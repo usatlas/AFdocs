@@ -4,6 +4,5 @@ mkdocs:
   configuration: mkdocs.yml
 
 submodules:
-  include:
-    - tier3docs
+  include: all
   recursive: true
