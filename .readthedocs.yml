@@ -5,5 +5,5 @@ mkdocs:
 
 submodules:
   include:
-    - tier3docs/
+    - tier3docs
   recursive: true
