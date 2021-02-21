@@ -1,0 +1,9 @@
+version: 2
+
+mkdocs:
+  configuration: mkdocs.yml
+
+submodule:
+  include:
+    - tier3docs/
+  recursive: true

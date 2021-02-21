@@ -1,0 +1,26 @@
+site_name: US ATLAS Analysis Facilities 
+docs_dir: tier3docs
+site_dir: site
+extra_javascript:
+- scripts/readMoreOrLess.js
+nav:
+    - 'Getting Started':
+        - 'Apply for AF Accounts': README.md
+        - 'Getting Help': GettingHelp.md
+    - 'Jupyter at Analysis Facilities':
+        - 'Introduction': jupyter/JupyterAtTier3s.md
+        - 'Jupyter at BNL': jupyter/BNLjupyter.md
+        - 'Jupyter at SLAC':
+            - 'The SLAC JupyterLab': jupyter/SLACjupyter.md
+            - 'Extend ATLAS JupyerLab at SLAC': jupyter/SLACJupyterExtraFuncs.md
+        - 'Using Jupyter to analyze xAODs':
+            - 'How to get information about an xAOD in python': jupyter/examples/xAODcheck.md
+            - 'Read xAODs using PyROOT': https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
+            - 'Info about uproot and xAOD': jupyter/examples/convert_specific_variables.py.txt
+    - 'Data Analysis Tutorial (2019-08)':
+        - 'Introduction': Tutorial-2019Aug/README.md
+        - 'Tutorial of Analysis Examples at BNL': Tutorial-2019Aug/BNL/README.md
+        - 'Tutorial of Analysis Examples at SLAC': Tutorial-2019Aug/SLAC/README.md
+        - 'Tutorial of Analysis Examples on the Grid': Tutorial-2019Aug/Grid/README.md
+theme: readthedocs
+
