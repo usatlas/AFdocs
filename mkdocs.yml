@@ -15,7 +15,7 @@ nav:
     - 'Using Jupyter to analyze xAODs':
         - 'How to get information about an xAOD in python': jupyter/examples/xAODcheck.md
         - 'Read xAODs using PyROOT': https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
-            - 'Info about uproot and xAOD': jupyter/examples/convert_specific_variables.py.txt
+        - 'Info about uproot and xAOD': jupyter/examples/convert_specific_variables.py.txt
     - 'Data Analysis Tutorial (2019-08)':
         - 'Introduction': Tutorial-2019Aug/README.md
         - 'Tutorial of Analysis Examples at BNL': Tutorial-2019Aug/BNL/README.md

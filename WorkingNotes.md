@@ -1,3 +1,7 @@
+## Limit mkdocs.yml navegation panel to two levels
+It seems standalone mkdocs can support >2 nested levels in navegation panel. But at the 
+readthedocs.io, only up to 2 levels are supported.
+
 ## What to do after a submodule is updated
 
 Use tier3docs (a git submodule of this repo) as example: If tier3docs is updated outside 
