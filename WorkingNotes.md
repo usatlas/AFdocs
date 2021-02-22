@@ -29,10 +29,10 @@ of the AFdocs (the repo), do the following:
 
 The last step will trigger ReadTheDocs to rebuild https://usatlas.readthedocs.io/projects/af-docs.
 If this page is already openned in the web browser, try refreshing browser cache (usually by pressing 
-shift while reload)
+shift while reloading)
 
 ## Update the tier3docs repo outside of the repo tree!!!
-Above we checked out the tier3docs. Please please don't try to edit anything there and expect to be
+In the above we checked out the tier3docs. Please please don't try to edit anything there and expect to be
 able to git push to tier3docs. This is because the we used 
 ```
 git submodule add https://github.com/usatlas/tier3docs
