@@ -33,9 +33,9 @@ shift while reloading)
 
 ## Update the tier3docs repo outside of the repo tree!!!
 In the above we checked out the tier3docs. Please please don't try to edit anything there and expect to be
-able to git push to tier3docs. This is because the we used 
+able to git push to tier3docs. This is because when setting up this repo, we used
 ```
 git submodule add https://github.com/usatlas/tier3docs
 ```
-Note the https://... URL. Once git enforced two-factor authentication, git push the this https URL with
+Note the https://... URL. Once git enforced two-factor authentication, git push to this https URL with
 username and password may not work.
