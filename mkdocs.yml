@@ -21,5 +21,7 @@ nav:
         - 'Tutorial of Analysis Examples at BNL': Tutorial-2019Aug/BNL/README.md
         - 'Tutorial of Analysis Examples at SLAC': Tutorial-2019Aug/SLAC/README.md
         - 'Tutorial of Analysis Examples on the Grid': Tutorial-2019Aug/Grid/README.md
+    - 'Containers':
+        - 'Using Singularity Containers': Containers/UsingSingularity/README.md
 theme: readthedocs
 
