@@ -24,7 +24,7 @@ SLAC JupyterLab will put you on a new 25GB home directory `/sdf/home/<username_i
 
 Once you login, click "Interactive Apps" from the top menu bar. Then choose "Jupyter". You will need to make a few choices:
 
-1. In "Jupyter Instance" box, choose "atlas-jupyter/20200502". You can choose Jupyter Instances for other experiments but there is no guarantee that those instances will work for you.
+1. In "Jupyter Instance" box, choose "atlas/20210403". You can choose Jupyter Instances for other experiments but there is no guarantee that those instances will work for you.
 2. Check the "Use JupyterLab instead of Jupyter Notebook?" box.
 3. In the "Partition" box, you can type in "usatlas" or "shared". Compare to "usatlas", "shared" may give you a quicker access but you may face preemption. If you have been told that you can use other SLURM partitions, please type at here.
 4. Choose hours, # CPUs, memory, # GPUs and GPU type, then click "launch". Note that your Jupyter work runs as a SLURM job. So choose only what you need to ensure speedy launching of your job.
@@ -52,11 +52,11 @@ conda activate
 
 ## An alternative way to use the ATLAS Jupyter environment at SLAC
 
-The above atlas-jupyter/20200502 instance resides in a Singularity image. You can use it at anywhere as long as the host can access the following CVMFS file. For example, on cent7a.slac.stanford.edu, you can run this command by hand:
+The above atlas/20210403 instance resides in a Singularity image. You can use it at anywhere as long as the host can access the following CVMFS file. For example, on cent7a.slac.stanford.edu, you can run this command by hand:
 
-`singularity run -B /cvmfs,/gpfs,/scratch,/nfs,/afs /cvmfs/atlas.sdcc.bnl.gov/jupyter/t3s/slac/singularity/atlas-slac-w-slurm.sif`
+`singularity run --nv -B /cvmfs,/gpfs,/scratch,/nfs,/afs /cvmfs/atlas.sdcc.bnl.gov/jupyter/t3s/slac/singularity/jupyter-conda.20210403.sif`
 
-(add `--nv` after `"run"` if the host supports Nvidia CUDA GPUs). When you see it prints out a line like the following,
+When you see it prints out a line like the following,
 
 `http://localhost:8888/?token=ec4d404fe69d2ff760d611c0509a9e8ac770c7f46ac32860`
 
@@ -70,9 +70,11 @@ The Jupyter environment provides several kernels and extensions. This includes:
 
 1. python2 with pyroot and uproot. By default, <b>AnalysisBase,21.2.111</b> is loaded before the pyroot2 kernel is launched. To overwrite this, create a file [$HOME/notebooks/.user_setups](SLACuser_setups.txt) in your home directory (even if your home directory is in AFS)
 2. ROOT C++. The ATLAS environment is set before the kernel is launched. The overwrite method is the same as the above. 
-3. python3 with pyroot and uproot/awkward. This kernel also includes ML packages such as Tensorflow and Keras for Nvidia GPUs. To use the GPU, choose "# of GPUs" and "GPU type" before launching Jupyter. 
-4. Terminal console for simple interactive use, e.g. file managements. It also include python2.7/python3, gcc/g++, gdb, make, cmake3, xrootd-clients, openssh-client, curl, vi, etc.
-5. Markdown document editor and previewer. You can edit and preview in two tabs simultaneously. 
+3. python3 with pyroot, uproot3/awkward and Dask.
+4. python3 with pyroot, uproot3/awkward and [RAPIDS.AI](https://rapids.ai) packages (cuPy, cuDF, cuML, dask_cuda, etc.). Choose "# of GPUs" (at least 1) and "GPU type" before launching Jupyter.
+5. python3 with pyroot, uproot3/awkward and TensorFlow(GPU) and Keras. Choose "# of GPUs" (at least 1) and "GPU type" before launching Jupyter. 
+6. Terminal console for simple interactive use, e.g. file managements. It also include python2.7/python3, gcc/g++, gdb, make, cmake3, xrootd-clients, openssh-client, curl, vi, SLURM client tools, etc.
+7. Markdown document editor and previewer. You can edit and preview in two tabs simultaneously. 
 
 ## Extend ATLAS JupyterLab Functionalities
 

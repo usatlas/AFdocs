@@ -43,3 +43,21 @@ Suppose you already have miniconda3 or Anaconda3 install:
 5. (To reverse, do `jupyter kernelspec uninstall mypyhf`)
 
 After this and restart the Jupyter environment, you will see a new kernel call `mypyhf`
+
+## Working with built-in Conda envorinment
+
+Some images, such as `atlas/20210403` has Andconda3 built-in to support Conda environments such as
+["rapids-0.18"](https://rapids.ai/start.html) and "tf-keras-gpu". You can use these Conda environments by
+`source /opt/anaconda3/etc/profile.d/conda.sh`. Alternatively, you can also mix them with your own Conda 
+installation and environments by creating a file `~/.condarc` and put the following lines inside
+```
+envs_dirs:
+  - ~/anaconda3/envs
+  - /opt/anaconda3/envs
+```
+
+Both "rapids-0.18" and "tf-keras-gpu" support uproot3 and pyroot (ROOT 6.22.08)
+
+### What is "rapids-0.18"
+See https://rapids.ai for detail. In short, packages such as `cupy`, `cudf` provide `numpy` and `pandas`
+equivalent running in Nvidia GPUs
