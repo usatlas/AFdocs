@@ -71,9 +71,9 @@ The Jupyter environment provides several kernels and extensions. This includes:
 1. python2 with pyroot and uproot. By default, <b>AnalysisBase,21.2.111</b> is loaded before the pyroot2 kernel is launched. To overwrite this, create a file [$HOME/notebooks/.user_setups](SLACuser_setups.txt) in your home directory (even if your home directory is in AFS)
 2. ROOT C++. The ATLAS environment is set before the kernel is launched. The overwrite method is the same as the above. 
 3. python3 with pyroot, uproot3/awkward and Dask.
-4. python3 with pyroot, uproot3/awkward and [RAPIDS.AI](https://rapids.ai) packages (cuPy, cuDF, cuML, dask_cuda, etc.). Choose "# of GPUs" (at least 1) and "GPU type" before launching Jupyter.
+4. python3 with pyroot, uproot3/awkward and [RAPIDS.AI](https://rapids.ai) packages (cuPy, cuDF, cuML, Dask/Dask-CUDA, etc.). Choose "# of GPUs" (at least 1) and "GPU type" before launching Jupyter.
 5. python3 with pyroot, uproot3/awkward and TensorFlow(GPU) and Keras. Choose "# of GPUs" (at least 1) and "GPU type" before launching Jupyter. 
-6. Terminal console for simple interactive use, e.g. file managements. It also include python2.7/python3, gcc/g++, gdb, make, cmake3, xrootd-clients, openssh-client, curl, vi, SLURM client tools, etc.
+6. Terminal console for simple interactive use, e.g. file managements. It also include python2.7/python3, gcc/g++, gdb, make, cmake3, xrootd-clients, openssh-client, curl, vi, SLURM clients, etc.
 7. Markdown document editor and previewer. You can edit and preview in two tabs simultaneously. 
 
 ## Extend ATLAS JupyterLab Functionalities
