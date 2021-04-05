@@ -4,6 +4,7 @@
 + [Install PYCUDA](#install-pycuda)
 + [Use DASK with SLURM](#use-dask-with-slurm)
 + [Use your own Conda environment](#use-your-own-conda-environment)
++ [Using built-in Conda environments](#using-built-in-conda-environments)
 
 Though pip, you can add more packages to your python/Jupyter. The folloing are examples that apply to python3
 
@@ -44,7 +45,7 @@ Suppose you already have miniconda3 or Anaconda3 install:
 
 After this and restart the Jupyter environment, you will see a new kernel call `mypyhf`
 
-## Working with built-in Conda envorinment
+## Using built-in Conda environments
 
 Some images, such as `atlas/20210403` has Andconda3 built-in to support Conda environments such as
 ["rapids-0.18"](https://rapids.ai/start.html) and "tf-keras-gpu". You can use these Conda environments by
@@ -60,4 +61,4 @@ Both "rapids-0.18" and "tf-keras-gpu" support uproot3 and pyroot (ROOT 6.22.08)
 
 ### What is "rapids-0.18"
 See https://rapids.ai for detail. In short, packages such as `cupy`, `cudf` provide `numpy` and `pandas`
-equivalent running in Nvidia GPUs
+equivalent but run in Nvidia GPUs.
