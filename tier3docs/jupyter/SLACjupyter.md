@@ -42,9 +42,9 @@ The ATLAS instance we built may not satisfy your need. If you have your own Jupy
 ~~~
 export SINGULARITY_IMAGE=/gpfs/slac/.../my_singularity_image.sif
 function jupyter() { singularity exec --nv -B /gpfs,/scratch,/nfs,/gpfs ${SINGULARITY_IMAGE} jupyter $@ }
-
-or from a Conda environment (assuming Anaconda 3 is installed at ~/anaconda3):
-
+~~~
+or from a Conda environment (assuming Anaconda 3 is installed at ~/anaconda3, and `jupyterlab` is installed via Conda):
+~~~
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate
 ~~~
