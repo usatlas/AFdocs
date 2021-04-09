@@ -1,20 +1,12 @@
 # Extend functionalities
 
 ## Table of contents
-+ [Install PYCUDA](#install-pycuda)
 + [Use DASK with SLURM](#use-dask-with-slurm)
 + [Use your own Conda environment](#use-your-own-conda-environment)
 + [Using built-in Conda environments](#using-built-in-conda-environments)
++ [Install PYCUDA](#install-pycuda)
 
 Though pip, you can add more packages to your python/Jupyter. The folloing are examples that apply to python3
-
-## Install PYCUDA
-
-Open a Terminal in JupyterLab and run the following command:
-
-`python3 -m pip install pycuda --user`
-
-To test whether your PYCUDA works, try [this python script](pycuda.test.py.txt) in JupyterLab. The script contains two URLs that explain the concepts of CUDA thread blocks and thread indexing.
 
 ## Use DASK with SLURM
 
@@ -62,3 +54,12 @@ Both "rapids-0.18" and "tf-keras-gpu" support uproot3 and pyroot (ROOT 6.22.08)
 ### What is "rapids-0.18"
 See https://rapids.ai for detail. In short, packages such as `cupy`, `cudf` provide `numpy` and `pandas`
 equivalent but run in Nvidia GPUs.
+
+## Install PYCUDA
+
+Open a Terminal in JupyterLab and run the following command:
+
+`python3 -m pip install pycuda --user`
+
+To test whether your PYCUDA works, try [this python script](pycuda.test.py.txt) in JupyterLab. The script contains two URLs that explain the concepts of CUDA thread blocks and thread indexing.
+
