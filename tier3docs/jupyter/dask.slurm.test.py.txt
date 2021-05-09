@@ -23,7 +23,8 @@ cluster = SLURMCluster(
     cores=1,
     memory="4 GB",
     python="/usr/bin/python3",
-    job_extra=['--account=shared', '--partition=shared']
+    job_extra=['--account=shared', '--partition=shared'],
+    scheduler_options={'dashboard_address': ':8787'}
 )
 cluster.scale(jobs=4)  # ask for 4 jobs
 

@@ -2,6 +2,7 @@
 
 ## Table of contents
 + [Use DASK with SLURM](#use-dask-with-slurm)
+    + [Access DASK Dashboard](#access-dask-dashboard)
 + [Use your own Conda environment](#use-your-own-conda-environment)
 + [Using built-in Conda environments](#using-built-in-conda-environments)
 + [Install PYCUDA](#install-pycuda)
@@ -19,6 +20,21 @@ Open a Terminal in JupyterLab and run the following command:
 `python3 -m pip install --ignore-installed dask numpy dask-jobqueue distributed --user`
 
 To test whether it works, try [this python script](dask.slurm.test.py.txt) in JupyterLab. Please pay attention to the line `python="/usr/bin/python3"` in the script - do not forget about it. 
+
+### Access DASK Dashboard
+
+For those who want to use [DASK dashboard](https://docs.dask.org/en/latest/diagnostics-distributed.html), there is a few 
+things to prepare: 
+
+1. Use pip3 to install `bokeh` (in order to start DASK dashboard automatically). This is a one time task.
+2. Optional: Adjust the DASK dashboard port number. By default, the dashboard listens to port 8787. You may need to 
+   change this port number if it is used by other users or by your other DASK programs. In the above example, line 
+   `scheduler_options={'dashboard_address': ':8787'}` specify the port number.
+3. Port forwarding
+    * Open a terminal in Juypyter Lab and find out the host name (use command 'hostname'). Let's say you are on host 
+      `rome0100`.
+    * From your desktop, `ssh -L 8787:rome0100:8787 sdf-login.slac.stanford.edu` .
+    * In your web browser, open `http://localhost:8787/status` to access the DASK dashboard.
 
 ## Use your own Conda environment 
 
