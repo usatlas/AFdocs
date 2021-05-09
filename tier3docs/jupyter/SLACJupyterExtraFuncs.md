@@ -30,6 +30,8 @@ things to prepare:
 2. Optional: Adjust the DASK dashboard port number. By default, the dashboard listens to port 8787. You may need to 
    change this port number if it is used by other users or by your other DASK programs. In the above example, line 
    `scheduler_options={'dashboard_address': ':8787'}` specify the port number.
+    * You don't have to do this: if you remove this `scheduler_options= ...` line, DASK will select an available port for 
+      you. In that case, you can print the `client` object in find out the host:port. 
 3. Port forwarding
     * Open a terminal in Juypyter Lab and find out the host name (use command 'hostname'). Let's say you are on host 
       `rome0100`.
