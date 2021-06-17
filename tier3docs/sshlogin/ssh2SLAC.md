@@ -5,11 +5,11 @@
 
 <script type="text/javascript" src="/tier3docs/scripts/readMoreOrLess.js"></script>
 
-# SLAC is transiting to a new computing environment
+# SDF: a new computing environment at SLAC
 
 For decades, SLAC runs a high throughput computing (HTC) environment, primarily serving the HEP community. This
-environment feature AFS home directory and LSF batch system, along with CVMFS. This environment is also known as
-the AFS environment.
+environment feature AFS file system home directory and LSF batch system, along with CVMFS. This environment is 
+also known as the AFS environment.
 
 SLAC is now building a new computing environment: the Scientific Data Facility (SDF). The core componment 
 of SDF is a high performance computer cluster (HPC) and a GPU cluster, both managed by a single SLURM batch 
@@ -20,7 +20,8 @@ systems and storage systems, as well as HTC may also be introduced.
 
 For ATLAS users, we currently provide GPFS filesystem for home (100GB) and data (2-10TB) in the AFS environment. 
 At SDF, ATLAS users will get a new home directory of 25GB. The GPFS file system is also available in SDF until 
-the hardware retires (at that time, we will migrate users from GPFS to Lustre). AFS is not available in SDF.
+the hardware retires (at that time, we will migrate users from GPFS to Lustre). AFS file system is not available 
+in SDF.
 
 ## Setup ATLAS environment
 
@@ -35,7 +36,7 @@ alias setupATLAS='source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh'
 ...
 ```
 
-## SSH login to the AFS environment
+## SSH login to the AFS environment and submit LSF batch jobs
 
 `ssh <username>@centos7.slac.stanford.edu`
 
@@ -61,6 +62,8 @@ set (SLAC ID = SLAC Windows account) and go to the next step. If you don't have 
 please go to [SLAC SDF page and click 
 "Accounts Portal"](https://sdf.slac.stanford.edu/public/doc/#/accounts-and-access?id=access). 
 After this, give it a hour for the changes to be proprogated through SLAC computing.
+
+## Submit SLURM batch job at SDF
 
 The above URL is actually [the main page of SDF](https://sdf.slac.stanford.edu) (login info at the upper half
 of the page, and user document at the lower half of the page). At there you can also find [the basic info about

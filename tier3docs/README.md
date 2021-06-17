@@ -40,10 +40,10 @@ is a two-step process: becoming a SLAC laboratory user, and then obtain computin
 
 <button onclick="readMoreOrLess('acctsLess', 'acctsMore', 'acctsBtn')" id="acctsBtn">More</button>
 
-## SSH login to AFs
-BNL SSH login info is available from [the main SDCC page](https://www.sdcc.bnl.gov)
+## SSH login to AFs, and batch jobs
+BNL SSH login and batch info is available from [the main SDCC page](https://www.sdcc.bnl.gov)
 
-SLAC SSH login info is available from [this page](sshlogin/ssh2SLAC.md)
+SLAC SSH login and batch info is available from [this page](sshlogin/ssh2SLAC.md)
 
 ## JupyterLab at AFs
 Documents, examples and entry points of the [JupyterLab at BNL and SLAC](jupyter/JupyterAtTier3s.md). 
