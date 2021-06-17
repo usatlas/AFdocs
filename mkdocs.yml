@@ -5,7 +5,7 @@ extra_javascript:
 - scripts/readMoreOrLess.js
 nav:
     - 'Getting Started':
-        - 'Apply for AF Accounts': README.md
+        - 'Apply for AF Accounts and login': README.md
         - 'Getting Help': GettingHelp.md
     - 'Jupyter at Analysis Facilities':
         - 'Introduction': jupyter/JupyterAtTier3s.md
