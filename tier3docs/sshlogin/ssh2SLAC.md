@@ -62,7 +62,8 @@ please go to [SLAC SDF page and click
 "Accounts Portal"](https://sdf.slac.stanford.edu/public/doc/#/accounts-and-access?id=access). 
 After this, give it a hour for the changes to be proprogated through SLAC computing.
 
-The above URL is actually the main user document page of SDF. At there you can also find [the basic info about
+The above URL is actually [the main page of SDF](https://sdf.slac.stanford.edu) (login info at the upper half
+of the page, and user document at the lower half of the page). At there you can also find [the basic info about
 using SLURM batch system](https://sdf.slac.stanford.edu/public/doc/#/batch-compute?id=using-slurm). One of the
 lines in the example SLURM submission script, `#SBATCH --partition=shared` 
 allows you to specify "shared" or "usatlas". 
