@@ -81,9 +81,9 @@ a GPU.
 
 ## Remote X-windows access
 
-SLAC currently provide [Fast-X](https://confluence.slac.stanford.edu/display/SCSPub/FastX) for accelerated 
+SLAC currently provides [Fast-X](https://confluence.slac.stanford.edu/display/SCSPub/FastX) for accelerated 
 X-window access. Note that upon login to Fast-X, you may find some space that you can save a few files. Do NOT 
-use it for anything. This space is not your main GPFS or Lustre storage, it is not accessible from the AFS or
-SDF environment. It is also subject to deletion without notice.
+use this space for anything. This space is not your main GPFS or Lustre storage, it is not accessible from 
+the AFS or SDF environment. It is also subject to deletion without notice.
 
 SLAC is investigating [NoMachine](https://www.nomachine.com) as a replacement of Fast-X.
