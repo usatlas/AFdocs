@@ -64,11 +64,15 @@ After this, give it a hour for the changes to be proprogated through SLAC comput
 
 The above URL is actually the main user document page of SDF. At there you can also find [the basic info about
 using SLURM batch system](https://sdf.slac.stanford.edu/public/doc/#/batch-compute?id=using-slurm). One of the
-line, `#SBATCH --partition=shared` allows you to specify "shared" or "usatlas". ATLAS owns a small 
+lines in the example SLURM submission script, `#SBATCH --partition=shared` 
+allows you to specify "shared" or "usatlas". 
+
+ATLAS owns a small 
 fraction of CPU resource in SDF. "usatlas" will give you guranteed access to ATLAS owned CPUs but you may have 
 to wait if other ATLAS users are using them. "shared" allows you to access a large pool of CPUs (own by others)
-so the waiting time will likely be shorter. But you jobs maybe pre-emptied. The rule of thumb is to run short 
-jobs on "shared", and long jobs (12h+) in "usatlas".
+so the waiting time will likely be shorter. But there is small risk that your job will be pre-emptied. 
+The rule of thumb is to run short 
+jobs in "shared", and run long jobs (12h+) in "usatlas".
 
 To request a GPU, add "#SBATCH --gpus=1" to the submission script. All installed GPUs are Nvidia CUDA GPUs. Since
 ATLAS currently does not own a GPU at SDF, you will need to use `#SBATCH --partition=shared` if you request
@@ -81,4 +85,4 @@ X-window access. Note that upon login to Fast-X, you may find some space that yo
 use it for anything. This space is not your main GPFS or Lustre storage, it is not accessible from the AFS or
 SDF environment. It is also subject to deletion without notice.
 
-SLAC is investigate [NoMachine](https://www.nomachine.com) as a replacement of Fast-X
+SLAC is investigating [NoMachine](https://www.nomachine.com) as a replacement of Fast-X.
