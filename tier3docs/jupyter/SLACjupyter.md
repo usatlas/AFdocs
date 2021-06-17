@@ -12,9 +12,11 @@
 
 ## Login to JupyterLab at SLAC
 
-Before accessing [the SLAC JupyterLab](https://sdf.slac.stanford.edu/public/doc/#/interactive-compute?id=jupyter), please [apply for a SLAC computing account](https://atlas.slac.stanford.edu/using-the-slac-computing-resources). 
+Before accessing [the SLAC JupyterLab](https://sdf.slac.stanford.edu/public/doc/#/interactive-compute?id=jupyter), 
+please [apply for a SLAC computing account](https://atlas.slac.stanford.edu/using-the-slac-computing-resources). 
 
-You need to use your "SLAC ID" (aka SLAC Windows account) to login to SLAC JupyterLab. For more information regarding "SLAC ID", please refer to ["SDF: New SLAC..."](../#sdf).
+You need to use your "SLAC ID" (aka SLAC Windows account) to login to SLAC JupyterLab. For more information 
+regarding "SLAC ID", please refer to ["SSH login to SDF"](../sshlogin/ssh2SLAC.md#sdf).
 
 ## A note about your AFS or GPFS spaces
 

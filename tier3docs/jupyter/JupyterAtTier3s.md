@@ -10,7 +10,10 @@ Use the following links to access the Jupyter environment at the AFs, or access 
 
 * [BNL JupyterLab](https://jupyter.sdcc.bnl.gov) and [documents](BNLjupyter.md).
 * [SLAC JupyterLab](https://sdf.slac.stanford.edu/public/doc/#/interactive-compute?id=jupyter) and [documents](SLACjupyter.md).
-   * SLAC is migrating to a new computing facility SDF. As a result, we recently made some change to the SLAC JupyterLab portal. If you haven't read and prepare yourself for "SLAC ID", please refer to ["SDF: New SLAC ..."](../#sdf) to estiblish your "SLAC ID", then `ssh sdf-login01.slac.stanford.edu` for the first time.
+   * SLAC is migrating to a new computing facility SDF. As a result, we recently made some change to the SLAC 
+JupyterLab portal. If you haven't read and prepare yourself for "SLAC ID", please refer to
+["SSH login to SDF"](../sshlogin/ssh2SLAC.md#sdf) to estiblish your "SLAC ID", then 
+`ssh sdf-login.slac.stanford.edu` for the first time.
    * The SLAC JupyterLab link above will change in the near future as the migration continue. When that happens, we will update the above link.
    * When asked to choose an identity provider, please choose "SLAC National Accelerator Laboratory" and then use your ["SLAC ID"](../#sdf) to login.
 
