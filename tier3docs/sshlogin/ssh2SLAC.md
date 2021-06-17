@@ -39,9 +39,9 @@ alias setupATLAS='source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh'
 
 `ssh <username>@centos7.slac.stanford.edu`
 
-SLAC has two different computer accounts, unix and windows. You should use unix account password to login. 
+SLAC has two different computer accounts, unix and Windows. You should use unix account password to login. 
 Note that as 
-SLAC retires the AFS environment in the next few years, this type of account (unix) may also disappear.
+SLAC retires the AFS environment in the next few years, this type of account (unix) may disappear.
 
 The following page has many useful info about using the AFS environment, esepecially with regard to using the LSF
 batch system. 
@@ -52,8 +52,8 @@ https://confluence.slac.stanford.edu/display/Atlas/SLAC+Analysis+Computing+Facil
 
 `ssh <username>@sdf-login.slac.stanford.edu`
 
-Please use your Windows account password to login. You may ask: What if I do not have a SLAC Windows account? 
-Continue reading.
+Please use your Windows account password to login. You may ask: What if I only have a unix account, and do not
+have a SLAC Windows account? Continue reading.
 
 SDF uses a new identity management system (aka <span style="color:red">"SLAC ID"</span> - it will be a 
 computer account to login to everything at SLAC). If you already have a SLAC Windows account, you are all 
