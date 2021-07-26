@@ -23,38 +23,12 @@ At SDF, ATLAS users will get a new home directory of 25GB. The GPFS file system 
 the hardware retires (at that time, we will migrate users from GPFS to Lustre). AFS file system is not available 
 in SDF.
 
-## Setup ATLAS environment
-
-A typical way to setup ATLAS environment upon login is to put the following in $HOME/.bashrc. This is the same
-at both AFS and SDF.
-
-```
-export ALRB_localConfigDir=/gpfs/slac/atlas/fs1/sw/localconfig
-export RUCIO_ACCOUNT="change_me"
-export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
-alias setupATLAS='source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh'
-...
-```
-
-## SSH login to the AFS environment and submit LSF batch jobs
-
-`ssh <username>@centos7.slac.stanford.edu`
-
-SLAC has two different computer accounts, unix and Windows. You should use unix account password to login. 
-Note that as 
-SLAC retires the AFS environment in the next few years, this type of account (unix) may disappear.
-
-The following page has many useful info about using the AFS environment, esepecially with regard to using the LSF
-batch system. 
-
-https://confluence.slac.stanford.edu/display/Atlas/SLAC+Analysis+Computing+Facility
-
 ## <a name="sdf"></a>SSH login to SDF
 
 `ssh <username>@sdf-login.slac.stanford.edu`
 
-Please use your Windows account password to login. You may ask: What if I only have a unix account, and do not
-have a SLAC Windows account? Continue reading.
+SLAC has two different computer accounts, unix and Windows. Please use your Windows account password to login. 
+You may ask: What if I only have a unix account, and do not have a SLAC Windows account? Continue reading.
 
 SDF uses a new identity management system (aka <span style="color:red">"SLAC ID"</span> - it will be a 
 computer account to login to everything at SLAC). If you already have a SLAC Windows account, you are all 
@@ -82,6 +56,18 @@ To request a GPU, add "#SBATCH --gpus=1" to the submission script. All installed
 ATLAS currently does not own a GPU at SDF, you will need to use `#SBATCH --partition=shared` if you request
 a GPU.
 
+## SSH login to the AFS environment and submit LSF batch jobs
+
+`ssh <username>@centos7.slac.stanford.edu`
+
+You should use unix account password to login. Note that as 
+SLAC retires the AFS environment in the next few years, this type of account (unix) may disappear.
+
+The following page has many useful info about using the AFS environment, esepecially with regard to using the LSF
+batch system. 
+
+https://confluence.slac.stanford.edu/display/Atlas/SLAC+Analysis+Computing+Facility
+
 ## Remote X-windows access
 
 SLAC currently provides [Fast-X](https://confluence.slac.stanford.edu/display/SCSPub/FastX) for accelerated 
@@ -89,4 +75,20 @@ X-window access. Note that upon login to Fast-X, you may find some space that yo
 use this space for anything. This space is not your main GPFS or Lustre storage, it is not accessible from 
 the AFS or SDF environment. It is also subject to deletion without notice.
 
+You should use SLAC unix username and password to login to Fast-X. Once you are in Fast-X, you can 
+`ssh -Y` to SDF or AFS login nodes.
+
 SLAC is investigating [NoMachine](https://www.nomachine.com) as a replacement of Fast-X.
+
+## Setup ATLAS environment
+
+A typical way to setup ATLAS environment upon login is to put the following in $HOME/.bashrc. This is the same
+at both AFS and SDF.
+
+```
+export ALRB_localConfigDir=/gpfs/slac/atlas/fs1/sw/localconfig
+export RUCIO_ACCOUNT="change_me"
+export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+alias setupATLAS='source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh'
+...
+```
