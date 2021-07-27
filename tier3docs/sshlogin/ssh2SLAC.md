@@ -71,12 +71,15 @@ https://confluence.slac.stanford.edu/display/Atlas/SLAC+Analysis+Computing+Facil
 ## Remote X-windows access
 
 SLAC currently provides [Fast-X](https://confluence.slac.stanford.edu/display/SCSPub/FastX) for accelerated 
-X-window access. Note that upon login to Fast-X, you may find some space that you can save a few files. Do NOT 
+X-window access. Fast-X maybe useful when you are far away from SLAC (geographically, or over a high latency network)
+and you want to diaply your ROOT 2-D or 3-D/scatter plot.
+You should use SLAC unix username and password to login to Fast-X. Once you are on Fast-X, you can 
+`ssh -Y` to SDF or AFS login nodes.
+
+Note that upon login to Fast-X, you may find some space that you can save a few files. Do NOT 
 use this space for anything. This space is not your main GPFS or Lustre storage, it is not accessible from 
 the AFS or SDF environment. It is also subject to deletion without notice.
 
-You should use SLAC unix username and password to login to Fast-X. Once you are in Fast-X, you can 
-`ssh -Y` to SDF or AFS login nodes.
 
 SLAC is investigating [NoMachine](https://www.nomachine.com) as a replacement of Fast-X.
 
