@@ -6,7 +6,7 @@ this repo with the following:
 1. .readthedocs.yml
 2. mkdocs.yml   (This file contains the structure of the left navegation panel)
 3. requirements.txt
-3. tier3docs/ (the acutual doc directory)  
+3. tier3docs/ (the actual doc directory)  
 
 ## Limit mkdocs.yml navegation panel to two levels
 It seems standalone mkdocs can support >2 nested levels in navegation panel. But at the 
