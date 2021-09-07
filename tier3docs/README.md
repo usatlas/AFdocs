@@ -45,6 +45,8 @@ BNL SSH login and batch info is available from [the main SDCC page](https://www.
 
 SLAC SSH login and batch info is available from [this page](sshlogin/ssh2SLAC.md)
 
+UChicago SSH login and batch info is available from [this page](sshlogin/ssh2UChicago.md)
+
 ## JupyterLab at AFs
 Documents, examples and entry points of the [JupyterLab at BNL and SLAC](jupyter/JupyterAtTier3s.md). 
 
