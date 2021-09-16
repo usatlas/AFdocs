@@ -25,7 +25,7 @@ storages.</span>
 
 <button onclick="readMoreOrLess('introLess', 'introMore', 'introBtn')" id="introBtn">More</button>
 
-## Apply computer accounts at BNL and/or SLAC
+## Apply computer accounts at BNL, SLAC and/or UChicago
 The processes can take days as both BNL and SLAC are DOE national labs. Do NOT wait until the 
 last minute.
 
@@ -38,7 +38,6 @@ Applying BNL computing accounts is a multiple-step process.
 is a two-step process: becoming a SLAC laboratory user, and then obtain computing account(s).
 </span>
 
-[Applying UChicago computing accounts](https://af.uchicago.edu)
 </span>
 
 
