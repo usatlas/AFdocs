@@ -24,7 +24,7 @@ nav:
     - 'Containers':
         - 'Using Singularity Containers': Containers/UsingSingularity/README.md
     - 'Storage':
-       - 'Data Storage at BNL': storage/BNL/storage-at-bnl.md
+        - 'Data Storage at BNL': storage/BNL/storage-at-bnl.md
     - 'testDir':
         - 'A test only': testDir/BNL/README.md
 theme: readthedocs
