@@ -15,20 +15,6 @@
 1.  In case the subdir **/pnfs/usatlas.bnl.gov/users/$USERNAME** does
     not exist, you can emaill to `"RT-RACF-StorageManagement@bnl.gov"`
     to help make the subdir.
-2.  Do not use `dccp /pnfs/usatlas......` as the Tier3 system is
-    configured to work with cp. The use of dccp with /pnfs/usatlas will
-    force the data traffic to proxy through the name space server,
-    forcing high traffic to that host. This will result in the name
-    space service being inaccessible. To properly use dccp on these
-    hosts add `dcap://dcdcap.usatlas.bnl.gov:22125` in front of
-    /pnfs/usatlas....
-
-For example: To access `/pnfs/usatlas.bnl.gov/A/B/C.root` via dccp/dcap,
-you will use
-
-    dcap://dcdcap.usatlas.bnl.gov:22125/pnfs/usatlas.bnl.gov/A/B/C.root
-    OR
-    cp /pnfs/usatlas.bnl.gov/A/B/C.root 
 
 As a reminder, your home area ($HOME) is intended to store analysis
 code, and not data.
@@ -327,3 +313,102 @@ path.
 Using your browser, you can access your files via browser with your
 valid certificate. just point to:  
 [https://dcgftp.usatlas.bnl.gov:443/pnfs/usatlas.bnl.gov/users/youraccount/xyz/<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://dcgftp.usatlas.bnl.gov:443/pnfs/usatlas.bnl.gov/users/youraccount/xyz/)
+
+## <span id="Use_the_BNLBox"></span> Use the BNLBox
+
+BNL provides a cloud storage **BNLBox**, similar to the CERNBox, but
+based on **NextCloud**. You can use it to share between computers and
+mobile devices, among groups. Everyone has a **default quota of 50GB**.
+
+You can find [more details on the SDCC page](https://www.sdcc.bnl.gov/information/services/using-bnlbox-cloud-storage)
+
+It can be accessed from [web
+browsers<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://bnlbox.sdcc.bnl.gov),
+[or desktop clients, or mobile
+apps<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://nextcloud.com/install/#install-clients).
+
+### <span id="Use_the_BNLBox_on_Web_Browsers"></span> Use the BNLBox on Web Browsers
+
+The web browser URL is
+**[https://bnlbox.sdcc.bnl.gov<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://bnlbox.sdcc.bnl.gov)**.
+You can log in with your BNL account. Please find out the webDAV access
+URL by clicking on the bottom left **Settings** on the sidebar, as shown
+below:
+
+  
+<img src="/twiki/pub/AtlasComputing/SPARatBNL/BNLBox-webDAV.jpg" width="211" alt="BNLBox-webDAV.jpg" />
+
+The webDAV URL is something like
+`https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/BNL-User-8efba3ed-bfc8-4324-9cef-e9f4878c3c8d/`,
+where the last part in the path is your unique UUID.
+
+### <span id="Use_the_BNLBox_on_Linux_machines"></span> Use the BNLBox on Linux machines
+
+The software
+**[cadaver<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](http://www.webdav.org/cadaver/)**
+has been installed on spar/acas machines at BNL, and lxplus machines at
+CERN. It is a command line webDAV client, with ftp-like commands. To
+save you from typing the username/password everytime, you can prepare a
+file **.netrc** under $HOME directory with the following content:
+
+    machine bnlbox.sdcc.bnl.gov
+      login yourLoginEmail
+      password yourPassword
+
+where you should put your own login and password. And run "chmod 600
+$HOME/.netrc" to make this file visible only to yourself.
+
+In addition, you can prepare another file **\~/.cadaverrc** with the
+following line:
+
+    open https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/Your-LONG-UUID-for-BNLBox/
+
+Please put your own long UUID here.
+
+Then just simply run **"cadaver"**, it will connect to your BNLBox.
+
+>     spar0101% cadaver
+>     WARNING: Untrusted server certificate presented for `*.sdcc.bnl.gov':
+>     Issued to: SDCC, Brookhaven National Laboratory, 53 Bell Avenue, Upton, New York, 11973-5000, US
+>     Issued by: InCommon, Internet2, Ann Arbor, MI, US
+>     Certificate is valid from Tue, 25 Sep 2018 00:00:00 GMT to Thu, 24 Sep 2020 23:59:59 GMT
+>     Do you wish to accept the certificate? (y/n) y
+>     dav:/remote.php/dav/files/BNL-User-8efba3ed-bfc8-4324-9cef-e9f4878c3c8d/> help
+>     Available commands: 
+>      ls         cd         pwd        put        get        mget       mput       
+>      edit       less       mkcol      cat        delete     rmcol      copy       
+>      move       lock       unlock     discover   steal      showlocks  version    
+>      checkin    checkout   uncheckout history    label      propnames  chexec     
+>      propget    propdel    propset    search     set        open       close      
+>      echo       quit       unset      lcd        lls        lpwd       logout     
+>      help       describe   about      
+>     Aliases: rm=delete, mkdir=mkcol, mv=move, cp=copy, more=less, quit=exit=bye
+>     dav:/remote.php/dav/files/BNL-User-8efba3ed-bfc8-4324-9cef-e9f4878c3c8d/>
+
+You can use davix commands (**davix-ls**, **davix-put** and
+**davix-get**) as well to access to your BNLBox. These commands are
+available by default on lxplus. At BNL, you need run "setupATLAS -q;
+lsetup davix" to set up the env. Then specify the full webDAV to the
+davix commands plus an option **-k** (Disable SSL credential checks).
+
+>     spar0101% setupATLAS -q
+>     spar0101% lsetup davix
+>     spar0101% davix-ls -k https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/BNL-User-8efba3ed-bfc8-4324-9cef-e9f4878c3c8d/
+>     davix: using ~/.netrc to load additional configuration. (match: bnlbox.sdcc.bnl.gov)
+>     copy_bnl_box.rb
+>     dCache
+>     Documents
+>     ._.DS_Store
+>     .DS_Store
+>     Nextcloud%20Manual.pdf
+>     Nextcloud.mp4
+>     Nextcloud.png
+>     Photos
+>     testDir
+>     Archive
+
+### <span id="Use_the_BNLBox_on_Mobile_Devices"></span> Use the BNLBox on Mobile Devices
+
+For iOS or Android devices, just install the **Nextcloud** app, and
+connect to **bnlbox.sdcc.bnl.gov**.
+

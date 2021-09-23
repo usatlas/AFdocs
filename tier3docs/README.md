@@ -45,7 +45,7 @@ is a two-step process: becoming a SLAC laboratory user, and then obtain computin
 <button onclick="readMoreOrLess('acctsLess', 'acctsMore', 'acctsBtn')" id="acctsBtn">More</button>
 
 ## SSH login to AFs, and batch jobs
-BNL SSH login and batch info is available from [the main SDCC page](https://www.sdcc.bnl.gov)
+BNL SSH login and batch info is available from [this page](sshlogin/ssh2BNL.md)
 
 SLAC SSH login and batch info is available from [this page](sshlogin/ssh2SLAC.md)
 
