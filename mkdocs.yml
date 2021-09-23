@@ -11,6 +11,8 @@ nav:
         - 'Data Storage at BNL': storage/BNL/storage-at-bnl.md
     - 'Xcache':
         - 'Using Xcache at BNL': Xcache/BNL/Using-Xcache-at-BNL.md
+    - 'Work with CERN':
+        - 'Work between BNL and CERN': work-with-CERN/BNL/Work-between-BNL-CERN.md
     - 'Jupyter at Analysis Facilities':
         - 'Introduction': jupyter/JupyterAtTier3s.md
         - 'Jupyter at BNL': jupyter/BNLjupyter.md
