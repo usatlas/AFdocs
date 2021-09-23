@@ -27,7 +27,5 @@ nav:
         - 'Tutorial of Analysis Examples on the Grid': Tutorial-2019Aug/Grid/README.md
     - 'Containers':
         - 'Using Singularity Containers': Containers/UsingSingularity/README.md
-    - 'testDir':
-        - 'A test only': testDir/BNL/README.md
 theme: readthedocs
 
