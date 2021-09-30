@@ -333,7 +333,7 @@ You can log in with your BNL account. Please find out the webDAV access
 URL by clicking on the bottom left **Settings** on the sidebar, as shown
 below:
 
-<img src="/tier3docs/images/BNLBox-webDAV.jpg" width="211" alt="BNLBox-webDAV.jpg" />
+<img src="BNLBox-webDAV.jpg" width="211" alt="BNLBox-webDAV.jpg" />
 
 The webDAV URL is something like
 `https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/BNL-User-8efba3ed-bfc8-4324-9cef-e9f4878c3c8d/`,
