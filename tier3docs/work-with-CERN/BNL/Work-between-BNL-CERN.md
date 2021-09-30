@@ -128,7 +128,7 @@ locally. For example,
     lxplus% sshfs spar0102:/atlasgpfs01/usatlas/data/yesw2000 /tmp/yesw/data
 
 assuming that you have already set up the ssh configuration as shown in
-[the section of interactive connection to BNL](sshlogin/ssh2BNL.md#Connect_to_the_interactive_nodes).
+[the section of interactive connection to BNL](/tier3docs/sshlogin/ssh2BNL.md#Connect_to_the_interactive_nodes).
 
 To umount the mounted point, just run **fusermount -u /tmp/yesw/data**.
 
