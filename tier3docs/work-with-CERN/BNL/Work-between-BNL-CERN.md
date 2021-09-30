@@ -35,7 +35,7 @@ alias and should have been defined for you upon login:
     % which eos-copy.py
     /afs/usatlas.bnl.gov/scripts/eos-copy.py
 
-    % os-copy.py -h
+    % eos-copy.py -h
     Usage: eos-copy.py [options] eos_source... local_dir
        eos-copy.py [options] eos_source... pnfs_dir
 
