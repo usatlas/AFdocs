@@ -29,28 +29,26 @@ If you need to store data outside of the resources dedicated to the BNL
 Tier 3 (either due to needing more space, or to share data with
 colleagues who are not using the BNL Tier 3), consider using
 LOCALGROUPDISK, which is a resource that all US ATLAS collaborators have
-access to. You can check at [RSE account
-usage<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://rucio-ui.cern.ch/r2d2/manage_quota)
+access to. 
+You can check at [RSE account usage](https://rucio-ui.cern.ch/r2d2/manage_quota) 
 with the RSE **BNL-OSG2\_LOCALGROUPDISK** selected. Every user should
 have a **default quota of 15TB**, if you could not find your name there,
-please check if you have selected **/atlas/usatlas** in [the VO
-groups/roles<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://lcg-voms2.cern.ch:8443/voms/atlas/user/home.action).
+please check if you have selected **/atlas/usatlas** in 
+[the VO groups/roles](https://lcg-voms2.cern.ch:8443/voms/atlas/user/home.action).
 
 ### <span id="Dataset_replication_to_LOCALGROU"></span> Dataset replication to LOCALGROUPDISK
 
 You can replicate datasets to the RSE **BNL-OSG2\_LOCALGROUPDISK** in
 the 2 following ways:
 
-1.  Make the request through [r2d2
-    request<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://rucio-ui.cern.ch/r2d2/manage_quota)
+1.  Make the request through [r2d2 request](https://rucio-ui.cern.ch/r2d2/manage_quota)
 2.  Make the request using rucio command **rucio add-rule**. Please
-    check the [rucio add-rule wiki
-    page<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://rucio.readthedocs.io/en/latest/man/rucio.html#add-rule)
+    check the [rucio add-rule wiki page](https://rucio.readthedocs.io/en/latest/man/rucio.html#add-rule)
     for usage help.
 
 ## <span id="Use_the_BNL_dCache_space"></span> Use the BNL dCache space
 
-**[dCache<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://en.wikipedia.org/wiki/DCache)**
+**[dCache](https://en.wikipedia.org/wiki/DCache)**
 is a system for storing and retrieving huge amounts of data, distributed
 among a large number of heterogeneous server nodes, under a single
 virtual filesystem tree with a variety of standard access methods.
@@ -117,7 +115,8 @@ pNFS area (/pnfs/usatlas.bnl.gov/users/$USER/). If for some reason you
 do not have a pNFS area you can fill out a ticket to this email group:
 <RT-RACF-StorageManagement@bnl.gov>. If you have an pNFS area your name
 should appear on this website:
-[https://www.sdcc.bnl.gov/experiments/usatlas/list-users-institutes<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://www.sdcc.bnl.gov/experiments/usatlas/list-users-institutes).
+[https://www.sdcc.bnl.gov/experiments/usatlas/list-users-institutes]
+(https://www.sdcc.bnl.gov/experiments/usatlas/list-users-institutes).
 
 **Note: You should not use rucio to download datasets!!!**
 
@@ -311,7 +310,8 @@ path.
 3\. **Web** (from outside BNL)  
 Using your browser, you can access your files via browser with your
 valid certificate. just point to:  
-[https://dcgftp.usatlas.bnl.gov:443/pnfs/usatlas.bnl.gov/users/youraccount/xyz/<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://dcgftp.usatlas.bnl.gov:443/pnfs/usatlas.bnl.gov/users/youraccount/xyz/)
+[https://dcgftp.usatlas.bnl.gov:443/pnfs/usatlas.bnl.gov/users/youraccount/xyz/]
+(https://dcgftp.usatlas.bnl.gov:443/pnfs/usatlas.bnl.gov/users/youraccount/xyz/).
 
 ## <span id="Use_the_BNLBox"></span> Use the BNLBox
 
@@ -321,21 +321,20 @@ mobile devices, among groups. Everyone has a **default quota of 50GB**.
 
 You can find [more details on the SDCC page](https://www.sdcc.bnl.gov/information/services/using-bnlbox-cloud-storage)
 
-It can be accessed from [web
-browsers<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://bnlbox.sdcc.bnl.gov),
-[or desktop clients, or mobile
-apps<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://nextcloud.com/install/#install-clients).
+It can be accessed from [web browsers](https://bnlbox.sdcc.bnl.gov),
+[or desktop clients, or mobile apps]
+(https://nextcloud.com/install/#install-clients).
 
 ### <span id="Use_the_BNLBox_on_Web_Browsers"></span> Use the BNLBox on Web Browsers
 
 The web browser URL is
-**[https://bnlbox.sdcc.bnl.gov<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://bnlbox.sdcc.bnl.gov)**.
+**[https://bnlbox.sdcc.bnl.gov](https://bnlbox.sdcc.bnl.gov)**.
 You can log in with your BNL account. Please find out the webDAV access
 URL by clicking on the bottom left **Settings** on the sidebar, as shown
 below:
 
   
-<img src="/twiki/pub/AtlasComputing/SPARatBNL/BNLBox-webDAV.jpg" width="211" alt="BNLBox-webDAV.jpg" />
+<img src="storage/BNL/BNLBox-webDAV.jpg" width="211" alt="BNLBox-webDAV.jpg" />
 
 The webDAV URL is something like
 `https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/BNL-User-8efba3ed-bfc8-4324-9cef-e9f4878c3c8d/`,
@@ -344,7 +343,7 @@ where the last part in the path is your unique UUID.
 ### <span id="Use_the_BNLBox_on_Linux_machines"></span> Use the BNLBox on Linux machines
 
 The software
-**[cadaver<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](http://www.webdav.org/cadaver/)**
+**[cadaver](http://www.webdav.org/cadaver/)**
 has been installed on spar/acas machines at BNL, and lxplus machines at
 CERN. It is a command line webDAV client, with ftp-like commands. To
 save you from typing the username/password everytime, you can prepare a

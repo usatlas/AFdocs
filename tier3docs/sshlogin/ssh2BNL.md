@@ -47,14 +47,13 @@ complete analysis code you should take advantage of [the batch system](#Use_the_
 ### <span id="Connect_to_NX_servers_at_BNL"></span> Connection to NX servers at BNL
 
 If you want to use a graphical environment, you can use
-[NoMachine<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://www.nomachine.com/getting-started-with-nomachine)
+[NoMachine](https://www.nomachine.com/getting-started-with-nomachine)
 client to connect to thoese NX servers, `nx.sdcc.bnl.gov`, which allows
-you to save/restore sessions from anywhere anytime. Please visit [the
-NoMachine (NX) page at
-BNL<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://www.sdcc.bnl.gov/information/services/how-use-nx-sdcc)
+you to save/restore sessions from anywhere anytime. Please visit 
+[the NoMachine (NX) page at BNL](https://www.sdcc.bnl.gov/information/services/how-use-nx-sdcc)
 for details. Besides the connection through NoMachine client, you can
 also connect to the new NX servers on web browsers, using the URL:
-[https://nx.sdcc.bnl.gov<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://nx.sdcc.bnl.gov).
+[https://nx.sdcc.bnl.gov](https://nx.sdcc.bnl.gov).
 
 ### <span id="Connect_to_the_interactive_n_AN1"></span> Connect to the interactive nodes from NX
 
@@ -121,7 +120,7 @@ Once you are on the interactive nodes, you can simply run:
 Please be aware that the executable or library built on SLC7 machines
 cannot run on SLC6 machines because of the system glibc library
 difference. To use old SLC6 releases, you can use
-[singularity<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://sylabs.io/singularity/)
+[singularity](https://sylabs.io/singularity/)
 to compile your package(s) withinin SLC6 container. The command
 **setupATLAS -c slc6** could help set up such a container, you would get
 something like:
@@ -150,13 +149,13 @@ Then it would behave like that you work on a SLC6 machine.
 RACF uses the Condor batch submission system. Detailed information about
 using this system (submitting jobs, killing jobs, etc.) is described
 here:  
-[https://www.sdcc.bnl.gov/information/services/htcondor-sdcc<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://www.sdcc.bnl.gov/information/services/htcondor-sdcc).
-You can also get the [HTCondor Quick Start
-Guide<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://www.sdcc.bnl.gov/information/services/htcondor-quick-start-guide).
+[https://www.sdcc.bnl.gov/information/services/htcondor-sdcc](https://www.sdcc.bnl.gov/information/services/htcondor-sdcc).
+You can also get the 
+[HTCondor Quick Start Guide](https://www.sdcc.bnl.gov/information/htcondor-quick-start-guide).
 
 To see if you are on the list of authorized users to use the T3 batch
 system consult this list of users:  
-[https://www.sdcc.bnl.gov/experiments/usatlas/list-users-institutes<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://www.sdcc.bnl.gov/experiments/usatlas/list-users-institutes)  
+[https://www.sdcc.bnl.gov/experiments/usatlas/list-users-institutes](https://www.sdcc.bnl.gov/experiments/usatlas/list-users-institutes)  
 You can also find your group information using the interactive command:
 `whatgroup`.
 

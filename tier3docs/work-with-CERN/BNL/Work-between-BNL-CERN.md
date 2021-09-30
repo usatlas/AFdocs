@@ -139,5 +139,5 @@ To list all the sshfs mounted points, just run **pgrep -a -f sshfs**.
 For other computers outside of BNL such as your laptop, you can use the
 say way as that for CERN. You can find the instruction of sshfs
 installation on different OS at
-[https://linuxize.com/post/how-to-use-sshfs-to-mount-remote-directories-over-ssh/<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://linuxize.com/post/how-to-use-sshfs-to-mount-remote-directories-over-ssh/).
+[https://linuxize.com/post/how-to-use-sshfs-to-mount-remote-directories-over-ssh/](https://linuxize.com/post/how-to-use-sshfs-to-mount-remote-directories-over-ssh/).
 

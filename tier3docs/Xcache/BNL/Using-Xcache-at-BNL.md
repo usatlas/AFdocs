@@ -55,5 +55,5 @@ run **Xcache\_ls.py -h** to get the full usage
 
 However, for large file inputs on the grid, you are recommended to plan
 ahead and pre-stage them to BNL using [R2D2
-request<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://rucio-ui.cern.ch/r2d2/manage_quota)
+request](https://rucio-ui.cern.ch/r2d2/manage_quota)
 or rucio command.
