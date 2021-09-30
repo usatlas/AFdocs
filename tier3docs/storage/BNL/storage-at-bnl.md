@@ -2,13 +2,13 @@
 
 **Data Storage at BNL**
 
-|                |                                                                                                                                                                                                                                        |
-|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Home area      | 20GB per user under $HOME                                                                                                                                                                                                              |
-| Data area      | 500 GB per user under /atlasgpfs01/usatlas/data/$USERNAME                                                                                                                                                                              |
-| dCache area    | 5TB per user under /pnfs/usatlas.bnl.gov/users/$USERNAME, should be access via xrootd as explained <a href="/twiki/bin/view/AtlasComputing/SPARatBNL#Use_the_BNL_dCache_space" class="twikiCurrentTopicLink twikiAnchorLink">below</a> |
-| BNLBox         | 50GB space under [https://bnlbox.sdcc.bnl.gov/<img src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" height="12" />](https://bnlbox.sdcc.bnl.gov/), accessiblle from both mobile devices and computers              |
-| LOCALGROUPDISK | 15TB (default) on the grid at BNL. Please check <a href="/twiki/bin/view/AtlasComputing/SPARatBNL#LOCALGROUPDISK" class="twikiCurrentTopicLink twikiAnchorLink">below</a> for more details                                             |
+|                |                                                                                                                                        |
+|----------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| Home area      | 20GB per user under $HOME                                                                                                              |
+| Data area      | 500 GB per user under /atlasgpfs01/usatlas/data/$USERNAME                                                                              |
+| dCache area    | 5TB per user under /pnfs/usatlas.bnl.gov/users/$USERNAME, should be access via xrootd as explained [below](#Use_the_BNL_dCache_space)  |
+| BNLBox         | 50GB space under [https://bnlbox.sdcc.bnl.gov](https://bnlbox.sdcc.bnl.gov/), accessiblle from both mobile devices and computers       |
+| LOCALGROUPDISK | 15TB (default) on the grid at BNL. Please check [below](#LOCALGROUPDISK) for more details                                              |
 
 **Note**:
 
@@ -66,8 +66,8 @@ datasets to this system.
 In addition to Rucio (and DQ2Client), a convenient python script
 **/afs/usatlas/scripts/pnfs\_ls.py** is provided to generate clist file
 (list of physicsl file path) for files in given datasets on BNL dCache,
-including datasets both on BNL rses (such as
-**<a href="/twiki/bin/view/AtlasComputing/SPARatBNL#LOCALGROUPDISK" class="twikiCurrentTopicLink twikiAnchorLink">LOCALGROUPDISK</a>**
+including datasets both on BNL rses 
+(such as **[BNL-OSG2\_LOCALGROUPDISK](#LOCALGROUPDISK)**)
 mentioned above) and under BNL users dCache area.
 
 Please **click the following arrow** to see the full usage.
@@ -300,8 +300,7 @@ For example:
     [4.063GB/4.063GB][100%][==================================================][106.7MB/s]
 
 Please notice that xrootd access would require a valid grid proxy, and
-refer to
-<a href="/twiki/bin/view/AtlasComputing/SPARatBNL#Use_the_batch_system" class="twikiCurrentTopicLink twikiAnchorLink">batch system</a>
+refer to [the batch system](#Use_the_batch_system)
 on how to copy the grid proxy to batch machines.
 
 2\. **NFS.4.1** (only from T3 machines - they are not available from BNL

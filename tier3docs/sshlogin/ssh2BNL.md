@@ -8,8 +8,9 @@ You can find [the main SDCC page](https://www.sdcc.bnl.gov)
 
 At BNL, you need login to `ssh.sdcc.bnl.govv` first, then login to
 interactive machines acas0001, ..., acas0008, spar0101, ..., spar0108
-with command **ssh** or **"rterm -i"** without argument (please refer to
-<a href="/twiki/bin/view/AtlasComputing/SPARatBNL#Connect_to_the_interactive_n_AN1" class="twikiCurrentTopicLink twikiAnchorLink">the following section for the rterm usage help</a>.
+with command **ssh** or **"rterm -i"** without argument 
+(please refer to 
+[the following section for the rterm usage help](#Connect_to_the_interactive_n_AN1) ).
 You can add the following to file $HOME/.ssh/config on your laptop or
 local machine, so you can login acas\* and spar\* machine directly.
 
@@ -39,8 +40,7 @@ Please note that: the **gateway** was just changed to
 **ssh.sdcc.bnl.gov**.
 
 These nodes should be used for debugging and testing code. To run your
-complete analysis code you should take advantage of the
-<a href="/twiki/bin/view/AtlasComputing/SPARatBNL#Use_the_batch_system" class="twikiCurrentTopicLink twikiAnchorLink">batch system</a>.
+complete analysis code you should take advantage of [the batch system](#Use_the_batch_system).
 
 ### <span id="FileTransfer_with_BNL"></span> File transfer from/to BNL machines
 
@@ -195,9 +195,8 @@ is,
 
     lsetup "asetup AnalysiisBase,21.2.129" "rucio -w"
 
-which set up both the release env of
-<a href="/twiki/bin/view/AtlasComputing/AnalysisBase" class="twikiLink">AnalysisBase</a>,21.2.129
-and a rucio wrapper, which does not provide python API.
+which set up both the release env of AnalysisBase,21.2.129 and a rucio wrapper, 
+which does not provide python API.
 
 #### <span id="Use_Condor_within_EventLoop"></span> Use Condor within <span class="twikiNewLink">[EventLoop](/twiki/bin/edit/AtlasComputing/EventLoop?topicparent=AtlasComputing.SPARatBNL;nowysiwyg=1 "this topic does not yet exist; you can create it.")</span>
 
