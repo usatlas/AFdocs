@@ -32,7 +32,7 @@ last minute.
 <span id="acctsLess"></span>
 <span id="acctsMore">
 Applying BNL computing accounts is a multiple-step process. 
-[The steps are summarized at here](https://www.sdcc.bnl.gov/)<br>
+[The steps are summarized at here](https://www.sdcc.bnl.gov/information/getting-started/new-user-account)<br>
 <br>
 [Applying SLAC computing accounts](https://atlas.slac.stanford.edu/atlas-support-center)
 is a two-step process: becoming a SLAC laboratory user, and then obtain computing account(s).
