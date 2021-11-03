@@ -119,7 +119,7 @@ The UChicago analysis faciltiy has three filesystems that you should be aware of
 | Filesystem| 	Quota |	Path          | Backed up ?|  Notes                                                 |
 | ----------|---------| --------------|------------|--------------------------------------------------------|                                                  
 | $HOME     |	100GB   |	/home/$USER 	|Yes 	       | Solid-state filesystem, shared to all worker nodes     |
-| $WORK     |	10 TB   |	/work/$USER 	|No 	       | CephFS filesystem, shared to all worker nodes          |
+| $DATA     |	10 TB   |	/data/$USER 	|No 	       | CephFS filesystem, shared to all worker nodes          |
 | $SCRATCH  | 	n/a 	| /scratch 	    |No 	       | Ephemeral storage for workloads, local to worker nodes |
 
 
