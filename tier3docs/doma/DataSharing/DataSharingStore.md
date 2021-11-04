@@ -82,7 +82,7 @@ protocol. Note that in a root URL, there is usuall a double slash after the
 port number.
 
 1. Upload: <br>`xrdcp -f /tmp/myfile.dat root://sdf-dtn10.slac.stanford.edu:2094//share/random-string/myfile.dat`
-2. Download: <br>`xrdcp -f root://sdf-dtn10.slac.stanford.edu:2094//share/random-string/myfile.dat /tmp/myfile.dat
+2. Download: <br>`xrdcp -f root://sdf-dtn10.slac.stanford.edu:2094//share/random-string/myfile.dat /tmp/myfile.dat`
 3. Delete: <br>`xrdfs root://sdf-dtn10.slac.stanford.edu:2094 rm /share/random-string/myfile.dat /tmp/myfile.dat`
 4. You can also do `xrdcp -f root://cern.ch//SCRATCHDISK/myfile.dat root://sdf-dtn10.slac.stanford.edu:2094//share/random-string/myfile.dat /tmp/myfile.dat`
 
