@@ -21,8 +21,8 @@ In addition, you can also use ssh-tunnel to **eosatlas.cern.ch**:
 
 Then you can list files on EOS:
 
-    xrd eosatlas.cern.ch dirlist /eos/atlas/..
-    xrd localhost dirlist /eos/atlas/..   # if using ssh-tunnel
+    xrdfs eosatlas.cern.ch ls /eos/atlas/..
+    xrdfs localhost ls /eos/atlas/..   # if using ssh-tunnel
 
 To copy files from EOS:
 
