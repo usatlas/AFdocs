@@ -15,6 +15,26 @@ for the way of using ssh-tunnel below) by:
 Please be aware that in the above command the realm **CERN.CH** must be
 in **UPPERCASE**.
 
+As convience for the US ATLAS users, we have installed the eos-client and eos-fusex packages on the interactive nodes.
+
+After obtaining your CERN Kerberos ticket, you can access the ATLAS EOS instance.
+
+To list your files:
+
+   ls /eos/atlas/...
+
+To copy files from EOS:
+
+   cp /eos/atlas/YourDir/YourFilename.root .
+
+To copy files to your EOS area at CERN:
+
+  cp MyNewFile.xxx /eos/atlas/YourDir/MyNewFile.xxx
+
+You can create new directories in your EOS area at CERN:
+
+  mkdir /eos/atlas/YourDir/NewDirectory
+
 In addition, you can also use ssh-tunnel to **eosatlas.cern.ch**:
 
     ssh -NfL 1094:eosatlas:1094 lxplus.cern.ch
