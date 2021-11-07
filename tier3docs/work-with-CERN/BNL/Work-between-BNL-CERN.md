@@ -21,19 +21,19 @@ After obtaining your CERN Kerberos ticket, you can access the ATLAS EOS instance
 
 To list your files:
 
-   ls /eos/atlas/...
+    ls /eos/atlas/...
 
 To copy files from EOS:
 
-   cp /eos/atlas/YourDir/YourFilename.root .
+    cp /eos/atlas/YourDir/YourFilename.root .
 
 To copy files to your EOS area at CERN:
 
-  cp MyNewFile.xxx /eos/atlas/YourDir/MyNewFile.xxx
+    cp MyNewFile.xxx /eos/atlas/YourDir/MyNewFile.xxx
 
 You can create new directories in your EOS area at CERN:
 
-  mkdir /eos/atlas/YourDir/NewDirectory
+    mkdir /eos/atlas/YourDir/NewDirectory
 
 In addition, you can also use ssh-tunnel to **eosatlas.cern.ch**:
 
