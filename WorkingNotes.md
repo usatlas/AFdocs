@@ -16,7 +16,7 @@ readthedocs.io, only up to 2 levels are supported.
 After editing the docs, use the following steps to start a web server at http://127.0.0.1:8000.
 Then point your web browser to this local web server to check the changes you just made.
 
-1. `python3 -m pip install mkdocs`
+1. `python3 -m pip install mkdocs mkdocs-include-markdown-plugin`
 2. cd to the root directory of the github repo
 3. `mkdocs serve`
 

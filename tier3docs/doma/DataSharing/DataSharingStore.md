@@ -1,9 +1,9 @@
-# Data Sharing Store
+## Data Sharing Store at SLAC
 
 US ATLAS is experimenting a data sharing store service at SLAC AF. The goal is
 to enable easy data sharing with your ATLAS colleagues.
 
-## Features
+### Features
 
 This is an object store with the following features:
 
@@ -19,7 +19,7 @@ The object store is available at the following URLs.
 `https://sdf-dtn10.slac.stanford.edu:2094/share` (or) <br>
 `root://sdf-dtn10.slac.stanford.edu:2094//share` (double slash after :2094)
 
-## Privacy
+### Privacy
 
 Browsing/Listing of '/share' is disabled in order to provide a level of privacy
 that is suitable for sharing <b>`low sensitivity data`</b>. For example, if 
@@ -37,7 +37,7 @@ Administrators won't be able to help you since there is no records
 of ownership in the object store.
 The data will eventually be pured after expiration. 
 
-## Upload and Download
+### Upload and Download
 
 You will need an X509 proxy with ATLAS VOMS attibute to upload and delete. No 
 such requirement for downloading, though some tools will insist to have a X509 
@@ -51,7 +51,7 @@ command `uuidgen`, and write it down!
 There are three set of tools that can be used to upload/download/delete a file. 
 In addition, you can also use your web broswer to download.
 
-### Using curl to update/download/delete
+#### Using curl to update/download/delete
 
 curl is available everywhere. To use curl, follow these steps
 
@@ -61,7 +61,7 @@ location and CA directory location (/etc/grid-security/certicates) in your envir
 3. Download: <br>`$mycurl -L -X GET https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat`
 4. Delete: <br>`$mycurl -L -X DELETE https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat`
 
-### Use gfal2 tools to upload/download/delete
+#### Use gfal2 tools to upload/download/delete
 
 You may need to setup the ATLAS environment (run `localSetupRucioClients`) to have 
 the gfal2 tools in your PATH. 
@@ -74,7 +74,7 @@ the gfal2 tools in your PATH.
 Gfal2 tools work with both https and root protocols. In the last example, 
 the source and destination can use different protocols.
 
-### Use xrootd tools to upload/download/delete
+#### Use xrootd tools to upload/download/delete
 
 You may need to setup the ATLAS environment (run `localSetupRucioClients`) to have 
 the xrootd tools in your PATH. These tools will mostly work with the root 
@@ -88,7 +88,7 @@ port number.
 
 With additional setting, xrdcp also works with the https protocol.
 
-### Use a web broswer
+#### Use a web broswer
 
 You can use a web broswer to download file and list a directory (except the top 
 level, which is not browsable). To do that, just paste the https URL to your 

@@ -3,16 +3,16 @@ docs_dir: tier3docs
 site_dir: site
 extra_javascript:
 - scripts/readMoreOrLess.js
+plugins:
+  - include-markdown
 nav:
     - 'Getting Started':
         - 'Apply for AF Accounts, Login and Batch': README.md
         - 'Getting Help': GettingHelp.md
-    - 'Storage':
-        - 'Data Storage at BNL': storage/BNL/storage-at-bnl.md
-    - 'Xcache':
-        - 'Using Xcache at BNL': Xcache/BNL/Using-Xcache-at-BNL.md
-    - 'Work with CERN':
-        - 'Work between BNL and CERN': work-with-CERN/BNL/Work-between-BNL-CERN.md
+    - 'Data Store, Accessing and Sharing':
+        - 'Data Storage at BNL': doma/storage/BNL/storage-at-bnl.md
+        - 'Using Xcache at BNL': doma/Xcache/BNL/Using-Xcache-at-BNL.md
+        - 'Data Sharing': doma/DataSharing/README.md
     - 'Jupyter at Analysis Facilities':
         - 'Introduction': jupyter/JupyterAtTier3s.md
         - 'Jupyter at BNL': jupyter/BNLjupyter.md
@@ -30,4 +30,5 @@ nav:
     - 'Containers':
         - 'Using Singularity Containers': Containers/UsingSingularity/README.md
 theme: readthedocs
-
+#theme:
+#  name: 'rtd-dropdown'
