@@ -29,6 +29,6 @@ nav:
         - 'Tutorial of Analysis Examples on the Grid': Tutorial-2019Aug/Grid/README.md
     - 'Containers':
         - 'Using Singularity Containers': Containers/UsingSingularity/README.md
-theme: readthedocs
-#theme:
-#  name: 'rtd-dropdown'
+theme: 
+  name: readthedocs
+# more options: https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs
