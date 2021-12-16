@@ -28,7 +28,7 @@ storages.</span>
 <button onclick="readMoreOrLess('introLess', 'introMore', 'introBtn')" id="introBtn">More</button>
 
 ## Apply computer accounts at BNL, SLAC and/or UChicago
-The processes can take days as both BNL and SLAC are DOE national labs. Do NOT wait until the 
+The processes can take days at the 3 facilities, specially BNL and SLAC as both are DOE national labs. Do NOT wait until the 
 last minute.
 
 <span id="acctsLess"></span>
