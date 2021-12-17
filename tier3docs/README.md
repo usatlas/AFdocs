@@ -9,7 +9,7 @@
 
 <b>[Privacy Disclaimer](privacyDisclaimer)</b>
 
-Visit our [ATLAS Discourse Forum at CERN](https://atlas-talk.web.cern.ch/) (do not confuse with Discord 👾) and go to [US Tier3 User Support](https://atlas-talk.web.cern.ch/c/us-tier-3-user-support/11) for support and friendly discussion.
+Visit our [ATLAS Discourse Forum at BNL](https://atlas-talk.sdcc.bnl.gov/) (do not confuse with Discord 👾) for user support and friendly discussion.
 
 ## Introduction to the US ATLAS Shared Tier 3s
 US ATLAS hosts three shared Tier 3 at BNL, SLAC, and The University of Chicago (UChicago); also known as Analysis Facilities (AF). These
