@@ -5,9 +5,9 @@
    from which you ssh to lxplus machines, you might see the following 
    error message after ssh login to CERN lxplus machines.
 
-'''
+```
 /usr/bin/xauth:  timeout in locking authority file /afs/cern.ch/user/y/yesw/.Xauthority
-'''
+```
 
    And it is very annoying that you have to run "kinit" again after ssh login.
 
@@ -20,16 +20,46 @@
 ### How to set up python3 env from CVMFS?
    Run **showVersions python** after the ALRB setup (that is, running *setupATLAS*).
    It will show the available python versions on CVMFS.
-   Then you can pick up one suitable for you. Says, *3.8.8-x86_64-centos7*,
-   so you can run **lsetup "python 3.8.8-x86_64-centos7"** to set up that python3.
+   
+   Then you can pick up one suitable for you, says, *3.8.8-x86_64-centos7*.
+   So you can run **lsetup "python 3.8.8-x86_64-centos7"** to set up that python3.
 
-### Using python3 in Rucio setup
+### How to set up Rucio with python3?
+  On default, rucio uses python2. So how to set up the rucio env to use in python3?
+  
+  You can run the following:
+```
   export RUCIO_PYTHONBIN=python3
   lsetup rucio
+```
 
-### Transfer QR code from Google Authenticator to other devices
-  to other devices (such as computer/laptop)
+### How to transfer QR code from Google Authenticator to other devices?
+  There are many services requiring **MFA** (Multi-Factor Authentication). It would be more convenient to have multiple devices for MFA.
+  To run the MFA app and the service requiring MFA on the same computer, you can just copy and paste the passcode into the service (such as BNL NX login),
+  without checking your phone to get the passcode and input the passcode into the service.
+  
+  If you set up the MFA originally with Google Authenticator on your phone, 
+  and want to add other devices (including computers) into the MFA list (for convenience and backups), 
+  you need extract the secret code from Google Authenticator, then add the secret code into other devices in the following:
+  
+1. Export the QR codes from "Google Authenticator" app
 
-### ScreenLock required for Duo Push
+2. Read QR codes with QR code reader
 
+3. Save the captured QR codes in a text file. Save each QR code on a new line. (The captured QR codes look like otpauth-migration://offline?data=...)
+
+4. Call [this script on github](https://github.com/scito/extract_otp_secret_keys):
+```
+python extract_otp_secret_keys.py -p example_export.txt
+```
+
+### Problem in the Duo Mobile app
+  If you get the following error message with **Duo Mobile** app:
+```
+Authentication Restricted
+Your administrator requires your phone to have a passcode
+```
+which may indicate that the screen lock is not enabled on your phone. You can find the details [here](https://help.duo.com/s/article/3159?language=en_US).
+
+So you can simply enable the screen lock on your phone to resolve the above problem.
 
