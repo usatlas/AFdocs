@@ -1,4 +1,4 @@
-# FAQs/Tips for Tier3
+# FAQs and Tips for Tier3 users
 
 ### No valid kerebos after lxplus login.
    If you have already had a valid CERN kerberos token on the local computer
