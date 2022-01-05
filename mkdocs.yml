@@ -29,6 +29,8 @@ nav:
         - 'Tutorial of Analysis Examples on the Grid': Tutorial-2019Aug/Grid/README.md
     - 'Containers':
         - 'Using Singularity Containers': Containers/UsingSingularity/README.md
+    - 'FAQs/Tips':
+        - 'FAQs and some tips': faq-tips.md
 theme: 
   name: readthedocs
 # more options: https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs
