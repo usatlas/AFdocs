@@ -15,7 +15,7 @@ Need help? Have questions or comments? visit our [US-ATLAS Discourse Forum ](htt
 US ATLAS hosts three shared Tier 3 at BNL, SLAC, and The University of Chicago (UChicago); also known as Analysis Facilities (AF). These
 facilities are available to all US ATLAS physicists and computer scientists. 
 <span id="introLess">...</span><span id="introMore">They are
-orgniazed and managed to support US ATLAS users' need on computing resources, including login,
+organized and managed to support US ATLAS users' need on computing resources, including login,
 run interactive and batch jobs, access ATLAS data, store private data, etc.
 <br><br>
 These facilities also support tools specific for users analysis, including ATLAS/CERN
