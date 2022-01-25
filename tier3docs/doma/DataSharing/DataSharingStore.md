@@ -57,9 +57,9 @@ curl is available everywhere. To use curl, follow these steps
 
 1. Create an alias to type less: <br>`alias mycurl="curl -E /tmp/x509up_u$(id -u) --cacert /tmp/x509up_u$(id -u) --capath /etc/grid-security/certicates"`. <br>You may need to adjust the proxy 
 location and CA directory location (/etc/grid-security/certicates) in your environment.
-2. Upload: <br>`$mycurl -L -X PUT --upload-file /tmp/mydata.file https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat`
-3. Download: <br>`$mycurl -L -X GET https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat`
-4. Delete: <br>`$mycurl -L -X DELETE https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat`
+2. Upload: <br>`mycurl -L -X PUT --upload-file /tmp/mydata.file https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat`
+3. Download: <br>`mycurl -L -X GET https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat`
+4. Delete: <br>`mycurl -L -X DELETE https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat`
 
 #### Use gfal2 tools to upload/download/delete
 
