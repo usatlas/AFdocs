@@ -17,6 +17,25 @@
    - or add **"GSSAPIDelegateCredentials yes"** into ~/.ssh/config on 
      the local computer.
 
+### Sharing the same kerebos token among the home clusters
+
+   By default, the kerberos token is cached locally on each individual machine, and you have to run kinit each time on a different node.
+   If those machines share the same home directory, you can define the envvar **KRB5CCNAME** to **$HOME/krb5cc_`id -u`** prior to running **kinit**.
+   So you would have a valid kerberos token on other machines too.
+    
+   For example, once you have obtained a valid CERN kerberos on one BNL spar machine, 
+   you can also access CERN EOS on other spar machines without running "kinit" again.
+    
+### Sharing one envvar KRB5CCNAME among multiple kerebos principals
+   The envvar **KRB5CCNAME** points to a file, it could only hold one kerebos prinpical. 
+
+   However, you can define it to point to a directory instead, then it could be used for multiple kerebos pricipals.
+   That is:
+```
+  export KRB5CCNAME=DIR:$HOME/.krb5cc
+```
+   Please note the prefix **"DIR:"** before the directory name. And you need create the directory **$HOME/.krb5cc** in advance.
+
 ### How to set up python3 env from CVMFS?
    Run **showVersions python** after the ALRB setup (that is, running *setupATLAS*).
    It will show the available python versions on CVMFS.
