@@ -17,11 +17,14 @@ in **UPPERCASE**.
 
 As convience for the US ATLAS users, we have installed the eos-client and eos-fusex packages on the interactive nodes.
 
-After obtaining your CERN Kerberos ticket, you can access the ATLAS EOS instance.
+After obtaining your CERN Kerberos ticket, you can access both the **ATLAS EOS** and **USER EOS** instances.
 
 To list your files:
 
     ls /eos/atlas/...
+    ls /eos/user/y/yesw/...
+
+Please replace *"y/yesw"* with your own username at CERN.
 
 To copy files from EOS:
 
