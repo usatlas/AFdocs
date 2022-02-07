@@ -1,6 +1,6 @@
 # FAQs and Tips for Tier3 users
 
-### No valid kerebos after lxplus login.
+### No valid kerberos after lxplus login.
    If you have already had a valid CERN kerberos token on the local computer
    from which you ssh to lxplus machines, you might see the following 
    error message after ssh login to CERN lxplus machines.
@@ -17,7 +17,7 @@
    - or add **"GSSAPIDelegateCredentials yes"** into ~/.ssh/config on 
      the local computer.
 
-### Sharing the same kerebos token among the home clusters
+### Sharing the same kerberos token among the home clusters
 
    By default, the kerberos token is cached locally on each individual machine, and you have to run kinit each time on a different node.
    If those machines share the same home directory, you can define the envvar **KRB5CCNAME** to **$HOME/krb5cc_`id -u`** prior to running **kinit**.
@@ -26,10 +26,10 @@
    For example, once you have obtained a valid CERN kerberos on one BNL spar machine, 
    you can also access CERN EOS on other spar machines without running "kinit" again.
     
-### Sharing one envvar KRB5CCNAME among multiple kerebos principals
-   The envvar **KRB5CCNAME** points to a file, it could only hold one kerebos prinpical. 
+### Sharing one envvar KRB5CCNAME among multiple kerberos principals
+   The envvar **KRB5CCNAME** points to a file, it could only hold one kerberos prinpical. 
 
-   However, you can define it to point to a directory instead, then it could be used for multiple kerebos pricipals.
+   However, you can define it to point to a directory instead, then it could be used for multiple kerberos pricipals.
    That is:
 ```
   export KRB5CCNAME=DIR:$HOME/.krb5cc
