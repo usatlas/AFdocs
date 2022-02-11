@@ -23,5 +23,6 @@ SLAC is building a new computing facility - SLAC Shared Scientific Data Facility
 
 What will happen to your GPFS or AFS spaces? The ATLAS GPFS spaces will be accessible at SDF. It just won't be your home directory. For AFS spaces, you will need to manually copy your files in AFS to SDF since SDF does not support AFS.
 
+
 <span style="color:blue">Note: Except the JupyterLab, the existing computing accounts and environment for ATLAS will continue until the hardware retires, which is a year or two from now (September
 2020).</span>

@@ -34,7 +34,6 @@ This documentation includes the following:
      * [Containers](Containers): detailed information on container-based data processing and how to use them at AFs
      * [FAQ](faus-tips): answers to frequently asked questions
 
-
 If you would like some additional help using AFs, you can reach ATLAS/AF staff on our Mattermost page [US-sharedtier3](https://mattermost.web.cern.ch/us-shared-tier3/channels/town-square).
 
 <!--
