@@ -7,8 +7,10 @@ plugins:
   - include-markdown
 nav:
     - 'Getting Started':
-        - 'Apply for AF Accounts, Login and Batch': README.md
+        - 'Introduction': README.md
         - 'Getting Help': GettingHelp.md
+    - 'User Onboarding':
+        - 'Applying for User Accounts': UserOnboarding/README.md
     - 'Data Store, Accessing and Sharing':
         - 'Data Storage at BNL': doma/storage/BNL/storage-at-bnl.md
         - 'Using Xcache at BNL': doma/Xcache/BNL/Using-Xcache-at-BNL.md
