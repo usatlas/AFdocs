@@ -11,8 +11,8 @@ nav:
         - 'Getting Help': GettingHelp.md
     - 'User Onboarding':
         - 'About the Facilities': UserOnboarding/facility.md
-	- 'Points of Contact': UserOnboarding/contact.md
-	- 'Applying for User Accounts': UserOnboarding/account.md
+        - 'Points of Contact': UserOnboarding/contact.md
+        - 'Applying for User Accounts': UserOnboarding/account.md
     - 'Data Store, Accessing and Sharing':
         - 'Data Storage at BNL': doma/storage/BNL/storage-at-bnl.md
         - 'Using Xcache at BNL': doma/Xcache/BNL/Using-Xcache-at-BNL.md
