@@ -36,9 +36,9 @@
 
 </div>
 
-# <span id="Introduction"></span> Introduction
+## <span id="Introduction"></span> Introduction
 
-## <span id="What_are_Containers"></span> What are Containers?
+### <span id="What_are_Containers"></span> What are Containers?
 
 **Containers** are an operating system virtualization technology used to
 package applications and their dependencies and run them in isolated
@@ -47,7 +47,7 @@ thus provide a **lightweight** method of packaging and deploying
 applications in a standardized way across many different types of
 infrastructure.
 
-## <span id="What_is_Singularity"></span> What is Singularity?
+### <span id="What_is_Singularity"></span> What is Singularity?
 
 **[Singularity](https://sylabs.io/)**
 is a container platform. It allows you to create and run containers that
@@ -61,9 +61,9 @@ You can build a container using Singularity on your laptop, and then run
 it on the grid. You can also make use of many already existing container
 images from different sources.
 
-# <span id="Installation_of_Singularity"></span> Installation of Singularity
+## <span id="Installation_of_Singularity"></span> Installation of Singularity
 
-## <span id="Singularity_on_Linux_OS"></span> Singularity on Linux OS
+### <span id="Singularity_on_Linux_OS"></span> Singularity on Linux OS
 
 Most Linux Distros should come with the Singularity. For example,
 Singularity is already available on BNL/SLAC machines.
@@ -85,7 +85,7 @@ visit [the gitlab source
 site](https://github.com/sylabs/singularity/releases)
 to install from the source.
 
-## <span id="Singularity_on_Mac_OS"></span> Singularity on Mac OS
+### <span id="Singularity_on_Mac_OS"></span> Singularity on Mac OS
 
 Since Mac OS does not use Linux kernel, the Singularity for Linux does
 not work here. However, a new Singularity Desktop for Mac OS has been
@@ -106,7 +106,7 @@ Run **singularity -h** to find the full available commands and options.
 In comparison with the Singularity-3.5 on Linux, the Singularity on Mac
 OS misses many commands such as **inspect** and **instance**.
 
-## <span id="Singularity_on_Windows_10"></span> Singularity on Windows 10
+### <span id="Singularity_on_Windows_10"></span> Singularity on Windows 10
 
 In order to use Singularity on Windows, you need install a Linux distro
 first. It could be achieved through [Windows Subsystem for Linux
@@ -115,7 +115,7 @@ without involving a Virtual Machine. **WSL** is a new Windows 10 feature
 that enables you to run native Linux command-line tools directly on
 Windows. So it is not available for other old Windows such as Windows 7.
 
-### <span id="Installation_of_Windows_Subsyste"></span> Installation of Windows Subsystem for Linux (WSL)
+#### <span id="Installation_of_Windows_Subsyste"></span> Installation of Windows Subsystem for Linux (WSL)
 
 Please refer [the WSL installation guide for
 Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
@@ -142,7 +142,7 @@ to **create a new user account** together with its password to
 [initialize the new Linux
 distro](https://docs.microsoft.com/en-us/windows/wsl/initialize-distro).
 
-### <span id="Running_Windows_10_build_18917_o"></span> Running Windows 10 build 18917 or higher
+#### <span id="Running_Windows_10_build_18917_o"></span> Running Windows 10 build 18917 or higher
 
 In order to install WSL2, ensure that you are running Windows 10 **build
 18917** or higher. You can check your Windows version by opening
@@ -179,7 +179,7 @@ settings**. In the setting, pick your Insider settings to **Fast** or
 Windows 10 Insider Preview
 builds](https://insider.windows.com/en-us/getting-started/#install).
 
-### <span id="Installation_of_WSL2"></span> Installation of WSL2
+#### <span id="Installation_of_WSL2"></span> Installation of WSL2
 
 You can find [the detailed instruction on installing WSL2 on
 Windows 10](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install).
@@ -213,7 +213,7 @@ Now you can verify which WSL version used the Linux distro.
 >       NAME            STATE           VERSION
 >     * Ubuntu-18.04    Stopped         2
 
-### <span id="Use_the_Installed_Linux_on_Windo"></span> Use the Installed Linux on Windows 10
+#### <span id="Use_the_Installed_Linux_on_Windo"></span> Use the Installed Linux on Windows 10
 
 Open **PowerShell under a regular user** and run **wsl**:
 
@@ -243,14 +243,14 @@ If the Linux is already running, you can run "bash" to enter the Linux:
 After all terminals associated with the Linux have been closed, the
 running Linux will stop then.
 
-### <span id="Singularity_Installation_on_WSL2"></span> Singularity Installation on WSL2
+#### <span id="Singularity_Installation_on_WSL2"></span> Singularity Installation on WSL2
 
 Start the Linux distro on Windows, then install Singularity as the same
 ways as on the Linux OS.
 
-# <span id="Using_Singularity_AN1"></span> Using Singularity
+## <span id="Using_Singularity_AN1"></span> Using Singularity
 
-## <span id="Singularity_Usage_Help"></span> Singularity Usage Help
+### <span id="Singularity_Usage_Help"></span> Singularity Usage Help
 
 You can find the Singularity usage by running **singularity -h**
 
@@ -370,7 +370,7 @@ For additional help or support, please visit
 refer to [the User
 Guide](https://sylabs.io/guides/3.5/user-guide/quick_start.html#).
 
-## <span id="Cache_Folders"></span> Cache Folders
+### <span id="Cache_Folders"></span> Cache Folders
 
 To make downloading images for build and pull faster and less redundant,
 Singularity uses a caching strategy. By default, Singularity will create
@@ -386,7 +386,7 @@ which could take quite much space, depending the image size.
 You can set the envvar **SINGULARITY\_CACHEDIR** to use other directory
 than the default cache directory **$HOME/.singularity/cache**.
 
-## <span id="Binding_Paths_and_Mounts"></span> Binding Paths and Mounts
+### <span id="Binding_Paths_and_Mounts"></span> Binding Paths and Mounts
 
 On default, Singularity will map the following directories on your host
 system to directories within the container:
@@ -409,12 +409,12 @@ as:
 You can also defined envvar **SINGULARITY\_BINDPATH** (such as `export
 SINGULARITY_BINDPATH="/data:/mnt"`) to bind paths.
 
-## <span id="Examples"></span> Examples
+### <span id="Examples"></span> Examples
 
 You need define the envvar **SINGULARITY\_CACHEDIR** to a directory to
 have enough space to accommodate the Singularity cache.
 
-### <span id="Some_Fun_Exercise_Examples"></span> Some Fun Exercise Examples
+#### <span id="Some_Fun_Exercise_Examples"></span> Some Fun Exercise Examples
 
 There are some fun exercises to play with the singularity command. One
 simple example is "Hello World", which takes the container image from
@@ -512,7 +512,7 @@ the latest in the Ubuntu container on the library:
 >     VERSION_CODENAME=cosmic
 >     UBUNTU_CODENAME=cosmic
 
-### <span id="Using_Containers_for_LaTeX"></span> Using Containers for LaTeX
+#### <span id="Using_Containers_for_LaTeX"></span> Using Containers for LaTeX
 
 If you need LaTeX and do not have LaTeX installed locally, you can use
 LaTeX container images.
@@ -564,7 +564,7 @@ more packages installed.
 
 Then you can process your tex file inside the container.
 
-### <span id="Using_Containers_for_Machine_Lea"></span> Using Containers for Machine Learning
+#### <span id="Using_Containers_for_Machine_Lea"></span> Using Containers for Machine Learning
 
 There are many containers available for machine learning.
 
@@ -604,7 +604,7 @@ the above container is also available on the docker hub via
 the container from the docker hub and convert into a singularity image
 file (sif).
 
-## <span id="Using_Containers_through_ARLB"></span> Using Containers through ARLB
+### <span id="Using_Containers_through_ARLB"></span> Using Containers through ARLB
 
 Prior to use ATLAS\_LOCAL\_ROOT\_BASE (ALRB), you need install CVMFS
 first. Please refer to [the CernVM-FS Client Quick
@@ -698,9 +698,9 @@ with tag **+noalrb** after the mage location/keyword:
 >               
 >     Singularity>
 
-# <span id="Explore_Container_Images"></span> Explore Container Images
+## <span id="Explore_Container_Images"></span> Explore Container Images
 
-## <span id="Containers_on_CVMFS"></span> Containers on CVMFS
+### <span id="Containers_on_CVMFS"></span> Containers on CVMFS
 
 There are a few singularity containers accessible by keyword **slc5**,
 **slc6**, **centos6** and **centos7** through command `setupATLAS -c`.
@@ -769,7 +769,7 @@ Let us take an example of release AthAnalysis,2.2.115 under
 That is, start the wanted container, then source
 /home/atlas/release\_setup.sh.
 
-## <span id="Containers_on_Docker_Hub"></span> Containers on Docker Hub
+### <span id="Containers_on_Docker_Hub"></span> Containers on Docker Hub
 
 The Docker hub hosts the largest container images. You can input keyword
 to [search on the
@@ -783,7 +783,7 @@ shown below:
 Click on the found container, it will provides the pull command
 instruction and sometimes also a brief description.
 
-## <span id="Containers_on_Singularity_Hub_an"></span> Containers on Singularity Hub and Library
+### <span id="Containers_on_Singularity_Hub_an"></span> Containers on Singularity Hub and Library
 
 There are many container images on the Singularity Hub and Library.
 
@@ -793,7 +793,7 @@ There are many container images on the Singularity Hub and Library.
     supported in Singularity version 2. Put keyword in the search field
     on the very top to search for your wanted container.
 
-# <span id="Contained_based_Jobs_on_the_Grid"></span> Contained-based Jobs on the Grid
+## <span id="Contained_based_Jobs_on_the_Grid"></span> Contained-based Jobs on the Grid
 
 There are more resources available on the grid, you can run
 container-based jobs on the grid. Both prun and pathena provide an
