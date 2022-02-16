@@ -31,6 +31,10 @@ nav:
         - 'Using Singularity Containers': Containers/UsingSingularity/README.md
     - 'FAQs/Tips':
         - 'FAQs and some tips': faqs-tips/faq-tips.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 theme: 
   name: readthedocs
 # more options: https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs
