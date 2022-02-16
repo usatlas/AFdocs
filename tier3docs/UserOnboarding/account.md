@@ -1,7 +1,10 @@
-## Apply computer accounts at BNL and/or SLAC
+# Apply for computer accounts at BNL and/or SLAC
 The processes can take days as both BNL and SLAC are DOE national labs. Do NOT wait until the
 last minute.
 
+## BNL Guest Registration and Computing User
+
+<!--
 <span id="acctsLess"></span>
 <span id="acctsMore">
 Applying BNL computing accounts is a multiple-step process.
@@ -10,10 +13,14 @@ Applying BNL computing accounts is a multiple-step process.
 [Applying SLAC computing accounts](https://atlas.slac.stanford.edu/atlas-support-center)
 is a two-step process: becoming a SLAC laboratory user, and then obtain computing account(s).
 </span>
-
 <button onclick="readMoreOrLess('acctsLess', 'acctsMore', 'acctsBtn')" id="acctsBtn">More</button>
+-->
 
-### <a name="sdf"></a><span style="color:orange">SDF: New SLAC computing environment and change to SLAC computing account</span>
+## UChicago Computing User
+
+## SLAC Computing User
+
+<a name="sdf"></a><span style="color:orange">SDF: New SLAC computing environment and change to SLAC computing account</span>
 
 SLAC is building a new computing facility - SLAC Shared Scientific Data Facility (SDF). On the technical side, it is an HPC environment built upon SLURM, Lustre and InfiniBand. Future US ATLAS resource at SLAC will be invested at SDF. At this stage, we would like to ask the JupyterLab users at the SLAC AF to prepare yourselves to login and switch to use JupyterLab at SDF ASAP by following the instruction below.
 
