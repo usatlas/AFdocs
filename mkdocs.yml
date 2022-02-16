@@ -1,4 +1,4 @@
-site_name: US ATLAS Analysis Facilities
+site_name: US ATLAS Analysis Facilities Test Site
 docs_dir: tier3docs
 site_dir: site
 extra_javascript:
