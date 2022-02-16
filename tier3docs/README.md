@@ -7,13 +7,11 @@
 
 # Public Documentation for US ATLAS Analysis Facilities
 
+>
+>   Need help? Have questions or comments?, Visit our [US-ATLAS Discourse Forum ](https://atlas-talk.sdcc.bnl.gov/) (do not confuse with Discord 👾) 
+>    for user support, contact, friendly discussion, newsletter and more!. We'd love to help you have a smooth experience while working at our analysis facilities!
+
 <b>[Privacy Disclaimer](privacyDisclaimer)</b>
-
->
->Need help? Have questions or comments?, Visit our [US-ATLAS Discourse Forum ](https://atlas-talk.sdcc.bnl.gov/) (do not confuse with Discord 👾)
-for user support, contact, friendly discussion, newsletter and more!. We'd love to help you have a smooth experience while working at our analysis facilities!
->
-
 
 ## Introduction to the US ATLAS Shared Tier 3s
 US ATLAS hosts three shared Tier 3 at BNL, SLAC, and The University of Chicago (UChicago); also known as Analysis Facilities (AF). These
