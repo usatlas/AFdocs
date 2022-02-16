@@ -4,7 +4,7 @@ last minute.
 
 ## BNL Guest Registration and Computing User
 
-<!--
+
 <span id="acctsLess"></span>
 <span id="acctsMore">
 Applying BNL computing accounts is a multiple-step process.
@@ -14,7 +14,7 @@ Applying BNL computing accounts is a multiple-step process.
 is a two-step process: becoming a SLAC laboratory user, and then obtain computing account(s).
 </span>
 <button onclick="readMoreOrLess('acctsLess', 'acctsMore', 'acctsBtn')" id="acctsBtn">More</button>
--->
+
 
 ## UChicago Computing User
 
