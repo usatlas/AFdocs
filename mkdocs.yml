@@ -1,4 +1,4 @@
-site_name: [[TEST SPACE]] US ATLAS Analysis Facilities 
+site_name: !! TEST SPACE !! US ATLAS Analysis Facilities 
 docs_dir: tier3docs
 site_dir: site
 extra_javascript:
@@ -22,7 +22,6 @@ nav:
         - 'Jupyter at BNL': jupyter/BNLjupyter.md
         - 'Jupyter at SLAC': jupyter/SLACjupyter.md
         - 'Extend ATLAS JupyterLab at SLAC': jupyter/SLACJupyterExtraFuncs.md
-    - 'Using Jupyter to analyze xAODs':
         - 'How to get information about an xAOD in python': jupyter/examples/xAODcheck.md
         - 'Read xAODs using PyROOT': https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
         - 'Info about uproot and xAOD': jupyter/examples/convert_specific_variables.py.txt
