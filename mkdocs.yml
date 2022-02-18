@@ -1,21 +1,21 @@
 site_name: US ATLAS Analysis Facilities Test Site
 docs_dir: tier3docs
 site_dir: site
-extra_javascript:
-- scripts/readMoreOrLess.js
+markdown_extensions:
+  - attr_list
+  - md_in_html
 plugins:
   - include-markdown
+  - search
 nav:
     - 'Getting Started':
         - 'Introduction': README.md
         - 'Getting Help': GettingHelp.md
     - 'User Onboarding':
         - 'About the Facilities': UserOnboarding/facility.md
-        - 'Points of Contact': UserOnboarding/contact.md
         - 'Applying for User Accounts': UserOnboarding/account.md
     - 'Data Store, Accessing and Sharing':
         - 'Data Storage at BNL': doma/storage/BNL/storage-at-bnl.md
-        - 'Using Xcache at BNL': doma/Xcache/BNL/Using-Xcache-at-BNL.md
         - 'Data Sharing': doma/DataSharing/README.md
     - 'Jupyter at Analysis Facilities':
         - 'Introduction': jupyter/JupyterAtTier3s.md
@@ -36,4 +36,6 @@ nav:
         - 'FAQs and some tips': faqs-tips/faq-tips.md
 theme: 
   name: readthedocs
+  html_theme_options: "html_logo: images/lgbt_atlas.png"
+
 # more options: https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs

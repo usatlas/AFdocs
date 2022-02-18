@@ -1,25 +1,45 @@
-# Apply for computer accounts at BNL and/or SLAC
-The processes can take days as both BNL and SLAC are DOE national labs. Do NOT wait until the
-last minute.
+# Apply for computer accounts at AFs
 
-## BNL Guest Registration and Computing User
+All three facilities currently require users to register for a computing account, and the process is different for each.
+This section will provide a brief description of the process of getting signed up to use the facilities.
 
+<!--
+# Table of Contents
 
-<span id="acctsLess"></span>
-<span id="acctsMore">
-Applying BNL computing accounts is a multiple-step process.
-[The steps are summarized at here](https://www.sdcc.bnl.gov/#accounts)<br>
-<br>
-[Applying SLAC computing accounts](https://atlas.slac.stanford.edu/atlas-support-center)
-is a two-step process: becoming a SLAC laboratory user, and then obtain computing account(s).
-</span>
-<button onclick="readMoreOrLess('acctsLess', 'acctsMore', 'acctsBtn')" id="acctsBtn">More</button>
+  - [Brookhaven National Lab](#BNL)
+  - [University of Chicago](#UChicago)
+  - [SLAC National Accelerator Laboratory](#SLAC)
+-->
 
+## <span id="BNL"></span> Brookhaven National Lab
 
-## UChicago Computing User
+The main site for new user sign-up is here: [BNL New User Account](https://www.sdcc.bnl.gov/information/getting-started/new-user-account)
 
-## SLAC Computing User
+Applying for a BNL computing account is a multi-step process. You will need to go through the following steps:
 
+- Register for a Guest Number (if you don't already have a valid Life or Guest Number)
+    - Same for as if you were going to visit BNL campus
+    - Most likely will need to upload photos of identification
+    - Non-citizens will need to upload your CV
+- Complete CyberSecurity training and Computer Use agreement
+- Sign up for a New User Account
+    - Complete directly on the BNL New User Account site above
+
+## <span id="UChicago"></span> University of Chicago
+
+## <span id="SLAC"></span> SLAC National Accelerator Laboratory
+
+Information about ATLAS at SLAC and their registration process can be found here: [SLAC ATLAS Support Center](https://atlas.slac.stanford.edu/atlas-support-center)
+
+Similar to BNL, the process for signing up for access to SLAC AF is a two-step process:
+
+- User Registration
+    - Same as if you were to visit SLAC campus
+- Computer Account
+    - Fill out a Computer Account Request Form
+    - Send to Charles Young (SLAC's designated ATLAS host)
+
+<!--
 <a name="sdf"></a><span style="color:orange">SDF: New SLAC computing environment and change to SLAC computing account</span>
 
 SLAC is building a new computing facility - SLAC Shared Scientific Data Facility (SDF). On the technical side, it is an HPC environment built upon SLURM, Lustre and InfiniBand. Future US ATLAS resource at SLAC will be invested at SDF. At this stage, we would like to ask the JupyterLab users at the SLAC AF to prepare yourselves to login and switch to use JupyterLab at SDF ASAP by following the instruction below.
@@ -33,3 +53,4 @@ What will happen to your GPFS or AFS spaces? The ATLAS GPFS spaces will be acces
 
 <span style="color:blue">Note: Except the JupyterLab, the existing computing accounts and environment for ATLAS will continue until the hardware retires, which is a year or two from now (September
 2020).</span>
+-->
