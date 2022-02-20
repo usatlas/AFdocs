@@ -17,7 +17,7 @@ Otherwise, for AF-specific issues (ie user accounts, login problems, etc.) pleas
 BNL: [rt-racf@bnl.gov](mailto:rt-racf@bnl.gov); Monitoring: [SDCC Tier 3 Monitoring for BNL](https://monitoring.sdcc.bnl.gov/grafana/d/000000006/tier-3?orgId=1)
 
 
-UChicago:
+UChicago: [atlas-us-chicago-tier3-admins@cern.ch](mailto:atlas-us-chicago-tier3-admins@cern.ch)
 
 
 SLAC: [unix-admin@slac.stanford.edu](mailto:unix-admin@slac.stanford.edu)
