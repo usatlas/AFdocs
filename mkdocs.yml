@@ -5,6 +5,8 @@ extra_javascript:
 - scripts/readMoreOrLess.js
 plugins:
   - include-markdown
+  - search:
+      min_search_length: 2
 nav:
     - 'Getting Started':
         - 'Apply for AF Accounts, Login and Batch': README.md
