@@ -9,7 +9,7 @@ plugins:
   - search
 nav:
     - 'Getting Started':
-        - 'Introduction': README.md
+        - 'Introduction': intro.md
         - 'Getting Help': GettingHelp.md
     - 'User Onboarding':
         - 'About the Facilities': UserOnboarding/facility.md
