@@ -23,12 +23,12 @@ storage.</span>
 
 <div style="float:right; margin-left:10px;">
 <a href="https://atlas-talk.sdcc.bnl.gov/">
-<img src="../images/discourse.png" style="width:80px; height:80px" alt="Discourse Logo" />
+<img src="images/discourse.png" style="width:80px; height:80px" alt="Discourse Logo" />
 </a>
 <p>AF Discourse</p>
 </div>
 
->   Need help? Have questions or comments?, Visit our <img src="../images/discourse.png" style="width:13px; height:13px" alt="Discourse Logo" /> [ATLAS AF Discourse Forum ](https://atlas-talk.sdcc.bnl.gov/) (do not confuse with Discord 👾) 
+>   Need help? Have questions or comments?, Visit our <img src="images/discourse.png" style="width:13px; height:13px" alt="Discourse Logo" /> [ATLAS AF Discourse Forum ](https://atlas-talk.sdcc.bnl.gov/) (do not confuse with Discord 👾) 
 >    for user support, contact, friendly discussion, newsletter and more! We'd love to help you have a smooth experience while working at our analysis facilities!
 
 <b>[Privacy Disclaimer](privacyDisclaimer)</b>
