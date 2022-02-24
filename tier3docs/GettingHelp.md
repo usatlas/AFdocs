@@ -1,9 +1,23 @@
-Please use the following e-mail addresses to get help. The division below is not strict. Questions will be routed to appropriate staff members.
 
-1. BNL:
-    + Use bnl-shared-tier3-l@lists.bnl.gov for ATLAS specific questions and requestions, including ATLAS software related issues.
-    + Use rt-racf@bnl.gov for all other questions
-    + Monitoring: https://monitoring.sdcc.bnl.gov/grafana/d/000000006/tier-3?orgId=1
-2. SLAC:
-    + Use atlas-us-slac-acf@cern.ch for ATLAS specific questions and requestions, including ATLAS software related issues.
-    + Use unix-admin@slac.stanford.edu for all other questions
+#Need Help?
+
+<div style="float:left; margin-right:10px;">
+<a href="https://atlas-talk.sdcc.bnl.gov/">
+<img src="../images/discourse.png" style="width:80px; height:80px" alt="Discourse Logo" />
+</a>
+<p>AF Discourse</p>
+</div>
+
+>For help with ATLAS software, using the facilities, or are generally stuck, come to the [ATLAS AF Discourse](https://atlas-talk.sdcc.bnl.gov/) page. There, we have members from the physics support team that would be more than happy to assist you however we can! 
+
+
+<br></br>
+Otherwise, for AF-specific issues (ie user accounts, login problems, etc.) please use the emails below:
+
+BNL: [rt-racf@bnl.gov](mailto:rt-racf@bnl.gov); Monitoring: [SDCC Tier 3 Monitoring for BNL](https://monitoring.sdcc.bnl.gov/grafana/d/000000006/tier-3?orgId=1)
+
+
+UChicago: [atlas-us-chicago-tier3-admins@cern.ch](mailto:atlas-us-chicago-tier3-admins@cern.ch)
+
+
+SLAC: [unix-admin@slac.stanford.edu](mailto:unix-admin@slac.stanford.edu)
