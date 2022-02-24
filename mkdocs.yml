@@ -6,7 +6,8 @@ markdown_extensions:
   - md_in_html
 plugins:
   - include-markdown
-  - search
+  - search:
+      min_search_length: 2
 nav:
     - 'Getting Started':
         - 'Introduction': README.md
@@ -39,6 +40,10 @@ nav:
         - 'Using Singularity Containers': Containers/UsingSingularity/README.md
     - 'FAQs/Tips':
         - 'FAQs and some tips': faqs-tips/faq-tips.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 theme: 
   name: readthedocs
   html_theme_options: "html_logo: images/lgbt_atlas.png"
