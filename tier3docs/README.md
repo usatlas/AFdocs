@@ -8,7 +8,7 @@
 # Public Documentation for US ATLAS Analysis Facilities
 
 
-US ATLAS hosts three shared Tier 3 computing spaces at BNL, SLAC, and UChicage, also known as Analysis Facilities (AF). These
+US ATLAS hosts three shared Tier 3 computing spaces at BNL, SLAC, and UChicago, also known as Analysis Facilities (AF). These
 three faclities are available to all US ATLAS physicists and computer scientists. They are
 organized and managed to support US ATLAS users' need for computing resources including login,
 run interactive and batch jobs, access ATLAS data, store private data, etc.

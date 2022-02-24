@@ -1,6 +1,7 @@
 # Apply for computer accounts at AFs
 
 All three facilities currently require users to register for a computing account, and the process is different for each.
+You are free to sign up for an account at each facility, but please contact your advisor if you are unsure of which site to use. 
 This section will provide a brief description of the process of getting signed up to use the facilities.
 
 <!--
