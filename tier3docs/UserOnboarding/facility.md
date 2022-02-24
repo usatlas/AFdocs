@@ -2,7 +2,7 @@
 
 ### Brookhaven National Lab (BNL)
 
-The Shared Physics Analysis Resources (SPAR) @ BNL is a project to provide computing resources (CPU, disk space, analysis support) for a "shared" T3 at BNL. These computing resources will be available for use and testing to all US ATLAS members (not explicitly BNL users). The system uses the already existing [Scientific Data and Computing Center (SDCC)](https://www.sdcc.bnl.gov/information/about-sdcc). It is supported with the help of the US ATLAS Technical Support Group.
+The Shared Physics Analysis Resources (SPAR) @ BNL is a project to provide computing resources (CPU, disk space, analysis support) for a "shared" T3 at BNL. These computing resources are available for use and testing to all US ATLAS members (not explicitly BNL users). The system uses the already existing [Scientific Data and Computing Center (SDCC)](https://www.sdcc.bnl.gov/information/about-sdcc). It is supported with the help of the [US ATLAS Technical Support Group](https://po.usatlas.bnl.gov/programoffice/ps.php).
  
 
 ### University of Chicago (UChicago)
