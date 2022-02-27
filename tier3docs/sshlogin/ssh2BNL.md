@@ -6,7 +6,7 @@ You can find [the main SDCC page](https://www.sdcc.bnl.gov)
 
 ### <span id="Connect_to_the_interactive_nodes"></span> ssh Connection to the interactive nodes
 
-At BNL, you need login to `ssh.sdcc.bnl.govv` first, then login to
+At BNL, you need login to `ssh.sdcc.bnl.gov` first, then login to
 interactive machines acas0001, ..., acas0008, spar0101, ..., spar0108
 with command **ssh** or **"rterm -i"** without argument 
 (please refer to 
