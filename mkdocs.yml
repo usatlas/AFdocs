@@ -42,8 +42,8 @@ nav:
         - 'FAQs and some tips': faqs-tips/faq-tips.md
 markdown_extensions:
   - markdown.extensions.admonition
-#  - pymdownx.details
-#  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.superfences
 theme: 
   name: readthedocs
   html_theme_options: "html_logo: images/lgbt_atlas.png"
