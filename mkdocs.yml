@@ -40,8 +40,8 @@ nav:
         - 'Using Singularity Containers': Containers/UsingSingularity/README.md
     - 'FAQs/Tips':
         - 'FAQs and some tips': faqs-tips/faq-tips.md
-#markdown_extensions:
-#  - admonition
+markdown_extensions:
+  - markdown.extensions.admonition
 #  - pymdownx.details
 #  - pymdownx.superfences
 theme: 
