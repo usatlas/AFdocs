@@ -7,6 +7,9 @@ The Shared Physics Analysis Resources (SPAR) @ BNL is a project to provide compu
 
 ### University of Chicago (UChicago)
 
+The ATLAS Analysis Facility at UChicago offers users a mix of traditional batch computing alongside of forward-looking technologies like Kubernetes, Jupyter and Dask. This af is funded by NSF and co-located with MWT2-UC.
+
+
 ### Stanford Linear Accelerator Center (SLAC)
 
 The SLAC Analysis Facility is open to and welcome all US ATLAS physicists and their ATLAS collaborators. The AF provides backup-ed user home directories, dedicated private data space, and several Rucio endpoints for user to bring official ATLAS data products to site for local processing. A Xcache is also available for users to quickly scan though official ATLAS data product without moving data to SLAC. SLAC AF uses SLURM to manage batch systems. US ATLAS has deploy dedicated CPU resource and GPU resource at SLAC AF. AF users also have opportunistic access to a very large pool of GPUs via SLURM.
