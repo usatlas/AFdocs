@@ -8,6 +8,7 @@ The Shared Physics Analysis Resources (SPAR) @ BNL is a project to provide compu
 ### University of Chicago (UChicago)
 
 The ATLAS Analysis Facility at UChicago offers users a mix of traditional batch computing alongside of forward-looking technologies like Kubernetes, Jupyter and Dask. This af is funded by NSF and co-located with MWT2-UC to complement the two DOE funded analyss facilities at SLAC and BNL. 
+
 This facility offers 3 modes of access: Traditional Tier-3, Jupyter Notebook and Coffea. It provides up to 1PB of local disk storage, ~1000 CPU cores and close integration with MWT2, each user starts with 5TB$DATA (which can be raised up to 10TB) and 100GB$HOME.
 UChicago is available to all US-ATLAS collaborators with secure authentication through federated login via CIlogon including cern login.
 
