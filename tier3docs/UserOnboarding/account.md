@@ -16,7 +16,11 @@ This section will provide a brief description of the process of getting signed u
 
 Brookhaven National Lab has two types of accounts. 1) lightweight Federated Identity account for accessing Jupyter instance at BNL SDCC and 2) full SDCC account which includes access to Jupyter as well as ssh access to analysis facility.
 
-The Federated Identity account is quicker to get and users connect BNL AF resources only through  the Jupyter Hub instance. Further details are found 
+#### Lightweight Federated Identity Account
+
+The Federated Identity account is quicker to get and users connect BNL AF resources only through  the Jupyter Hub instance. Further details are found here: [BNL Federated ID Account](account/BNLFederatedID.md)
+
+#### Full SDCC Account
 
 The main site for new user sign-up for a full SDCC account is here: [BNL New User Account](https://www.sdcc.bnl.gov/information/getting-started/new-user-account)
 
