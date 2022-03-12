@@ -14,7 +14,11 @@ This section will provide a brief description of the process of getting signed u
 
 ## <span id="BNL"></span> Brookhaven National Lab
 
-The main site for new user sign-up is here: [BNL New User Account](https://www.sdcc.bnl.gov/information/getting-started/new-user-account)
+Brookhaven National Lab has two types of accounts. 1) lightweight Federated Identity account for accessing Jupyter instance at BNL SDCC and 2) full SDCC account which includes access to Jupyter as well as ssh access to analysis facility.
+
+The Federated Identity account is quicker to get and users connect BNL AF resources only through  the Jupyter Hub instance. Further details are found 
+
+The main site for new user sign-up for a full SDCC account is here: [BNL New User Account](https://www.sdcc.bnl.gov/information/getting-started/new-user-account)
 
 Applying for a BNL computing account is a multi-step process. You will need to go through the following steps:
 
