@@ -23,7 +23,9 @@ You will first come to this authorization page:
 
 ![InitialSigninPage.png](InitialSigninPage.png?fileId=25551496#mimetype=image%2Fpng&hasPreview=true)
 
-If you already have an SDCC account, you can use it to log in by entering username/password on the left side of this page. To user your CERN login, select the CERN button on the right. This will send you to a CERN login page (note: multifactor authentication will be required at that point).
+If you already have an SDCC account, you can use it to log in by entering username/password on the left side of this page (NB: if not already done, you will need to enable MFA for your SDCC account by following the procedure described here: https://www.sdcc.bnl.gov/information/unified-multi-factor-authentication). 
+
+To use your CERN login, select the CERN button on the right. This will send you to a CERN login page (NB: MFA will be required at that point).
 
 Once you have successfully logged in, you will be directed to an account registration page. On this page, all fields are required, in particular the ORCID as shown below.
 
