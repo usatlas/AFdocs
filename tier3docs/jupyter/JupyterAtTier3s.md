@@ -8,7 +8,7 @@ One of the services available at the US ATLAS analysis facilities is the Jupyter
 
 Use the following links to access the Jupyter environment at the AFs, or access site specific documents on Jupyter.
 
-* [BNL JupyterLab](https://jupyter.sdcc.bnl.gov) and [documents](BNLjupyter.md).
+* [BNL JupyterLab](https://atlas-jupyter.sdcc.bnl.gov) <https://atlas-jupyter.sdcc.bnl.gov/> and [documents](BNLjupyter.md).
 * [SLAC JupyterLab](https://sdf.slac.stanford.edu/public/doc/#/interactive-compute?id=jupyter) and [documents](SLACjupyter.md).
    * SLAC is migrating to a new computing facility SDF. As a result, we recently made some change to the SLAC 
 JupyterLab portal. If you haven't read and prepare yourself for "SLAC ID", please refer to
