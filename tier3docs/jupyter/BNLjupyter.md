@@ -26,6 +26,11 @@ The Jupyter environment provides several kernels and extensions. This includes:
 
 ## Getting help
 
+>   Need help? Have questions or comments?, Visit our <img src="images/discourse.png" style="width:13px; height:13px" alt="Discourse Logo" /> [ATLAS AF Discourse Forum ](https://atlas-talk.sdcc.bnl.gov/) (do not confuse with Discord 👾) 
+>    for user support, contact, friendly discussion, newsletter and more! We'd love to help you have a smooth experience while working at our analysis facilities!
+
+<!---
 Please use the following e-mail addresses to get help. The division below is not strict. Questions will be routed to appropriate staff members.
 1. Use bnl-shared-tier3-l@lists.bnl.gov for ATLAS specific questions and requestions, including ATLAS software related issues.
 2. Use rt-racf@bnl.gov for all other questions
+-->
