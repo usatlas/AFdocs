@@ -5,7 +5,7 @@
 + [Kernels and extensions in the ATLAS Jupyter environment](#kernels-and-extensions-in-the-atlas-jupyter-environment)
 + [Getting help](#getting-help)
 
-Before accessing [the BNL JupyterHub](https://atlas-jupyter.sdcc.bnl.gov) <https://atlas-jupyter.sdcc.bnl.gov/>, please [apply for a BNL computing account](/UserOnboarding/account/BNLFederatedID.md). BNL's Scientific Data Computing Center (SDCC) provides JupyterHub environment on their HTC (high throughput computing) cluster and HPC (high performance computing) clusters. Choose one of them to login.
+Before accessing [the BNL JupyterHub](https://atlas-jupyter.sdcc.bnl.gov) <https://atlas-jupyter.sdcc.bnl.gov/>, please [apply for a BNL computing account](UserOnboarding/account/BNLFederatedID.md). BNL's Scientific Data Computing Center (SDCC) provides JupyterHub environment on their HTC (high throughput computing) cluster and HPC (high performance computing) clusters. Choose one of them to login.
 
 ## The JupyterHub resources on HTC cluster and HPC clusters
 
