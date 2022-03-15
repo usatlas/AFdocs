@@ -8,9 +8,12 @@ As a prerequisite, you will need to obtain an [ORCID](https://orcid.org) number.
 
 BNL requires multi-factor authentication (MFA) to access these accounts. Currently Federated accounts from CERN or SLAC are accepted. 
 
+If you have an existing SDCC account, you will need to enable MFA for your SDCC account by following the procedure described here: <https://www.sdcc.bnl.gov/information/unified-multi-factor-authentication>
+
 You will need to make certain that your CERN account is set up for MFA. See this link for further details: <https://security.web.cern.ch/recommendations/en/2FA.shtml> 
 
 SLAC also has a multi-factor authentication option. You will need to enroll in SLAC DUO. Instructions on setting up Two Step Authentication @ SLAC can be here: <https://www-internal.slac.stanford.edu/twostep/> 
+
 
 
 It will typically take less than one business day to get a light-weight BNL Federated ID account.
@@ -23,7 +26,7 @@ You will first come to this authorization page:
 
 ![InitialSigninPage.png](InitialSigninPage.png?fileId=25551496#mimetype=image%2Fpng&hasPreview=true)
 
-If you already have an SDCC account, you can use it to log in by entering username/password on the left side of this page (NB: if not already done, you will need to enable MFA for your SDCC account by following the procedure described here: [https://www.sdcc.bnl.gov/information/unified-multi-factor-authentication](Link to BNL MFA Documenation). 
+If you already have an SDCC account, you can use it to log in by entering username/password on the left side of this page.
 
 To use your CERN login, select the CERN button on the right. This will send you to a CERN login page (NB: MFA will be required at that point).
 
