@@ -16,7 +16,7 @@ SLAC also has a multi-factor authentication option. You will need to enroll in S
 
 
 
-It will typically take less than one business day to get a light-weight BNL Federated ID account.
+It will typically take one to two business days to get a light-weight BNL Federated ID account.
 
 ### Apply for account 
 
