@@ -1,26 +1,33 @@
-site_name: US ATLAS Analysis Facilities 
+site_name: US ATLAS Analysis Facilities
 docs_dir: tier3docs
 site_dir: site
-extra_javascript:
-- scripts/readMoreOrLess.js
+markdown_extensions:
+  - attr_list
+  - md_in_html
 plugins:
   - include-markdown
   - search:
       min_search_length: 2
 nav:
     - 'Getting Started':
-        - 'Apply for AF Accounts, Login and Batch': README.md
+        - 'Introduction': README.md
         - 'Getting Help': GettingHelp.md
+    - 'User Onboarding':
+        - 'About the Facilities': UserOnboarding/facility.md
+        - 'Applying for User Accounts': UserOnboarding/account.md
+    - 'Quickstart Guides':
+        - 'BNL': sshlogin/ssh2BNL.md
+        - 'UChicago': sshlogin/ssh2UChicago.md
+        - 'SLAC': sshlogin/ssh2SLAC.md
     - 'Data Store, Accessing and Sharing':
         - 'Data Storage at BNL': doma/storage/BNL/storage-at-bnl.md
-        - 'Using Xcache at BNL': doma/Xcache/BNL/Using-Xcache-at-BNL.md
         - 'Data Sharing': doma/DataSharing/README.md
     - 'Jupyter at Analysis Facilities':
         - 'Introduction': jupyter/JupyterAtTier3s.md
         - 'Jupyter at BNL': jupyter/BNLjupyter.md
+        - 'Jupyter at UChicago with Coffea': jupyter/JupyterUChicago.md
         - 'Jupyter at SLAC': jupyter/SLACjupyter.md
-        - 'Extend ATLAS JupyerLab at SLAC': jupyter/SLACJupyterExtraFuncs.md
-    - 'Using Jupyter to analyze xAODs':
+        - 'Extend ATLAS JupyterLab at SLAC': jupyter/SLACJupyterExtraFuncs.md
         - 'How to get information about an xAOD in python': jupyter/examples/xAODcheck.md
         - 'Read xAODs using PyROOT': https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
         - 'Info about uproot and xAOD': jupyter/examples/convert_specific_variables.py.txt
@@ -34,9 +41,11 @@ nav:
     - 'FAQs/Tips':
         - 'FAQs and some tips': faqs-tips/faq-tips.md
 markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
+  - markdown.extensions.admonition
+#  - markdown.extensions.pymdownx.details      not available in readthedocs   
+#  - markdown.extensions.pymdownx.superfences  not available in readthedocs
 theme: 
   name: readthedocs
+  html_theme_options: "html_logo: images/lgbt_atlas.png"
+
 # more options: https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs

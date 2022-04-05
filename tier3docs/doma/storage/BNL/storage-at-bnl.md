@@ -1,6 +1,22 @@
+
 # <span id="Data_Storage"></span> Data Storage at BNL
 
-**Data Storage at BNL**
+# Table of Contents
+
+  - [Storage Limits](#Limits)
+  - [LOCALGROUPDISK](#LOCALGROUPDISK)
+  - [Dataset Replication to LOCALGROUPDISK](#Dataset_replication_to_LOCALGROU)
+  - [Use the BNL dCache Space](#Use_the_BNL_dCache_space)
+    - [Access to the datasets on BNL dCache](#Access_to_the_datasets_on_BNL_dC)
+    - [Download datasets to your pNFS area](#Download_datasets_to_your_pNFS_a)
+    - [Access your data in your pNFS space](#Access_your_data_in_your_pNFS_sp)
+  - [Use the BNLBox](#Use_the_BNLBox)
+    - [Use the BNLBox on Web Browsers](#Use_the_BNLBox_on_Web_Browsers)
+    - [Use the BNLBox on Linux machines](#Use_the_BNLBox_on_Linux_machines)
+    - [Use the BNLBox on Mobile Devices](#Use_the_BNLBox_on_Mobile_Devices)
+
+
+## <span id="Limits"></span> Storage Limits
 
 |                |                                                                                                                                        |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------|
@@ -36,7 +52,7 @@ have a **default quota of 15TB**, if you could not find your name there,
 please check if you have selected **/atlas/usatlas** in 
 [the VO groups/roles](https://lcg-voms2.cern.ch:8443/voms/atlas/user/home.action).
 
-### <span id="Dataset_replication_to_LOCALGROU"></span> Dataset replication to LOCALGROUPDISK
+### <span id="Dataset_replication_to_LOCALGROU"></span> Dataset Replication to LOCALGROUPDISK
 
 You can replicate datasets to the RSE **BNL-OSG2\_LOCALGROUPDISK** in
 the 2 following ways:

@@ -1,0 +1,49 @@
+#!/usr/bin/python3
+
+#
+# Useful debugging info when useing dask with SLURM jobs
+#
+#import logging
+#logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
+
+#
+# A example of using threads on local host
+#
+#from dask.distributed import Client, progress
+#client = Client(processes=False, threads_per_worker=4,
+#                n_workers=1, memory_limit='4GB')
+
+#
+# A example of using SLURM jobs on the farm
+#
+from dask_jobqueue import SLURMCluster
+cluster = SLURMCluster(
+    queue='shared',
+    project="myproj",
+    cores=1,
+    memory="4 GB",
+    python="/usr/bin/python3",
+    job_extra=['--account=shared', '--partition=shared']
+)
+cluster.scale(jobs=4)  # ask for 4 jobs
+
+from dask.distributed import Client
+client = Client(cluster)
+
+#
+# Print dask client info
+#
+client
+
+import dask.array as da
+x = da.random.random((10000, 10000), chunks=(1000, 1000))
+y = da.random.random((10000, 10000), chunks=(1000, 1000))
+
+z = da.arcsin(x).dot(da.arccos(y))
+
+z.compute()
+print(z)
+
+#import numpy as np
+#zz = np.asarray(z)
+#print(zz)
