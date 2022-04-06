@@ -42,10 +42,9 @@ The website containing sign-up information is here: [UChicago AF Website](https:
 The process is as follows:
 
 - Account Creation
-  - Multiple ways to sign up
-  - Should use CERN email/info for quicker turnaround
-- Upload public SSH key
-  - Necessary for access
+    - Multiple ways to sign up
+    - Should use CERN email/info for quicker turnaround
+- Upload public SSH key <b>(Necessary for access)</b>
 
 ## <span id="SLAC"></span> SLAC National Accelerator Laboratory
 
