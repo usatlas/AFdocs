@@ -1,13 +1,7 @@
-# Data sharing mechanisms at the US AFs.
+# Data sharing 
 
-US AFs are experimenting the following data sharing methods. Once they are
-matured, they will be deployed at all US AFs.
-
-## Table of contents
-+ [Use the Xcache servers at BNL](#Use_the_Xcache_servers)
-+ [Xcache at UChicago](#xcache_uchicago)
-+ [Work between BNL and CERN](#work-between-bnl-and-cern)
-+ [Data sharing store at SLAC](#data-sharing-store-at-slac)
+US-ATLAS Analysis Facilities are experimenting the following data sharing methods. Once they are
+matured, they will be deployed at all US-ATLAS AFs.
 
 {%
     include-markdown "./Using-Xcache-at-BNL.md"
@@ -22,5 +16,10 @@ matured, they will be deployed at all US AFs.
 %}
 
 {%
+    include-markdown "./work-between-uchicago-cern.md"
+%}
+
+{%
     include-markdown "./DataSharingStore.md"
 %}
+
