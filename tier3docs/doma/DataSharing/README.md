@@ -7,6 +7,7 @@ matured, they will be deployed at all US AFs.
 + [Use the Xcache servers at BNL](#Use_the_Xcache_servers)
 + [Xcache at UChicago](#xcache_uchicago)
 + [Work between BNL and CERN](#work-between-bnl-and-cern)
++ [Work between UChicago and CERN](#work-between-uchicago-and-cern)
 + [Data sharing store at SLAC](#data-sharing-store-at-slac)
 
 {%
