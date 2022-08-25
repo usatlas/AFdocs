@@ -25,8 +25,8 @@ To create a directory at /eos/user/d/dschrute/ :
     
 To copy files from /eos/user/d/dschrute/: 
 
-     xrdcp root://eosuser.cern.ch//eos/user/d/dschrute/file.txt . 
-     # use `xrdcp -r` if you need to copy a directory
+    xrdcp root://eosuser.cern.ch//eos/user/d/dschrute/file.txt . 
+    # use `xrdcp -r` if you need to copy a directory
     
 
 
