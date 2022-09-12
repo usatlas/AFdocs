@@ -173,14 +173,15 @@ Submitting job(s).
 
 #### - Important points to consider when using the Analysis Facility System
 
-| Title           | 	                 Important!                 |	                     Tip                   |
-| ----------------| --------------------------------------------- | ------------------------------------------ | 
 
+| Title           | 	                 Important!                 |	                     Tip                   |
+|-----------------|-----------------------------------------------|--------------------------------------------|                                     
 | $HOME quota     |	Your quota at $HOME is 100GB, be careful not  | - you can use du -sh to know the actual    |      
 |                 | to exceed this quota because some issues may  |   size of your current directory           |
 |                 | arise, for example not being able to login    | - Check the table displayed at the start of|
 |                 | next time into your session.                  |   your session which indicates the usage of|
 |                 |                                               |   your /home and /data directories.        |
+
 
 
 ## Using Docker / Singularity containers (Advanced)
