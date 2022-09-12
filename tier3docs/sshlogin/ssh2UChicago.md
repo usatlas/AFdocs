@@ -170,6 +170,18 @@ $ condor_submit myjob.sub
 Submitting job(s).
 1 job(s) submitted to cluster 17.
 ```
+
+### Important points to consider when using the Analysis Facility System
+| Title           | 	                 Important!                 |	                     Tip                   |
+| ----------      | --------------------------------------------- | ------------------------------------------ | 
+
+| $HOME quota     |	Your quota at $HOME is 100GB, be careful not  | - you can use du -sh to know the actual    |      
+|                 | to exceed this quota because some issues may  |   size of your current directory           |
+|                 | arise, for example not being able to login    | - Check the table displayed at the start of|
+|                 | next time into your session.                  |   your session which indicates the usage of|
+|                 |                                               |   your /home and /data directories.        |
+
+
 ## Using Docker / Singularity containers (Advanced)
 
 Some users may want to bring their own container-based workloads to the Analysis Facility. We support both Docker-based jobs as well as Singularity-based jobs. Additionally, the CVMFS repository unpacked.cern.ch is mounted on all nodes.
