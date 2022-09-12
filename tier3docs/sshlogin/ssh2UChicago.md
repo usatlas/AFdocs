@@ -171,9 +171,10 @@ Submitting job(s).
 1 job(s) submitted to cluster 17.
 ```
 
-### Important points to consider when using the Analysis Facility System
+#### - Important points to consider when using the Analysis Facility System
+
 | Title           | 	                 Important!                 |	                     Tip                   |
-| ----------      | --------------------------------------------- | ------------------------------------------ | 
+| ----------------| --------------------------------------------- | ------------------------------------------ | 
 
 | $HOME quota     |	Your quota at $HOME is 100GB, be careful not  | - you can use du -sh to know the actual    |      
 |                 | to exceed this quota because some issues may  |   size of your current directory           |
