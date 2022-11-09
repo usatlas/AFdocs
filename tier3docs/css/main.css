@@ -19,6 +19,19 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.myimages { 
+    width: 100px;
+}
+img[src*="#center"] { 
+    display: block; 
+    margin: auto; 
+    align: center;
+}
+img[alt=imgtocontrol] {
+    width:100px;
+    border: none;
+    background: none;
+  }
 /*
 h1 {
     font-size: 3em;

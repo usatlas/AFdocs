@@ -11,9 +11,8 @@ If you aren't familiar with any of these tools, please click on the links above 
 ## Access
 
    Please use [https://coffea.af.uchicago.edu](https://coffea.af.uchicago.edu) as an access point to the Coffea-Casa Analysis Facility @ UChicago.
-
-   ![Access to Coffea-casa Analysis Facility @ UChicago](../images/coffea.af.uchicago.edu_hub_login.png)
-
+         
+   <p align="center"> <img src="/../images/coffea.af.uchicago.edu_hub_login.png" alt="hola"></p>
 ## ATLAS AuthZ Authentication Instance
 
 Currently Coffea-Casa Analysis Facility @ UChicago can support any member of ATLAS.
@@ -22,7 +21,6 @@ Sign in with your ATLAS CERN credential:
 
    ![ATLAS Authz authentification to Coffea-casa Analysis Facility @ UChicago](../images/atlas-auth.web.cern.ch_login.png)
 
-   ![Approval required for CMS Authz authentification to Coffea-casa Analysis Facility @ UChicago](../images/coffea-casa-authz-approval.png)
 
 ## Docker Image Selection
 
@@ -49,6 +47,7 @@ As soon as you will start your computations, you will notice that available reso
 There are three ways by which you can open a new tab within coffea-casa. Two are located within the **File** menu at the very top of the JupyterLab interface: *New* and *New Launcher.*
 
    ![The File menu of the coffea-casa JupyterLab interface.](../images/coffea-casa-newtab.png)
+   <img src="/../images/coffea-casa-newtab.png" width="400" />
 
 The *New* dropdown menu allows you to open the console or a file of a specified format directly. The *New Launcher* option creates a new tab with buttons that permit you to launch a console or a new file, exactly like the interface you are shown when you first open coffea-casa.
 

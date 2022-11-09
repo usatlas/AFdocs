@@ -6,6 +6,8 @@ markdown_extensions:
   - md_in_html
 plugins:
   - include-markdown
+  #- jekyll-image-size
+  #- include-kramdown*/
   - search:
       min_search_length: 2
 nav:
@@ -25,7 +27,8 @@ nav:
     - 'Jupyter at Analysis Facilities':
         - 'Introduction': jupyter/JupyterAtTier3s.md
         - 'Jupyter at BNL': jupyter/BNLjupyter.md
-        - 'Jupyter at UChicago with Coffea': jupyter/JupyterUChicago.md
+        - 'Jupyter at UChicago with Coffea': jupyter/JupyterUChicago.md 
+        - 'JupyterLab at UChicago': jupyter/JupyterLabUChicago.md
         - 'Jupyter at SLAC': jupyter/SLACjupyter.md
         - 'Extend ATLAS JupyterLab at SLAC': jupyter/SLACJupyterExtraFuncs.md
         - 'How to get information about an xAOD in python': jupyter/examples/xAODcheck.md
