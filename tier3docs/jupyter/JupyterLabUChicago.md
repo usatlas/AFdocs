@@ -45,5 +45,3 @@ code
 Please use the following e-mail addresses to get help. The division below is not strict. Questions will be routed to appropriate staff members.
 1. Use atlas-us-UChicago-acf@cern.ch for ATLAS specific questions and requestions, including ATLAS software related issues.
 2. Use unix-admin@UChicago.stanford.edu for all other questions
-
-{% include links.md %}

@@ -12,7 +12,7 @@ If you aren't familiar with any of these tools, please click on the links above 
 
    Please use [https://coffea.af.uchicago.edu](https://coffea.af.uchicago.edu) as an access point to the Coffea-Casa Analysis Facility @ UChicago.
          
-   <p align="center"> <img src="/../images/coffea.af.uchicago.edu_hub_login.png" alt="hola"></p>
+   <p align="center"> <img src="/../images/coffea.af.uchicago.edu_hub_login.png"></p>
 ## ATLAS AuthZ Authentication Instance
 
 Currently Coffea-Casa Analysis Facility @ UChicago can support any member of ATLAS.
@@ -46,8 +46,7 @@ As soon as you will start your computations, you will notice that available reso
 
 There are three ways by which you can open a new tab within coffea-casa. Two are located within the **File** menu at the very top of the JupyterLab interface: *New* and *New Launcher.*
 
-   ![The File menu of the coffea-casa JupyterLab interface.](../images/coffea-casa-newtab.png)
-   <img src="/../images/coffea-casa-newtab.png" width="400" />
+   ![The File menu of the coffea-casa JupyterLab interface](../images/coffea-casa-newtab.png)
 
 The *New* dropdown menu allows you to open the console or a file of a specified format directly. The *New Launcher* option creates a new tab with buttons that permit you to launch a console or a new file, exactly like the interface you are shown when you first open coffea-casa.
 
@@ -56,8 +55,7 @@ The final way is specific to the **File Browser** tab of the sidebar.
    ![The File Browser tab of the coffea-casa JupyterLab interface, showcasing the New Launcher button.](../images/coffea-casa-newlauncher.png)
 
 This behaves exactly like the *New Launcher* option above.
-
-    Regardless of the method you use to open a new file, the file will be saved to the current directory of your **File Browser.**
+Regardless of the method you use to open a new file, the file will be saved to the current directory of your **File Browser.**
 
 ## Using Git
 

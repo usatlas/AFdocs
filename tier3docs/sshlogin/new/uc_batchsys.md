@@ -1,37 +1,23 @@
-## Logging in to the UChicago Analysis Facility
-
-First you will need to sign up on the [Analysis Facility website](https://af.uchicago.edu)
-
-Please use your institutional or CERN identity (lxplus username) when signing up, as this will make the approval process smoother.
-
-As part of signing up you will need to upload an SSH Public Key.
-
-If you are not sure if you have generated an SSH Public Key before, try the following command (Mac/Linux) on your laptop to print the content of the file that contains the SSH Public Key:
-
-```
-cat ~/.ssh/id_rsa.pub
-```
-
-If the file exists, you should be able to copy the contents of this file to your profile on the AF website. **`Important!: Do not copy the contents of a file that does not end in .pub. You must only upload the public (.pub) part of the key.`**
-
-
-
-If you do not have a public key (the file doesn't exist), you can generate one via the following command (Mac/Linux):
-
-```
-ssh-keygen -t rsa
-```
-
-Upload the resulting public key (ending in .pub) to your profile.
-
-Once you have uploaded a key, it will take a little bit of time to process your profile and add your account to the system. After 10-15 minutes, you ought to be able to login via SSH:
-```
-ssh <username>@login.af.uchicago.edu
-```
-If it does not work, please double check that you have been approved, have a public key uploaded and have waited at least 15 minutes. If you still have an issue, feel free to reach out to us for help.
 ## Submitting to the Analyis Facility
 
-The UChicago Analysis Facility uses HTCondor for batch workloads. You will need to define an executable script and a "submit" file that describes your job. A simple job that loads the ATLAS environment looks something like this:
+The UChicago Analysis Facility uses HTCondor for batch workloads. Before submmiting your jobs to the batch system, there are a few things that you have to consider to perform your analysis in the most efficient way and enhance the use of the available resources. 
+
+### Short-Jobs and Long-Jobs
+
+Before submitting jobs you should have an idea about how long the job will take to finish (not the exact time but an approximate).
+In `HTCondor` we added a a feature called `shortqueue` with dedicated workers that will ONLY service jobs that run for less than **4 hours**.
+To make use of the shortqueue you just have to add the following configuration parameter to your job submit file.
+
+```bash
++queue="short"
+```
+
+If your job is longer than 4 hours, just exclude this configuration parameter from your submit file and your jobs will be sent to the `long-queue`.
+
+☆ﾟ.* Important: Using this -shortqueue- for shortjobswhen possible is essential for the use of the available resources, specially to let the long queue available for long jobs. *. ﾟ☆.
+
+## How to submit jobs
+ You will need to define an executable script and a "submit" file that describes your job. A simple job that loads the ATLAS environment looks something like this:
 
 Job script, called myjob.sh:
 

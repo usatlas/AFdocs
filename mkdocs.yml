@@ -19,7 +19,7 @@ nav:
         - 'Applying for User Accounts': UserOnboarding/account.md
     - 'Quickstart Guides':
         - 'BNL': sshlogin/ssh2BNL.md
-        - 'UChicago': sshlogin/ssh2UChicago.md
+        - 'UChicago': sshlogin/README.md
         - 'SLAC': sshlogin/ssh2SLAC.md
     - 'Data Store, Accessing and Sharing':
         - 'Data Storage at BNL': doma/storage/BNL/storage-at-bnl.md
