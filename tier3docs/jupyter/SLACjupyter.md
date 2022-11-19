@@ -102,7 +102,7 @@ srun -J jupyter --nodes=1 <other_options> /bin/sh the_above_script
 --cpus-per-task=N (number of CPU cores)
 --mem=XXXX (memory in MB)
 --time=XXXX (wall time in minutes, default is 30 minutes)
---gres='gpu:a100:1' (request a A100 GPU)
+--gres='gpu:a100:1' (request a A100 GPU, or 'gpu:1' for any kind of GPU)
 --account='shared' (or use account 'usatlas')
 ```
 A word about Slurm `account`: SLAC has a large pool of GPUs, including 80x A100 GPUs and a few hundreds older 
@@ -118,7 +118,7 @@ http://localhost:8888/?token=ec4d404fe69d2ff760d611c0509a9e8ac770c7f46ac32860
 ```
 Note the port number above is `8888`. Sometimes it is not `8888`.
 
-4\. Setup a SSH tunnel between your desktop and the batch node
+4\. Setup a SSH tunnel between your desktop and the batch node to access Jupyter
 ```
 ssh -L 8888:localhost:8888 -J <your_username>@sdf-login.slac.stanford.edu \
                               <your_username>@the_batch_node.slac.stanford.edu
