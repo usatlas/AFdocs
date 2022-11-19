@@ -5,7 +5,7 @@
 + [A note about yoru AFS or GPFS spaces](#a-note-about-your-afs-or-gpfs-spaces)
 + [How to launch JupyterLab at SLAC](#how-to-launch-jupyterlab-at-slac)
 + [Run your own Jupyter environment](#run-your-own-jupyter-environment)
-+ [An alternative way to use the ATLAS Jupyter environment at SLAC](#an-alternative-way-to-use-the-atlas-jupyter-environment-at-slac)
++ [An alternative way to start a Jupyter environment at SLAC](#an-alternative-way-to-start-a-jupyter-environment-at-slac)
 + [Kernels and extensions in the ATLAS Jupyter environment](#kernels-and-extensions-in-the-atlas-jupyter-environment)
 + [Extend ATLAS JupyterLab Functionalities](#extend-atlas-jupyterlab-functionalities)
 + [Getting help](#getting-help)
@@ -25,9 +25,6 @@ SLAC JupyterLab will put you on a new 25GB home directory `/sdf/home/<username_i
 ## How to launch JupyterLab at SLAC
 
 The main portal to run Jupyter at SLAC is [https://sdf.slac.stanford.edu](https://sdf.slac.stanford.edu). 
-It is based on the Open OnDemand technology. In addition to this portal, it is also possible to directly run Jupyter
-on SLAC batch nodes (see [secton below](#an-alternative-way-to-use-the-atlas-jupyter-environment-at-slac))
-
 Once you login to the main portal, click "Interactive Apps" from the top menu bar. Then choose "Jupyter". 
 You will need to make a few choices:
 
@@ -35,6 +32,9 @@ You will need to make a few choices:
 2. Check the "Use JupyterLab instead of Jupyter Notebook?" box.
 3. In the "Partition" box, you can type in "usatlas" or "shared". Compare to "usatlas", "shared" may give you a quicker access but you may face preemption. If you have been told that you can use other SLURM partitions, please type at here.
 4. Choose hours, # CPUs, memory, # GPUs and GPU type, then click "launch". Note that your Jupyter work runs as a SLURM job. So choose only what you need to ensure speedy launching of your job.
+
+In addition to using this portal, it is also possible to directly run Jupyter
+on SLAC batch nodes (see [secton below](#an-alternative-way-to-start-a-jupyter-environment-at-slac))
 
 ## Run your own Jupyter environment
 
@@ -57,13 +57,13 @@ conda activate
 ~~~
 
 
-## An alternative way to use the ATLAS Jupyter environment at SLAC
+## An alternative way to start a Jupyter environment at SLAC
 
-The SLAC Jupyter portal depends on Open OnDemand running properly. But in rare cases, Open OnDemand can run into 
+The SLAC Jupyter portal uses the Open OnDemand technology. In rare cases, Open OnDemand may run into 
 trouble. Fortunately the Slurm batch system at SLAC enables a user to SSH into a batch node if the user has a batch
 job running on that 
-node. The feature makes it possible to for users to directly run Jupyter on batch nodes, by following instruction 
-below:
+node. The feature makes it possible to for users to directly run Jupyter on batch nodes (bypassing Open OnDemand), 
+by following instruction below:
 
 1\. Create a script to start your Jupyter environment. <p>
 The following script can be used to start a Jupyter instance using one of the ATLAS image in CVMFS. You can write a 
@@ -107,25 +107,25 @@ srun -J jupyter --nodes=1 <other_options> /bin/sh the_above_script
 ```
 A word about Slurm `account`: SLAC has a large pool of GPUs, including 80x A100 GPUs and a few hundreds older 
 Nvidia GPU models. US ATLAS owns four A100 GPUs. 'usatlas' account will guaranty the usage, but you may be 
-competing with other US ATLAS colleagues. Account 'shared' is subject to preemption but the risk be being preempted
-in a few hours is low (under the current usage pattern).
+competing with other US ATLAS colleagues. Jobs using 'shared' account are subject to preemption but the risk of
+being preempted in a few hours is low (under the current usage pattern).
 
 3\. Write down a few info from the above `srun` command.<p> 
 The command should first show the full hostname of the batch node it is running on (say 
-`the_batch_node.slac.stanford.edu`). It should also print out messages asking you to point your brower to a URL like:
+`the_batch_node.slac.stanford.edu`). It should also print out messages asking you to point your brower to an URL like:
 ```
 http://localhost:8888/?token=ec4d404fe69d2ff760d611c0509a9e8ac770c7f46ac32860
 ```
 Note the port number above is `8888`. Sometimes it is not `8888`.
 
-4\. Setup an SSH tunnel between your desktop and the batch node
+4\. Setup a SSH tunnel between your desktop and the batch node
 ```
 ssh -L 8888:localhost:8888 -J <your_username>@sdf-login.slac.stanford.edu \
                               <your_username>@the_batch_node.slac.stanford.edu
 ```
 Again, note that the port number may not be `8888`.
 
-5\. Paste the above URL into your browser. 
+5\. Paste the above URL in your browser. 
 
 You are all set.
 
