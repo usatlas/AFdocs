@@ -1,9 +1,24 @@
 site_name: US ATLAS Analysis Facilities
 docs_dir: tier3docs
 site_dir: site
+#hola
 markdown_extensions:
-  - attr_list
+  - abbr
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - md_in_html
+  - tables  
+  - pymdownx.critic:
+        mode:accept
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
 plugins:
   - include-markdown
   #- jekyll-image-size
@@ -27,7 +42,7 @@ nav:
     - 'Jupyter at Analysis Facilities':
         - 'Introduction': jupyter/JupyterAtTier3s.md
         - 'Jupyter at BNL': jupyter/BNLjupyter.md
-        - 'Jupyter at UChicago with Coffea': jupyter/JupyterUChicago.md 
+        - 'Jupyter at UChicago with Coffea': jupyter/JupyterCoffeaCUChicago.md 
         - 'JupyterLab at UChicago': jupyter/JupyterLabUChicago.md
         - 'Jupyter at SLAC': jupyter/SLACjupyter.md
         - 'Extend ATLAS JupyterLab at SLAC': jupyter/SLACJupyterExtraFuncs.md
@@ -43,6 +58,7 @@ nav:
         - 'Using Singularity Containers': Containers/UsingSingularity/README.md
     - 'FAQs/Tips':
         - 'FAQs and some tips': faqs-tips/faq-tips.md
+        - 'Glossary': faqs-tips/glossary.md
 markdown_extensions:
   - markdown.extensions.admonition
 #  - markdown.extensions.pymdownx.details      not available in readthedocs   

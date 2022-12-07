@@ -22,11 +22,7 @@ a:hover {
 .myimages { 
     width: 100px;
 }
-img[src*="#center"] { 
-    display: block; 
-    margin: auto; 
-    align: center;
-}
+
 img[alt=imgtocontrol] {
     width:100px;
     border: none;
