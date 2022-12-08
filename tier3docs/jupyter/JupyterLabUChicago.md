@@ -26,12 +26,18 @@ Once you login, click "Services" on the top menu bar, then choose "JupyterLab". 
 	 9. You can give the notebook a duration of 1 to 168 hours.
     10. You can choose any Docker image from the dropdown. 
 
-### Choose a Docker image  Image 
-**ml-platform:latest**:  NVidia GPU and ROOT support  This image has most of the ML packages (Tensorflow, Keras, ScikitLearn, etc.) preinstalled, and a small tutorial with code examples in /ML_platform_tests/tutorial.  
-**ml-platform:conda**:  With full anaconda through micromamba, keep reading to know how to use it. 
-**ml-platform:julia**:  d
-**ml-platform:lava**  
-**ml-platform:centos7-experimental**  
+
+### Choose a Docker image  
+**ml-platform:latest**:  NVidia GPU and ROOT support  This image has most of the ML packages (Tensorflow, Keras, ScikitLearn, etc.) preinstalled, and a small tutorial with code examples in /ML_platform_tests/tutorial.
+
+**ml-platform:conda**:  With full anaconda through micromamba, keep reading to know how to use it.   
+
+**ml-platform:julia**: 
+
+**ml-platform:lava**   
+
+**ml-platform:centos7-experimental**   
+
 
 ~~~
 code
@@ -40,14 +46,12 @@ code
 ## Using ATLAS environment at JupyterLab UChicago
 
 
-`command red text`
+`command text`
 
 ## Images 
 
 
 
-<b>text</b> 
-[RAPIDS.AI](link)
 
 ## Getting help
 

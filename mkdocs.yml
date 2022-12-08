@@ -4,7 +4,9 @@ site_dir: site
 #hola
 markdown_extensions:
   - abbr
+  - attr_list
   - def_list
+  - admonition
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
@@ -19,6 +21,11 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
 plugins:
   - include-markdown
   #- jekyll-image-size
@@ -60,11 +67,18 @@ nav:
         - 'FAQs and some tips': faqs-tips/faq-tips.md
         - 'Glossary': faqs-tips/glossary.md
 markdown_extensions:
-  - markdown.extensions.admonition
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
 #  - markdown.extensions.pymdownx.details      not available in readthedocs   
 #  - markdown.extensions.pymdownx.superfences  not available in readthedocs
 theme: 
   name: readthedocs
   html_theme_options: "html_logo: images/lgbt_atlas.png"
+  features:
+     - content.code.annotate 
+     - content.tooltips
+
 
 # more options: https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs
