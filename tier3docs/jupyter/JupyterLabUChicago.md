@@ -18,9 +18,9 @@
 Once you login, click "Services" on the top menu bar, then choose "JupyterLab". You will need to make some choices in order to configure your JupyterLab notebook:
 
 	 1. Provide a notebook name that has no whitespace, using 30 characters or less from the set [a-zA-Z0-9._-] to name your notebook.
-	 4. You can request 1 to 4 CPU cores.
+	 4. You can request 1 to 16 CPU cores.
 	 5. You can request 1 to 32 GB of memory.
-	 6. You can request 0 to 4 GPU instances.
+	 6. You can request 0 to 7 GPU instances.
 	 7. You can select a GPU model based on its memory size.
 	 8. If you request a GPU, please make sure the GPU is available, by clicking on the icon next to GPU memory.
 	 9. You can give the notebook a duration of 1 to 168 hours.
