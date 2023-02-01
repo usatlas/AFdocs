@@ -1,4 +1,4 @@
-# [The UChicago JupyterLab](link)
+# The UChicago JupyterLab
 
 ![underconstruction](../images/underconstruction.jpg)
 
