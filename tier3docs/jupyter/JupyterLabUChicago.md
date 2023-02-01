@@ -1,6 +1,6 @@
 # [The UChicago JupyterLab](link)
 
-![underconstruction](../images/underconstruction.jpg)[:width="500"]
+![underconstruction](../images/underconstruction.jpg)[]
 
 ## Table of contents
 + [Go to JupyterLab at UChicago](#login-to-jupyterlab-at-UChicago)
