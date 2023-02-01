@@ -14,16 +14,27 @@ cat ~/.ssh/id_rsa.pub
 If the file exists, you should be able to copy the contents of this file to your profile on the AF website. **`Important!: Do not copy the contents of a file that does not end in .pub. You must only upload the public (.pub) part of the key.`**
 
 
-
 If you do not have a public key (the file doesn't exist), you can generate one via the following command (Mac/Linux):
 
 ```
-ssh-keygen -t rsa
+cd ~/.ssh
+ssh-keygen -t rsa -f idrsa_uc
+cd - # go back to previous directory
 ```
 
-Upload the resulting public key (ending in .pub) to your profile.
+This will create 2 files: a private key named **idrsa_uc**, and a public key named **idrsa_uc.pub**, upload the resulting public key to your profile on the "SSH public key" box (in case you haven't done it already), to print its content use:
 
-Once you have uploaded a key, it will take a little bit of time to process your profile and add your account to the system. After 10-15 minutes, you ought to be able to login via SSH:
+```
+cat ~/.ssh/idrsa_uc.pub
+```
+and also add your identification from your local machine to the site:
+
+```
+# ssh-add path-to-private-key
+ssh-add ~/.ssh/idrsa_uc
+```
+
+Once you have uploaded the public key and added your identification to the site it will take a little bit of time to process your profile and add your account to the system. After 10-15 minutes, you ought to be able to login via SSH:
 ```
 ssh <username>@login.af.uchicago.edu
 ```
