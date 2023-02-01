@@ -72,9 +72,9 @@ The UChicago analysis facility has three filesystems that you should be aware of
 </p>
 </tbody>
 </table>
+
 This table describes more of their diferences
 []:#(table2  with filesystems differences)
-
 <table>
 <thead>
 <tr>

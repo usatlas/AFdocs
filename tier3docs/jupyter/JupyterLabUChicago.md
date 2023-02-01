@@ -1,7 +1,7 @@
 # [The UChicago JupyterLab](link)
 
-![underconstruction](../images/underconstruction.jpg)[]
-
+![underconstruction](../images/underconstruction.jpg)
+ 
 ## Table of contents
 + [Go to JupyterLab at UChicago](#login-to-jupyterlab-at-UChicago)
 + [How to launch a JupyterLab at UChicago](#how-to-launch-jupyterlab-at-UChicago)
