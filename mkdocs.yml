@@ -16,7 +16,7 @@ markdown_extensions:
   - md_in_html
   - tables  
   - pymdownx.critic:
-        mode:accept
+      mode: accept
   - pymdownx.caret
   - pymdownx.keys
   - pymdownx.mark
@@ -66,10 +66,10 @@ nav:
     - 'FAQs/Tips':
         - 'FAQs and some tips': faqs-tips/faq-tips.md
         - 'Glossary': faqs-tips/glossary.md
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
+#markdown_extensions:
+#  - admonition
+#  - pymdownx.details
+#  - pymdownx.superfences
 
 #  - markdown.extensions.pymdownx.details      not available in readthedocs   
 #  - markdown.extensions.pymdownx.superfences  not available in readthedocs

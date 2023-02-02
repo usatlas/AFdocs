@@ -3,3 +3,5 @@ mkdocs==1.3.0
 Pillow==8.0.1
 mkdocs-include-markdown-plugin==3.2.3
 sphinx_rtd_theme
+pymdown_extensions==9.9.2
+Pygments==2.14.0
