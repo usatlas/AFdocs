@@ -38,6 +38,6 @@ This documentation includes the following:
 + [Data Storing, Accessing, and Sharing](doma/DataSharing/): explains the ways users can use their ATLAS data at AFs
 + [Jupyter at Analysis Facilities](jupyter/JupyterAtTier3s): highlights the different aspects of Jupyter and how to use it at AFs
 + [Data Analysis Tutorials](Tutorial-2019Aug): step-by-step tutorials on using AFs for analyses
-+ [Containers](Containers/UsingSingularity/): detailed information on container-based data processing and how to use them at AFs
++ [Containers](Containers/UsingSingularity): detailed information on container-based data processing and how to use them at AFs
 + [FAQ](faqs-tips/faq-tips): answers to frequently asked questions
 
