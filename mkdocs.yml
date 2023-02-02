@@ -49,7 +49,7 @@ nav:
     - 'Jupyter at Analysis Facilities':
         - 'Introduction': jupyter/JupyterAtTier3s.md
         - 'Jupyter at BNL': jupyter/BNLjupyter.md
-        - 'Jupyter at UChicago with Coffea': jupyter/JupyterCoffeaCUChicago.md 
+        - 'Jupyter at UChicago with Coffea': jupyter/JupyterCoffeaCUChicago.md
         - 'JupyterLab at UChicago': jupyter/JupyterLabUChicago.md
         - 'Jupyter at SLAC': jupyter/SLACjupyter.md
         - 'Extend ATLAS JupyterLab at SLAC': jupyter/SLACJupyterExtraFuncs.md
