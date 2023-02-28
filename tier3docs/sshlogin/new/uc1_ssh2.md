@@ -95,7 +95,7 @@ This table describes more of their diferences
 </tr>
 <tr>
 <td>$data</td>
-<td> 10 TB </td>
+<td> 5 TB </td>
 <td>/data/$user  </td>
 <td>No</td>
 <td>CephFS filesystem, shared to all worker nodes</td>
