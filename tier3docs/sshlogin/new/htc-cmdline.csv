@@ -1,0 +1,16 @@
+﻿Command reference for submission file,Description,Example
+condor_hold,Put jobs in the queue into the hold state,-
+condor_dagman: ,Meta scheduler for tthe HTCondor jobs within a DAG (directed acyclic graph) or multiple DAGs,-
+condor_release,Releases jobs from the HTCondor job queue that were previously placed in hold state. ,-
+condor_ssh_to_job JobId,Creates an ssh session ro a running job.,-
+condor_submit –interactive,Sets up the job environment and input files<br>It gives a command prompt where you can then start job manually to see what happens.<br>,-
+condor_q,Display information about your jobs in queue ,-
+condor_qedit,To modify job attributes.<br>check condor_q -long<br>condor_qedit Cmd = path_to_executable #changes it <br>,-
+condor_q -long,Check job's ClassAd attributes to edit the attributes,-
+condor_q -analyze 27497829,Determines why certain jobs are not running.,-
+condor_q -hold  16.0,Reason job 16.0 is in the hold state,-
+condor_q -hold user,"retrieves: ID, OWNER, HELD_SINCE, HOLD_REASON",-
+condor_q -nobatch,"retrieves: ID, OWNER, SUBMITTED, RUN_TIME, ST, PRI, SIZE, CMD",-
+condor_q -run,"retrieves: ID, OWNER, SUBMITTED, RUN_TIME, HOST(S)",-
+condor_q -factory -long,Factory information and the jobMaterializationPauseReason attribute.,-
+condor_tail xx.yy,Displays the last bytes of a file in the sandbox of a running job,-
