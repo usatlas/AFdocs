@@ -28,10 +28,11 @@ markdown_extensions:
 
 plugins:
   - include-markdown
-  #- jekyll-image-size
-  #- include-kramdown*/
   - search:
       min_search_length: 2
+  - table-reader
+    #- jekyll-image-size
+    #- include-kramdown*/
 nav:
     - 'Getting Started':
         - 'Introduction': README.md
@@ -79,6 +80,5 @@ theme:
   features:
      - content.code.annotate 
      - content.tooltips
-
 
 # more options: https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs

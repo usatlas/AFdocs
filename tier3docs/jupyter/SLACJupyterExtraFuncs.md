@@ -7,7 +7,7 @@
 + [Using built-in Conda environments](#using-built-in-conda-environments)
 + [Install PYCUDA](#install-pycuda)
 
-Though pip, you can add more packages to your python/Jupyter. The folloing are examples that apply to python3
+Though pip, you can add more packages to your python/Jupyter. The following are examples that apply to python3
 
 ## Use DASK with SLURM
 
@@ -33,15 +33,15 @@ things to prepare:
     * You don't have to do this: if you remove this `scheduler_options= ...` line, DASK will select an available port for 
       you. In that case, you can print the `client` object in find out the host:port. 
 3. Port forwarding
-    * Open a terminal in Juypyter Lab and find out the host name (use command 'hostname'). Let's say you are on host 
+    * Open a terminal in Jupyter Lab and find out the host name (use command 'hostname'). Let's say you are on host 
       `rome0100`.
     * From your desktop, `ssh -L 8787:rome0100:8787 sdf-login.slac.stanford.edu` .
     * In your web browser, open `http://localhost:8787/status` to access the DASK dashboard.
 
 ## Use your own Conda environment 
 
-You can use your own [Conda environment](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html#) along with the ATLAS Jupyter enviornment. Suppose you want to setup
-[pyhf](https://github.com/scikit-hep/pyhf) via Conda, and use it in ATLAS Jyputer environment, here is what you can do:
+You can use your own [Conda environment](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html#) along with the ATLAS Jupyter environment. Suppose you want to setup
+[pyhf](https://github.com/scikit-hep/pyhf) via Conda, and use it in ATLAS Jupyter environment, here is what you can do:
 
 Open a Terminal in JupyterLab, you have two choices: "`python3 -m pip install pyhf`" is the easiest way (but not via Conda). We want to show how to do this in an Conda environment, and make it available in Jupyter. 
 

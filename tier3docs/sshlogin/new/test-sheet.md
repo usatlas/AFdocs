@@ -1,4 +1,53 @@
+### this sheed is not published is only for format references
+<!--comment-->
+sd
+<!--- This is an HTML comment in Markdown -->
+sdf
 
+##
+``` {linenums="1"}
+line_1
+line_2
+line_3
+```
+<!--dont know yet-->
+<hr />jkj
+esfd
+<hr />
+dasd
+<hr /> 
+<!--list-->
+<li>item1</li>
+<li>item2</li>
+<li>item3</li>
+
+<!--code-->
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
+<!-- table of images-->
+<table>
+  <tr>
+    <td>First Screen Page</td>
+    <td>Holiday Mention</td>
+    <td>Present day in purple and selected day in pink</td>
+  </tr>
+  <tr>
+    <td><img src="../../images/atlas-logo-new.png" width=270 height=180></td>
+    <td><img src="../../images/atlas-logo-new.png" width=270 height=180></td>
+    <td><img src="../../images/atlas-logo-new.png" width=270 height=180></td>
+  </tr>
+</table>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------------------>
+<!--rest of reference page de github-->
 GitHub Flavored Markdown Spec
 Version 0.29-gfm (2019-04-06)
 This formal specification is based on the CommonMark Spec by John MacFarlane and licensed under Creative Commons BY-SA
