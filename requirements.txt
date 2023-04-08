@@ -5,3 +5,4 @@ mkdocs-include-markdown-plugin==3.2.3
 sphinx_rtd_theme
 pymdown_extensions==9.9.2
 Pygments==2.14.0
+mkdocs-table-reader-plugin==2.0

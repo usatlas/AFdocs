@@ -30,11 +30,11 @@ Once you login, click "Services" on the top menu bar, then choose "JupyterLab". 
 ### Choose a Docker image  
 **ml-platform:latest**:  NVidia GPU and ROOT support  This image has most of the ML packages (Tensorflow, Keras, ScikitLearn, etc.) preinstalled, and a small tutorial with code examples in /ML_platform_tests/tutorial.
 
-**ml-platform:conda**:  With full anaconda through micromamba, keep reading to know how to use it.   
+**ml-platform:conda**:  With full Anaconda through Micromamba, keep reading to learn how to use it.   
 
-**ml-platform:julia**: 
+**ml-platform:julia**:  With Julia programming languge
 
-**ml-platform:lava**   
+**ml-platform:lava**: With Intel Lava neuromorphic computing framework
 
 **ml-platform:centos7-experimental**   
 
@@ -58,3 +58,5 @@ code
 Please use the following e-mail addresses to get help. The division below is not strict. Questions will be routed to appropriate staff members.  
 1. Use atlas-us-UChicago-acf@cern.ch for ATLAS specific questions and requestions, including ATLAS software related issues.  
 2. Use unix-admin@UChicago.stanford.edu for all other questions.
+
+For software additions and upgrades please contact ivukotic@uchicago.edu.
