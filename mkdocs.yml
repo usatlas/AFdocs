@@ -40,12 +40,15 @@ nav:
     - 'User Onboarding':
         - 'About the Facilities': UserOnboarding/facility.md
         - 'Applying for User Accounts': UserOnboarding/account.md
+    #- 'Editor':
+    #    - 'test-sheet': test-sheet.md
     - 'Quickstart Guides':
         - 'BNL': sshlogin/ssh2BNL.md
         - 'UChicago': sshlogin/README.md
         - 'SLAC': sshlogin/ssh2SLAC.md
     - 'Data Store, Accessing and Sharing':
         - 'Data Storage at BNL': doma/storage/BNL/storage-at-bnl.md
+        - 'Data Storage at UChicago': doma/storage/UChicago/uc_storage.md
         - 'Data Sharing': doma/DataSharing/README.md
     - 'Jupyter at Analysis Facilities':
         - 'Introduction': jupyter/JupyterAtTier3s.md
