@@ -83,11 +83,13 @@ Check the Rucio documentation at [RSE Rucio manage quota](https://rucio-ui.cern.
 ![rse rucio manage quota](uc_rucio_localgoupdisk.png)
 
 and click the `select` button. If you search your lxplus username you'll see that you have a default quota of 15TB. For additional space if need beyond 30TB here is the [Request form]( https://atlas-lgdm.cern.ch/LocalDisk_Usage/USER/RequestFormUsage/).
-Remember that you need US-ATLAS VO for the grid certificate. If you are an ATLAS member but can't find your name go to [VOMS page](https://lcg-voms2.cern.ch:8443/voms/atlas/user/home.action) and select /atlas/usatlas in the groups roles box.
+Remember that you need US-ATLAS VO for the grid certificate.
+
+If you are an ATLAS member but can't find your name go to [VOMS page](https://lcg-voms2.cern.ch:8443/voms/atlas/user/home.action) and select /atlas/usatlas in the groups roles box.
 
 ![voms groups roles](uc_vo_roles.png)
 
- ### Transfer datasets to LOCALGROUP DISK
+### Transfer datasets to LOCALGROUP DISK
 
 To transfer datasets to LOCALGROUPDISK, check the following 3 options: 
 
@@ -95,7 +97,7 @@ To transfer datasets to LOCALGROUPDISK, check the following 3 options:
 - Adding “-destSE” to your PANDA job.
 - Via Rucio on the command line
 
- ### How to access datasets
+### How to access datasets
 
 To access datasets, you can choose one of the following 3 options. 
 
