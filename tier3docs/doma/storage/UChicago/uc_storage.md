@@ -89,7 +89,7 @@ If you are an ATLAS member but can't find your name go to [VOMS page](https://lc
 
 ![voms groups roles](uc_vo_roles.png)
 
-### Transfer datasets to LOCALGROUP DISK
+### Transfer datasets to LOCALGROUPDISK
 
 To transfer datasets to LOCALGROUPDISK, check the following 3 options: 
 
