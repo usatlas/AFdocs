@@ -1,7 +1,7 @@
 ## Login into UChicago analysis facility
 
 First you will need to sign up on the [Analysis Facility website](https://af.uchicago.edu/).
-You can use your institutional or CERN identity (lxplus username) when signing up, this last will make the approval process smoother. Please enter your fullname and your institutional(CERN) email, accounts requests from services like Gmail, Outlook, iCloud, etc. won't be accepted.  
+You can use your institutional or CERN identity (lxplus username) when signing up, this last will make the approval process smoother. Please enter your fullname, your home institution name, and your institutional email, accounts requests from services like Gmail, Outlook, iCloud, etc. won't be accepted.  
 In case you don't have an ATLAS membership yet, just send us an email explaining the reasons of your account request and add some US-ATLAS member connection. 
 
 Once your account is accepted you will need to upload an SSH Public Key.
