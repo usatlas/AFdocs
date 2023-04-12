@@ -40,8 +40,8 @@ nav:
     - 'User Onboarding':
         - 'About the Facilities': UserOnboarding/facility.md
         - 'Applying for User Accounts': UserOnboarding/account.md
-    - 'Editor':
-        - 'test-sheet': test-sheet.md
+    #- 'Editor':
+    #    - 'test-sheet': test-sheet.md
     - 'Quickstart Guides':
         - 'BNL': sshlogin/ssh2BNL.md
         - 'UChicago': sshlogin/README.md
