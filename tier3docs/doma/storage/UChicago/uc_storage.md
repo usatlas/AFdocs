@@ -1,10 +1,14 @@
 # Data Storage at UChicago
 
-## Table of contents
-+ [Storage Limits](#storage-limits)
-+ [FileSystems](#filesystems)
+  <!--<big>**Table of contents**</big>-->
+
+<font size="6">**Table of contents**</font>
+    <br> - [Storage Limits](#storage-limits)
+    <br> - [FileSystems](#filesystems)
 <!--+ [-](#-)-->
 ## Storage Limits
+ 
+
 []:#(table2  with filesystems differences)
 <table>
 <thead>
@@ -42,7 +46,7 @@
 </tbody>
 </table>
 
-
+`sdkf`
 ## Filesystems 
 
 The UChicago analysis facility has three filesystems with a clearly defined role. Please be aware of each of these roles when running workloads. 
@@ -75,3 +79,4 @@ The UChicago analysis facility has three filesystems with a clearly defined role
 </tbody>
 </table>
 
+rsw
