@@ -47,7 +47,6 @@
 </tbody>
 </table>
 
-`sdkf`
 ## Filesystems 
 
 The UChicago analysis facility has three filesystems with a clearly defined role. Please be aware of each of these roles when running workloads. 
