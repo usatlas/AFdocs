@@ -1,15 +1,18 @@
 ## Using the batch system at UChicago
 The UChicago Analysis Facility uses `HTCondor` for batch workloads. 
 In a nutshell, to submit a job you will need to create an `executable` script and a `submit` file that describes your job.
-### Submitting to the analysis facility
+### Before submitting to the analysis facility
 
 Before going mad submmiting jobs to the batch system, we have to check some points to consider when performing an analysis/work in the most efficient way and enhance the use of the available resources.
-Be sure to understand them and remember you can always ask. 
+Be sure to understand them and remember that you can always ask. 
 
+Check list before submitting:
 <ul>
-<li><input checked="" disabled="" type="checkbox"> Which filesystem to use</li>
-<li><input checked="" disabled="" type="checkbox"> Job memory request</li>
-<li><input checked="" disabled="" type="checkbox"> short & long jobs</li>
+<li><input  disabled=" " type="checkbox"> Which filesystem should be used to submit my jobs?</li>
+<li><input  disabled="" type="checkbox"> How much memory request does my Job(s) need?</li>
+<li><input  disabled="" type="checkbox"> Should my job(s) be submitted to the short or the long queue?</li>
+<li><input  disabled="" type="checkbox"> Check all my jobs requirements</li>
+<li><input  disabled="" type="checkbox"> Always check my jobs status</li>
 </ul>
 
 
@@ -68,7 +71,7 @@ Submitting job(s).
 1 job(s) submitted to cluster 17.
 ```
 
-- #### Short-Jobs and Long-Jobs
+- #### The Short and the Long queues.
 
 Before submitting jobs you should have an idea about how long the job will take to finish (not the exact time but an approximate).
 In `HTCondor` we added a a feature called `shortqueue` with dedicated workers that will ONLY service jobs that run for less than **4 hours**.
@@ -193,9 +196,6 @@ Queue 1
 <td>-</td></tr>
 </tbody>
 </table>
-
-
-
 
 ## Using Docker / Singularity containers (Advanced)
 

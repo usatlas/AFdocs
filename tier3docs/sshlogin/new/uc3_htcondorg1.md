@@ -7,7 +7,7 @@ EL::CondorDriver driver;
 job.options()->setString(EL::Job::optCondorConf, "getenv = true\naccounting_group = group_atlas.<institute>");
 driver.submitOnly( job, "yourJobName”);
 ```
-### Useful commands for the jobs submission file
+### Useful attributes for the jobs submission file
 <table>
 <thead><tr>
 <th>option</th>
@@ -43,35 +43,16 @@ e.g. periodic_remove = (JobStatus == 2) && (time() - EnteredCurrentStatus) > (2 
 </tbody></table>
 <!--code-->
 
-### Useful commands to manage jobs
+### Useful commands to manage and check jobs status.
 <!--
-<table>
-<thead><tr>
-<th>option</th>
-<th>What is it for?</th></tr>
-</thead><tbody>
-    <tr><td>condor_release</td>
-    <td>
-        <li>- releases t job fm t htcondor job queue tt were prev placed in hold state (only owner or super users can release)</li>
-        <li>- version</li>
-        <li>- user # to specified user</li>
-        <li>- debug # sent debugging inf to stderr based on t value oft config var tool_debug</li>
-        <li>- constraint expression # match t job ClassAd expression constraint</li>
-        <li>- all</li></td>
-    <tr><td>condor_ssh_to_job jobid filename</td>
-    <td><li>- while running n check on realtime</li>
-        <li>- attach to it w gdb to inspect the stack</td> </tr></li>
-    <tr><td>condor_ssh_to_job jobid </td>
-    <td>- eg. slot1_3@c008.af.uchicago.edu
-</td> </tr>
-    <!--<tr><td>fun1</td>
-    <td>mean2</td> </tr>
-    <tr><td>fun1</td>
-    <td>mean2</td> </tr>
-    <tr><td>fun1</td>
-    <td>mean2</td> </tr>
-    </td></tr>
-</tbody></table>
+<!--#for the dropdown wrapper
+<details open> 
+<summary>example1 of dropdown</summary> <!--for the dropdown title
+<br>
+csv
+{{ read_csv('tier3docs/sshlogin/new/htc-cmdline.csv') }}
+</details>
+<br>
 -->
 
 {{ read_csv('tier3docs/sshlogin/new/htc-cmdline.csv') }}
