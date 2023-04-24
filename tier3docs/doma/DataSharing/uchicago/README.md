@@ -1,6 +1,4 @@
-# Data sharing UChicago
-
-UChicago
+# Data sharing at UChicago: Work between UChicago and CERN
 
 {%
     include-markdown "./uc_cern_work.md"
