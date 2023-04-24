@@ -12,18 +12,6 @@ matured, they will be deployed at all US-ATLAS AFs.
 %}
 
 {%
-    include-markdown "./work-between-uchicago-cern.md"
-%}
-
-{%
-    include-markdown "./xcache_uchicago.md"
-%}
-
-{%
-    include-markdown "./uc_checkproxy.md"
-%}
-
-{%
     include-markdown "./DataSharingStore.md"
 %}
 
