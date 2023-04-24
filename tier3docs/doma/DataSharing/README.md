@@ -8,17 +8,15 @@ matured, they will be deployed at all US-ATLAS AFs.
 %}
 
 {%
-    include-markdown "./xcache_uchicago.md"
-%}
-
-{%
     include-markdown "./Work-between-BNL-CERN.md"
 %}
 
 {%
     include-markdown "./work-between-uchicago-cern.md"
 %}
-
+{%
+    include-markdown "./xcache_uchicago.md"
+%}
 {%
     include-markdown "./DataSharingStore.md"
 %}
