@@ -3,7 +3,7 @@
   <br> - [Xcache at UChicago](#uc_xcache)
   <br> - [Always check your proxy certificate](#uc_checkproxy)
 
-## <span id="uc_access_cerneos"></span> Access to CERN-EOS from UChicago
+# <span id="uc_access_cerneos"></span> Access to CERN-EOS from UChicago
 
 The ways to list, write and read files on CERN EOS, documented
 [here](https://twiki.cern.ch/twiki/bin/view/AtlasComputing/ATLASStorageAtCERN#EOS_storage_system),
