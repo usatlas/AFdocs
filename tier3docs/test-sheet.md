@@ -42,13 +42,8 @@ list
 <!------------------------------------------------------------------------------------->
 
 ## menus dropdown
-**## example1 dropdown**
-<details> <!--#for the dropdown wrapper-->
-<summary>example1 of dropdown</summary> <!--for the dropdown title-->
-<br>
-This is how you dropdown.
-</details>
-<br>
+**## example1 dropdown:simple**
+
 
 **## example2 dropdown** 
 <details open>
@@ -69,7 +64,7 @@ This is how you dropdown.
 </details>
 <br>
 
-**##example4 dropdown** 
+**## example4 dropdown** 
 <details open>
 <summary>**example1 dropdown: nested dropdown</summary>
 

@@ -48,8 +48,9 @@ nav:
         - 'SLAC': sshlogin/ssh2SLAC.md
     - 'Data Store, Accessing and Sharing':
         - 'Data Storage at BNL': doma/storage/BNL/storage-at-bnl.md
-        - 'Data Storage at UChicago': doma/storage/UChicago/uc_storage.md
         - 'Data Sharing': doma/DataSharing/README.md
+        - 'Data Storage at UChicago': doma/storage/UChicago/uc_storage.md
+        - 'Data Sharing at UChicago': doma/DataSharing/uchicago
     - 'Jupyter at Analysis Facilities':
         - 'Introduction': jupyter/JupyterAtTier3s.md
         - 'Jupyter at BNL': jupyter/BNLjupyter.md
