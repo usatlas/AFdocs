@@ -41,6 +41,7 @@ voms-proxy-init -voms atlas -out $HOME/x509proxy
 ```	
 **notice that** withouth the term `-out $HOME/x509proxy` you create a new proxy but the one that maybe is already in your $HOME directory is still expired.
 Once you renew you proxy certificate, add *line1* and *line2* from the following example to your job submit file so that HTCondor configures the job environment automaticcaly for x509 authenticated data access.
+
 ```bash
 universe = vanilla
 
