@@ -12,3 +12,6 @@ Find the UChicago main page [here](https://af.uchicago.edu/)
 {%
     include-markdown "./new/uc3_htcondorg1.md"
 %}
+{%
+    include-markdown "./new/uc4_docker.md"
+%}
