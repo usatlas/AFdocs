@@ -24,7 +24,7 @@
 | Data area      | 500 GB per user under /atlasgpfs01/usatlas/data/$USERNAME                                                                              |
 | dCache area    | 5TB per user under /pnfs/usatlas.bnl.gov/users/$USERNAME, should be access via xrootd as explained [below](#Use_the_BNL_dCache_space)  |
 | BNLBox         | 50GB space under [https://bnlbox.sdcc.bnl.gov](https://bnlbox.sdcc.bnl.gov/), accessiblle from both mobile devices and computers       |
-| LOCALGROUPDISK | 15TB (default) on the grid at BNL. Please check [below](#LOCALGROUPDISK) for more details                                              |
+| LOCALGROUPDISK | 100TB (default) on the grid at BNL. Please check [below](#LOCALGROUPDISK) for more details                                              |
 
 **Note**:
 
@@ -48,9 +48,11 @@ LOCALGROUPDISK, which is a resource that all US ATLAS collaborators have
 access to. 
 You can check at [RSE account usage](https://rucio-ui.cern.ch/r2d2/manage_quota) 
 with the RSE **BNL-OSG2\_LOCALGROUPDISK** selected. Every user should
-have a **default quota of 15TB**, if you could not find your name there,
+have a **default quota of 100TB**, if you could not find your name there,
 please check if you have selected **/atlas/usatlas** in 
 [the VO groups/roles](https://lcg-voms2.cern.ch:8443/voms/atlas/user/home.action).
+For additional space if need beyond 100TB here is the [Request form]( https://a\
+tlas-lgdm.cern.ch/LocalDisk_Usage/USER/RequestFormUsage/)
 
 ### <span id="Dataset_replication_to_LOCALGROU"></span> Dataset Replication to LOCALGROUPDISK
 
