@@ -51,8 +51,7 @@ with the RSE **BNL-OSG2\_LOCALGROUPDISK** selected. Every user should
 have a **default quota of 100TB**, if you could not find your name there,
 please check if you have selected **/atlas/usatlas** in 
 [the VO groups/roles](https://lcg-voms2.cern.ch:8443/voms/atlas/user/home.action).
-For additional space if need beyond 100TB here is the [Request form]( https://a\
-tlas-lgdm.cern.ch/LocalDisk_Usage/USER/RequestFormUsage/)
+For additional space if need beyond 100TB here is the [Request form]( https://atlas-lgdm.cern.ch/LocalDisk_Usage/USER/RequestFormUsage/)
 
 ### <span id="Dataset_replication_to_LOCALGROU"></span> Dataset Replication to LOCALGROUPDISK
 
