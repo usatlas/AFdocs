@@ -8,7 +8,7 @@ Once your account is accepted you need to generate an `SSH-key-pair` consisting 
 
 Create your SSH-key-pair via the following command (Mac/Linux):
 
-```
+```sh
 cd ~/.ssh
 # the next command prompts you to enter a passphrase, specify a passphrase of your choice to protect your private key against unauthorized use.
 ssh-keygen -t rsa -f idrsa_uc 
@@ -20,13 +20,14 @@ This generates 2 files: an SSH-private-key named **idrsa_uc**, and an SSH-public
 
 To print its content do:
 
-```
+```sh
 cat ~/.ssh/idrsa_uc.pub
 ```
 
-Now, add your identification from your local machine to the site. First, open your `config` file, if the file doesn't exist just create it. 
+Now, add your identification from your local machine to the site:
+First, open your `config` file, if the file doesn't exist just create it.  
 
-```
+```sh
 # use the next line only if the file doesn't exist
 touch config
 # open the file and add the following lines:
@@ -36,14 +37,36 @@ IdentityFile ~/.ssh/idrsa_uc
 ```
 
 Finally, add your identification from your local machine using the following command:
-```
+
+```sh
 # ssh-add  path-to-private-key 
 ssh-add ~/.ssh/idrsa_uc
 ```
+
+> `Tip`: If, while following the previous steps you get this error message:  
+> 
+>     Could not open a connection to your authentication agent.
+> You may need to start the `SSH-agent`, you can use this command:  
+>    ```sh
+>    eval "$(ssh-agent -s)"
+>    ```   
+
+
+    `Tip`: If, while following the previous steps you get this error message:  
+  
+      Could not open a connection to your authentication agent.
+    
+    You may need to start the `SSH-agent`, you can use this command:
+    
+      eval "$(ssh-agent -s)"
+    
 
 Once you have uploaded the public key and added your local identification to the site it will take a little bit of time to process your profile and add your account to the system. After ~15 minutes, you should be able to login via SSH:
 ```
 ssh -Y <username>@login.af.uchicago.edu
 ```
+
+
+
 If it does not work, please double check that you have been approved, have uploaded your public key and have waited at least 15 minutes. If you still have an issue, feel free to reach out to us for help.
 
