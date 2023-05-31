@@ -11,8 +11,6 @@ List your ticket:
 ```bash
 klist
 ```
-ls /eos/atlas/...
-ls /eos/user/y/yesw/..
 
 ### Pass your CERN Kerberos ticket to your HTCondor jobs
 
