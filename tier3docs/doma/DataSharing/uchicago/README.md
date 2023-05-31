@@ -12,4 +12,7 @@
     include-markdown "./uc_checkproxy.md"
 %}
 
+{%
+    include-markdown "./uc_kinit.md"
+%}
 
