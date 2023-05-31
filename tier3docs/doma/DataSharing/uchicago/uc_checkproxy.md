@@ -1,4 +1,4 @@
-# <span id="uc_checkproxy"></span> Always check your proxy certificate
+## Always check your proxy certificate
 
 If you are trying to use HTCondor driver to run some jobs that need data access authorization, for example on `rucio`. In any of the ways described to access your data always check the status of your proxy grid certificate.
 Your x509proxy certificate has expiry date, once it expires you have to create an ATLAS VOMS proxy again in the usual way. As you know you create (or copy it to) on the shared $HOME filesystem so that the HTCondor scheduler can find and read the proxy. This is how you copy it to $HOME:
