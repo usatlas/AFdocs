@@ -50,7 +50,7 @@ nav:
         - 'Data Storage at BNL': doma/storage/BNL/storage-at-bnl.md
         - 'Data Sharing': doma/DataSharing/README.md
         - 'Data Storage at UChicago': doma/storage/UChicago/uc_storage.md
-        - 'Data Sharing at UChicago': doma/DataSharing/uchicago
+        - 'Data Sharing at UChicago': doma/DataSharing/uchicago/README.md
     - 'Jupyter at Analysis Facilities':
         - 'Introduction': jupyter/JupyterAtTier3s.md
         - 'Jupyter at BNL': jupyter/BNLjupyter.md
