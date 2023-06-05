@@ -86,7 +86,7 @@ Check the Rucio documentation at [RSE Rucio manage quota](https://rucio-ui.cern.
 
 ![rse rucio manage quota](uc_rucio_localgroupdisk.png)
 
-and click the `select` button. If you search your lxplus username you'll see that you have a default quota of 15TB. For additional space if need beyond 30TB here is the [Request form]( https://atlas-lgdm.cern.ch/LocalDisk_Usage/USER/RequestFormUsage/).
+and click the `select` button. If you search your lxplus username you'll see that you have a default quota of 15TB. For additional space if need beyond 15TB here is the [Request form]( https://atlas-lgdm.cern.ch/LocalDisk_Usage/USER/RequestFormUsage/).
 Remember that you need US-ATLAS VO for the grid certificate.
 
 If you are an ATLAS member but can't find your name go to [VOMS page](https://lcg-voms2.cern.ch:8443/voms/atlas/user/home.action) and select /atlas/usatlas in the "groups roles" box:
