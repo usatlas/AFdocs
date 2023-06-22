@@ -18,7 +18,8 @@ SDF provides Luster parallel file system for user home and data.
 SDF is still expanding and will likely experenice a rapid expansion in the near future. Other types of file
 systems and storage systems, as well as HTC may also be introduced. 
 
-For ATLAS users, we currently provide GPFS filesystem for home (100GB) and data (2-10TB) in the AFS environment. 
+For ATLAS users, we currently provide GPFS filesystem for home (100GB) and data (2-10TB) in the AFS environment 
+(under /gpfs/slac/atlas/fs1/{u,d} respectively). 
 At SDF, ATLAS users will get a new home directory of 25GB. The GPFS file system is also available in SDF until 
 the hardware retires (at that time, we will migrate users from GPFS to Lustre). AFS file system is not available 
 in SDF.
