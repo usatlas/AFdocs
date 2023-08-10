@@ -7,6 +7,8 @@ markdown_extensions:
   - attr_list
   - def_list
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
@@ -46,6 +48,10 @@ nav:
         - 'BNL': sshlogin/ssh2BNL.md
         - 'UChicago': sshlogin/README.md
         - 'SLAC': sshlogin/ssh2SLAC.md
+    - 'Machine Learning Containers':
+        - 'Introduction': ML-Containers/info.md
+        - 'Contents': ML-Containers/contents.md
+        - 'Implementing': ML-Containers/implement.md
     - 'Data Store, Accessing and Sharing':
         - 'Data Storage at BNL': doma/storage/BNL/storage-at-bnl.md
         - 'Data Sharing': doma/DataSharing/README.md
@@ -66,7 +72,7 @@ nav:
         - 'Tutorial of Analysis Examples at BNL': Tutorial-2019Aug/BNL/README.md
         - 'Tutorial of Analysis Examples at SLAC': Tutorial-2019Aug/SLAC/README.md
         - 'Tutorial of Analysis Examples on the Grid': Tutorial-2019Aug/Grid/README.md
-    - 'Containers':
+    - 'Singularity':
         - 'Using Singularity Containers': Containers/UsingSingularity/README.md
     - 'FAQs/Tips':
         - 'FAQs and some tips': faqs-tips/faq-tips.md
