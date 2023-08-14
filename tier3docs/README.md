@@ -35,10 +35,11 @@ storage.</span>
 This documentation includes the following:
 
 + [User Onboarding](UserOnboarding/account): details the process of applying for user accounts at BNL, SLAC, and UChicago
++ [Quickstart Guides](sshlogin/sshlogin2BNL): walkthroughs for accessing the AFs
++ [Machine Learning Containers](ML-Containers/info.md): information and use of ML containers
 + [Data Storing, Accessing, and Sharing](doma/DataSharing/): explains the ways users can use their ATLAS data at AFs
 + [Jupyter at Analysis Facilities](jupyter/JupyterAtTier3s): highlights the different aspects of Jupyter and how to use it at AFs
 + [Data Analysis Tutorials](Tutorial-2019Aug): step-by-step tutorials on using AFs for analyses
-
 + [Containers](Containers/UsingSingularity/README.md): detailed information on container-based data processing and how to use them at AFs
 + [FAQ](faqs-tips/faq-tips): answers to frequently asked questions
 
