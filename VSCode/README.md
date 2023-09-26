@@ -5,10 +5,10 @@ Using VSCode
 
 [Visual Studio Code](https://code.visualstudio.com/) is a lightweight but powerful source code editor which runs on your desktop.
 It provides a rich code editing experience with features like 
-- syntax highlighting,
-- auto-indentation,
-- intelliSense (context-aware suggestions as you type),
-- linting for various programming languages,
+- syntax highlighting
+- auto-indentation
+- intelliSense (context-aware suggestions as you type)
+- linting for various programming languages
 - powerful debugging
 - Integrated Terminal
 
@@ -27,12 +27,20 @@ and other extensions directly **on the remote machine**.
 VS Code can provide a **local-quality development experience** - including full IntelliSense (completions), code navigation, 
 and debugging - **regardless of where your code is hosted**.
 
+## Requirements to Run Remote-Tunnels
+
+To run **Remote-Tunnels**, it requires:
+- A GitHub account
+- [VSCode CLI](https://code.visualstudio.com/docs/editor/command-line) on the remote machine
+
+So you can edit in VSCode on local machine browser the files on the remote machine.
+
+But if you would like to use local VSCode client to edit the files on the remote machine, 
+you still need:
+- VSCode client and extension *Remote-Tunnels* on the local machine
+
 ## Setup Guide
 
-Requirements to run remote-tunnels:
-- A GitHub account
-- VSCode client and extension *Remote-Tunnels* on the local machine
-- [VSCode CLI](https://code.visualstudio.com/docs/editor/command-line) on the remote machine
 
 ### Step-1: Create a Secure Tunnel on the Remote Machine
 
@@ -56,7 +64,7 @@ It would print out something like:
 >
 
 On a browser, following the above instruction, visit https://github.com/login/device, input the code.
-On the next web page, click on the button of **Authorize Visual-Studio-Code**.
+On the next web page, click on the button of `Authorize Visual-Studio-Code`.
 
 Afterward, the remote machine screen would print out a new line:
 > **What would you like to call this machine?**
@@ -72,4 +80,8 @@ Now you can explore the files on the remote machine, and use VSCode to edit file
 - Either on a browser, open the above link: https://vscode.dev/tunnel/bnl-spar/home/tmp/yesw
 - Or in VSCode client, open **Remote Explorer**, click on **Remotes**, then **Tunnels**, choose the name **BNL-SPAR**.
 
-Upon opening a folder/file, you just click on the button of **Yes, I trusted the authors**.
+In the VSCode client, you can see the name **BNL-SPAR** as shown in the following screenshot:
+
+![screenshot of BNL Jupyter Launcher](Screenshot-Remote-Tunnels.png)
+
+Upon opening a folder/file, you just click on the button of `Yes, I trusted the authors`.
