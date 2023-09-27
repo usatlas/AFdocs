@@ -74,6 +74,8 @@ nav:
         - 'Tutorial of Analysis Examples on the Grid': Tutorial-2019Aug/Grid/README.md
     - 'Singularity':
         - 'Using Singularity Containers': Containers/UsingSingularity/README.md
+    - 'VSCode':
+        - 'Detailed guide on using Visual Studio Code': VSCode/README.md
     - 'FAQs/Tips':
         - 'FAQs and some tips': faqs-tips/faq-tips.md
         - 'Glossary': faqs-tips/glossary.md
