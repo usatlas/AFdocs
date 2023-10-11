@@ -41,5 +41,6 @@ This documentation includes the following:
 + [Jupyter at Analysis Facilities](jupyter/JupyterAtTier3s): highlights the different aspects of Jupyter and how to use it at AFs
 + [Data Analysis Tutorials](Tutorial-2019Aug): step-by-step tutorials on using AFs for analyses
 + [Containers](Containers/UsingSingularity/README.md): detailed information on container-based data processing and how to use them at AFs
++ [Using VSCode](VSCode/README.md): detailed guide on using [Visual Studio Code](https://code.visualstudio.com/).
 + [FAQ](faqs-tips/faq-tips): answers to frequently asked questions
 
