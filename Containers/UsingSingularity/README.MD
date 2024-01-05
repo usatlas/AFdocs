@@ -156,12 +156,12 @@ You can check your Windows version by opening
 
 > 
 > 
->     Microsoft Windows [Version 10.0.19587.1000]
+>     Microsoft Windows [Version 10.0.19045.3803]
 >     (c) 2020 Microsoft Corporation. All rights reserved.
 >     
 >     C:\Users\Shuwei>ver
 >     
->     Microsoft Windows [Version 10.0.19587.1000]
+>     Microsoft Windows [Version 10.0.19045.3803]
 
 Actually the Windows build information has already be displayed on the
 terminal top when the **Command Prompt** app is opened.
