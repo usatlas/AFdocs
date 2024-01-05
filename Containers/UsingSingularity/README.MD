@@ -9,11 +9,11 @@
       - [Singularity on Windows 10](#Singularity_on_Windows_10)
           - [Installation of Windows Subsystem for Linux
             (WSL)](#Installation_of_Windows_Subsyste)
-          - [Running Windows 10 build 18917 or
-            higher](#Running_Windows_10_build_18917_o)
+          - [Running Windows 10 build 19041 or
+            higher or Windows 11](#Running_Windows_build)
           - [Installation of WSL2](#Installation_of_WSL2)
-          - [Use the Installed Linux on Windows
-            10](#Use_the_Installed_Linux_on_Windo)
+          - [Linux Distribution Installation on Windows](#Linux_Distro_Installation_on_Windows)
+          - [Use the Installed Linux on Windows](#Use_the_Installed_Linux_on_Windo)
           - [Singularity Installation on
             WSL2](#Singularity_Installation_on_WSL2)
   - [Using Singularity](#Using_Singularity_AN1)
@@ -142,10 +142,16 @@ to **create a new user account** together with its password to
 [initialize the new Linux
 distro](https://docs.microsoft.com/en-us/windows/wsl/initialize-distro).
 
-### <span id="Running_Windows_10_build_18917_o"></span> Running Windows 10 build 18917 or higher
+### <span id="Running_Windows_build"></span> Running Windows 10 build 19041 or higher or Windows 11
 
-In order to install WSL2, ensure that you are running Windows 10 **build
-18917** or higher. You can check your Windows version by opening
+In order to install WSL2, ensure that you must be running Windows 10...
+
+   - For x64 systems: Version 1903 or later, with Build 18362.1049 or later.
+   - For ARM64 systems: Version 2004 or later, with Build 19041 or later.
+
+or Windows 11.
+
+You can check your Windows version by opening
 **Command Prompt** and running the **ver** command.
 
 > 
@@ -170,19 +176,14 @@ You can also check the Windows build info in PowerShell with command
 >     OS Name:                   Microsoft Windows 10 Home Insider Preview
 >     OS Version:                10.0.19587 N/A Build 19587
 
-If your Windows build is lower than **18917**, you can update it by
-joining the Windows Insider Program and select the **Fast ring** or the
-**Slow ring**. Search for `"Windows Insider Program"` in the Windows
-start search box, and click the found **Windows Insider Program
-settings**. In the setting, pick your Insider settings to **Fast** or
-**Slow** ring. You can find more details at [How to get started with
-Windows 10 Insider Preview
-builds](https://insider.windows.com/en-us/getting-started/#install).
+If your Windows build is lower than **18362** (for x64 systems) or 19041 (for ARM64 systems), 
+you can use the [Windows Update Assistant](https://www.microsoft.com/software-download/windows10) 
+to update your version of Windows.
 
 ### <span id="Installation_of_WSL2"></span> Installation of WSL2
 
 You can find [the detailed instruction on installing WSL2 on
-Windows 10](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install).
+Windows](https://learn.microsoft.com/en-us/windows/wsl/install).
 The first 2 requirements have already been discussed above. Next you
 need:
 
@@ -208,12 +209,18 @@ which may take a while to apply.
 Now you can verify which WSL version used the Linux distro.
 
 > 
-> 
->     PS C:\Users\Shuwei> wsl -l -v
->       NAME            STATE           VERSION
->     * Ubuntu-18.04    Stopped         2
+>     PS C:\Users\Shuwei> wsl -v
+>     WSL version: 2.0.9.0
+>     Kernel version: 5.15.133.1-1
+>     WSLg version: 1.0.59
+>     MSRDC version: 1.2.4677
+>     Direct3D version: 1.611.1-81528511
+>     DXCore version: 10.0.25131.1002-220531-1700.rs-onecore-base2-hyp
+>     Windows version: 10.0.19045.3803
 
-### <span id="Use_the_Installed_Linux_on_Windo"></span> Use the Installed Linux on Windows 10
+### <span id="Linux_Distro_Installation_on_Windows"></span> Linux Distribution Installation on Windows
+
+### <span id="Use_the_Installed_Linux_on_Windo"></span> Use the Installed Linux on Windows
 
 Open **PowerShell under a regular user** and run **wsl**:
 
