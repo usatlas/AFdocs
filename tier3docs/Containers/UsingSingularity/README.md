@@ -6,14 +6,14 @@
   - [Installation of Singularity](#Installation_of_Singularity)
       - [Singularity on Linux OS](#Singularity_on_Linux_OS)
       - [Singularity on Mac OS](#Singularity_on_Mac_OS)
-      - [Singularity on Windows 10](#Singularity_on_Windows_10)
+      - [Singularity on Windows](#Singularity_on_Windows)
           - [Installation of Windows Subsystem for Linux
             (WSL)](#Installation_of_Windows_Subsyste)
-          - [Running Windows 10 build 18917 or
-            higher](#Running_Windows_10_build_18917_o)
+          - [Running Windows 10 build 19041 or
+            higher or Windows 11](#Running_Windows_build)
           - [Installation of WSL2](#Installation_of_WSL2)
-          - [Use the Installed Linux on Windows
-            10](#Use_the_Installed_Linux_on_Windo)
+          - [Linux Distribution Installation on Windows](#Linux_Distro_Installation_on_Windows)
+          - [Use the Installed Linux on Windows](#Use_the_Installed_Linux_on_Windo)
           - [Singularity Installation on
             WSL2](#Singularity_Installation_on_WSL2)
   - [Using Singularity](#Using_Singularity_AN1)
@@ -36,9 +36,9 @@
 
 </div>
 
-## <span id="Introduction"></span> Introduction
+# <span id="Introduction"></span> Introduction
 
-### <span id="What_are_Containers"></span> What are Containers?
+## <span id="What_are_Containers"></span> What are Containers?
 
 **Containers** are an operating system virtualization technology used to
 package applications and their dependencies and run them in isolated
@@ -47,7 +47,7 @@ thus provide a **lightweight** method of packaging and deploying
 applications in a standardized way across many different types of
 infrastructure.
 
-### <span id="What_is_Singularity"></span> What is Singularity?
+## <span id="What_is_Singularity"></span> What is Singularity?
 
 **[Singularity](https://sylabs.io/)**
 is a container platform. It allows you to create and run containers that
@@ -61,9 +61,9 @@ You can build a container using Singularity on your laptop, and then run
 it on the grid. You can also make use of many already existing container
 images from different sources.
 
-## <span id="Installation_of_Singularity"></span> Installation of Singularity
+# <span id="Installation_of_Singularity"></span> Installation of Singularity
 
-### <span id="Singularity_on_Linux_OS"></span> Singularity on Linux OS
+## <span id="Singularity_on_Linux_OS"></span> Singularity on Linux OS
 
 Most Linux Distros should come with the Singularity. For example,
 Singularity is already available on BNL/SLAC machines.
@@ -85,7 +85,7 @@ visit [the gitlab source
 site](https://github.com/sylabs/singularity/releases)
 to install from the source.
 
-### <span id="Singularity_on_Mac_OS"></span> Singularity on Mac OS
+## <span id="Singularity_on_Mac_OS"></span> Singularity on Mac OS
 
 Since Mac OS does not use Linux kernel, the Singularity for Linux does
 not work here. However, a new Singularity Desktop for Mac OS has been
@@ -106,7 +106,7 @@ Run **singularity -h** to find the full available commands and options.
 In comparison with the Singularity-3.5 on Linux, the Singularity on Mac
 OS misses many commands such as **inspect** and **instance**.
 
-### <span id="Singularity_on_Windows_10"></span> Singularity on Windows 10
+## <span id="Singularity_on_Windows"></span> Singularity on Windows
 
 In order to use Singularity on Windows, you need install a Linux distro
 first. It could be achieved through [Windows Subsystem for Linux
@@ -115,10 +115,10 @@ without involving a Virtual Machine. **WSL** is a new Windows 10 feature
 that enables you to run native Linux command-line tools directly on
 Windows. So it is not available for other old Windows such as Windows 7.
 
-#### <span id="Installation_of_Windows_Subsyste"></span> Installation of Windows Subsystem for Linux (WSL)
+### <span id="Installation_of_Windows_Subsyste"></span> Installation of Windows Subsystem for Linux (WSL)
 
 Please refer [the WSL installation guide for
-Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+Windows 10/11](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 First enable the option feature **Microsoft-Windows-Subsystem-Linux**.
 Open **PowerShell as Administrator** and run:
@@ -142,20 +142,26 @@ to **create a new user account** together with its password to
 [initialize the new Linux
 distro](https://docs.microsoft.com/en-us/windows/wsl/initialize-distro).
 
-#### <span id="Running_Windows_10_build_18917_o"></span> Running Windows 10 build 18917 or higher
+### <span id="Running_Windows_build"></span> Running Windows 10 build 19041 or higher or Windows 11
 
-In order to install WSL2, ensure that you are running Windows 10 **build
-18917** or higher. You can check your Windows version by opening
+In order to install WSL2, ensure that you must be running Windows 10...
+
+   - For x64 systems: Version 1903 or later, with Build 18362.1049 or later.
+   - For ARM64 systems: Version 2004 or later, with Build 19041 or later.
+
+or Windows 11.
+
+You can check your Windows version by opening
 **Command Prompt** and running the **ver** command.
 
 > 
 > 
->     Microsoft Windows [Version 10.0.19587.1000]
+>     Microsoft Windows [Version 10.0.19045.3803]
 >     (c) 2020 Microsoft Corporation. All rights reserved.
 >     
 >     C:\Users\Shuwei>ver
 >     
->     Microsoft Windows [Version 10.0.19587.1000]
+>     Microsoft Windows [Version 10.0.19045.3803]
 
 Actually the Windows build information has already be displayed on the
 terminal top when the **Command Prompt** app is opened.
@@ -168,21 +174,16 @@ You can also check the Windows build info in PowerShell with command
 >     PS C:\Users\Shuwei> systeminfo | Select-String "^OS Name","^OS Version"
 >     
 >     OS Name:                   Microsoft Windows 10 Home Insider Preview
->     OS Version:                10.0.19587 N/A Build 19587
+>     OS Version:                10.0.19045 N/A Build 19045
 
-If your Windows build is lower than **18917**, you can update it by
-joining the Windows Insider Program and select the **Fast ring** or the
-**Slow ring**. Search for `"Windows Insider Program"` in the Windows
-start search box, and click the found **Windows Insider Program
-settings**. In the setting, pick your Insider settings to **Fast** or
-**Slow** ring. You can find more details at [How to get started with
-Windows 10 Insider Preview
-builds](https://insider.windows.com/en-us/getting-started/#install).
+If your Windows build is lower than **18362** (for x64 systems) or 19041 (for ARM64 systems), 
+you can use the [Windows Update Assistant](https://www.microsoft.com/software-download/windows10) 
+to update your version of Windows.
 
-#### <span id="Installation_of_WSL2"></span> Installation of WSL2
+### <span id="Installation_of_WSL2"></span> Installation of WSL2
 
 You can find [the detailed instruction on installing WSL2 on
-Windows 10](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install).
+Windows](https://learn.microsoft.com/en-us/windows/wsl/install).
 The first 2 requirements have already been discussed above. Next you
 need:
 
@@ -208,12 +209,46 @@ which may take a while to apply.
 Now you can verify which WSL version used the Linux distro.
 
 > 
-> 
->     PS C:\Users\Shuwei> wsl -l -v
->       NAME            STATE           VERSION
->     * Ubuntu-18.04    Stopped         2
+>     PS C:\Users\Shuwei> wsl -v
+>     WSL version: 2.0.9.0
+>     Kernel version: 5.15.133.1-1
+>     WSLg version: 1.0.59
+>     MSRDC version: 1.2.4677
+>     Direct3D version: 1.611.1-81528511
+>     DXCore version: 10.0.25131.1002-220531-1700.rs-onecore-base2-hyp
+>     Windows version: 10.0.19045.3803
 
-#### <span id="Use_the_Installed_Linux_on_Windo"></span> Use the Installed Linux on Windows 10
+### <span id="Linux_Distro_Installation_on_Windows"></span> Linux Distribution Installation on Windows
+
+Running `wsl -l --online` in either **PowerShell** or **Command Prompt** to list the available Linux Disibution Systems.
+
+>
+>     PS C:\Users\yesw> wsl -l --online
+>     The following is a list of valid distributions that can be installed.
+>     Install using 'wsl.exe --install <Distro>'.
+> 
+>     NAME                                   FRIENDLY NAME
+>     Ubuntu                                 Ubuntu
+>     Debian                                 Debian GNU/Linux
+>     kali-linux                             Kali Linux Rolling
+>     Ubuntu-18.04                           Ubuntu 18.04 LTS
+>     Ubuntu-20.04                           Ubuntu 20.04 LTS
+>     Ubuntu-22.04                           Ubuntu 22.04 LTS
+>     OracleLinux_7_9                        Oracle Linux 7.9
+>     OracleLinux_8_7                        Oracle Linux 8.7
+>     OracleLinux_9_1                        Oracle Linux 9.1
+>     openSUSE-Leap-15.5                     openSUSE Leap 15.5
+>     SUSE-Linux-Enterprise-Server-15-SP4    SUSE Linux Enterprise Server 15 SP4
+>     SUSE-Linux-Enterprise-15-SP5           SUSE Linux Enterprise 15 SP5
+>     openSUSE-Tumbleweed                    openSUSE Tumbleweed
+> 
+
+There are Linux Distribution Systems for WSL2 available in the [Microsoft Store](https://apps.microsoft.com), such as *AlmaLinux*.
+
+To install *Unbutun*, just run `wsl --install Ubuntu*.
+To install *AlmaLinux9*, find the corresponding app in the Microsoft Store, install it.
+
+### <span id="Use_the_Installed_Linux_on_Windo"></span> Use the Installed Linux on Windows
 
 Open **PowerShell under a regular user** and run **wsl**:
 
@@ -243,14 +278,14 @@ If the Linux is already running, you can run "bash" to enter the Linux:
 After all terminals associated with the Linux have been closed, the
 running Linux will stop then.
 
-#### <span id="Singularity_Installation_on_WSL2"></span> Singularity Installation on WSL2
+### <span id="Singularity_Installation_on_WSL2"></span> Singularity Installation on WSL2
 
 Start the Linux distro on Windows, then install Singularity as the same
 ways as on the Linux OS.
 
-## <span id="Using_Singularity_AN1"></span> Using Singularity
+# <span id="Using_Singularity_AN1"></span> Using Singularity
 
-### <span id="Singularity_Usage_Help"></span> Singularity Usage Help
+## <span id="Singularity_Usage_Help"></span> Singularity Usage Help
 
 You can find the Singularity usage by running **singularity -h**
 
@@ -370,7 +405,7 @@ For additional help or support, please visit
 refer to [the User
 Guide](https://sylabs.io/guides/3.5/user-guide/quick_start.html#).
 
-### <span id="Cache_Folders"></span> Cache Folders
+## <span id="Cache_Folders"></span> Cache Folders
 
 To make downloading images for build and pull faster and less redundant,
 Singularity uses a caching strategy. By default, Singularity will create
@@ -386,7 +421,7 @@ which could take quite much space, depending the image size.
 You can set the envvar **SINGULARITY\_CACHEDIR** to use other directory
 than the default cache directory **$HOME/.singularity/cache**.
 
-### <span id="Binding_Paths_and_Mounts"></span> Binding Paths and Mounts
+## <span id="Binding_Paths_and_Mounts"></span> Binding Paths and Mounts
 
 On default, Singularity will map the following directories on your host
 system to directories within the container:
@@ -409,12 +444,12 @@ as:
 You can also defined envvar **SINGULARITY\_BINDPATH** (such as `export
 SINGULARITY_BINDPATH="/data:/mnt"`) to bind paths.
 
-### <span id="Examples"></span> Examples
+## <span id="Examples"></span> Examples
 
 You need define the envvar **SINGULARITY\_CACHEDIR** to a directory to
 have enough space to accommodate the Singularity cache.
 
-#### <span id="Some_Fun_Exercise_Examples"></span> Some Fun Exercise Examples
+### <span id="Some_Fun_Exercise_Examples"></span> Some Fun Exercise Examples
 
 There are some fun exercises to play with the singularity command. One
 simple example is "Hello World", which takes the container image from
@@ -512,7 +547,7 @@ the latest in the Ubuntu container on the library:
 >     VERSION_CODENAME=cosmic
 >     UBUNTU_CODENAME=cosmic
 
-#### <span id="Using_Containers_for_LaTeX"></span> Using Containers for LaTeX
+### <span id="Using_Containers_for_LaTeX"></span> Using Containers for LaTeX
 
 If you need LaTeX and do not have LaTeX installed locally, you can use
 LaTeX container images.
@@ -564,7 +599,7 @@ more packages installed.
 
 Then you can process your tex file inside the container.
 
-#### <span id="Using_Containers_for_Machine_Lea"></span> Using Containers for Machine Learning
+### <span id="Using_Containers_for_Machine_Lea"></span> Using Containers for Machine Learning
 
 There are many containers available for machine learning.
 
@@ -604,7 +639,7 @@ the above container is also available on the docker hub via
 the container from the docker hub and convert into a singularity image
 file (sif).
 
-### <span id="Using_Containers_through_ARLB"></span> Using Containers through ARLB
+## <span id="Using_Containers_through_ARLB"></span> Using Containers through ARLB
 
 Prior to use ATLAS\_LOCAL\_ROOT\_BASE (ALRB), you need install CVMFS
 first. Please refer to [the CernVM-FS Client Quick
@@ -698,9 +733,9 @@ with tag **+noalrb** after the mage location/keyword:
 >               
 >     Singularity>
 
-## <span id="Explore_Container_Images"></span> Explore Container Images
+# <span id="Explore_Container_Images"></span> Explore Container Images
 
-### <span id="Containers_on_CVMFS"></span> Containers on CVMFS
+## <span id="Containers_on_CVMFS"></span> Containers on CVMFS
 
 There are a few singularity containers accessible by keyword **slc5**,
 **slc6**, **centos6** and **centos7** through command `setupATLAS -c`.
@@ -769,7 +804,7 @@ Let us take an example of release AthAnalysis,2.2.115 under
 That is, start the wanted container, then source
 /home/atlas/release\_setup.sh.
 
-### <span id="Containers_on_Docker_Hub"></span> Containers on Docker Hub
+## <span id="Containers_on_Docker_Hub"></span> Containers on Docker Hub
 
 The Docker hub hosts the largest container images. You can input keyword
 to [search on the
@@ -783,7 +818,7 @@ shown below:
 Click on the found container, it will provides the pull command
 instruction and sometimes also a brief description.
 
-### <span id="Containers_on_Singularity_Hub_an"></span> Containers on Singularity Hub and Library
+## <span id="Containers_on_Singularity_Hub_an"></span> Containers on Singularity Hub and Library
 
 There are many container images on the Singularity Hub and Library.
 
@@ -793,7 +828,7 @@ There are many container images on the Singularity Hub and Library.
     supported in Singularity version 2. Put keyword in the search field
     on the very top to search for your wanted container.
 
-## <span id="Contained_based_Jobs_on_the_Grid"></span> Contained-based Jobs on the Grid
+# <span id="Contained_based_Jobs_on_the_Grid"></span> Contained-based Jobs on the Grid
 
 There are more resources available on the grid, you can run
 container-based jobs on the grid. Both prun and pathena provide an
