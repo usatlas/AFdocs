@@ -245,7 +245,8 @@ Running `wsl -l --online` in either **PowerShell** or **Command Prompt** to list
 
 There are Linux Distribution Systems for WSL2 available in the [Microsoft Store](https://apps.microsoft.com), such as *AlmaLinux*.
 
-To install *Unbutun*, just run `wsl --install Ubuntu*.
+To install *Ubuntu*, just run `wsl --install Ubuntu*.
+
 To install *AlmaLinux9*, find the corresponding app in the Microsoft Store, install it.
 
 ### <span id="Use_the_Installed_Linux_on_Windo"></span> Use the Installed Linux on Windows
