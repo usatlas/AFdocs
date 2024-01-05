@@ -6,7 +6,7 @@
   - [Installation of Singularity](#Installation_of_Singularity)
       - [Singularity on Linux OS](#Singularity_on_Linux_OS)
       - [Singularity on Mac OS](#Singularity_on_Mac_OS)
-      - [Singularity on Windows 10](#Singularity_on_Windows_10)
+      - [Singularity on Windows](#Singularity_on_Windows)
           - [Installation of Windows Subsystem for Linux
             (WSL)](#Installation_of_Windows_Subsyste)
           - [Running Windows 10 build 19041 or
@@ -106,7 +106,7 @@ Run **singularity -h** to find the full available commands and options.
 In comparison with the Singularity-3.5 on Linux, the Singularity on Mac
 OS misses many commands such as **inspect** and **instance**.
 
-## <span id="Singularity_on_Windows_10"></span> Singularity on Windows 10
+## <span id="Singularity_on_Windows"></span> Singularity on Windows
 
 In order to use Singularity on Windows, you need install a Linux distro
 first. It could be achieved through [Windows Subsystem for Linux
@@ -118,7 +118,7 @@ Windows. So it is not available for other old Windows such as Windows 7.
 ### <span id="Installation_of_Windows_Subsyste"></span> Installation of Windows Subsystem for Linux (WSL)
 
 Please refer [the WSL installation guide for
-Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+Windows 10/11](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 First enable the option feature **Microsoft-Windows-Subsystem-Linux**.
 Open **PowerShell as Administrator** and run:
@@ -174,7 +174,7 @@ You can also check the Windows build info in PowerShell with command
 >     PS C:\Users\Shuwei> systeminfo | Select-String "^OS Name","^OS Version"
 >     
 >     OS Name:                   Microsoft Windows 10 Home Insider Preview
->     OS Version:                10.0.19587 N/A Build 19587
+>     OS Version:                10.0.19045 N/A Build 19045
 
 If your Windows build is lower than **18362** (for x64 systems) or 19041 (for ARM64 systems), 
 you can use the [Windows Update Assistant](https://www.microsoft.com/software-download/windows10) 
