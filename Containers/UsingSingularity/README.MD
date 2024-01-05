@@ -243,6 +243,11 @@ Running `wsl -l --online` in either **PowerShell** or **Command Prompt** to list
 >     openSUSE-Tumbleweed                    openSUSE Tumbleweed
 > 
 
+There are Linux Distribution Systems for WSL2 available in the [Microsoft Store](https://apps.microsoft.com), such as *AlmaLinux*.
+
+To install *Unbutun*, just run `wsl --install Ubuntu*.
+To install *AlmaLinux9*, find the corresponding app in the Microsoft Store, install it.
+
 ### <span id="Use_the_Installed_Linux_on_Windo"></span> Use the Installed Linux on Windows
 
 Open **PowerShell under a regular user** and run **wsl**:
