@@ -220,6 +220,29 @@ Now you can verify which WSL version used the Linux distro.
 
 ### <span id="Linux_Distro_Installation_on_Windows"></span> Linux Distribution Installation on Windows
 
+Running `wsl -l --online` in either **PowerShell** or **Command Prompt** to list the available Linux Disibution Systems
+
+>
+> PS C:\Users\yesw> wsl -l --online
+> The following is a list of valid distributions that can be installed.
+> Install using 'wsl.exe --install <Distro>'.
+> 
+> NAME                                   FRIENDLY NAME
+> Ubuntu                                 Ubuntu
+> Debian                                 Debian GNU/Linux
+> kali-linux                             Kali Linux Rolling
+> Ubuntu-18.04                           Ubuntu 18.04 LTS
+> Ubuntu-20.04                           Ubuntu 20.04 LTS
+> Ubuntu-22.04                           Ubuntu 22.04 LTS
+> OracleLinux_7_9                        Oracle Linux 7.9
+> OracleLinux_8_7                        Oracle Linux 8.7
+> OracleLinux_9_1                        Oracle Linux 9.1
+> openSUSE-Leap-15.5                     openSUSE Leap 15.5
+> SUSE-Linux-Enterprise-Server-15-SP4    SUSE Linux Enterprise Server 15 SP4
+> SUSE-Linux-Enterprise-15-SP5           SUSE Linux Enterprise 15 SP5
+> openSUSE-Tumbleweed                    openSUSE Tumbleweed
+> 
+
 ### <span id="Use_the_Installed_Linux_on_Windo"></span> Use the Installed Linux on Windows
 
 Open **PowerShell under a regular user** and run **wsl**:
