@@ -13,6 +13,7 @@
             higher or Windows 11](#Running_Windows_build)
           - [Installation of WSL2](#Installation_of_WSL2)
           - [Linux Distribution Installation on Windows](#Linux_Distro_Installation_on_Windows)
+              - [Nameservers in WSL2 Linux](#Namservers_in_WSL2_Linux)
           - [Use the Installed Linux on Windows](#Use_the_Installed_Linux_on_Windo)
           - [Singularity Installation on
             WSL2](#Singularity_Installation_on_WSL2)
@@ -248,6 +249,36 @@ There are Linux Distribution Systems for WSL2 available in the [Microsoft Store]
 To install *Ubuntu*, just run `wsl --install Ubuntu`.
 
 To install *AlmaLinux9*, find the corresponding app in the **Microsoft Store**, install it.
+
+#### <span id="Namservers_in_WSL2_Linux"></span> Nameservers in WSL2 Linux
+
+In case the Windows machine is **behind a campus firewall**, the automatically generated file */etc/resolv.conf* would not work properly.
+In the case, you need override the file */etc/resolv.conf*, which is actually a sym-link to */mnt/wsl/resolv.conf* by default.
+
+Step-1: Inside the WSL2 Linux, run `ipconfig.exe /all | grep -A1 "DNS Servers"` to find the nameservrs on the host.
+> 
+> 
+>     AlmaLinux9$ ipconfig.exe /all | grep -A1 "DNS Servers"
+>     DNS Servers . . . . . . . . . . . : 130.199.128.31
+>                                         130.199.1.1
+>     --
+>     DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+>                                         fec0:0:0:ffff::2%1
+
+Step-2: Remove the sym-linked file */etc/resolv.conf*, then create a new file with **the above IPv4 DNS servers**.
+> 
+> 
+>     AlmaLinux9$ sudo rm -f /etc/resolv.conf
+>     AlmaLinux9$ sudo cat >/etc/resolv.conf
+>     nameserver 130.199.128.31
+>     nameserver  130.199.1.1
+
+Step-3: Create a new file */etc/wsl.conf* with the following content, to prevent overrding */etc/resolv.conf* during WSL2 restart.
+> 
+> 
+>     AlmaLinux9$ sudo cat > /etc/wsl.conf
+>     [network]
+>     generateResolvConf = false
 
 ### <span id="Use_the_Installed_Linux_on_Windo"></span> Use the Installed Linux on Windows
 
