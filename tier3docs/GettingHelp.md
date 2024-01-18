@@ -20,4 +20,4 @@ BNL: [rt-racf@bnl.gov](mailto:rt-racf@bnl.gov); Monitoring: [SDCC Tier 3 Monitor
 UChicago: [atlas-us-chicago-tier3-admins@cern.ch](mailto:atlas-us-chicago-tier3-admins@cern.ch)
 
 
-SLAC: [unix-admin@slac.stanford.edu](mailto:unix-admin@slac.stanford.edu)
+SLAC: [atlas-us-slac-acf@cern.ch](mailto:atlas-us-slac-acf@cern.ch) or [CERN MatterMost](https://mattermost.web.cern.ch/slac-testing/channels/town-square)

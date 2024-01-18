@@ -5,36 +5,33 @@
 + [A note about yoru AFS or GPFS spaces](#a-note-about-your-afs-or-gpfs-spaces)
 + [How to launch JupyterLab at SLAC](#how-to-launch-jupyterlab-at-slac)
 + [Run your own Jupyter environment](#run-your-own-jupyter-environment)
-+ [An alternative way to start a Jupyter environment at SLAC](#an-alternative-way-to-start-a-jupyter-environment-at-slac)
 + [Kernels and extensions in the ATLAS Jupyter environment](#kernels-and-extensions-in-the-atlas-jupyter-environment)
 + [Extend ATLAS JupyterLab Functionalities](#extend-atlas-jupyterlab-functionalities)
 + [Getting help](#getting-help)
+<!--
++ [An alternative way to start a Jupyter environment at SLAC](#an-alternative-way-to-start-a-jupyter-environment-at-slac)
+-->
 
 ## Login to JupyterLab at SLAC
 
-Before accessing [the SLAC JupyterLab](https://sdf.slac.stanford.edu/public/doc/#/interactive-compute?id=jupyter), 
-please [apply for a SLAC computing account](https://atlas.slac.stanford.edu/using-the-slac-computing-resources). 
-
-You need to use your "SLAC ID" (aka SLAC Windows account) to login to SLAC JupyterLab. For more information 
-regarding "SLAC ID", please refer to ["SSH login to SDF"](../sshlogin/ssh2SLAC.md#sdf).
-
-## A note about your AFS or GPFS spaces
-
-SLAC JupyterLab will put you on a new 25GB home directory `/sdf/home/<username_initial>/<username>`. If you have GPFS or AFS spaces at SLAC, you will find that the JupyterLab can access GPFS spaces but can not access AFS space. You will need to manually copy your files from AFS to the new home. In JupyterLab's terminal, you can run scp/sftp to copy files.
+Please refer to ["S3DF: a new ..."](../sshlogin/ssh2SLAC.md#accessing-to-s3df) for information about logging in to 
+[SLAC Jupyter Web portal](https://s3df.slac.stanford.edu/ondemand), available spaces and network constrains.
 
 ## How to launch JupyterLab at SLAC
 
-The main portal to run Jupyter at SLAC is [https://sdf.slac.stanford.edu](https://sdf.slac.stanford.edu). 
-Once you login to the main portal, click "Interactive Apps" from the top menu bar. Then choose "Jupyter". 
+Once you login to the main portal, click "My Interactive Sessions" from the top menu bar. Then choose "Jupyter". 
 You will need to make a few choices:
 
-1. In "Jupyter Instance" box, choose "atlas/20210403". You can choose Jupyter Instances for other experiments but there is no guarantee that those instances will work for you.
+1. In "Jupyter Instance" box, choose "atlas/20210403". You can choose Jupyter Instances for other experiments but there is no guarantee that those instances will work for you. You can also bring your own Jupyter environment (under Custom)
 2. Check the "Use JupyterLab instead of Jupyter Notebook?" box.
-3. In the "Partition" box, you can type in "usatlas" or "shared". Compare to "usatlas", "shared" may give you a quicker access but you may face preemption. If you have been told that you can use other SLURM partitions, please type at here.
+3. In the accoutn box, type "atlas:usatlas". 
+3. In the "Partition" box, choose "rome" for CPU only session, or "ampere" if you need GPUs 
 4. Choose hours, # CPUs, memory, # GPUs and GPU type, then click "launch". Note that your Jupyter work runs as a SLURM job. So choose only what you need to ensure speedy launching of your job.
 
+<!--
 In addition to using this portal, it is also possible to directly run Jupyter
 on SLAC batch nodes (see [secton below](#an-alternative-way-to-start-a-jupyter-environment-at-slac))
+-->
 
 ## Run your own Jupyter environment
 
@@ -47,8 +44,8 @@ The ATLAS instance we built may not satisfy your need. If you have your own Jupy
 5. Below are example scripts to prepare for launching Jupyter from a Singularity container:
 
 ~~~
-export SINGULARITY_IMAGE=/gpfs/slac/.../my_singularity_image.sif
-function jupyter() { singularity exec --nv -B /gpfs,/scratch,/nfs,/gpfs ${SINGULARITY_IMAGE} jupyter $@ }
+export SINGULARITY_IMAGE=/sdf/data/atlas/u/$(id -un)/.../my_singularity_image.sif
+function jupyter() { singularity exec --nv -B /sdf,/cvmfs ${SINGULARITY_IMAGE} jupyter $@ }
 ~~~
 or from a Conda environment (assuming Anaconda 3 is installed at ~/anaconda3, and `jupyterlab` is installed via Conda):
 ~~~
@@ -56,7 +53,7 @@ source ~/anaconda3/etc/profile.d/conda.sh
 conda activate
 ~~~
 
-
+<!--
 ## An alternative way to start a Jupyter environment at SLAC
 
 The SLAC Jupyter portal uses the Open OnDemand technology. In rare cases, Open OnDemand may run into 
@@ -128,6 +125,7 @@ Again, note that the port number may not be `8888`.
 5\. Paste the above URL in your browser. 
 
 You are all set.
+-->
 
 ## Kernels and extensions in the ATLAS Jupyter environment
 

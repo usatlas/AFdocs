@@ -5,24 +5,100 @@
 
 <script type="text/javascript" src="/tier3docs/scripts/readMoreOrLess.js"></script>
 
-# SDF: a new computing environment at SLAC
+# S3DF: a new computing environment at SLAC
 
 For decades, SLAC runs a high throughput computing (HTC) environment, primarily serving the HEP community. This
 environment feature AFS file system home directory and LSF batch system, along with CVMFS. This environment is 
 also known as the AFS environment.
 
-SLAC is now building a new computing environment: the Scientific Data Facility (SDF). The core componment 
-of SDF is a high performance computer cluster (HPC) and a GPU cluster, both managed by a single SLURM batch 
-system. CVMFS is available on all nodes. For storage, 
-SDF provides Luster parallel file system for user home and data. 
-SDF is still expanding and will likely experenice a rapid expansion in the near future. Other types of file
-systems and storage systems, as well as HTC may also be introduced. 
+SLAC is now building a new computing environment: the SLAC Shared Scientific Data Facility (S3DF). The core 
+componments of S3DF are an interative pool, an OpenOnDemain web portal, a high performance computer cluster i
+(HPC) and a GPU cluster - both managed by a single SLURM batch system. and storage clusters
+
+## Accessing to S3DF
+
+There are two ways to login to S3DF. 
+<ol>
+  <li> <b>SSH login</b><p>
+  Login to the bastion host `ssh <username>@s3dflogin.slac.stanford.edu`<p>
+  Login to the actual interactive pool node `ssh iana` to do your work. <p>
+  Login to these host use your SLAC Unix password (not Window password).
+  <li> <b>Login to S3DF web portal`</b><p>
+  Go to https://s3df.slac.stanford.edu/ondemand and login to via Jupyter or a terminal. You will land on a 
+  batch node.
+</ol>
+
+S3DF also have a few data trasnfer nodes (s3dfdtn.slac.stanford.edu) for interactive data transfers. Note that 
+all nodes in S3DF, except the bastion nodes and DTN nodes above, are in private network IP space. There are limited
+NAT capacity to reach to the outside from these interactive and batch nodes. There is no inbound network connection 
+to the interactive and batch nodes.
+
+### OS enviornment
+
+S3DF currently runs RHEL-8. However, ATLAS recommanded OS is AlmaLinux 9 (and previously RHEL7/CentOS7). Apptainer
+container package is available on all S3DF nodes to help users who need to run their codes under a different OS 
+environment.
+
+### Submitting SLURM jobs
+
+All US ATLAS users can submit batch jobs using Slurm account atlas:usatlas, e.g. `srun -A atlas:usatlas hostname`.
+
+### Setup ATLAS environment
+
+A typical way to setup ATLAS environment upon login is to put the following in $HOME/.bashrc. This is the same
+at both AFS and SDF.
+
+```
+export ALRB_localConfigDir=/gpfs/slac/atlas/fs1/sw/localconfig
+export RUCIO_ACCOUNT="change_me"
+export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+alias setupATLAS='source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh'
+...
+```
+
+## Available Storage
+
+On the storage side, S3DF provides 
+<ol>
+  <li> Several  Weka parallel Posix file systems for user home and data. At the backend and , 
+invisible and transparent to the users, each of these storage system consists of a NVMe cache of a few PB, 
+and a spining disk basked CEPH s3 object storage. All the file system metadata reside in the NVMe cache. 
+  <li> The S3DF also mounted a Lustre file system that was previously used by the SDF system (S3DF's predecesssor). 
+  <li> GPFS and AFS from the older faclities are mounted read-only on a few interactive login nodes to facilitate 
+data migration
+  <li> CVMFS is availble on all interactive, batch and DTN nodes.
+</ol>
 
 For ATLAS users, we currently provide GPFS filesystem for home (100GB) and data (2-10TB) in the AFS environment 
 (under /gpfs/slac/atlas/fs1/{u,d} respectively). 
 At SDF, ATLAS users will get a new home directory of 25GB. The GPFS file system is also available in SDF until 
 the hardware retires (at that time, we will migrate users from GPFS to Lustre). AFS file system is not available 
 in SDF.
+
+### Space available to the ATLAS users
+
+The following spaces are available to ATLAS users:
+<ol>
+  <li> $HOME: quota 25GB on Weka file system
+  <li> /sdf/data/atlas/u/<username>: quota 200GB on Weka file system
+  <li> /sdf/scratch/<username_intial>/<username>: quota 100GB on Weka file system. This is a scratch space. Data 
+are subject to purge when the total scratch space is full.
+  <li> /sdf/group/atlas: quota 10TB on Weka file system, for groups to storage software (not data)
+  <li> /fs/ddn/sdf/group/atlas/d/<username>: create your own dir please. This is a Lustre file system. It is fast
+for bulk data access, but is not suitable for software. There is currently no easy way to enforce quota on this 
+file system. Please try to keep your usage under 2TB if possible.
+</ol>
+
+For existing users, you may notice that the old AFS and GPFS spaces are no longer availalb at S3DF (except read-only
+on a few interactive nodes). AFS and GPFS will be decommissioned soon at SLAC. Please move your data in AFS and 
+GPFS space to the above spaces. 
+
+
+
+# Old obsolete systems
+
+The following describe the soon to be obsolete systems, SDF and older AFS/LSF systems. Please migrate to S3DF ASAP
+as SLAC has set a deadline to decommission most of the services in these two older system around April 2024.
 
 ## <a name="sdf"></a>SSH login to SDF
 
@@ -84,15 +160,3 @@ the AFS or SDF environment. It is also subject to deletion without notice.
 
 SLAC is investigating [NoMachine](https://www.nomachine.com) as a replacement of Fast-X.
 
-## Setup ATLAS environment
-
-A typical way to setup ATLAS environment upon login is to put the following in $HOME/.bashrc. This is the same
-at both AFS and SDF.
-
-```
-export ALRB_localConfigDir=/gpfs/slac/atlas/fs1/sw/localconfig
-export RUCIO_ACCOUNT="change_me"
-export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
-alias setupATLAS='source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh'
-...
-```
