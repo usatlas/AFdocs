@@ -22,7 +22,7 @@ There are two ways to login to S3DF.
   <li> <b>SSH login</b><p>
   Login to the bastion host `ssh <username>@s3dflogin.slac.stanford.edu`<p>
   Login to the actual interactive pool node `ssh iana` to do your work. <p>
-  Login to these host use your SLAC Unix password (not Window password).
+  Please login to these host use your SLAC Unix password (not Window password).
   <li> <b>Login to S3DF web portal`</b><p>
   Go to https://s3df.slac.stanford.edu/ondemand and login to via Jupyter or a terminal. You will land on a 
   batch node.
@@ -41,15 +41,17 @@ environment.
 
 ### Submitting SLURM jobs
 
-All US ATLAS users can submit batch jobs using Slurm account atlas:usatlas, e.g. `srun -A atlas:usatlas hostname`.
+All US ATLAS users can submit batch jobs using Slurm account <b>atlas:usatlas</b>, e.g. 
+`srun -A atlas:usatlas hostname`.
 
 ### Setup ATLAS environment
 
 A typical way to setup ATLAS environment upon login is to put the following in $HOME/.bashrc. This is the same
 at both AFS and SDF.
-
-```
+<!--
 export ALRB_localConfigDir=/gpfs/slac/atlas/fs1/sw/localconfig
+-->
+```
 export RUCIO_ACCOUNT="change_me"
 export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
 alias setupATLAS='source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh'
@@ -69,22 +71,24 @@ data migration
   <li> CVMFS is availble on all interactive, batch and DTN nodes.
 </ol>
 
+<!--
 For ATLAS users, we currently provide GPFS filesystem for home (100GB) and data (2-10TB) in the AFS environment 
 (under /gpfs/slac/atlas/fs1/{u,d} respectively). 
 At SDF, ATLAS users will get a new home directory of 25GB. The GPFS file system is also available in SDF until 
 the hardware retires (at that time, we will migrate users from GPFS to Lustre). AFS file system is not available 
 in SDF.
+-->
 
 ### Space available to the ATLAS users
 
 The following spaces are available to ATLAS users:
 <ol>
   <li> $HOME: quota 25GB on Weka file system
-  <li> /sdf/data/atlas/u/<username>: quota 200GB on Weka file system
-  <li> /sdf/scratch/<username_intial>/<username>: quota 100GB on Weka file system. This is a scratch space. Data 
+  <li> /sdf/data/atlas/u/&lt;username>: quota 200GB on Weka file system
+  <li> /sdf/scratch/&lt;username_intial>/&lt;username>: quota 100GB on Weka file system. This is a scratch space. Data 
 are subject to purge when the total scratch space is full.
-  <li> /sdf/group/atlas: quota 10TB on Weka file system, for groups to storage software (not data)
-  <li> /fs/ddn/sdf/group/atlas/d/<username>: create your own dir please. This is a Lustre file system. It is fast
+  <li> /sdf/group/atlas: quota 10TB on Weka file system shared by all users, for groups to storage software (not data)
+  <li> /fs/ddn/sdf/group/atlas/d/&lt;username>: create your own dir please. This is a Lustre file system. It is fast
 for bulk data access, but is not suitable for software. There is currently no easy way to enforce quota on this 
 file system. Please try to keep your usage under 2TB if possible.
 </ol>
@@ -93,12 +97,15 @@ For existing users, you may notice that the old AFS and GPFS spaces are no longe
 on a few interactive nodes). AFS and GPFS will be decommissioned soon at SLAC. Please move your data in AFS and 
 GPFS space to the above spaces. 
 
+The best tool to copy your data from AFS/GPFS to S3DF spaces is probaly the unix `cp -r -p` command. `rsync` is also a 
+good and easy to use tool. Copying data may take days. So you may want to run your `cp` or `rsync` inside a `screen`
+session. 
 
 
 # Old obsolete systems
 
-The following describe the soon to be obsolete systems, SDF and older AFS/LSF systems. Please migrate to S3DF ASAP
-as SLAC has set a deadline to decommission most of the services in these two older system around April 2024.
+The following describe the soon to be obsolete systems, SDF and older AFS/LSF facilities. Please migrate to S3DF ASAP
+as SLAC has set a deadline to decommission most of the services in these two older facilities around April 2024.
 
 ## <a name="sdf"></a>SSH login to SDF
 
