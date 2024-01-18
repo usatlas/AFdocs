@@ -20,7 +20,7 @@ componments of S3DF are an interative pool, an OpenOnDemain web portal, a high p
 There are two ways to login to S3DF. 
 <ol>
   <li> <b>SSH login</b><p>
-  Login to the bastion host `ssh <username>@s3dflogin.slac.stanford.edu`<p>
+  Login to the bastion host `ssh &lt;username>@s3dflogin.slac.stanford.edu`<p>
   Login to the actual interactive pool node `ssh iana` to do your work. <p>
   Please login to these host use your SLAC Unix password (not Window password).
   <li> <b>Login to S3DF web portal`</b><p>
