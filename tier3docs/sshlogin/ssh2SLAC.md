@@ -68,7 +68,7 @@ and a spining disk basked CEPH s3 object storage. All the file system metadata r
   <li> The S3DF also mounted a Lustre file system that was previously used by the SDF system (S3DF's predecesssor). 
   <li> GPFS and AFS from the older faclities are mounted read-only on a few interactive login nodes to facilitate 
 data migration
-  <li> CVMFS is availble on all interactive, batch and DTN nodes.
+  <li> CVMFS is availble on all interactive and batch nodes.
 </ol>
 
 <!--
