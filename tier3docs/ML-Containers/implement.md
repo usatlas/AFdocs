@@ -90,12 +90,16 @@ The images are deployed onto the Docker hub and CVMFS and there are 3 ways to ru
 
     Steps for using ML containers using SLAC Jupyter interface:
 
-    1. Connect to SLAC's [Jupyter Portal](https://sdf.slac.stanford.edu/pun/sys/dashboard/batch_connect/sys/slac-ood-jupyter/session_contexts/new)
+    1. Connect to SLAC's [S3DF Jupyter Portal](https://s3df.slac.stanford.edu/pun/sys/dashboard/batch_connect/sys/slac-ood-jupyter/session_contexts/new)
     2. After you login, you'll come to the menu where you can define your jupyter server. The first dropdown is the **Jupyter Instance**. Choose the "Custom Singularity Container" option.
-    3. Now the **Commands to initiate Jupyter** box will be editable. We not only need to update the `SINGULARITY_IMAGE_PATH` but we need to include `/cvmfs` to the list of directories in the jupyt       er function. Below is an example of the full command:
+    3. Now the **Commands to initiate Jupyter** box will be editable. Replace the content of the box by the following:
     ```
-    export SINGULARITY_IMAGE_PATH=/cvmfs/unpacked.cern.ch/registry.hub.docker.com/yesw2000/ml-base:centos7-python38
-    function jupyter() { singularity exec --nv -B /sdf,/cvmfs,/gpfs,/scratch,/lscratch ${SINGULARITY_IMAGE_PATH} jupyter $@; }
+    export APPTAINER_IMAGE_PATH=/cvmfs/unpacked.cern.ch/registry.hub.docker.com/yesw2000/ml-base:centos7-python38
+    function jupyter() { apptainer exec --nv -B /cvmfs,/sdf,/fs,/sdf/scratch,/lscratch ${APPTAINER_IMAGE_PATH} jupyter $@; }
     ```
-    4. Your server will be submitted to the queue and will take a minute or so to generate. You will see the **Connect to Jupyter** button when your server has initialized successfully.
+    4. Make sure the two pull down menu under **Run on cluster type** choose `Batch` and `s3df`.
+    5. In **Account** box, type in `atlas:usatlas`
+    6. In **Partition** choose `ampere` if you want GPUs, or choose `rome` if you don't need a GPU.
+    7. Fill the **Number of GPUs** box if you are asking for GPUs.
+    8. Your server will be submitted to the queue and will take a minute or so to generate. You will see the **Connect to Jupyter** button when your server has initialized successfully.
 </p>
