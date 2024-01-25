@@ -71,7 +71,7 @@ On the storage side, S3DF provides
 <ol>
   <li> Several  Weka parallel Posix file systems for user home and data. At the backend and , 
 invisible and transparent to the users, each of these storage system consists of a NVMe cache of a few PB, 
-and a spining disk basked CEPH s3 object storage. All the file system metadata reside in the NVMe cache. 
+and a spinning disk backed CEPH s3 object storage. All the file system metadata reside in the NVMe cache. 
   <li> The S3DF also mounted a Lustre file system that was previously used by the SDF system (S3DF's predecesssor). 
   <li> GPFS and AFS from the older faclities are mounted read-only on a few interactive login nodes to facilitate 
 data migration
