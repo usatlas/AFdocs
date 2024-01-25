@@ -21,7 +21,7 @@ There are two ways to login to S3DF.
 
 - <b>SSH login</b> (using SLAC Unix password)
     1. Login to the bastion host `ssh <username>@s3dflogin.slac.stanford.edu`
-    2. The login to the actual interactive pool node `ssh iana` to do your work.
+    2. Then login to the actual interactive pool node `ssh iana` to do your work.
 - <b>Login to S3DF web portal</b>
     - Go to https://s3df.slac.stanford.edu/ondemand and login to via Jupyter or a terminal. You will land on a 
   batch node.
