@@ -18,15 +18,14 @@ componments of S3DF are an interative pool, an OpenOnDemain web portal, a high p
 ## Accessing to S3DF
 
 There are two ways to login to S3DF. 
-<ol>
-  <li> <b>SSH login</b><p>
-  Login to the bastion host `ssh &lt;username>@s3dflogin.slac.stanford.edu`<p>
-  Login to the actual interactive pool node `ssh iana` to do your work. <p>
-  Please login to these host use your SLAC Unix password (not Window password).
-  <li> <b>Login to S3DF web portal`</b><p>
-  Go to https://s3df.slac.stanford.edu/ondemand and login to via Jupyter or a terminal. You will land on a 
+
+- <b>SSH login</b> (using SLAC Unix password)
+    1. Login to the bastion host `ssh <username>@s3dflogin.slac.stanford.edu`
+    2. The login to the actual interactive pool node `ssh iana` to do your work.
+- <b>Login to S3DF web portal</b>
+    - Go to https://s3df.slac.stanford.edu/ondemand and login to via Jupyter or a terminal. You will land on a 
   batch node.
-</ol>
+
 
 S3DF also have a few data trasnfer nodes (s3dfdtn.slac.stanford.edu) for interactive data transfers. Note that 
 all nodes in S3DF, except the bastion nodes and DTN nodes above, are in private network IP space. There are limited
