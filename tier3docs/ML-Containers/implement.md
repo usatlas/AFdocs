@@ -97,6 +97,7 @@ The images are deployed onto the Docker hub and CVMFS and there are 3 ways to ru
     export APPTAINER_IMAGE_PATH=/cvmfs/unpacked.cern.ch/registry.hub.docker.com/yesw2000/ml-base:centos7-python38
     function jupyter() { apptainer exec --nv -B /cvmfs,/sdf,/fs,/sdf/scratch,/lscratch ${APPTAINER_IMAGE_PATH} jupyter $@; }
     ```
+    4. You may need to check the **Use Jupyter Lab instead of Jupyter Notebook** box (in case only Jupyter Lab or only Jupyter Notebook is available in the container)
     4. Make sure the two pull down menu under **Run on cluster type** choose `Batch` and `s3df`.
     5. In **Account** box, type in `atlas:usatlas`
     6. In **Partition** choose `ampere` if you want GPUs, or choose `rome` if you don't need a GPU.
