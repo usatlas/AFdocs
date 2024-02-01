@@ -50,6 +50,7 @@ The process is as follows:
 
 Information about ATLAS at SLAC and their registration process can be found here: [SLAC ATLAS Support Center](https://atlas.slac.stanford.edu/atlas-support-center)
 
+<!--
 Similar to BNL, the process for signing up for access to SLAC AF is a two-step process:
 
 - User Registration
@@ -63,3 +64,4 @@ left) and click "Request Access to Facility" (yellow tab). Choose "ATLAS" facili
     - You will get an e-mail when your access to ATLAS facility is approved. After that, go to the same place, then
 click "Request Repo Membership" (yellow tab). Choose "usatlas" as repo name, and "ATLAS" as facility name.
     - Once your repo is approved (check your e-mail). Please login and check if your space /sdf/data/atlas/u/<username> is available. If not, [ask for help](../GettingHelp.md).
+-->
