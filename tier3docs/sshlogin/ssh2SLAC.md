@@ -36,15 +36,24 @@ to the interactive and batch nodes.
 
 S3DF currently runs RHEL-8. However, ATLAS recommanded OS is AlmaLinux 9 (and previously RHEL7/CentOS7). Apptainer
 container package is available on all S3DF nodes to help users who need to run their codes under a different OS 
-environment. For example, the following use an ATLAS provided generic AlmaLinux 9 container on an interactive node:
+environment. For example, to bring up an ATLAS provided AlmaLinux 9 environment in a container on an interactive node:
 
+1. Add the following to `$HOME/.bashrc` and re-login
 ```
-apptainer shell -B /sdf,/fs/ddn,/cvmfs /cvmfs/atlas.cern.ch/repo/containers/images/singularity/x86_64-almalinux9.img
+  function setupATLAS()
+  {
+    export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+    export ALRB_CONT_CMDOPTS="-B /sdf,/fs"
+    source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh $@
+    return $?
+  }
 ```
-or
+2. Start an ATLAS environment in an AlmaLinux 9 container
 ```
-apptainer exec -B /sdf,/fs/ddn,/cvmfs /cvmfs/atlas.cern.ch/repo/containers/images/singularity/x86_64-almalinux9.img id
+  setupATLAS -c el9
 ```
+For more info on this topic, especially how to do this in batch jobs, please refer to 
+[ATLAS Canada Twiki](https://twiki.atlas-canada.ca/bin/view/AtlasCanada/Containers)
 
 ### Submitting SLURM jobs
 
