@@ -59,7 +59,8 @@ For more info on this topic, especially how to do this in batch jobs, please ref
 ### Submitting SLURM jobs
 
 All US ATLAS users can submit batch jobs using Slurm account <b>atlas:usatlas</b>, e.g. 
-`srun -A atlas:usatlas hostname`.
+`srun -A atlas:usatlas hostname`. The partition to use is `roma` (which is both a HPC cluster)
+and `ampere` (a GPU cluster)
 
 ### Setup ATLAS environment
 
