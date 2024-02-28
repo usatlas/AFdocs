@@ -12,8 +12,9 @@ environment feature AFS file system home directory and LSF batch system, along w
 also known as the AFS environment.
 
 SLAC is now building a new computing environment: the SLAC Shared Scientific Data Facility (S3DF). The core 
-componments of S3DF are an interative pool, an OpenOnDemain web portal, a high performance computer cluster i
-(HPC) and a GPU cluster - both managed by a single SLURM batch system. and storage clusters
+componments of S3DF are an interative pool, an OpenOnDemain web portal, a high throughput computer cluster
+(HTC), with a subset being a HPC cluster and a GPU cluster - both managed by a single SLURM batch system, 
+and storage clusters
 
 ## Accessing to S3DF
 
@@ -119,6 +120,12 @@ The best tool to copy your data from AFS/GPFS to S3DF spaces is probaly the unix
 good and easy to use tool. Copying data may take days. So you may want to run your `cp` or `rsync` inside a `screen`
 session. 
 
+### Migration from older faculity to S3DF
+
+Please refer to the following slides for plan and resentation about the migration.
+
+1. [User data migration plan](https://docs.google.com/document/d/1-4YHRG2AswbJiBRP5EkWK86VPXW_x2HfWFrpTyTy5VA/edit?usp=sharing)
+2. [Presentation at the SLAC ATLAS Group Meeting 2024-02-16](https://docs.google.com/presentation/d/1Hl1gDhSL8K0YFNVLHLm95a6Uo3p8SoCjdhhNQpg1gwY/edit?usp=sharing)
 
 # Old obsolete systems
 
