@@ -89,6 +89,9 @@ source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh -c el9 –pwd $PWD
 
 ```
 
+Note that S3DF currently disabled submitting to multiple partitions (due to issues with SLURM accounting). So
+please avoid submitting jobs using multiple partitions (e.g. `#SBATCH --partition=roma,ampere`).
+
 ### Setup ATLAS environment
 
 A typical way to setup ATLAS environment upon login is to put the following in $HOME/.bashrc. This is the same
