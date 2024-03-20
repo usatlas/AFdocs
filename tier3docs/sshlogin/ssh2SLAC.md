@@ -60,7 +60,34 @@ For more info on this topic, especially how to do this in batch jobs, please ref
 
 All US ATLAS users can submit batch jobs using Slurm account <b>atlas:usatlas</b>, e.g. 
 `srun -A atlas:usatlas hostname`. The partition to use is `roma` (an HPC cluster with AMD EPYC 7702 CPUs)
-and `ampere` (a Nvidia A100 GPU cluster)
+and `ampere` (a Nvidia A100 GPU cluster). The following is a typical script to be used with the `sbatch` command:
+
+```
+#!/bin/bash
+#
+#SBATCH --account=atlas:usatlas
+#SBATCH --partition=ampere
+#SBATCH --gpus a100:1
+#SBATCH --job-name=my_first_job
+#SBATCH --output=output-%j.txt
+#SBATCH --error=output-%j.txt
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=2
+#SBATCH --mem-per-cpu=4g
+#SBATCH --time=0-00:10:00
+
+export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+
+# Use ALRB_CONT_CMDOPTS to provide bind mount, etc. options
+export ALRB_CONT_CMDOPTS="-B /sdf,/fs,lscratch"
+
+# Use ALRB_CONT_RUNPAYLOAD to define the actual job payload
+export ALRB_CONT_RUNPAYLOAD="source $HOME/myJobPayload.sh”
+
+# Run the payload in container.
+source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh -c el9 –pwd $PWD
+
+```
 
 ### Setup ATLAS environment
 
