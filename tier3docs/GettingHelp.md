@@ -20,4 +20,4 @@ BNL: [rt-racf@bnl.gov](mailto:rt-racf@bnl.gov); Monitoring: [SDCC Tier 3 Monitor
 UChicago: [atlas-us-chicago-tier3-admins@cern.ch](mailto:atlas-us-chicago-tier3-admins@cern.ch)
 
 
-SLAC: [atlas-us-slac-acf@cern.ch](mailto:atlas-us-slac-acf@cern.ch) or [CERN MatterMost](https://mattermost.web.cern.ch/slac-testing/channels/town-square)
+SLAC: [atlas-us-slac-acf@cern.ch](mailto:atlas-us-slac-acf@cern.ch) (This is a CERN e-group, please [join this e-group](https://e-groups.cern.ch/e-groups/Egroup.do?egroupName=atlas-us-slac-acf)); [CERN MatterMost](https://mattermost.web.cern.ch/slac-testing/channels/town-square)
