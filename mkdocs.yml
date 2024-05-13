@@ -52,6 +52,9 @@ nav:
         - 'Introduction': ML-Containers/info.md
         - 'Contents': ML-Containers/contents.md
         - 'Implementing': ML-Containers/implement.md
+    - 'Containers for ATLAS Analysis Users':
+        - 'OS Containers': ATLAS-Containers/OS-Containers.md
+        - 'ATLAS Release Containers': ATLAS-Containers/Release-Containers.md
     - 'Data Store, Accessing and Sharing':
         - 'Data Storage at BNL': doma/storage/BNL/storage-at-bnl.md
         - 'Data Sharing': doma/DataSharing/README.md
