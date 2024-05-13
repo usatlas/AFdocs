@@ -37,7 +37,7 @@ The command `setupATLAS -c` supports the option **'-r'** (or export **ALRB_CONT_
 container payload commands. That is:
 
 ```shell
-setupATLAS -c centos7 -r "source myPayload.sh"
+setupATLAS -c centos7 -r "source /srv/myPayload.sh"
 
 ```
 
