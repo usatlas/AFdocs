@@ -4,20 +4,21 @@ The ML containers were developed to be used both at the command line and with ea
 
 ## Command Line ML Container Usage
 
-The images are deployed onto the Docker hub and CVMFS and there are 3 ways to run the ML images at the command line.
+The images are deployed onto the Docker hub and CVMFS and there are 4 ways to run the ML images at the command line.
 
-??? note "**Singularity**"
+??? note "**Apptainer/Singularity**"
 
-    You can directly use **Singularity** to develop with the containers using the `singularity run` command.
+    You can directly use **Apptainer** or **Singularity** to develop with the containers using the
+`apptainer run` or `singularity run` command.
 
     ``` output
-    lxplus901% singularity run /cvmfs/unpacked.cern.ch/registry.hub.docker.com/yesw2000/ml-base:centos7-python38
+    lxplus901% apptainer run /cvmfs/unpacked.cern.ch/registry.hub.docker.com/yesw2000/ml-base:alma9-python39
     For the content in this container,
       please read the file /list-of-pkgs-inside.txt
 
     To create your own new env, run "source /create-newEnv-on-base.sh -h" for help
     Singularity> python --version
-    Python 3.8.17
+    Python 3.9.19
     Singularity>
     ```
 
@@ -26,9 +27,10 @@ The images are deployed onto the Docker hub and CVMFS and there are 3 ways to ru
     We have included a bash script with every container that will create a virtual environment based on that container. 
 
     ``` output
-    lxplus901% source /cvmfs/unpacked.cern.ch/registry.hub.docker.com/yesw2000/ml-base:centos7-python38/setupMe-on-host.sh
+    lxplus901% source /cvmfs/unpacked.cern.ch/registry.hub.docker.com/yesw2000/ml-base:alma9-python39/setupMe-on-host.sh
+    To create your own new env, run "source $EnvTopDir/create-newEnv-on-base.sh -h" for help
     (base) lxplus901% python --version
-    Python 3.8.17
+    Python 3.9.19
     (base) lxplus901%
     ```
 
@@ -37,35 +39,36 @@ The images are deployed onto the Docker hub and CVMFS and there are 3 ways to ru
     Since the containers are also deployed to Docker hub, you can use `docker` or `podman` to develop with them.
 
     ``` output
-    lxplus901% podman run -it docker.io/yesw2000/ml-base:centos7-python38
-    ERRO[0000] cannot find UID/GID for user yesw: no subuid ranges found for user "yesw" in /etc/subuid - check rootless mode in man pages.
-    WARN[0000] Using rootless single mapping into the namespace. This might break some images. Check /etc/subuid and /etc/subgid for adding sub*ids if not using a network user
-    Trying to pull docker.io/yesw2000/ml-base:centos7-python38...
-    Getting image source signatures
-    Copying blob 7a7bfb37ab80 done  
-    Copying blob 777139c0ccd6 done  
-    Copying blob 11acc4d123ae done  
-    Copying blob 845f8ce3e594 done  
-    Copying blob 1b828031002a done  
-    Copying blob 3f3f4dff06ec done  
-    Copying blob 743e1b9fe53f done  
-    Copying blob a5fd80583b08 done  
-    Copying blob 34393f5f9fd4 done  
-    Copying blob ef9d4f56bd36 done  
-    Copying blob 42242a0ba1e5 done  
-    Copying blob 7a2b6c54e081 done  
-    Copying blob acb70224b2a8 done  
-    Copying blob b0f8d0afc04a done  
-    Copying blob 708671683597 done  
-    Copying blob 679007b0c85b done  
-    Copying blob 7a8b17a36c6d done  
-    Copying config 7386b26131 done  
-    Writing manifest to image destination
-    Storing signatures
-    (base) bash-4.2# python --version
-    Python 3.8.17
-    (base) bash-4.2#
+    lxplus901% podman run -it docker.io/yesw2000/ml-base:alma9-python39
+    [...]
+    For the content in this container,
+    please read the file /list-of-pkgs-inside.txt
+    
+    To install new pkg(s), run "micromamba install pkg1 [pkg2 ...]"
+    (base) bash-5.1# python --version
+    Python 3.9.19
+    (base) bash-5.1#
     ```	
+
+??? note "**Script for laptops**"
+
+    <a href="https://raw.githubusercontent.com/usatlas/ML-Containers/main/run-ml_container.sh">A script</a> is available to run the ML container on laptops.
+    ``` output
+    lxplus901% wget https://raw.githubusercontent.com/usatlas/ML-Containers/main/run-ml_container.sh
+    lxplus901% source run-ml_container.sh ml-base:alma9-python39
+    Found the image name= ml-base:alma9-python39  with the dockerPath= docker.io/yesw2000/ml-base:alma9-python39
+    Trying to pull docker.io/yesw2000/ml-base:alma9-python39...
+    [...]
+    To reuse the same container next time, just run
+    
+         source runML-here.sh
+    or
+         source run-ml_container.sh
+    
+    podman exec -it yesw_ml-base_alma9-python39 /bin/bash
+    
+    root@3c90a02d92d6:[1]%
+    ```
 
 ## Jupyter Interface at AFs
 
@@ -94,7 +97,7 @@ The images are deployed onto the Docker hub and CVMFS and there are 3 ways to ru
     2. After you login, you'll come to the menu where you can define your jupyter server. The first dropdown is the **Jupyter Instance**. Choose the "Custom Singularity Container" option.
     3. Now the **Commands to initiate Jupyter** box will be editable. Replace the content of the box by the following:
     ```
-    export APPTAINER_IMAGE_PATH=/cvmfs/unpacked.cern.ch/registry.hub.docker.com/yesw2000/ml-base:centos7-python38
+    export APPTAINER_IMAGE_PATH=/cvmfs/unpacked.cern.ch/registry.hub.docker.com/yesw2000/ml-base:alma9-python39
     function jupyter() { apptainer exec --nv -B /cvmfs,/sdf,/fs,/sdf/scratch,/lscratch ${APPTAINER_IMAGE_PATH} jupyter $@; }
     ```
     4. You may need to check the **Use Jupyter Lab instead of Jupyter Notebook** box (in case only Jupyter Lab or only Jupyter Notebook is available in the container)
