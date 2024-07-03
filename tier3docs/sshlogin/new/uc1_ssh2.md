@@ -30,9 +30,12 @@ First, open your `config` file, if the file doesn't exist just create it.
 ```sh
 # use the next line only if the file doesn't exist
 touch config
-# open the file and add the following lines:
-ForwardAgent yes
-IdentityFile ~/.ssh/idrsa_uc
+# open the file and add the following lines, replacing <username> with your username:
+Host uchicago
+  HostName = login.af.uchicago.edu
+  User = <username> 
+  ForwardAgent yes
+  IdentityFile ~/.ssh/idrsa_uc
 # save and close the file
 ```
 
@@ -54,13 +57,10 @@ ssh-add ~/.ssh/idrsa_uc
 
 Once you have uploaded the public key and added your local identification to the site it will take a little bit of time to process your profile and add your account to the system. After ~15 minutes, you should be able to login via SSH:
 ```
-ssh -Y <username>@login.af.uchicago.edu
+ssh -Y uchicago
 ```
 
-
-
 If it does not work, please double check that you have been approved, have uploaded your public key and have waited at least 15 minutes. If you still have an issue, feel free to reach out to us for help.
-
 
 [comment]: Perhaps including instructions on how to edit the .ssh/config file to make logging a matter of a single command using aliases.
 
