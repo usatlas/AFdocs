@@ -1,7 +1,7 @@
 ## Login into UChicago analysis facility
 
 First you will need to sign up on the [Analysis Facility website](https://af.uchicago.edu/).
-You can use your institutional or CERN identity (lxplus username) when signing up, this last will make the approval process smoother. Please enter your fullname, your home institution name, and your institutional email, accounts requests from services like Gmail, Outlook, iCloud, etc. won't be accepted.  
+You can use your institutional or CERN identity (lxplus username) when signing up, the latter will make the approval process smoother. Please enter your full name, your home institution's name, and your institutional email; account requests from services like Gmail, Outlook, iCloud, etc. won't be accepted.  
 In case you don't have an ATLAS membership yet, just send us an email explaining the reasons of your account request and add some US-ATLAS member connection. 
 
 Once your account is accepted you need to generate an `SSH-key-pair` consisting of a `SSH-public-key` and a `SSH-private-key`; past the content of your SSH-public-Key on your profile and add your local machine identification to the site. Follow the instrucctions below:
@@ -43,23 +43,14 @@ Finally, add your identification from your local machine using the following com
 ssh-add ~/.ssh/idrsa_uc
 ```
 
-> `Tip`: If, while following the previous steps you get this error message:  
+> `Tip`: If, while following the previous steps, you get this error message:  
 > 
 >     Could not open a connection to your authentication agent.
 > You may need to start the `SSH-agent`, you can use this command:  
->    ```sh
+>    ```
 >    eval "$(ssh-agent -s)"
 >    ```   
-
-
-    `Tip`: If, while following the previous steps you get this error message:  
-  
-      Could not open a connection to your authentication agent.
-    
-    You may need to start the `SSH-agent`, you can use this command:
-    
-      eval "$(ssh-agent -s)"
-    
+   
 
 Once you have uploaded the public key and added your local identification to the site it will take a little bit of time to process your profile and add your account to the system. After ~15 minutes, you should be able to login via SSH:
 ```
@@ -69,4 +60,9 @@ ssh -Y <username>@login.af.uchicago.edu
 
 
 If it does not work, please double check that you have been approved, have uploaded your public key and have waited at least 15 minutes. If you still have an issue, feel free to reach out to us for help.
+
+
+[comment]: Perhaps including instructions on how to edit the .ssh/config file to make logging a matter of a single command using aliases.
+
+[comment]: Consider issuing a note of caution or reminder to the user about having their certificate already. If they don't then just link them to where they can get theirs. If they do, explain how to send their credentials to the facility and the commands needed for that.
 
