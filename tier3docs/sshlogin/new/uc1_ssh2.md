@@ -53,7 +53,7 @@ ssh-add ~/.ssh/idrsa_uc
 >    ```
 >    eval "$(ssh-agent -s)"
 >    ```   
-   
+ 
 
 Once you have uploaded the public key and added your local identification to the site it will take a little bit of time to process your profile and add your account to the system. After ~15 minutes, you should be able to login via SSH:
 ```
@@ -61,8 +61,3 @@ ssh -Y uchicago
 ```
 
 If it does not work, please double check that you have been approved, have uploaded your public key and have waited at least 15 minutes. If you still have an issue, feel free to reach out to us for help.
-
-[comment]: Perhaps including instructions on how to edit the .ssh/config file to make logging a matter of a single command using aliases.
-
-[comment]: Consider issuing a note of caution or reminder to the user about having their certificate already. If they don't then just link them to where they can get theirs. If they do, explain how to send their credentials to the facility and the commands needed for that.
-
