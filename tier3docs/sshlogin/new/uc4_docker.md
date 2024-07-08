@@ -2,7 +2,7 @@
 
 Some users may want to bring their own container-based workloads to the Analysis Facility. We support both Docker-based jobs as well as Singularity-based jobs. Additionally, the CVMFS repository unpacked.cern.ch is mounted on all nodes.
 
-If, for whatever reason, you wanted to run a Debian Linux-based container on the Analysis Facilty, it would be as simple as the following Job file:
+If, for whatever reason, you wanted to run a Debian Linux-based container on the Analysis Facility, it would be as simple as the following Job file:
 ```
 universe                = docker
 docker_image            = debian
@@ -16,7 +16,7 @@ log                     = log.$(Process)
 request_memory          = 1000M
 queue 1
 ```
-Similarly, if you would like to run a Singualrity container, such as the ones provided in th unpacked.cern.ch CVMFS repo, you can submit a normal vanilla universe job, with a job executable that looks something like the following:
+Similarly, if you would like to run a Singularity container, such as the ones provided in the unpacked.cern.ch CVMFS repo, you can submit a normal vanilla universe job, with a job executable that looks something like the following:
 ```
 #!/bin/bash
 singularity run -B /cvmfs -B /home /cvmfs/unpacked.cern.ch/registry.hub.docker.com/atlas/rucio-clients:default rucio --version
