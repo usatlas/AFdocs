@@ -3,4 +3,4 @@
 
 
 
-condor_submit /benchmark_TRUTH.sub
+condor_submit benchmark_TRUTH.sub
