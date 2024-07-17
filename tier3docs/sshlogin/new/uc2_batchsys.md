@@ -3,27 +3,22 @@ The UChicago Analysis Facility uses `HTCondor` for batch workloads.
 In a nutshell, to submit a job you will need to create an `executable` script and a `submit` file that describes your job.
 ### Before submitting to the analysis facility
 
-Before going mad submmiting jobs to the batch system, we have to check some points to consider when performing an analysis/work in the most efficient way and enhance the use of the available resources.
+Before going mad submitting jobs to the batch system, we have to check some points to consider when performing an analysis/work in the most efficient way and enhance the use of the available resources.
 Be sure to understand them and remember that you can always ask. 
 
 Check list before submitting:
 <ul>
 <li><input  disabled=" " type="checkbox"> Which filesystem should be used to submit my jobs?</li>
-<li><input  disabled="" type="checkbox"> How much memory request does my Job(s) need?</li>
 <li><input  disabled="" type="checkbox"> Should my job(s) be submitted to the short or the long queue?</li>
+<li><input  disabled="" type="checkbox"> How much memory request does my Job(s) need?</li>
 <li><input  disabled="" type="checkbox"> Check all my jobs requirements</li>
 <li><input  disabled="" type="checkbox"> Always check my jobs status</li>
 </ul>
 
 
 -  #### Which filesystem to use
-By default, all jobs start in the `$scratch/` directory on the worker nodes, this means you have to create the workflow for your jobs keeping in mind that they will start in the `$scratch` directory as soon as you submit your jobs and indicating every step that you yourself follow when running your jobs locally, (that also includes copying the data samples that you will run to the `$scratch` directory). Also, notice that your output data will need to be staged to the shared filesystem or it will be lost!, since the `$scratch/` area is ephemeral not for storage and it is not backed up.
+By default, all jobs start in the `$scratch/` directory on the worker nodes, this means you have to create the workflow for your jobs keeping in mind that they will start in the `$scratch` directory. As soon as you submit your jobs and indicating every step that you yourself follow when running your jobs locally, (that also includes copying the data samples that you will run to the `$scratch` directory). Also, notice that your output data will need to be staged to the shared filesystem or it will be lost, since the `$scratch/` area is ephemeral not for storage and it is not backed up.
 When submitting jobs, you should try to use the local scratch filesystem whenever possible. This will help you be a "good neighbor" to other users on the system, and reduce overall stress on the shared filesystems, which can lead to slowness, downtimes, etc.
-
-
-We added some examples to make this ideas clearer.
-
-[example]()
 
 Check the following example, data is read from `Rucio`, we pretend to process it, and then push a small output copied back to the `$HOME` filesystem. It assumes your X509 proxy certificate is valid and in your home directory.
 
@@ -46,8 +41,7 @@ cd data16_13TeV
 truncate --size 10MB AOD.11071822._001488.pool.root.1
 cp AOD.11071822._001488.pool.root.1 $HOME/myjob.output
 ```
-
-It gets submitted in the usual way:
+Followed by our submission file:
 ```
 Universe = vanilla
 
@@ -65,6 +59,8 @@ request_cpus = 1
 
 Queue 1
 ```
+
+It gets submitted in the usual way:
 ```
 $ condor_submit myjob.sub
 Submitting job(s).
@@ -74,7 +70,7 @@ Submitting job(s).
 - #### The Short and the Long queues.
 
 Before submitting jobs you should have an idea about how long the job will take to finish (not the exact time but an approximate).
-In `HTCondor` we added a a feature called `shortqueue` with dedicated workers that will ONLY service jobs that run for less than **4 hours**.
+In `HTCondor` we added a feature called `shortqueue` with dedicated workers that will ONLY service jobs that run for less than **4 hours**.
 To make use of the shortqueue you just have to add the following configuration parameter to your job submit file.
 
 ```bash
@@ -135,7 +131,7 @@ Total for all users: 1 jobs; 0 completed, 0 removed, 0 idle, 1 running, 0 held, 
 ```
 ### Configuring your jobs to use an X509 Proxy Certificate
 
-If you need to use an X509 Proxy, e.g. to access ATLAS Data, you will want to copy your X509 certificate to the Analysis Facility.
+If you need to use an X509 Proxy, e.g. to access ATLAS Data, you will want to copy your X509 certificate to the Analysis Facility. If you need a reminder, information can be found in [this link.](https://twiki.cern.ch/twiki/bin/view/AtlasComputing/WorkBookStartingGrid)
 
 Store your certificate in ```$HOME/.globus``` and create a ATLAS VOMS proxy in the usual way:
 ```
@@ -148,7 +144,8 @@ voms-proxy-init -voms atlas -out $HOME/x509proxy
 You will want to generate the proxy on, or copy it to, the shared $HOME filesystem so that the HTCondor scheduler can find and read the proxy. With the following additions to your jobscript, HTCondor will configure the job enviroment automatically for X509 authenticated data access:
 ```
 use_x509userproxy = true
-x509userproxy = /home/YOURUSERNAME/x509proxy
+# Replacing <username> with your own username
+x509userproxy = /home/<username>/x509proxy
 ```
 E.g., in the job above for the user lincolnb:
 ```
