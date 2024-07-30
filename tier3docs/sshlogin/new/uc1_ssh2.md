@@ -2,12 +2,21 @@
 
 First you will need to sign up on the [Analysis Facility
 website](https://af.uchicago.edu/). You can use your institutional or CERN
-identity (lxplus username) when signing up, the latter will make the approval
-process smoother. Please enter your full name, your home institution's name,
-and your institutional email; account requests from services like Gmail,
-Outlook, iCloud, etc. won't be accepted.  In case you don't have an ATLAS
-membership yet, just send an email to **atlas-us-chicago-tier3-admins@cern.ch**
-explaining who you are working with in ATLAS, and why you need an account.
+identity when signing up, the latter will make the approval process smoother.
+Please enter your full name, your home institution's name, and your
+institutional email; account requests from services like Gmail, Outlook,
+iCloud, etc. won't be accepted. 
+
+When choosing a UNIX username during signup, you should consider using the same
+username that you have at CERN. This will make certain tools (e.g. Rucio, EOS)
+simpler to set up. Otherwise, we recommend that you pick a username that is
+reflective of your full name, and that you should prefer brevity (e.g. John
+Smith -> `jsmith`). We will not be able to easily change your username for you
+if you decide that you want something different later.
+
+If you are not yet an ATLAS member, but are working with someone in ATLAS,
+please **atlas-us-chicago-tier3-admins@cern.ch** explaining who you are working
+with and why you need an account.
 
 Once your account is accepted, you will need to generate a cryptographic SSH
 key consisting of a public key, which you will upload to your profile on the AF
