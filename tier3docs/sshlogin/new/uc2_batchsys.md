@@ -1,5 +1,5 @@
 ## Using the batch system at UChicago
-The UChicago Analysis Facility uses `HTCondor` for batch workloads. 
+The UChicago Analysis Facility uses [HTCondor](https://htcondor.readthedocs.io/en/latest/users-manual/index.html) for batch workloads. 
 In a nutshell, to submit a job you will need to create an executable script and
 a submit file that describes your job.
 
