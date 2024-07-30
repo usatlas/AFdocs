@@ -39,9 +39,10 @@ such as DSA or RSA with a SHA-1 signature, as these are generally considered
 insecure.
 
 The `ssh-keygen` command will generate two files in `~/.ssh` (unless you chose
-a different location). If you used the `ed25519` key type recommend above with
-the default location, your private key should be located at `~/.ssh/id_ed25519`
-with its corresponding public key located at `~/.ssh/id_ed25519.pub`.
+a different location). If you used the `ed25519` key type as recommended above
+with the default location, your private key should be located at
+`~/.ssh/id_ed25519` with its corresponding public key located at
+`~/.ssh/id_ed25519.pub`.
 
 Once you have generated your key pair, you should upload the resulting public
 key (e.g., `id_ed25519.pub`) to your profile on the Analysis Facility portal
