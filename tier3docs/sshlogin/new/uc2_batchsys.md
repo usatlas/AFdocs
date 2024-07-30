@@ -1,14 +1,18 @@
 ## Using the batch system at UChicago
 The UChicago Analysis Facility uses `HTCondor` for batch workloads. 
-In a nutshell, to submit a job you will need to create an `executable` script and a `submit` file that describes your job.
-### Before submitting to the analysis facility
+In a nutshell, to submit a job you will need to create an executable script and
+a submit file that describes your job.
 
-Before going mad submitting jobs to the batch system, we have to check some points to consider when performing an analysis/work in the most efficient way and enhance the use of the available resources.
-Be sure to understand them and remember that you can always ask. 
+### Before submitting to the Analysis Facility
 
-Check list before submitting:
+Before submitting a large number of tasks to the batch system, it is important
+to understand a few things about our workloads and how they might best fit the
+available resources of the Analysis Facility. 
+
+Some prerequisites to consider before submitting workloads to the Analysis
+Facility:
 <ul>
-<li><input  disabled=" " type="checkbox"> Which filesystem should be used to submit my jobs?</li>
+<li><input  disabled="" type="checkbox"> Which filesystem should be used to submit my jobs?</li>
 <li><input  disabled="" type="checkbox"> Should my job(s) be submitted to the short or the long queue?</li>
 <li><input  disabled="" type="checkbox"> How much memory request does my Job(s) need?</li>
 <li><input  disabled="" type="checkbox"> Check all my jobs requirements</li>
@@ -17,10 +21,49 @@ Check list before submitting:
 
 
 -  #### Which filesystem to use
-By default, all jobs start in the `$scratch/` directory on the worker nodes, this means you have to create the workflow for your jobs keeping in mind that they will start in the `$scratch` directory. As soon as you submit your jobs and indicating every step that you yourself follow when running your jobs locally, (that also includes copying the data samples that you will run to the `$scratch` directory). Also, notice that your output data will need to be staged to the shared filesystem or it will be lost, since the `$scratch/` area is ephemeral not for storage and it is not backed up.
-When submitting jobs, you should try to use the local scratch filesystem whenever possible. This will help you be a "good neighbor" to other users on the system, and reduce overall stress on the shared filesystems, which can lead to slowness, downtimes, etc.
+Your account on the UChicago Analysis Facility will be allocated space on the
+`$HOME` and `$DATA` filesystems when your account is approved. By
+default, we give each user 100GB of storage on the `$HOME` filesystem (i.e.,
+`/home/<username>`). This filesystem is backed up weekly and is more optimized
+for small files such as job logs, submit files, code and so on.
 
-Check the following example, data is read from `Rucio`, we pretend to process it, and then push a small output copied back to the `$HOME` filesystem. It assumes your X509 proxy certificate is valid and in your home directory.
+Data files, on the other hand, should be placed in the `$DATA` filesystem
+(`/data/<username>`) which is more suitable for large files but is **not**
+backed up. By default, you will be given a 5TB quota on this filesystem. If you
+are working on an analysis that requires more local storage, please reach out
+to us at *atlas-us-chicago-tier3-admins@cern.ch* and we'll do our best to
+accomodate your request.
+
+Finally, jobs submitted to HTCondor will be assigned to a server with one or
+more dedicated high-speed "scratch" disks to use as working space when
+processing your jobs, each with a few TB of available space. This is important
+for two reasons:
+1. The scratch disk is _local_. We strongly recommend that you copy your input
+   data from `$DATA` to `$SCRATCH` when running a job because this will
+   generally deliver the best performance.
+1. The scratch disk is _ephemeral_. HTCondor will automatically clean up the
+   scratch disk for the next workload when your job has finished using it. 
+
+**With this in mind, you will need to make sure that you copy your output data
+away from the $SCRATCH filesystem and into the $DATA filesystem at the end of
+your job. Any data left in $SCRATCH will be lost at the end of your job!
+When submitting jobs, you should try to use the scratch disk whenever possible.
+This will help you be a "good neighbor" to other users on the system, and
+reduce overall stress on the shared filesystems, which can lead to slowness,
+downtimes, etc.**
+
+To summarize, please review the following table:
+
+| Filesystem | Best for ...                  | Backup  | Access from ...    | Default Quota |
+| ---------  | ----------------------------  | ------- | ------------------ | ------------- |
+| $HOME      | Code, Logs, Submit files      | Weekly  | SSH, Jupyter, Jobs | 100GB         |
+| $DATA      | ROOT files, other large files | None    | SSH, Jupyter, Jobs | 5TB           |
+| $SCRATCH   | Transient job files           | None    | Jobs only          | No quota      |
+
+
+Consider the following example: Data is read from Rucio, we pretend to process
+it, and then push a small output back to the `$DATA` filesystem. It assumes
+your X509 proxy certificate is valid and in your home directory.
 
 We create our executable file:
 ```
@@ -39,7 +82,8 @@ asetup AnalysisBase,21.2.81
 # output file. This is definitely not what you want to do in a real analysis!
 cd data16_13TeV
 truncate --size 10MB AOD.11071822._001488.pool.root.1
-cp AOD.11071822._001488.pool.root.1 $HOME/myjob.output
+cp AOD.11071822._001488.pool.root.1 $DATA/myjob.output
+sleep 300
 ```
 Followed by our submission file:
 ```
@@ -52,7 +96,7 @@ Log = myjob.log
 Executable = myjob.sh
 
 use_x509userproxy = true
-x509userproxy = /home/lincolnb/x509proxy
+x509userproxy = /home/<username>/x509proxy
 
 request_memory = 1GB
 request_cpus = 1
