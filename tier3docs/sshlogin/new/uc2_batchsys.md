@@ -187,9 +187,5 @@ Queue 1
 <br>    to know the actual  size of your current directory  
 <br>- Check the table displayed at the start of your session,
 <br>    which indicates the usage of your /home and /data directories.</td></tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>-</td></tr>
 </tbody>
 </table>
