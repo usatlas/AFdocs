@@ -6,7 +6,7 @@ a submit file that describes your job.
 ### Before submitting to the Analysis Facility
 
 Before submitting a large number of tasks to the batch system, it is important
-to understand a few things about our workloads and how they might best fit the
+to understand a few things about your workloads and how they might best fit the
 available resources of the Analysis Facility. 
 
 Some prerequisites to consider before submitting workloads to the Analysis
@@ -31,17 +31,18 @@ Data files, on the other hand, should be placed in the `$DATA` filesystem
 (`/data/<username>`) which is more suitable for large files but is **not**
 backed up. By default, you will be given a 5TB quota on this filesystem. If you
 are working on an analysis that requires more local storage, please reach out
-to us at *atlas-us-chicago-tier3-admins@cern.ch* and we'll do our best to
+to us at **atlas-us-chicago-tier3-admins@cern.ch** and we'll do our best to
 accomodate your request.
 
 Finally, jobs submitted to HTCondor will be assigned to a server with one or
 more dedicated high-speed "scratch" disks to use as working space when
 processing your jobs, each with a few TB of available space. This is important
 for two reasons:
-1. The scratch disk is _local_. We strongly recommend that you copy your input
+
+- The scratch disk is _local_. We strongly recommend that you copy your input
    data from `$DATA` to `$SCRATCH` when running a job because this will
    generally deliver the best performance.
-1. The scratch disk is _ephemeral_. HTCondor will automatically clean up the
+- The scratch disk is _ephemeral_. HTCondor will automatically clean up the
    scratch disk for the next workload when your job has finished using it. 
 
 **With this in mind, you will need to make sure that you copy your output data
