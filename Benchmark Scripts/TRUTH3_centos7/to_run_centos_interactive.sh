@@ -12,17 +12,6 @@ outputdir=/home/selbor/benchmarks/benchmark_TRUTH_centos7/100xxx/100001/
 # Defining the seed
 seed=1001
 
-# Forcefully removes the output directory
-rm -rf ${outputdir}
-
-# Creates a new, clean, output directory
-mkdir -p ${outputdir}
-
-# Goes into the new output directory
-cd ${outputdir}
-
-# Gets a list from the input directory
-ls -ltrh ${inputdir}EVNT_centos.root
 
 # Defining the current time; used when naming files
 curr_time=$(date +"%Y.%m.%dT%H.%M.%S")
@@ -31,3 +20,7 @@ curr_time=$(date +"%Y.%m.%dT%H.%M.%S")
 # Output is saved in the log file with the name set up curr_time
 source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh -b -c centos7 -m /data:/data -r "asetup AthDerivation,21.2.178.0,here && \
 Reco_tf.py --inputEVNTFile ${inputdir}EVNT_centos.root --outputDAODFile TRUTH3.root --reductionConf TRUTH3" 2>&1 | tee /data/selbor/LogFiles/TRUTH3_centos7_interactive/$curr_time.log
+
+# Creates a new, clean, output directory
+mkdir -p ${outputdir}
+

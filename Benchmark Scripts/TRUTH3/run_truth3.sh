@@ -15,17 +15,12 @@ outputdir="/home/selbor/benchmarks/benchmark_TRUTH/100xxx/100001/"
 # Defining our seed parameter
 seed=1001
 
-# Forcefully removes any existing files in the output directory, if there are any.
-rm -rf ${outputdir}
+
+# Runs our process with all of the previously defined parameters
+Derivation_tf.py --CA True --inputEVNTFile ${inputdir}EVNT.root --outputDAODFile=TRUTH3.root --formats TRUTH3
+
 
 # Creates a new, clean, output directory
 mkdir -p ${outputdir}
 
-# Copies the required script and files into the output directory
-cp mc* SUSY_*.py ${outputdir}
 
-# Goes into the output directory
-cd ${outputdir}
-
-# Runs our process with all of the previously defined parameters
-Derivation_tf.py --CA True --inputEVNTFile ${inputdir}EVNT.root --outputDAODFile=TRUTH3.root --formats TRUTH3
