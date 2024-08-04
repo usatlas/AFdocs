@@ -8,7 +8,7 @@ import os
 
 class Parsing:
     def __init__(self, directory_name):
-        initial_directory = "/Users/selbor/SCIPP/LogFiles_Testing/"
+        initial_directory = "/data/selbor//LogFiles/"
         self.directory_name = directory_name
         self.full_directory_name = initial_directory + directory_name
     def cycle_through_files(self):
