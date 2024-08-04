@@ -8,7 +8,7 @@ import os
 
 class Parsing:
     def __init__(self, directory_name):
-        initial_directory = "/data/selbor//LogFiles/"
+        initial_directory = "/data/selbor/LogFiles/"
         self.directory_name = directory_name
         self.full_directory_name = initial_directory + directory_name
     def cycle_through_files(self):
@@ -67,32 +67,16 @@ class plotting(Parsing):
         self.first_measurement = first_measurement
         self.final_measurement = final_measurement
     def make_the_plot(self):
-        if self.directory_name == "Rucio":
-            horizontal_axis = pd.date_range(start = self.first_measurement, end = self.final_measurement, freq = '6h')
-            fig, ax = plt.subplots()
-            date_fomatting = mdates.DateFormatter(fmt='%Y-%m-%d %H:%M')
-            ax.plot(horizontal_axis, self.my_list)
-            ax.scatter(horizontal_axis, self.my_list)
-            ax.grid()
-            fig.set_size_inches(20,9)
-            ax.xaxis.set_major_formatter(date_fomatting)
-            fig.autofmt_xdate()
-            plt.title("{} Downloads".format(self.directory_name), size = 15)
-            plt.xlabel("Start Time", size = 15)
-            plt.ylabel("Time Taken \n Measured in Seconds", size = 15)
-            plt.show()
-        else:
-            freq = len(self.my_list)
-            horizontal_axis = pd.date_range(start = self.first_measurement, end = self.final_measurement, periods = freq)
-            fig, ax = plt.subplots()
-            date_fomatting = mdates.DateFormatter(fmt='%Y-%m-%d %H:%M')
-            ax.plot(horizontal_axis, self.my_list)
-            ax.scatter(horizontal_axis, self.my_list)
-            ax.grid()
-            fig.set_size_inches(20,9)
-            ax.xaxis.set_major_formatter(date_fomatting)
-            fig.autofmt_xdate()
-            plt.title("{} Downloads".format(self.directory_name), size = 15)
-            plt.xlabel("Start Time", size = 15)
-            plt.ylabel("Time Taken \n Measured in Seconds", size = 15)
-            plt.show()
+        horizontal_axis = pd.date_range(start = self.first_measurement, end = self.final_measurement, periods = len(self.my_list))
+        fig, ax = plt.subplots()
+        date_fomatting = mdates.DateFormatter(fmt='%Y-%m-%d %H:%M')
+        ax.plot(horizontal_axis, self.my_list)
+        ax.scatter(horizontal_axis, self.my_list)
+        ax.grid()
+        fig.set_size_inches(20,9)
+        ax.xaxis.set_major_formatter(date_fomatting)
+        fig.autofmt_xdate()
+        plt.title("{} Downloads".format(self.directory_name), size = 15)
+        plt.xlabel("Start Time", size = 15)
+        plt.ylabel("Time Taken \n Measured in Seconds", size = 15)
+        plt.show()
