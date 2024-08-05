@@ -76,7 +76,17 @@ class plotting(Parsing):
         fig.set_size_inches(20,9)
         ax.xaxis.set_major_formatter(date_fomatting)
         fig.autofmt_xdate()
-        plt.title("{} Downloads".format(self.directory_name), size = 15)
+        if self.directory_name == "TRUTH3_centos7_interactive":
+            name_on_plot = "Interactive TRUTH3 using CentOS 7"
+        elif self.directory_name == "TRUTH3_centos7":
+            name_on_plot = "TRUTH3 Using CentOS7 in Batch"
+        elif self.directory_name == "Rucio":
+            name_on_plot = "Rucio Downloads"
+        elif self.directory_name == "EVNT":
+            name_on_plot = "EVNT Production"
+        elif self.directory_name == "TRUTH3":
+            name_on_plot = "TRUTH3"
+        plt.title("{}".format(name_on_plot), size = 15)
         plt.xlabel("Start Time", size = 15)
         plt.ylabel("Time Taken \n Measured in Seconds", size = 15)
         plt.show()
