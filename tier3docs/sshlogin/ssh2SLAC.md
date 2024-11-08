@@ -79,7 +79,7 @@ and `ampere` (a Nvidia A100 GPU cluster). The following is a typical script to b
 export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
 
 # Use ALRB_CONT_CMDOPTS to provide bind mount, etc. options
-export ALRB_CONT_CMDOPTS="-B /sdf,/fs,lscratch"
+export ALRB_CONT_CMDOPTS="-B /sdf,/fs,/lscratch"
 
 # Use ALRB_CONT_RUNPAYLOAD to define the actual job payload
 export ALRB_CONT_RUNPAYLOAD="source $HOME/myJobPayload.sh”
