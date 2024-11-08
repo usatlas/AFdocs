@@ -76,6 +76,8 @@ and `ampere` (a Nvidia A100 GPU cluster). The following is a typical script to b
 #SBATCH --mem-per-cpu=4g
 #SBATCH --time=0-00:10:00
 
+unset KRB5CCNAME  # <-- this is important
+
 export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
 
 # Use ALRB_CONT_CMDOPTS to provide bind mount, etc. options
