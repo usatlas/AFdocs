@@ -41,11 +41,12 @@
 As a reminder, your home area ($HOME) is intended to store analysis
 code, and not data.
 
-Please use the other storage (dCache, LOCALGROUPDISK, and Data area) for
-data.
+Please use the other storage (**dCache**, **LOCALGROUPDISK**, and **Data area**)
+to store data.
 
 As for dCache, the files could be listed with the command `ls` under /pnfs.
-They should be accessed via xrootd as explained [below](#Use_the_BNL_dCache_space).
+However, they should be accessed via xrootd as explained 
+[below](#Use_the_BNL_dCache_space).
 And for batch jobs, it is recommended to write into the dCache at the job end.
 
 
