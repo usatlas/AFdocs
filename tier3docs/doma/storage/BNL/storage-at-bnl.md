@@ -20,10 +20,10 @@
 
 |                |                                                                                                                                        |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| Home area      | 20GB per user under $HOME                                                                                                              |
-| Data area      | 500 GB per user under /atlasgpfs01/usatlas/data/$USERNAME                                                                              |
-| dCache area    | 5TB per user under /pnfs/usatlas.bnl.gov/users/$USERNAME, should be access via xrootd as explained [below](#Use_the_BNL_dCache_space)  |
-| BNLBox         | 50GB space under [https://bnlbox.sdcc.bnl.gov](https://bnlbox.sdcc.bnl.gov/), accessiblle from both mobile devices and computers       |
+| Home area      | 20GB (with backup) per user under $HOME                                                                                                |
+| Data area      | 500GB per user under /atlasgpfs01/usatlas/data/$USERNAME                                                                               |
+| dCache area    | 5TB per user under /pnfs/usatlas.bnl.gov/users/$USERNAME.                                                                              |
+| BNLBox         | 50GB (with backup) space under [https://bnlbox.sdcc.bnl.gov](https://bnlbox.sdcc.bnl.gov/), accessiblle from both mobile devices and computers       |
 | LOCALGROUPDISK | 50TB (default) on the grid at BNL. Please check [below](#LOCALGROUPDISK) for more details                                              |
 
 **Note**:
@@ -31,13 +31,24 @@
 1.  In case the subdir **/pnfs/usatlas.bnl.gov/users/$USERNAME** does
     not exist, you can emaill to `"RT-RACF-StorageManagement@bnl.gov"`
     to help make the subdir.
+2.  Additional space on BNLBox is available upon request.
+3.  And there is also a 9TB **scratch disk** /usatlas/scratch/ shared among
+    all users, where the files can be kept for **30 days**. Please make your
+    own subdir **/usatlas/scratch/$USER** there.
+
+### Guidance on storage usage
 
 As a reminder, your home area ($HOME) is intended to store analysis
 code, and not data.
 
-And there is also a 9TB **scratch disk** /usatlas/scratch/ shared among
-all users, where the files can be kept for **30 days**. Please make your
-own subdir **/usatlas/scratch/$USER** there.
+Please use the other storage (**dCache**, **LOCALGROUPDISK**, and **Data area**)
+to store data.
+
+As for dCache, the files could be listed with the command `ls` under /pnfs.
+However, they should be accessed via xrootd as explained 
+[below](#Use_the_BNL_dCache_space).
+And for batch jobs, it is recommended to write into the dCache at the job end.
+
 
 ## <span id="LOCALGROUPDISK"></span> LOCALGROUPDISK
 
