@@ -10,7 +10,7 @@
 US ATLAS hosts three shared Tier 3 computing spaces at BNL, SLAC, and UChicago, also known as Analysis Facilities (AF). These
 three facilities are available to all US ATLAS physicists and computer scientists. They are
 organized and managed to support US ATLAS users' need for computing resources including login,
-run interactive and batch jobs, access ATLAS data, store private data, etc. Visualization for said support can be viewed [here](https://atlas-kibana.mwt2.org:5601/s/analysis-facility/app/dashboards#/view/8bb58440-6145-11ed-afcf-d91dad577662?_g=(filters:!()))
+run interactive and batch jobs, access ATLAS data, store private data, etc. Visualization for said support can be viewed [here](https://atlas-kibana.mwt2.org:5601/s/analysis-facility/app/dashboards#/view/8bb58440-6145-11ed-afcf-d91dad577662?_g=(filters:!())).
 
 <br><br>
 The AFs also support a wide variety of tools specific for analysis, including ATLAS/CERN
