@@ -143,6 +143,9 @@ for bulk data access, but is not suitable for software. There is currently no ea
 file system. Please try to keep your usage under 2TB if possible <p>
   <li> /sdf/group/atlas: quota 10TB on Weka file system shared by all users, for groups to storage software but not data.
 (Note that this is a new space at S3DF. It has nothing to do with the above SDF space /sdf/group/atlas)
+  <li> /sdf/scratch/users/&lt;username_initial>/&lt;<username>: 100GB scratch space, subject to purging.
+  <li> /sdf/scratch/atlas: 5TB shared scratch space, subject to purging.
+  <li> /lscratch on batch nodes, 300GB-7TB (depend on nodes). 
 </ol>
 
 For existing users, you may notice that the old AFS and GPFS spaces are no longer availalb at S3DF (except read-only
