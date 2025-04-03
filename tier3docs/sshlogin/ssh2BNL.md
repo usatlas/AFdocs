@@ -7,22 +7,18 @@ You can find [the main SDCC page](https://www.sdcc.bnl.gov)
 ### <span id="Connect_to_the_interactive_nodes"></span> ssh Connection to the interactive nodes
 
 At BNL, you need login to `ssh.sdcc.bnl.gov` first, then login to
-interactive machines acas0001, ..., acas0008, spar0101, ..., spar0108
+interactive machines attsub01, ..., attsub08, spar0101, ..., spar0108
 with command **ssh** or **"rterm -i"** without argument 
 (please refer to 
 [the following section for the rterm usage help](#Connect_to_the_interactive_n_AN1) ).
 You can add the following to file $HOME/.ssh/config on your laptop or
-local machine, so you can login acas\* and spar\* machine directly.
+local machine, so you can login attsub\* and spar\* machine directly.
 
 >     host atlasgw
 >          hostname ssh.sdcc.bnl.gov
 >          user yourNameAtBNL
->      
->     host atlasnx*
->        user yourNameAtBNL
->        proxycommand ssh atlasgw nc %h %p
 >
->     host acas*
+>     host attsub*
 >        user yourNameAtBNL
 >        proxycommand ssh atlasgw nc %h %p
 >
@@ -31,10 +27,10 @@ local machine, so you can login acas\* and spar\* machine directly.
 >        proxycommand ssh atlasgw nc %h %p
 
 Replace "yourNameAtBNL" with your own username at BNL. So you should be
-able to run the following to login any machine such as spar0101
+able to run the following to login any machine such as attsub01
 directly,
 
-    ssh spar0101
+    ssh attsub01
 
 Please note that: the **gateway** was just changed to
 **ssh.sdcc.bnl.gov**.
@@ -59,7 +55,7 @@ also connect to the new NX servers on web browsers, using the URL:
 
 After you connect to the NX server, you can open a konsole terminal
 (depending on the Window Manager you have chosen). From NX servers, you
-can run **rterm** to ssh to other spar/acas machines on a separate
+can run **rterm** to ssh to other attsub/spar machines on a separate
 **xterm** terminal. **rterm** will help choose **the least loaded
 node**.
 
@@ -117,21 +113,22 @@ Once you are on the interactive nodes, you can simply run:
 
     setupATLAS
 
-Please be aware that the executable or library built on SLC7 machines
-cannot run on SLC6 machines because of the system glibc library
-difference. To use old SLC6 releases, you can use
+Please be aware that the executable or library built on Alma9 machines
+cannot run on CentOS7 machines because of the system glibc library
+difference. To use old CentOS7 releases, you can use
 [singularity](https://sylabs.io/singularity/)
-to compile your package(s) withinin SLC6 container. The command
-**setupATLAS -c slc6** could help set up such a container, you would get
+to compile your package(s) within CentOS7 container. The command
+**setupATLAS -c CentOS7** could help set up such a container, you would get
 something like:
 
 >      ------------------------------------------------------------------------------
 >     Info: /cvmfs mounted; do 'setupATLAS -d -c ...' to skip default mounts.
 >     ------------------------------------------------------------------------------
->     Singularity: 3.7.4
->     From: /bin/singularity
+>     Apptainer: 1.3.4
+>     Host: Linux, AlmaLinux 9.5 (Teal Serval), x86_64, 5.14.0-503.19.1.el9_5.x86_64
+>     From: /cvmfs/atlas.cern.ch/repo/containers/sw/apptainer/x86_64-el7/1.3.4/bin/apptainer
 >     ContainerType: atlas-default
->     singularity  exec -B /usatlas/u/yesw2000:/home/yesw2000 -e  -H /tmp/yesw2000/.alrb/container/singularity/home.ocJ9Bt:/alrb -B /cvmfs:/cvmfs -B /home/tmp/yesw:/srv /cvmfs/atlas.cern.ch/repo/containers/fs/singularity/x86_64-centos6 /bin/bash
+>     apptainer  exec  -e   -H /usatlas/u/yesw2000/.alrb/container/apptainer/home.XMrLKx:/alrb -B /cvmfs:/cvmfs -B /usatlas/u:/home -B /tmp/yesw:/srv /cvmfs/atlas.cern.ch/repo/containers/fs/singularity/x86_64-centos7 /bin/zsh
 >     ------------------------------------------------------------------------------
 >     lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):
 >      lsetup agis          ATLAS Grid Information System
@@ -140,7 +137,7 @@ something like:
 >      lsetup eiclient      Event Index 
 >      [...]
 
-Then it would behave like that you work on a SLC6 machine.
+Then it would behave like that you work on a CentOS7 machine.
 
 ## <span id="Use_the_batch_system"></span> Use the batch system at BNL
 
