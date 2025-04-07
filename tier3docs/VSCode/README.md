@@ -69,18 +69,18 @@ On the next web page, click on the button of `Authorize Visual-Studio-Code`.
 Afterward, the remote machine screen would print out a new line:
 > **What would you like to call this machine?**
 
-Provide a name to the remote machine, says, *BNL-SPAR*.
+Provide a name to the remote machine, says, *BNL-ATTSUB*.
 
 Then it would yield something like:
-> [2023-09-25 22:22:51] info Creating tunnel with the name: bnl-spar
+> [2023-09-25 22:22:51] info Creating tunnel with the name: bnl-attsub
 > 
-> Open this link in your browser https://vscode.dev/tunnel/bnl-spar/home/tmp/yesw
+> Open this link in your browser https://vscode.dev/tunnel/bnl-attsub/home/tmp/yesw
 
 Now you can explore the files on the remote machine, and use VSCode to edit file:
-- Either on a browser, open the above link: https://vscode.dev/tunnel/bnl-spar/home/tmp/yesw
-- Or in VSCode client, open **Remote Explorer**, click on **Remotes**, then **Tunnels**, choose the name **BNL-SPAR**.
+- Either on a browser, open the above link: https://vscode.dev/tunnel/bnl-attsub/home/tmp/yesw
+- Or in VSCode client, open **Remote Explorer**, click on **Remotes**, then **Tunnels**, choose the name **BNL-ATTSUB**.
 
-In the VSCode client, you can see the name **BNL-SPAR** as shown in the following screenshot:
+In the VSCode client, you can see the name **BNL-ATTSUB** as shown in the following screenshot:
 
 ![screenshot of BNL Jupyter Launcher](Screenshot-Remote-Tunnels.png)
 

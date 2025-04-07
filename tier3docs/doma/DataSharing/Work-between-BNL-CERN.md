@@ -148,7 +148,7 @@ You can use **sshfs** to mount the remote BNL files to lxplus machines
 locally. For example,
 
     lxplus% mkdir /tmp/yesw/data
-    lxplus% sshfs spar0102:/atlasgpfs01/usatlas/data/yesw2000 /tmp/yesw/data
+    lxplus% sshfs attsub02:/atlasgpfs01/usatlas/data/yesw2000 /tmp/yesw/data
 
 assuming that you have already set up the ssh configuration as shown in
 [the section of interactive connection to BNL](../../sshlogin/ssh2BNL.md#Connect_to_the_interactive_nodes).

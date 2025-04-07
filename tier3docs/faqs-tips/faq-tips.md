@@ -23,8 +23,8 @@
    If those machines share the same home directory, you can define the envvar **KRB5CCNAME** to **$HOME/krb5cc_`id -u`** prior to running **kinit**.
    So you would have a valid kerberos token on other machines too.
     
-   For example, once you have obtained a valid CERN kerberos on one BNL spar machine, 
-   you can also access CERN EOS on other spar machines without running "kinit" again.
+   For example, once you have obtained a valid CERN kerberos on one BNL attsub machine, 
+   you can also access CERN EOS on other attsub machines without running "kinit" again.
     
 ### Sharing one envvar KRB5CCNAME among multiple kerberos principals
    The envvar **KRB5CCNAME** points to a file, it could only hold one kerberos prinpical. 
