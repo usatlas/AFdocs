@@ -371,7 +371,7 @@ where the last part in the path is your unique UUID.
 
 The software
 **[cadaver](http://www.webdav.org/cadaver/)**
-has been installed on spar/acas machines at BNL, and lxplus machines at
+has been installed on attsub machines at BNL, and lxplus machines at
 CERN. It is a command line webDAV client, with ftp-like commands. To
 save you from typing the username/password everytime, you can prepare a
 file **.netrc** under $HOME directory with the following content:
@@ -392,7 +392,7 @@ Please put your own long UUID here.
 
 Then just simply run **"cadaver"**, it will connect to your BNLBox.
 
->     spar0101% cadaver
+>     attsub01% cadaver
 >     WARNING: Untrusted server certificate presented for `*.sdcc.bnl.gov':
 >     Issued to: SDCC, Brookhaven National Laboratory, 53 Bell Avenue, Upton, New York, 11973-5000, US
 >     Issued by: InCommon, Internet2, Ann Arbor, MI, US
@@ -416,9 +416,9 @@ available by default on lxplus. At BNL, you need run "setupATLAS -q;
 lsetup davix" to set up the env. Then specify the full webDAV to the
 davix commands plus an option **-k** (Disable SSL credential checks).
 
->     spar0101% setupATLAS -q
->     spar0101% lsetup davix
->     spar0101% davix-ls -k https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/BNL-User-8efba3ed-bfc8-4324-9cef-e9f4878c3c8d/
+>     attsub01% setupATLAS -q
+>     attsub01% lsetup davix
+>     attsub01% davix-ls -k https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/BNL-User-8efba3ed-bfc8-4324-9cef-e9f4878c3c8d/
 >     davix: using ~/.netrc to load additional configuration. (match: bnlbox.sdcc.bnl.gov)
 >     copy_bnl_box.rb
 >     dCache

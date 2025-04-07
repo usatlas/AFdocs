@@ -7,22 +7,18 @@ You can find [the main SDCC page](https://www.sdcc.bnl.gov)
 ### <span id="Connect_to_the_interactive_nodes"></span> ssh Connection to the interactive nodes
 
 At BNL, you need login to `ssh.sdcc.bnl.gov` first, then login to
-interactive machines attsub01, ..., attsub08, spar0101, ..., spar0108
+interactive machines attsub01, ..., attsub08
 with command **ssh** or **"rterm -i"** without argument 
 (please refer to 
 [the following section for the rterm usage help](#Connect_to_the_interactive_n_AN1) ).
 You can add the following to file $HOME/.ssh/config on your laptop or
-local machine, so you can login attsub\* and spar\* machine directly.
+local machine, so you can login attsub\* machines directly.
 
 >     host atlasgw
 >          hostname ssh.sdcc.bnl.gov
 >          user yourNameAtBNL
 >
 >     host attsub*
->        user yourNameAtBNL
->        proxycommand ssh atlasgw nc %h %p
->
->     host spar*
 >        user yourNameAtBNL
 >        proxycommand ssh atlasgw nc %h %p
 
@@ -55,7 +51,7 @@ also connect to the new NX servers on web browsers, using the URL:
 
 After you connect to the NX server, you can open a konsole terminal
 (depending on the Window Manager you have chosen). From NX servers, you
-can run **rterm** to ssh to other attsub/spar machines on a separate
+can run **rterm** to ssh to other attsub machines on a separate
 **xterm** terminal. **rterm** will help choose **the least loaded
 node**.
 
@@ -82,10 +78,10 @@ Please find the detailed usage of rterm by running the command **rterm
 >
 >     The 'NodeSpec' argument may be a node name (specific login to a given node) 
 >     or a partial node name followed by the '+' sign (wildcard). For example,
->       % rterm acas+
+>       % rterm attsub+
 >
 >     will open a connection on the least loaded node amongst all batch-available 
->     acas* nodes. By default, this command will determine the appropriate
+>     attsub* nodes. By default, this command will determine the appropriate
 >     wildcarded node specification for your GroupID. However, if this help
 >     is displayed when the command '% rterm' is used, contact the RCF support 
 >     team (your group ID is probably not supported by this script).

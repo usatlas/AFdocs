@@ -72,7 +72,7 @@ Singularity is already available on BNL/SLAC machines.
     cent7a(SLAC)$ singularity --version
     singularity version 3.5.3-1.1.el7
 
-    spar0101(BNL)$ singularity --version
+    attsub01(BNL)$ singularity --version
     2.6.1-dist
 
 If it does not come with your Linux OS, you can find the installation
@@ -385,7 +385,7 @@ For additional help or support, please visit https://www.sylabs.io/docs/
 
 <details>
 
-<summary>spar0101(BNL)$ singularity -h</summary>
+<summary>attsub01(BNL)$ singularity -h</summary>
 <blockquote><pre>
 USAGE: singularity [global options...] <command> [command options...] ...
 
