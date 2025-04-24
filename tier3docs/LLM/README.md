@@ -36,21 +36,14 @@ curl --silent http://localhost:11434/api/chat -d '{
 ```
 - Use in Python
 ```
-import os
 from ollama import Client
-
-if 'OLLAMA_HOST' in os.environ.keys():
-    host = os.environ['OLLAMA_HOST']
-else:
-    host = "http://localhost:11434"
-
-client = Client(host=host)
 
 msg_sys = {'role': 'system',
            'content': 'You are a good assistant with knowledge on Chemistry'}
 msg_usr = {'role': 'user',
            'content': 'Please balance chemical equation c2h6 + o2 -> co2 + h2o'} 
 
+client = Client()
 stream = client.chat(
     model='llama3.2',
     messages=[msg_sys, msg_usr],
