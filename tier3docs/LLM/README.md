@@ -6,15 +6,21 @@ models can be done with a simple command. The following instructions assume that
 Ollama client (or your python codes) will be run on your desktop, while resource demanding
 models will be run at the SLAC AF.
 
-## Getting Start with Ollama
+## Getting Start with Ollama on a Mac Desktop
 
-1. Download and install Ollama from the their [web site](https://ollama.com/download). 
-2. Start the Ollama serve: If you want to run LLM models via Ollama on your desktop, type `ollama serve`. 
-   Apple Silicon Mac, especially those with suficient RAM, are good candidate to run small models. 
-   If your plan is to run the LLM models at SLAC AF, see instruction below.
+1. Use `brew` to install Ollama, or download and install Ollama.app from the their 
+   [web site](https://ollama.com/download). 
+    - If installed via the Ollama.app, you may want disable the `Ollama Application` from 
+      **Open at Login** in **System Setting -> General -> Login Items and Extensions**.
+2. Start the Ollama server: 
+    - If you want to run LLM models via Ollama on your desktop, type `ollama serve`. Apple Silicon Mac, 
+      especially those with suficient RAM, are good candidate to run small models. For example, a M1 Mac
+      with 8GB RAM will run a 3b to 4b model smoothly.
+    - If your plan is to run the LLM models at SLAC AF, see instruction below.
 3. Start the Ollama client and run a model: (assume the server is running), type `ollama run llama3.2`. 
-   Now you can start typing your questions. (This command actually tell the server to pull a model named 
-   "llama3.2" from Ollama model library, and run it at the server side). 
+   Now you can start typing your questions. 
+    - This command actually tell the server to pull a model named "llama3.2" from Ollama model library, 
+      and run it at the server side. 
 
 ## Interact with Ollama
 
@@ -81,13 +87,13 @@ ssh -t -L 11434:localhost:11435 -J s3dflogin iana CALLBACKPORT=11435 srun -A atl
 
 These two commands above listen to the default Ollama port (11434) on your desktop, and 
 forward to the Ollama server running at the SLAC AF's batch node. The number `11435` is a randomly 
-choose port. If someone else is already listening to this port on the **iana** node, then you will need 
+chosen port. If someone else is already listening to this port on the **iana** node, then you will need 
 to choose a different port 
 
-### How does This Port Forwarding Work.
+### (Optional) How does This Port Forwarding Work.
 
 There are two forwarding going on
 
 - `ssh -t -L 11434:localhost:11435 -J s3dflogin iana` forwards the local port to `iana:11435`
 - Batch node that runs `/sdf/group/atlas/op/ollama/ollama.sh serve` will run another ssh 
-  back to the iana node, and listent to port 11435 and forward traffic to the Ollama.
+  back to the iana node, and listent to port 11435 and forward traffic to the Ollama server.
