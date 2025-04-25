@@ -8,14 +8,9 @@ models will be run at the SLAC AF.
 
 ## Getting Start with Ollama on a Mac Desktop
 
-1. Use `brew` to install Ollama, or download and install Ollama.app from the their 
-   [web site](https://ollama.com/download). 
-    - If installed via the Ollama.app, you may want disable the `Ollama Application` from 
-      **Open at Login** in **System Setting -> General -> Login Items and Extensions**.
+1. Use `brew` to install Ollama. 
 2. Start the Ollama server: 
-    - If you want to run LLM models via Ollama on your desktop, type `ollama serve`. Apple Silicon Mac, 
-      especially those with suficient RAM, are good candidate to run small models. For example, a M1 Mac
-      with 8GB RAM will run a 3b to 4b model smoothly.
+    - If you want to run LLM models via Ollama on your desktop, type `ollama serve`. 
     - If your plan is to run the LLM models at SLAC AF, see instruction below.
 3. Start the Ollama client and run a model: (assume the server is running), type `ollama run llama3.2`. 
    Now you can start typing your questions. 
@@ -50,15 +45,11 @@ msg_usr = {'role': 'user',
            'content': 'Please balance chemical equation c2h6 + o2 -> co2 + h2o'} 
 
 client = Client()
-stream = client.chat(
-    model='llama3.2',
-    messages=[msg_sys, msg_usr],
-    options={
-        'temperature': 0.3,
-        'num_predict': -1
-    },
-    stream=True
-)
+stream = client.chat(model='llama3.2',
+                     messages=[msg_sys, msg_usr],
+                     options={'temperature': 0.3,
+                              'num_predict': -1},
+                     stream=True)
 
 for chunk in stream:
     print(chunk['message']['content'], end='', flush=True)
