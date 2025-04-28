@@ -83,6 +83,16 @@ forward to the Ollama server running at the SLAC AF's batch node. The number `11
 chosen port. If someone else is already listening to this port on the **iana** node, then you will need 
 to choose a different port 
 
+### Where does Ollama Pickup Model Files
+
+When `/sdf/group/atlas/op/ollama/ollama.sh` starts, it will check the following places for model files:
+
+- Environment variable $OLLAMA_MODELS (You can set this environment variable in your .bashrc file)
+- Directory $HOME/.ollama/models
+- Default ATLAS wide location at /sdf/group/atlas/op/ollama/models.  
+
+Only one of the above directories will be used to model files.
+
 ### (Optional) How does This Port Forwarding Work.
 
 There are two forwarding going on
