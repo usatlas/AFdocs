@@ -100,3 +100,8 @@ There are two forwarding going on
 - `ssh -t -L 11434:localhost:11435 -J s3dflogin iana` forwards the local port to `iana:11435`
 - Batch node that runs `/sdf/group/atlas/op/ollama/ollama.sh serve` will run another ssh 
   back to the iana node, and listent to port 11435 and forward traffic to the Ollama server.
+
+## Reference Links
+
+- [Ollama API doc for running and managing LLMs](https://github.com/ollama/ollama/blob/main/docs/api.md)
+- [OpenAI compatibility with Ollama](https://ollama.com/blog/openai-compatibility)
