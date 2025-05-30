@@ -28,11 +28,12 @@
 
 **Note**:
 
-1.  In case the subdir **/pnfs/usatlas.bnl.gov/users/$USERNAME** does
-    not exist, you can emaill to `"RT-RACF-StorageManagement@bnl.gov"`
+1.  Quota and usage in the atlasgpfs01 Data area can be checked using the command `/usr/lpp/mmfs/bin/mmlsquota atlasgpfs01` but note that *the actual quota and usage is half the values displayed.* 
+3.  In case the subdir **/pnfs/usatlas.bnl.gov/users/$USERNAME** does
+    not exist, you can send email to <RT-RACF-StorageManagement@bnl.gov>
     to help make the subdir.
-2.  Additional space on BNLBox is available upon request.
-3.  And there is also a 9TB **scratch disk** /usatlas/scratch/ shared among
+4.  Additional space on BNLBox is available upon email request to <RT-RACF-StorageManagement@bnl.gov>.
+5.  And there is also a 9TB **scratch disk** /usatlas/scratch/ shared among
     all users, where the files can be kept for **30 days**. Please make your
     own subdir **/usatlas/scratch/$USER** there.
 
