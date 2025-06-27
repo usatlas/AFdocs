@@ -15,7 +15,7 @@ service.
 ssh -L 11434:sdfiana005:11434 s3dflogin.slac.stanford.edu
 ```
 
-1. The OpenAI API accessing URL is `http://localhost:11434/v1/` (set OPENAI_API_KEY to a non-empty value)
+1. The OpenAI API accessing URL is `http://localhost:11434/v1/` (set OPENAI_API_KEY to a non-empty string)
 2. The Ollama API accessing URL is `http://localhost:11434/`
 
 To check the available models, use the following command:
@@ -55,14 +55,19 @@ Most of the availle models are quantized to 4-bit (`Q4_0` or `Q4_K_M`), which me
 smaller, but still performance well with high qaulity (accuracy). In our experience:
 
 - The `gemma3:27b` (`Q4`) model is the best performing model for most of the tasks. It uses about
-  20GB of the GPU memory. This leaves rooms for other, smaller  models to run at the same time on
-  the same GPU.
+  20GB of the GPU memory. This leaves rooms for multiple-user activities, and/or running smaller models
+  on the same GPU at the same time.
+- The `gemma3` models do not natively support OpenAI's three-role ("system", "user", "assistant") in
+  the message to the models (Ollama API also used these three roles).
+  They only support two roles ("user", "model"). The `gemma3` models
+  from Ollama added a template to seamlessly convert a three-role message to a two-role message.
 - The `gemma3` models do not support tool usage (AI agent) when using OpenAI API or Ollama API.
-  Models like `gemma3-tools` support tool usage. They are the same models as `gemma3`, but with 
-  additional template to support tool usage.
+  Models like `gemma3-tools` from Ollama support tool usage. They are the same models as `gemma3`, 
+  but with additional template to support tool usage.
 - `llama3.3:70b` models are too large to run on a single A100 GPU with 40GB of memory. Even a `Q4`
-   model requires slight above 40GB of memory. So avoid using `llama3.3:70b` models.
-- `all-minilm` models are embedding models. They are very small and fast.
+  model requires slight above 40GB of memory (and therefore need two A100-SXM4-40GB GPU). So avoid 
+  using the `llama3.3:70b` models.
+- `all-minilm` models are embedding models. They are very small and fast. They are not for inference.
 
 If for some reason you need a model that is not available in the service, or the service is too busy,
 you can start our own Ollama service by following the instructions in [this](./RunYourOwnOllama.md)
