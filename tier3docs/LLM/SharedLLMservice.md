@@ -28,6 +28,8 @@ To check the current running models, use the following command:
 curl -s http://localhost:11434/api/ps | jq '.["models"][]["name"]' 
 ```
 
+(We may require an API KEY in the future).
+
 ## Limitations
 
 The service is experimental and is an on-demand service: The frontend of this service is a http proxy
