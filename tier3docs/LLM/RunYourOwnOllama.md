@@ -92,7 +92,7 @@ When `/sdf/group/atlas/op/ollama/ollama.sh` starts, it will check the following 
 - Directory $HOME/.ollama/models
 - Default ATLAS wide location at /sdf/group/atlas/op/ollama/models.  
 
-Only one of the above directories will be used to model files.
+Only one of the above directories will be used by the script to look for model files.
 
 ### (Optional) How does This Port Forwarding Work.
 
