@@ -52,7 +52,7 @@ limited GPU resources, the service is designed to:
 ## Models and Size
 
 Most of the available models are quantized to 4-bit (`Q4_0` or `Q4_K_M`), which means the model sizes 
-relatively small, but still perform well with high qaulity (accuracy). In our experience:
+are relatively small, but still perform well with high qaulity (accuracy). In our experience:
 
 - The `gemma3:27b` (`Q4`) model is the best performing model for most of the tasks. It uses about
   20GB of the GPU memory. This leaves rooms for multiple-user activities, and/or running smaller models
