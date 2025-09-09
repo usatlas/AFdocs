@@ -36,15 +36,8 @@ Applying for a BNL computing account is a multi-step process. You will need to g
 
 ## <span id="UChicago"></span> University of Chicago
 
-The UChicago AF user account signup process is much shorter than the other two labs, but still requires approval (which can take a few days).
-The website containing sign-up information is here: [UChicago AF Website](https://af.uchicago.edu/).
-
-The process is as follows:
-
-- Account Creation
-    - Multiple ways to sign up
-    - Should use CERN email/info for quicker turnaround
-- Upload public SSH key <b>(Necessary for access)</b>
+The UChicago AF user account sign-up information is here: 
+[UChicago AF Website](https://af.uchicago.edu/).
 
 ## <span id="SLAC"></span> SLAC National Accelerator Laboratory
 
