@@ -18,21 +18,30 @@ cmd = "linkchecker --config .linkcheckerrc site"
 
 [tasks.build-no-dir-urls]
 args = [{ "arg" = "config", "default" = "mkdocs.yml" }]
-cmd = "mkdocs build --config-file {{ config }} --clean --strict --no-directory-urls"
+env = { READTHEDOCS_OUTPUT = "." }  # RTD will set this
+cmd = "mkdocs build --config-file {{ config }} --clean --strict --no-directory-urls -d $READTHEDOCS_OUTPUT/html"
 
 [tasks.build-check]
 depends-on = ["build-no-dir-urls", "validate"]
 
 [dependencies]
-python = ">=3.8,<3.9"
-alabaster = "==0.7.12"
-mkdocs = "==1.3.0"
-pillow = "==8.0.1"
+python = ">=3.14.0,<3.15"
+alabaster = ">=1.0.0,<2"
+mkdocs = ">=1.6.1,<2"
+pillow = ">=11.3.0,<12"
 sphinx_rtd_theme = ">=3.0.2,<4"
-pygments = "==2.14.0"
-mkdocs-table-reader-plugin = "==2.0"
-linkchecker = ">=10.4.0,<11"
+pygments = ">=2.19.2,<3"
+mkdocs-table-reader-plugin = ">=3.1.0,<4"
+linkchecker = ">=10.6.0,<11"
+mkdocs-material = ">=9.6.21,<10"
+mkdocs-git-revision-date-localized-plugin = ">=1.2.9,<2"
+mkdocs-redirects = ">=1.2.1,<2"
+mkdocs-glightbox = ">=0.4.0,<0.5"
+pymdown-extensions = ">=10.16.1,<11"
+mkdocs-include-markdown-plugin = ">=7.1.7,<8"
+mkdocs-section-index = ">=0.3.10,<0.4"
+mkdocs-macros-plugin = ">=1.4.0,<2"
 
 [pypi-dependencies]
-pymdown-extensions = "==9.9.2"
-mkdocs-include-markdown-plugin = "==3.2.3"
+mkdocs-minify-plugin = ">=0.8.0, <0.9"
+mdx-truly-sane-lists = ">=1.3, <2"

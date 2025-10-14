@@ -14,7 +14,7 @@ build:
         - pixi install
      build:
         html:
-           - pixi run build -d $READTHEDOCS_OUTPUT/html
+           - pixi run build
 
 submodules:
   include: all
