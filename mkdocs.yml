@@ -8,7 +8,7 @@ edit_uri: edit/main/tier3docs
 copyright: "Copyright &copy; USATLAS 2025-present"
 
 docs_dir: tier3docs
-site_dir: html
+site_dir: site
 theme:
   name: readthedocs
   html_theme_options: "html_logo: images/lgbt_atlas.png"

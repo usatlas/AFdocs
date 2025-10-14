@@ -18,8 +18,7 @@ cmd = "linkchecker --config .linkcheckerrc site"
 
 [tasks.build-no-dir-urls]
 args = [{ "arg" = "config", "default" = "mkdocs.yml" }]
-env = { READTHEDOCS_OUTPUT = "." }  # RTD will set this
-cmd = "mkdocs build --config-file {{ config }} --clean --strict --no-directory-urls -d $READTHEDOCS_OUTPUT/html"
+cmd = "mkdocs build --config-file {{ config }} --clean --strict --no-directory-urls"
 
 [tasks.build-check]
 depends-on = ["build-no-dir-urls", "validate"]
