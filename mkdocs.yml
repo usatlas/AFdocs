@@ -1,7 +1,105 @@
 site_name: US ATLAS Analysis Facilities
+site_description: Documentation for UChicago Analysis Facility (AF)
+site_author: USATLAS
+site_url: https://usatlas.readthedocs.io/projects/af-docs/
+repo_name: usatlas/AFdocs
+repo_url: https://github.com/usatlas/AFdocs
+edit_uri: edit/main/tier3docs
+copyright: "Copyright &copy; USATLAS 2025-present"
+
 docs_dir: tier3docs
 site_dir: site
-#hola
+theme:
+  name: readthedocs
+  html_theme_options: "html_logo: images/lgbt_atlas.png"
+  font: false
+  language: en
+  #favicon: assets/images/logo.svg
+  icon:
+    repo: fontawesome/brands/gitlab
+    logo: material/file-document
+    edit: material/pencil
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: light-blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: light-blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - content.action.edit
+    - content.code.copy
+    - content.code.annotate
+    - content.tooltips
+
+nav:
+  - "Getting Started":
+      - "Introduction": README.md
+      - "Getting Help": GettingHelp.md
+  - "User Onboarding":
+      - "About the Facilities": UserOnboarding/facility.md
+      - "Applying for User Accounts": UserOnboarding/account.md
+  #- 'Editor':
+  #    - 'test-sheet': test-sheet.md
+  - "Quickstart Guides":
+      - "BNL": sshlogin/ssh2BNL.md
+      - "UChicago": sshlogin/README.md
+      - "SLAC": sshlogin/ssh2SLAC.md
+  - "Machine Learning Containers":
+      - "Introduction": ML-Containers/info.md
+      - "Contents": ML-Containers/contents.md
+      - "Implementing": ML-Containers/implement.md
+  - "Containers for ATLAS Analysis Users":
+      - "OS Containers": ATLAS-Containers/OS-Containers.md
+      - "ATLAS Release Containers": ATLAS-Containers/Release-Containers.md
+  - "Data Store, Accessing and Sharing":
+      - "Data Storage at BNL": doma/storage/BNL/storage-at-bnl.md
+      - "Data Sharing": doma/DataSharing/README.md
+      - "Data Storage at UChicago": doma/storage/UChicago/uc_storage.md
+      - "Data Sharing at UChicago": doma/DataSharing/uchicago/README.md
+  - "Jupyter at Analysis Facilities":
+      - "Introduction": jupyter/JupyterAtTier3s.md
+      - "Jupyter at BNL": jupyter/BNLjupyter.md
+      - "Jupyter at UChicago with Coffea": jupyter/JupyterCoffeaCUChicago.md
+      - "JupyterLab at UChicago": jupyter/JupyterLabUChicago.md
+      - "Jupyter at SLAC": jupyter/SLACjupyter.md
+      - "Extend ATLAS JupyterLab at SLAC": jupyter/SLACJupyterExtraFuncs.md
+      - "How to get information about an xAOD in python": jupyter/examples/xAODcheck.md
+      - "Read xAODs using PyROOT": https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
+      - "Info about uproot and xAOD": jupyter/examples/convert_specific_variables.py.txt
+  - "Data Analysis Tutorial (2019-08)":
+      - "Introduction": Tutorial-2019Aug/README.md
+      - "Tutorial of Analysis Examples at BNL": Tutorial-2019Aug/BNL/README.md
+      - "Tutorial of Analysis Examples at SLAC": Tutorial-2019Aug/SLAC/README.md
+      - "Tutorial of Analysis Examples on the Grid": Tutorial-2019Aug/Grid/README.md
+  - "Singularity":
+      - "Using Singularity Containers": Containers/UsingSingularity/README.md
+  - "VSCode":
+      - "Detailed guide on using Visual Studio Code": VSCode/README.md
+  - "FAQs/Tips":
+      - "FAQs and some tips": faqs-tips/faq-tips.md
+      - "Glossary": faqs-tips/glossary.md
+#markdown_extensions:
+#  - admonition
+#  - pymdownx.details
+#  - pymdownx.superfences
+
+# more options: https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs
+
+
 markdown_extensions:
   - abbr
   - attr_list
@@ -16,7 +114,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - md_in_html
-  - tables  
+  - tables
   - pymdownx.critic:
       mode: accept
   - pymdownx.caret
@@ -35,65 +133,4 @@ plugins:
   - table-reader
     #- jekyll-image-size
     #- include-kramdown*/
-nav:
-    - 'Getting Started':
-        - 'Introduction': README.md
-        - 'Getting Help': GettingHelp.md
-    - 'User Onboarding':
-        - 'About the Facilities': UserOnboarding/facility.md
-        - 'Applying for User Accounts': UserOnboarding/account.md
-    #- 'Editor':
-    #    - 'test-sheet': test-sheet.md
-    - 'Quickstart Guides':
-        - 'BNL': sshlogin/ssh2BNL.md
-        - 'UChicago': sshlogin/README.md
-        - 'SLAC': sshlogin/ssh2SLAC.md
-    - 'Machine Learning Containers':
-        - 'Introduction': ML-Containers/info.md
-        - 'Contents': ML-Containers/contents.md
-        - 'Implementing': ML-Containers/implement.md
-    - 'Containers for ATLAS Analysis Users':
-        - 'OS Containers': ATLAS-Containers/OS-Containers.md
-        - 'ATLAS Release Containers': ATLAS-Containers/Release-Containers.md
-    - 'Data Store, Accessing and Sharing':
-        - 'Data Storage at BNL': doma/storage/BNL/storage-at-bnl.md
-        - 'Data Sharing': doma/DataSharing/README.md
-        - 'Data Storage at UChicago': doma/storage/UChicago/uc_storage.md
-        - 'Data Sharing at UChicago': doma/DataSharing/uchicago/README.md
-    - 'Jupyter at Analysis Facilities':
-        - 'Introduction': jupyter/JupyterAtTier3s.md
-        - 'Jupyter at BNL': jupyter/BNLjupyter.md
-        - 'Jupyter at UChicago with Coffea': jupyter/JupyterCoffeaCUChicago.md
-        - 'JupyterLab at UChicago': jupyter/JupyterLabUChicago.md
-        - 'Jupyter at SLAC': jupyter/SLACjupyter.md
-        - 'Extend ATLAS JupyterLab at SLAC': jupyter/SLACJupyterExtraFuncs.md
-        - 'How to get information about an xAOD in python': jupyter/examples/xAODcheck.md
-        - 'Read xAODs using PyROOT': https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
-        - 'Info about uproot and xAOD': jupyter/examples/convert_specific_variables.py.txt
-    - 'Data Analysis Tutorial (2019-08)':
-        - 'Introduction': Tutorial-2019Aug/README.md
-        - 'Tutorial of Analysis Examples at BNL': Tutorial-2019Aug/BNL/README.md
-        - 'Tutorial of Analysis Examples at SLAC': Tutorial-2019Aug/SLAC/README.md
-        - 'Tutorial of Analysis Examples on the Grid': Tutorial-2019Aug/Grid/README.md
-    - 'Singularity':
-        - 'Using Singularity Containers': Containers/UsingSingularity/README.md
-    - 'VSCode':
-        - 'Detailed guide on using Visual Studio Code': VSCode/README.md
-    - 'FAQs/Tips':
-        - 'FAQs and some tips': faqs-tips/faq-tips.md
-        - 'Glossary': faqs-tips/glossary.md
-#markdown_extensions:
-#  - admonition
-#  - pymdownx.details
-#  - pymdownx.superfences
 
-#  - markdown.extensions.pymdownx.details      not available in readthedocs   
-#  - markdown.extensions.pymdownx.superfences  not available in readthedocs
-theme: 
-  name: readthedocs
-  html_theme_options: "html_logo: images/lgbt_atlas.png"
-  features:
-     - content.code.annotate 
-     - content.tooltips
-
-# more options: https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs
