@@ -8,8 +8,8 @@ import pyarrow as pa
 def main():
   # Open DAOD file with uproot
   filename = "/mnt/disks/disk-1/root_sample_data/mc16_13TeV.DAOD_TOPQ1.17829204._000001.pool.root.1"
-  myfile = uproot.open(filename)  
-  mytree = myfile["CollectionTree"]  
+  myfile = uproot.open(filename)
+  mytree = myfile["CollectionTree"]
 
   # Read 3 variables into pandas dataframe
   mydf = mytree.pandas.df(["AntiKt10TruthJetsAuxDyn.JetEMScaleMomentum_pt", "AntiKt10TruthJetsAuxDyn.JetEMScaleMomentum_eta", "AntiKt10TruthJetsAuxDyn.JetEMScaleMomentum_phi"])
@@ -31,4 +31,3 @@ def main():
 
 if __name__ == "__main__":
   main()
-

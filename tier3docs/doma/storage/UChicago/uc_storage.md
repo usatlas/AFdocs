@@ -1,16 +1,17 @@
 # Data Storage at UChicago
-  
+
   <!--<big>**Table of contents**</big>-->
 
-<font size="6">**Table of contents**</font>
-  <br> - [Storage Limits](#storage-limits)
-  <br> - [FileSystems](#filesystems)
-  <br> - [LOCALGROUPDISK](#localgroupdisk)
-<!--+ [-](#-)-->
-## Storage Limits
- 
+<font size="6">**Table of contents**</font> <br> -
+[Storage Limits](#storage-limits) <br> - [FileSystems](#filesystems) <br> -
+[LOCALGROUPDISK](#localgroupdisk)
 
-[]:#(table2  with filesystems differences)
+<!--+ [-](#-)-->
+
+## Storage Limits
+
+[]:#(table2 with filesystems differences)
+
 <table>
 <thead>
 <tr>
@@ -47,10 +48,12 @@
 </tbody>
 </table>
 
-## Filesystems 
+## Filesystems
 
-The UChicago analysis facility has three filesystems with a clearly defined role. Please be aware of each of these roles when running workloads. 
-[]:#(table with filesystems functions)
+The UChicago analysis facility has three filesystems with a clearly defined
+role. Please be aware of each of these roles when running workloads. []:#(table
+with filesystems functions)
+
 <table>
 <thead>
 <tr>
@@ -72,40 +75,52 @@ The UChicago analysis facility has three filesystems with a clearly defined role
 <td>$scratch</td>
 <td>
 <p>This filesystem is an ephemeral storage for workloads and local to worker nodes.
-<br> All jobs start in this directory on the worker nodes by default. 
+<br> All jobs start in this directory on the worker nodes by default.
 <br>Consequently, Output data will need to be staged to the shared filesystem or it will be lost!.
 <br> In the next sections you can find examples and more details about this directory and its use.
 </p>
 </tbody>
 </table>
 
-
 ## LOCALGROUPDISK
-If you need more space to storage data, need to share it with your teamwork or colleagues who are not necessarily using the UChicago Analysis Facility you can use LOCALGROUPDISK which is a disk resource for all US-ATLAS members.
-Check the Rucio documentation at [RSE Rucio manage quota](https://rucio-ui.cern.ch/r2d2/manage_quota), type `MWT2_UC_LOCALGROUPDISK` in the text box:
+
+If you need more space to storage data, need to share it with your teamwork or
+colleagues who are not necessarily using the UChicago Analysis Facility you can
+use LOCALGROUPDISK which is a disk resource for all US-ATLAS members. Check the
+Rucio documentation at
+[RSE Rucio manage quota](https://rucio-ui.cern.ch/r2d2/manage_quota), type
+`MWT2_UC_LOCALGROUPDISK` in the text box:
 
 ![rse rucio manage quota](uc_rucio_localgroupdisk.png)
 
-and click the `select` button. If you search your lxplus username you'll see that you have a default quota of 15TB. For additional space if need beyond 15TB here is the [Request form]( https://atlas-lgdm.cern.ch/LocalDisk_Usage/USER/RequestFormUsage/).
+and click the `select` button. If you search your lxplus username you'll see
+that you have a default quota of 15TB. For additional space if need beyond 15TB
+here is the
+[Request form](https://atlas-lgdm.cern.ch/LocalDisk_Usage/USER/RequestFormUsage/).
 Remember that you need US-ATLAS VO for the grid certificate.
 
-If you are an ATLAS member but can't find your name go to [VOMS page](https://lcg-voms2.cern.ch:8443/voms/atlas/user/home.action) and select /atlas/usatlas in the "groups roles" box:
+If you are an ATLAS member but can't find your name go to
+[VOMS page](https://lcg-voms2.cern.ch:8443/voms/atlas/user/home.action) and
+select /atlas/usatlas in the "groups roles" box:
 
 ![voms groups roles](uc_vo_roles.png)
 
 ### Transfer datasets to LOCALGROUPDISK
 
-To transfer datasets to LOCALGROUPDISK, check the following 3 options: 
+To transfer datasets to LOCALGROUPDISK, check the following 3 options:
 
-- Using **r2d2**, make your request in the Rucio page [rucio r2d2 request](https://rucio-ui.cern.ch/r2d2/request):
-![rucio r2d2 request](uc_r2d2_request.png)
+- Using **r2d2**, make your request in the Rucio page
+  [rucio r2d2 request](https://rucio-ui.cern.ch/r2d2/request):
+  ![rucio r2d2 request](uc_r2d2_request.png)
 - Adding “-destSE” to your PANDA job.
 - Via Rucio on the command line
 
 ### How to access datasets
 
-To access datasets, you can choose one of the following 3 options. 
+To access datasets, you can choose one of the following 3 options.
 
 - In grid-based analyses
-- Through XRootD from shared T3’s, check the [Data Sharing section](http://127.0.0.1:8000/doma/DataSharing/).
-- Download locally, remember to use the proper filesystem, eg: to storage large data samples files use $data. 
+- Through XRootD from shared T3’s, check the
+  [Data Sharing section](http://127.0.0.1:8000/doma/DataSharing/).
+- Download locally, remember to use the proper filesystem, eg: to storage large
+  data samples files use $data.

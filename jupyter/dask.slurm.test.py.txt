@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 #
-# Useful debugging info when useing dask with SLURM jobs
+# Useful debugging info when using dask with SLURM jobs
 #
 #import logging
 #logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)

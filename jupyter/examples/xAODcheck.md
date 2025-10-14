@@ -1,14 +1,19 @@
 # Example on checking xAODs in python
 
-*This document was originally written by Dr. Shawfeng Dong*
+_This document was originally written by Dr. Shawfeng Dong_
 
-This repo contains a few examples for processing [ATLAS](https://atlas.cern/) xAOD data.
+This repo contains a few examples for processing [ATLAS](https://atlas.cern/)
+xAOD data.
 
 ## What information is in an xAOD file
 
-The [ATLAS Analysis Release](https://atlassoftwaredocs.web.cern.ch/ABtutorial/release_setup/) provides a handy Python [checkxAOD.py](https://atlassoftwaredocs.web.cern.ch/ABtutorial/basic_xaod_content/) that we can use to learn the container types and container keys in an xAOD file.
+The
+[ATLAS Analysis Release](https://atlassoftwaredocs.web.cern.ch/ABtutorial/release_setup/)
+provides a handy Python
+[checkxAOD.py](https://atlassoftwaredocs.web.cern.ch/ABtutorial/basic_xaod_content/)
+that we can use to learn the container types and container keys in an xAOD file.
 
-First, set up the environment for ATLAS Analysis 
+First, set up the environment for ATLAS Analysis
 
 ```
 export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
@@ -100,8 +105,22 @@ Total,InDet,*Unknown*,Trig,egamma,Muon,Jet,MET,BTag,tau,EvtId,PFO
 ================================================================================
 ```
 
-In this case, for example, `AntiKt4LCTopoJets` is a *key name* for the container whose type is `DataVector<xAOD::Jet_v1>`. Once you know the container types, you can find their APIs at the [RootCore APIs site](http://hep.uchicago.edu/~kkrizka/rootcoreapis/dd/d44/namespacexAOD.html). 
+In this case, for example, `AntiKt4LCTopoJets` is a _key name_ for the container
+whose type is `DataVector<xAOD::Jet_v1>`. Once you know the container types, you
+can find their APIs at the
+[RootCore APIs site](http://hep.uchicago.edu/~kkrizka/rootcoreapis/dd/d44/namespacexAOD.html).
 
 ## Using xAOD API in python
 
-In your analysis, you choose the key name for the particular instance of the container in which you are interested (e.g., `AntiKt4LCTopoJets`). **Note** xAOD APIs are higher-level APIs, and they hide some behind-the-scenes magic, which is actually saved in the Auxiliary store of the raw Root file. However, as of this writing, you can only access the xAOD APIs in either C++ (e.g., [Exam_JetsPlot.cxx](../../Tutorial-2019Aug/BNL/src/Exam_JetsPlot.cxx)) or pyROOT (e.g., [pyROOT_example.ipynb](https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb), but not in [uproot](https://github.com/scikit-hep/uproot) yet. Until someone implements xAOD support for uproot, you will have to read the raw data from the Auxiliary store (for an example, see [convert_specific_variables.py](convert_specific_variables.py.txt)).
+In your analysis, you choose the key name for the particular instance of the
+container in which you are interested (e.g., `AntiKt4LCTopoJets`). **Note** xAOD
+APIs are higher-level APIs, and they hide some behind-the-scenes magic, which is
+actually saved in the Auxiliary store of the raw Root file. However, as of this
+writing, you can only access the xAOD APIs in either C++ (e.g.,
+[Exam_JetsPlot.cxx](../../Tutorial-2019Aug/BNL/src/Exam_JetsPlot.cxx)) or pyROOT
+(e.g.,
+[pyROOT_example.ipynb](https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb),
+but not in [uproot](https://github.com/scikit-hep/uproot) yet. Until someone
+implements xAOD support for uproot, you will have to read the raw data from the
+Auxiliary store (for an example, see
+[convert_specific_variables.py](convert_specific_variables.py.txt)).

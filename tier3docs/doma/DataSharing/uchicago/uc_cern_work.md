@@ -29,8 +29,8 @@ On the Analysis Facility login servers, try the following:
 
     kinit <cern_user>@CERN.CH
 
-as described in [CERN Kerberos ticket](README.md#cern-kerberos-ticket). To list your
-files located at /eos/user/d/dschrute/ :
+as described in [CERN Kerberos ticket](README.md#cern-kerberos-ticket). To list
+your files located at /eos/user/d/dschrute/ :
 
     ls /eos/user/d/dschrute
     # remember to replace "d/dschrute" with your own username at CERN.

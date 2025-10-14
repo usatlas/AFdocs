@@ -2,13 +2,13 @@
 # =============
 
 # ssh to centos7 machines at SLAC
-ssh -Y centos7.slac.stanford.edu
+ssh -Y centos7.slack.stanford.edu
 
 # get the source code
 # ===================
 
-cd /nfs/slac/g/atlas/u02/$USER
-cp -pR /nfs/slac/g/atlas/u02/yesw/T3-Example-SLAC
+cd /nfs/slack/g/atlas/u02/$USER
+cp -pR /nfs/slack/g/atlas/u02/yesw/T3-Example-SLAC
 cd T3-Example-SLAC
 
 
@@ -16,7 +16,7 @@ cd T3-Example-SLAC
 # =====
 
 # ssh to centos7 machines at SLAC
-ssh -Y centos7.slac.stanford.edu
+ssh -Y centos7.slack.stanford.edu
 
 export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
 source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh
@@ -37,7 +37,7 @@ lsetup rucio
 voms-proxy-init -voms atlas -valid 95:00
 dset=data16_13TeV:data16_13TeV.00311481.physics_Main.merge.DAOD_SUSY15.f758_m1616_r8669_p3185_tid11525262_00
 rucio list-file-replicas --rse SLACXRD_LOCALGROUPDISK --protocols root $dset > dset-outside.txt
-sed 's#griddev03.slac.stanford.edu:2094#atlrdr1#' dset-outside.txt > dset-inside.txt
+sed 's#griddev03.slack.stanford.edu:2094#atlrdr1#' dset-outside.txt > dset-inside.txt
 head dset-inside.txt
 
 

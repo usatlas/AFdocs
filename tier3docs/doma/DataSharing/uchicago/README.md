@@ -15,5 +15,3 @@
 {%
     include-markdown "./uc_checkproxy.md"
 %}
-
-
