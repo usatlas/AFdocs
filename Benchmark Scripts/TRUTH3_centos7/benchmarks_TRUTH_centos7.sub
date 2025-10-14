@@ -1,0 +1,12 @@
+Universe = vanilla
+
+Output = /data/selbor/Out_Files/TRUTH3_Centos/$(Cluster).$(Process).out
+Error = /data/selbor/Err_Files/TRUTH3_Centos/$(Cluster).$(Process).err
+Log = /data/selbor/LogFiles/TRUTH3_centos7/$(Cluster).$(Process).log
+
+Executable = /home/selbor/benchmarks/TRUTH3_centos7/to_run_centos.sh
+
+request_memory = 3GB
+request_cpus = 1
+
+Queue 1

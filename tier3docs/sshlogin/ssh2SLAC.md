@@ -135,7 +135,7 @@ The following spaces are available to ATLAS users:
 <ol>
   <li> $HOME: quota 25GB on Weka file system
   <li> /sdf/data/atlas/u/&lt;username>: quota 200GB on Weka file system
-  <li> /sdf/scratch/&lt;username_intial>/&lt;username>: quota 100GB on Weka file system. This is a scratch space. Data 
+  <li> /sdf/scratch/users/&lt;username_intial>/&lt;username>: quota 100GB on Weka file system. This is a scratch space. Data 
 are subject to purge when the total scratch space is full.
   <li> /fs/ddn/sdf/group/atlas/d/&lt;username>: create your own dir please. This is a Lustre file system (it is also 
 available in the old SDF facility at /sdf/group/atlas/d). It is fast
