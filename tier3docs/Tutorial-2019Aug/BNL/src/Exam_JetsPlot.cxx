@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
 
   std::cout << "This file " << basename(inputFilePath.Data()) << " contains " << numEntries << " events" << std::endl;
 
-  int nevts_everyPrint = 100; // print for every number of events 
+  int nevts_everyPrint = 100; // print for every number of events
 
   // primary event loop
   for ( Long64_t i=0; i<numEntries; ++i ) {

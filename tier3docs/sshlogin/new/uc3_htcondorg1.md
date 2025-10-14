@@ -1,12 +1,16 @@
 ## HTCondor user's guide
+
 ### Use condor within eventloop
-If you are using EventLoop to submit your code to the Condor batch system you should replace your submission driver line with something like the following:
+
+If you are using EventLoop to submit your code to the Condor batch system you
+should replace your submission driver line with something like the following:
 
 ```bash
 EL::CondorDriver driver;
 job.options()->setString(EL::Job::optCondorConf, "getenv = true\naccounting_group = group_atlas.<institute>");
 driver.submitOnly( job, "yourJobName”);
 ```
+
 <h3> Useful attributes for the jobs submission file</h3>
 
 <div class="wy-table-responsive"><table class="docutils">
@@ -55,11 +59,10 @@ driver.submitOnly( job, "yourJobName”);
 </tbody>
 </table></div>
 
-
 <h3> Useful commands to manage and check the job's status.</h3>
 <!--
 <!--#for the dropdown wrapper
-<details open> 
+<details open>
 <summary>example1 of dropdown</summary> <!--for the dropdown title
 <br>
 csv
@@ -69,4 +72,3 @@ csv
 -->
 
 {{ read_csv('tier3docs/sshlogin/new/htc-cmdline.csv') }}
-

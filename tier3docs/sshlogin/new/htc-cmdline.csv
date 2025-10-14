@@ -1,6 +1,6 @@
 ﻿Command reference for submission file,Description,Example
 condor_hold,Put jobs in the queue into the hold state,-
-condor_dagman: ,Meta scheduler for tthe HTCondor jobs within a DAG (directed acyclic graph) or multiple DAGs,-
+condor_dagman: ,Meta scheduler for the HTCondor jobs within a DAG (directed acyclic graph) or multiple DAGs,-
 condor_release,Releases jobs from the HTCondor job queue that were previously placed in hold state. ,-
 condor_ssh_to_job JobId,Creates an ssh session ro a running job.,-
 condor_submit –interactive,Sets up the job environment and input files<br>It gives a command prompt where you can then start job manually to see what happens.<br>,-

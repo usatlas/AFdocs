@@ -7,24 +7,26 @@ The ways to list, write and read files on CERN EOS, documented
 still work at BNL, but you need specify the full EOS server name
 **eosatlas.cern.ch** and obtain a CERN Kerberos ticket:
 
-You can obtain and cache a CERN Kerberos ticket (this is also required
-for the way of using ssh-tunnel below) by:
+You can obtain and cache a CERN Kerberos ticket (this is also required for the
+way of using ssh-tunnel below) by:
 
     kinit YourNameAtCERN@CERN.CH
 
-Please be aware that in the above command the realm **CERN.CH** must be
-in **UPPERCASE**.
+Please be aware that in the above command the realm **CERN.CH** must be in
+**UPPERCASE**.
 
-As convience for the US ATLAS users, we have installed the eos-client and eos-fusex packages on the interactive nodes.
+As convenience for the US ATLAS users, we have installed the eos-client and
+eos-fusex packages on the interactive nodes.
 
-After obtaining your CERN Kerberos ticket, you can access both the **ATLAS EOS** and **USER EOS** instances.
+After obtaining your CERN Kerberos ticket, you can access both the **ATLAS EOS**
+and **USER EOS** instances.
 
 To list your files:
 
     ls /eos/atlas/...
     ls /eos/user/y/yesw/...
 
-Please replace *"y/yesw"* with your own username at CERN.
+Please replace _"y/yesw"_ with your own username at CERN.
 
 To copy files from EOS:
 
@@ -52,8 +54,8 @@ To copy files from EOS:
     xrdcp root://eosatlas.cern.ch//eos/atlas/YourDir/YourFilename.root .
     xrdcp root://localhost//eos/atlas/YourDir/YourFilename.root.root  .  # if using ssh-tunnel
 
-Or you make use of the existing script **eos-copy.py**, which is an
-alias and should have been defined for you upon login:
+Or you make use of the existing script **eos-copy.py**, which is an alias and
+should have been defined for you upon login:
 
     % which eos-copy.py
     /afs/usatlas.bnl.gov/scripts/eos-copy.py
@@ -80,10 +82,9 @@ Or to read EOS files in ROOT:
 
 #### <span id="Access_to_CERN_EOS_in_BNL_batch"></span> Access to CERN EOS in BNL batch jobs
 
-The method using ssh-tunnel would not work in batch jobs, you need
-access them directly with root://eosatlas.cern.ch. However, for
-protected EOS files, you need pass your CERN Kerberos ticket to the
-batch machines in the following way:
+The method using ssh-tunnel would not work in batch jobs, you need access them
+directly with root://eosatlas.cern.ch. However, for protected EOS files, you
+need pass your CERN Kerberos ticket to the batch machines in the following way:
 
 1.  First define one envvar **KRB5CCNAME** prior to running
     `kinit YourNameAtCERN@CERN.CH`
@@ -94,13 +95,12 @@ batch machines in the following way:
 
 #### <span id="Access_to_CERN_EOS_through_BNL_X"></span> Access to CERN EOS through BNL Xcache server
 
-If you need repeat access the same EOS files, you can make use of the
-BNL Xcache server to speed up the reading speed for the sequntial
-access.
+If you need repeat access the same EOS files, you can make use of the BNL Xcache
+server to speed up the reading speed for the sequntial access.
 
-Just use the option **--eos=EOS\_PATH** in the script **Xcache\_ls.py**
-to generate the clist files for your EOS files at CERN. Please run
-**Xcache\_ls.py -h** for more details.
+Just use the option **--eos=EOS_PATH** in the script **Xcache_ls.py** to
+generate the clist files for your EOS files at CERN. Please run **Xcache_ls.py
+-h** for more details.
 
 ### <span id="Access_to_BNL_files_from_CERN_an"></span> Access to BNL files from CERN and outside BNL
 
@@ -108,15 +108,14 @@ You or your collaborators may need remote access to files at BNL.
 
 #### <span id="Access_to_BNL_dCache_files_from"></span> Access to BNL dCache files from CERN
 
-You can use the following scripts
-(**\~yesw/public/bnl/bnl\_pnfs-ls.py**) to generate clist or list files
-under a given BNL /pnfs directory.
+You can use the following scripts (**\~yesw/public/bnl/bnl_pnfs-ls.py**) to
+generate clist or list files under a given BNL /pnfs directory.
 
 >     lxplus% ~yesw/public/bnl/bnl_pnfs-ls.py -h
->     Usage: 
+>     Usage:
 >          bnl_pnfs-ls.py [-o clistFilename] [options] [pnfsFilePath | pnfsDirPath] [morePaths]
 >
->       This script generates pfn (physical file name), pnfs-path,  
+>       This script generates pfn (physical file name), pnfs-path,
 >     or xrootd-path of files on BNL dcache for given datasets or files on PNFS,
 >     where wildcard is supported in pnfsFilePath and pnfsDirPath
 >
@@ -144,8 +143,8 @@ For example, you run the above script in the following ways:
 
 #### <span id="Access_to_BNL_other_file_systems"></span> Access to BNL other file systems from CERN
 
-You can use **sshfs** to mount the remote BNL files to lxplus machines
-locally. For example,
+You can use **sshfs** to mount the remote BNL files to lxplus machines locally.
+For example,
 
     lxplus% mkdir /tmp/yesw/data
     lxplus% sshfs attsub02:/atlasgpfs01/usatlas/data/yesw2000 /tmp/yesw/data
@@ -159,8 +158,7 @@ To list all the sshfs mounted points, just run **pgrep -a -f sshfs**.
 
 #### <span id="Access_to_BNL_other_file_sys_AN1"></span> Access to BNL other file systems from other remote computers
 
-For other computers outside of BNL such as your laptop, you can use the
-say way as that for CERN. You can find the instruction of sshfs
-installation on different OS at
+For other computers outside of BNL such as your laptop, you can use the say way
+as that for CERN. You can find the instruction of sshfs installation on
+different OS at
 [https://linuxize.com/post/how-to-use-sshfs-to-mount-remote-directories-over-ssh/](https://linuxize.com/post/how-to-use-sshfs-to-mount-remote-directories-over-ssh/).
-

@@ -1,14 +1,17 @@
 # Ways to Implement ML Containers
 
-The ML containers were developed to be used both at the command line and with each of the AF's jupyter interfaces.
+The ML containers were developed to be used both at the command line and with
+each of the AF's jupyter interfaces.
 
 ## Command Line ML Container Usage
 
-The images are deployed onto the Docker hub and CVMFS and there are 4 ways to run the ML images at the command line.
+The images are deployed onto the Docker hub and CVMFS and there are 4 ways to
+run the ML images at the command line.
 
 ??? note "**Apptainer/Singularity**"
 
     You can directly use **Apptainer** or **Singularity** to develop with the containers using the
+
 `apptainer run` or `singularity run` command.
 
     ``` output
@@ -24,7 +27,7 @@ The images are deployed onto the Docker hub and CVMFS and there are 4 ways to ru
 
 ??? note "**Virtual Environment**"
 
-    We have included a bash script with every container that will create a virtual environment based on that container. 
+    We have included a bash script with every container that will create a virtual environment based on that container.
 
     ``` output
     lxplus901% source /cvmfs/unpacked.cern.ch/registry.hub.docker.com/yesw2000/ml-base:alma9-python39/setupMe-on-host.sh
@@ -43,12 +46,12 @@ The images are deployed onto the Docker hub and CVMFS and there are 4 ways to ru
     [...]
     For the content in this container,
     please read the file /list-of-pkgs-inside.txt
-    
+
     To install new pkg(s), run "micromamba install pkg1 [pkg2 ...]"
     (base) bash-5.1# python --version
     Python 3.9.19
     (base) bash-5.1#
-    ```	
+    ```
 
 ??? note "**Script for laptops**"
 
@@ -60,13 +63,13 @@ The images are deployed onto the Docker hub and CVMFS and there are 4 ways to ru
     Trying to pull docker.io/yesw2000/ml-base:alma9-python39...
     [...]
     To reuse the same container next time, just run
-    
+
          source runML-here.sh
     or
          source run-ml_container.sh
-    
+
     podman exec -it yesw_ml-base_alma9-python39 /bin/bash
-    
+
     root@3c90a02d92d6:[1]%
     ```
 
@@ -83,17 +86,15 @@ The images are deployed onto the Docker hub and CVMFS and there are 4 ways to ru
 
     After pressing start, the server for the notebook will begin the setup process. After a minute or so, your jupyter notebook will appear and you will have a number of kernels available to use. The kernel associated with the container is called `ML-Python3`.
 
-
 ??? note "**UChicago**"
 
     Currently the UChicago JupyterLab servers don't allow custom containers when creating a new notebook. This is planning on being updated soon. In the meantime, the `ml-platform:latest` container shown in the `Image` dropdown box does have all packages necessary for running the ML Tutorial material.
-
 
 ??? note "**SLAC**"
 
     Steps for using ML containers using SLAC Jupyter interface:
 
-    1. Connect to SLAC's [S3DF Jupyter Portal](https://s3df.slac.stanford.edu/pun/sys/dashboard/batch_connect/sys/slac-ood-jupyter/session_contexts/new)
+    1. Connect to SLAC's [S3DF Jupyter Portal](https://s3df.slack.stanford.edu/pun/sys/dashboard/batch_connect/sys/slack-ood-jupyter/session_contexts/new)
     2. After you login, you'll come to the menu where you can define your jupyter server. The first dropdown is the **Jupyter Instance**. Choose the "Custom Singularity Container" option.
     3. Now the **Commands to initiate Jupyter** box will be editable. Replace the content of the box by the following:
     ```
@@ -106,4 +107,5 @@ The images are deployed onto the Docker hub and CVMFS and there are 4 ways to ru
     6. In **Partition** choose `ampere` if you want GPUs, or choose `rome` if you don't need a GPU.
     7. Fill the **Number of GPUs** box if you are asking for GPUs.
     8. Your server will be submitted to the queue and will take a minute or so to generate. You will see the **Connect to Jupyter** button when your server has initialized successfully.
+
 </p>

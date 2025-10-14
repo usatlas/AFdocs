@@ -96,7 +96,7 @@ plugins:
   # Built-in
   include-markdown: {}
   search:
-      min_search_length: 2
+    min_search_length: 2
   macros: {}
   # Extra
   table-reader: {}

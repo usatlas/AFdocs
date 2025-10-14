@@ -8,4 +8,4 @@ SLAC Contact:
 
 ATLAS support:
 
-Mattermost: 
+Mattermost:
