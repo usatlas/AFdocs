@@ -21,15 +21,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
-      accent: light-blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue
-      accent: light-blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
@@ -52,6 +52,14 @@ theme:
     - content.code.annotate
     - content.tooltips
     - content.tabs.link
+
+extra_css:
+  - css/atlas-theme.css
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill-fastly.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - Getting Started:
