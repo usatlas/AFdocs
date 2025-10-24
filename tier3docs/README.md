@@ -15,15 +15,20 @@ packages, MPI, Jupyter Lab with PyROOT, Xcache with auto data discovery, GPUs,
 etc. The three facilities are backed by staff to support software environments,
 unix systems and storage.
 
-!!! question "Need Help?" Have questions or comments? Visit our
-[:fontawesome-solid-comments: ATLAS AF Discourse Forum](https://atlas-talk.sdcc.bnl.gov/)
-(do not confuse with Discord :fontawesome-brands-discord:) for user support,
-contact, friendly discussion, newsletter and more! We'd love to help you have a
-smooth experience while working at our analysis facilities!
+<div style="float:right; margin-left:10px;">
+<a href="https://atlas-talk.sdcc.bnl.gov/">
+<img src="images/discourse.png" style="width:80px; height:80px" alt="Discourse Logo" />
+</a>
+<p>AF Discourse</p>
+</div>
 
-!!! info "Privacy Disclaimer" Please read our
-[Privacy Disclaimer](privacyDisclaimer.md) for information about data handling
-and privacy policies.
+!!! question "Need Help?"
+
+    Have questions or comments? Visit our [:fontawesome-solid-comments: ATLAS AF Discourse Forum](https://atlas-talk.sdcc.bnl.gov/) (do not confuse with Discord :fontawesome-brands-discord:) for user support, contact, friendly discussion, newsletter and more! We'd love to help you have a smooth experience while working at our analysis facilities!
+
+!!! info "Privacy Disclaimer"
+
+    Please read our [Privacy Disclaimer](privacyDisclaimer.md) for information about data handling and privacy policies.
 
 ---
 
