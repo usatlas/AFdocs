@@ -77,13 +77,13 @@ for user support, contact, friendly discussion, newsletter and more!
 
 ## Quick Comparison
 
-| Feature               | BNL               | UChicago              | SLAC                        |
-| --------------------- | ----------------- | --------------------- | --------------------------- |
-| **Batch System**      | HTCondor          | HTCondor              | SLURM                       |
+| Feature               | BNL               | UChicago              | SLAC                         |
+| --------------------- | ----------------- | --------------------- | ---------------------------- |
+| **Batch System**      | HTCondor          | HTCondor              | SLURM                        |
 | **Interactive Nodes** | atl-dev01.bnl.gov | login.af.uchicago.edu | sdf-login.slack.stanford.edu |
-| **JupyterLab**        | ✓                 | ✓                     | ✓                           |
-| **GPUs**              | ✓                 | ✓                     | ✓                           |
-| **Xcache**            | 60TB              | 37.5TB                | 20TB                        |
+| **JupyterLab**        | ✓                 | ✓                     | ✓                            |
+| **GPUs**              | ✓                 | ✓                     | ✓                            |
+| **Xcache**            | 60TB              | 37.5TB                | 20TB                         |
 
 ---
 
