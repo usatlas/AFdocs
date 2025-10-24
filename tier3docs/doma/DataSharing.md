@@ -60,9 +60,9 @@ Options:
                         dataset
 ```
 
-!!! tip "Pre-staging large files" For large file inputs on the grid, you are
-recommended to plan ahead and pre-stage them to BNL using
-[R2D2 request](https://rucio-ui.cern.ch/r2d2/manage_quota) or rucio command.
+!!! tip "Pre-staging large files"
+
+    For large file inputs on the grid, you are recommended to plan ahead and pre-stage them to BNL using [R2D2 request](https://rucio-ui.cern.ch/r2d2/manage_quota) or rucio command.
 
 ---
 
@@ -82,8 +82,9 @@ way of using ssh-tunnel below) by:
 kinit YourNameAtCERN@CERN.CH
 ```
 
-!!! warning "CERN.CH must be uppercase" Please be aware that in the above
-command the realm **CERN.CH** must be in **UPPERCASE**.
+!!! warning "CERN.CH must be uppercase"
+
+    Please be aware that in the above command the realm **CERN.CH** must be in **UPPERCASE**.
 
 As convenience for the US ATLAS users, we have installed the eos-client and
 eos-fusex packages on the interactive nodes.
@@ -98,7 +99,9 @@ ls /eos/atlas/...
 ls /eos/user/y/yesw/...
 ```
 
-!!! note Please replace _"y/yesw"_ with your own username at CERN.
+!!! note
+
+    Please replace _"y/yesw"_ with your own username at CERN.
 
 To copy files from EOS:
 
@@ -247,9 +250,9 @@ lxplus% mkdir /tmp/yesw/data
 lxplus% sshfs attsub02:/atlasgpfs01/usatlas/data/yesw2000 /tmp/yesw/data
 ```
 
-!!! note This assumes that you have already set up the ssh configuration as
-shown in
-[the section of interactive connection to BNL](../sshlogin/ssh2BNL.md#Connect_to_the_interactive_nodes).
+!!! note
+
+    This assumes that you have already set up the ssh configuration as shown in [the section of interactive connection to BNL](../sshlogin/ssh2BNL.md#Connect_to_the_interactive_nodes).
 
 To umount the mounted point, just run **fusermount -u /tmp/yesw/data**.
 
@@ -287,9 +290,9 @@ The object store is available at the following URLs:
 
 ### Privacy
 
-!!! warning "Low sensitivity data only" Browsing/Listing of `/share` is disabled
-in order to provide a level of privacy that is suitable for sharing **low
-sensitivity data**.
+!!! warning "Low sensitivity data only"
+
+    Browsing/Listing of `/share` is disabled in order to provide a level of privacy that is suitable for sharing **low sensitivity data**.
 
 For example, if one copies a data file to:
 
@@ -300,10 +303,9 @@ the `random-string`. This is because `/share` is not searchable. As the owner,
 you should write down the random string and keep it secure. Anyone who know the
 random string can search for the content under it.
 
-!!! danger "Important: Keep your random string secure" If you lose the random
-string, you lose access to your data. Administrators won't be able to help you
-since there is no records of ownership in the object store. The data will
-eventually be purged after expiration.
+!!! danger "Important: Keep your random string secure"
+
+    If you lose the random string, you lose access to your data. Administrators won't be able to help you since there is no records of ownership in the object store. The data will eventually be purged after expiration.
 
 ### Upload and Download
 
@@ -323,32 +325,33 @@ In addition, you can also use your web browser to download.
 
 curl is available everywhere. To use curl, follow these steps:
 
-1. Create an alias to type less:
+1.  Create an alias to type less:
 
-   ```bash
-   alias mycurl="curl -E /tmp/x509up_u$(id -u) --cacert /tmp/x509up_u$(id -u) --capath /etc/grid-security/certificates"
-   ```
+    ```bash
+    alias mycurl="curl -E /tmp/x509up_u$(id -u) --cacert /tmp/x509up_u$(id -u) --capath /etc/grid-security/certificates"
+    ```
 
-   !!! note You may need to adjust the proxy location and CA directory location
-   (/etc/grid-security/certificates) in your environment.
+    !!! note
 
-2. Upload:
+        You may need to adjust the proxy location and CA directory location (/etc/grid-security/certificates) in your environment.
 
-   ```bash
-   mycurl -L -X PUT --upload-file /tmp/mydata.file https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat
-   ```
+2.  Upload:
 
-3. Download:
+    ```bash
+    mycurl -L -X PUT --upload-file /tmp/mydata.file https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat
+    ```
 
-   ```bash
-   mycurl -L -X GET https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat
-   ```
+3.  Download:
 
-4. Delete:
+    ```bash
+    mycurl -L -X GET https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat
+    ```
 
-   ```bash
-   mycurl -L -X DELETE https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat
-   ```
+4.  Delete:
+
+    ```bash
+    mycurl -L -X DELETE https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat
+    ```
 
 #### Use gfal2 tools to upload/download/delete
 
@@ -379,8 +382,9 @@ have the gfal2 tools in your PATH.
    gfal-copy -f https://cern.ch//SCRATCHDISK/myfile.dat https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat
    ```
 
-!!! tip Gfal2 tools work with both https and root protocols. In the last
-example, the source and destination can use different protocols.
+!!! tip
+
+    Gfal2 tools work with both https and root protocols. In the last example, the source and destination can use different protocols.
 
 #### Use xrootd tools to upload/download/delete
 
@@ -413,7 +417,9 @@ port number.
    xrdcp -f root://cern.ch//SCRATCHDISK/myfile.dat root://sdf-dtn10.slack.stanford.edu:2094//share/random-string/myfile.dat /tmp/myfile.dat
    ```
 
-!!! note With additional setting, xrdcp also works with the https protocol.
+!!! note
+
+    With additional setting, xrdcp also works with the https protocol.
 
 #### Use a web browser
 

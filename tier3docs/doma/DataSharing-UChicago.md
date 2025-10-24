@@ -7,9 +7,9 @@ and manage authentication credentials for data access.
 
 ## Access to CERN-EOS from UChicago
 
-!!! warning "EOS access from worker nodes" `/eos` is only mounted on the
-interactive (`login`) nodes. To access from worker nodes (e.g. condor jobs), we
-recommend the use of `xrootd` such as:
+!!! warning "EOS access from worker nodes"
+
+    `/eos` is only mounted on the interactive (`login`) nodes. To access from worker nodes (e.g. condor jobs), we recommend the use of `xrootd` such as:
 
     ```bash
     root://eosuser.cern.ch//eos/user/d/dschrute/file.txt
@@ -28,8 +28,9 @@ The ways to list, write and read files on CERN EOS, documented
 [here](https://twiki.cern.ch/twiki/bin/view/AtlasComputing/ATLASStorageAtCERN#EOS_storage_system),
 still work at UChicago.
 
-!!! note "setup-eos is deprecated" `setup-eos` has been deprecated in favor of
-using `kinit`.
+!!! note "setup-eos is deprecated"
+
+    `setup-eos` has been deprecated in favor of using `kinit`.
 
 On the Analysis Facility login servers, try the following:
 
@@ -108,8 +109,9 @@ root://192.170.240.18:1094//root://eosatlas.cern.ch:1094//eos/atlas/atlastier0/r
 You can obtain and cache a CERN Kerberos ticket (this is also required for the
 way of using ssh-tunnel below) by doing:
 
-!!! warning "CERN.CH must be uppercase" Please notice that the domain CERN.CH
-must be in UPPERCASE.
+!!! warning "CERN.CH must be uppercase"
+
+    Please notice that the domain CERN.CH must be in UPPERCASE.
 
 ```bash
 kinit <name_at_CERN>@CERN.CH
@@ -147,10 +149,9 @@ If you are trying to use HTCondor driver to run some jobs that need data access
 authorization, for example on `rucio`, always check the status of your proxy
 grid certificate.
 
-!!! warning "Proxy certificate expiration" Your x509proxy certificate has an
-expiry date. Once it expires you have to create an ATLAS VOMS proxy again in the
-usual way. You create (or copy it to) the shared $HOME filesystem so that the
-HTCondor scheduler can find and read the proxy.
+!!! warning "Proxy certificate expiration"
+
+    Your x509proxy certificate has an expiry date. Once it expires you have to create an ATLAS VOMS proxy again in the usual way. You create (or copy it to) the shared $HOME filesystem so that the HTCondor scheduler can find and read the proxy.
 
 This is how you copy it to $HOME:
 
@@ -158,8 +159,9 @@ This is how you copy it to $HOME:
 voms-proxy-init -voms atlas -out $HOME/x509proxy
 ```
 
-!!! important Without the term `-out $HOME/x509proxy` you create a new proxy but
-the one that maybe is already in your $HOME directory is still expired.
+!!! important
+
+    Without the term `-out $HOME/x509proxy` you create a new proxy but the one that maybe is already in your $HOME directory is still expired.
 
 Once you renew your proxy certificate, add the following lines to your job
 submit file so that HTCondor configures the job environment automatically for

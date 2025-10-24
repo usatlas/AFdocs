@@ -17,18 +17,13 @@ approval process smoother. Please enter your full name, your home institution's
 name, and your institutional email; account requests from services like Gmail,
 Outlook, iCloud, etc. won't be accepted.
 
-!!! tip "Choose your username wisely" When choosing a UNIX username during
-signup, you should consider using the same username that you have at CERN. This
-will make certain tools (e.g. Rucio, EOS) simpler to set up. Otherwise, we
-recommend that you pick a username that is reflective of your full name, and
-that you should prefer brevity (e.g. John Smith -> `jsmith`). We will not be
-able to easily change your username for you if you decide that you want
-something different later.
+!!! tip "Choose your username wisely"
 
-!!! info "Not an ATLAS member yet?" If you are not yet an ATLAS member, but are
-working with someone in ATLAS, please email
-**atlas-us-chicago-tier3-admins@cern.ch** explaining who you are working with
-and why you need an account.
+    When choosing a UNIX username during signup, you should consider using the same username that you have at CERN. This will make certain tools (e.g. Rucio, EOS) simpler to set up. Otherwise, we recommend that you pick a username that is reflective of your full name, and that you should prefer brevity (e.g. John Smith -> `jsmith`). We will not be able to easily change your username for you if you decide that you want something different later.
+
+!!! info "Not an ATLAS member yet?"
+
+    If you are not yet an ATLAS member, but are working with someone in ATLAS, please email **atlas-us-chicago-tier3-admins@cern.ch** explaining who you are working with and why you need an account.
 
 ### Generating SSH Keys
 
@@ -43,9 +38,9 @@ follow the prompts:
 ssh-keygen -t ed25519
 ```
 
-!!! warning "Passphrase recommended" We recommend setting a passphrase on your
-private key. This way, if your private key is ever lost or compromised, an
-attacker would still need your passphrase in order to impersonate you.
+!!! warning "Passphrase recommended"
+
+    We recommend setting a passphrase on your private key. This way, if your private key is ever lost or compromised, an attacker would still need your passphrase in order to impersonate you.
 
 We also recommend modern elliptic curve key types, such as `ed25519` or `ecdsa`.
 The UChicago Analysis Facility will _not_ accept deprecated key types such as
@@ -61,8 +56,9 @@ Once you have generated your key pair, you should upload the resulting public
 key (e.g., `id_ed25519.pub`) to your profile on the Analysis Facility portal by
 pasting its content into the "SSH public key" text box.
 
-!!! danger "Important: Protect your private key!" You must only upload the
-public key (.pub)! Treat the private key as if it were your password.
+!!! danger "Important: Protect your private key!"
+
+    You must only upload the public key (.pub)! Treat the private key as if it were your password.
 
 Assuming you created an ed25519 key per instructions above, you can view the
 public key with the following command:
@@ -110,11 +106,19 @@ command:
 ssh-add ~/.ssh/id25519
 ```
 
-!!! tip "SSH Agent Error" If, while following the previous steps, you get this
-error message:
-`     Could not open a connection to your authentication agent.     ` You may
-need to start the `SSH Agent`, you can use this command:
-`sh     eval "$(ssh-agent -s)"     `
+!!! tip "SSH Agent Error"
+
+    If, while following the previous steps, you get this error message:
+
+    ```
+    Could not open a connection to your authentication agent.
+    ```
+
+    You may need to start the `SSH Agent`, you can use this command:
+
+    ```sh
+    eval "$(ssh-agent -s)"
+    ```
 
 ---
 
@@ -166,13 +170,9 @@ for two reasons:
 - The scratch disk is _ephemeral_. HTCondor will automatically clean up the
   scratch disk for the next workload when your job has finished using it.
 
-!!! warning "Don't lose your data!" With this in mind, you will need to make
-sure that you copy your output data away from the `$SCRATCH` filesystem and into
-the `$DATA` filesystem at the end of your job. Any data left in `$SCRATCH` will
-be lost at the end of your job! When submitting jobs, you should try to use the
-scratch disk whenever possible. This will help you be a "good neighbor" to other
-users on the system, and reduce overall stress on the shared filesystems, which
-can lead to slowness, downtimes, etc.
+!!! warning "Don't lose your data!"
+
+    With this in mind, you will need to make sure that you copy your output data away from the `$SCRATCH` filesystem and into the `$DATA` filesystem at the end of your job. Any data left in `$SCRATCH` will be lost at the end of your job! When submitting jobs, you should try to use the scratch disk whenever possible. This will help you be a "good neighbor" to other users on the system, and reduce overall stress on the shared filesystems, which can lead to slowness, downtimes, etc.
 
 To summarize, please review the following table:
 
@@ -253,9 +253,9 @@ from your submit file and your jobs will be sent to the `long-queue`
 automatically, otherwise your job will be placed on hold until you remove it or
 release it (check HTCondor commands).
 
-!!! important "Use the short queue for short jobs" Using the short queue for
-short jobs when possible is essential for the use of the available resources,
-specially to let the long queue available for long jobs.
+!!! important "Use the short queue for short jobs"
+
+    Using the short queue for short jobs when possible is essential for the use of the available resources, specially to let the long queue available for long jobs.
 
 #### Job memory request
 
@@ -368,9 +368,9 @@ Queue 1
 
 ### Check these points before using the Analysis Facility System
 
-!!! warning "$HOME quota" Your quota at $HOME is 100GB. Be careful not to exceed
-this quota because some issues may arise, for example not being able to login
-next time.
+!!! warning "$HOME quota"
+
+    Your quota at $HOME is 100GB. Be careful not to exceed this quota because some issues may arise, for example not being able to login next time.
 
     **Tips:**
 

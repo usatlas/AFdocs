@@ -69,9 +69,9 @@ All three facilities provide:
 - :material-language-python: Machine Learning packages
 - :material-laptop: JupyterLab environments
 
-!!! tip "Need Help?" Visit our
-[:fontawesome-solid-comments: ATLAS AF Discourse Forum](https://atlas-talk.sdcc.bnl.gov/)
-for user support, contact, friendly discussion, newsletter and more!
+!!! tip "Need Help?"
+
+    Visit our [:fontawesome-solid-comments: ATLAS AF Discourse Forum](https://atlas-talk.sdcc.bnl.gov/) for user support, contact, friendly discussion, newsletter and more!
 
 ---
 
@@ -89,9 +89,9 @@ for user support, contact, friendly discussion, newsletter and more!
 
 ## Before You Begin
 
-!!! warning "Account Required" You need an approved account to access any of the
-Analysis Facilities. See [User Onboarding](../UserOnboarding/account.md) for
-details on applying for user accounts at BNL, SLAC, and UChicago.
+!!! warning "Account Required"
+
+    You need an approved account to access any of the Analysis Facilities. See [User Onboarding](../UserOnboarding/account.md) for details on applying for user accounts at BNL, SLAC, and UChicago.
 
 ### Prerequisites
 

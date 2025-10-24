@@ -54,51 +54,65 @@ theme:
     - content.tabs.link
 
 nav:
-  - "Getting Started":
-      - "Introduction": README.md
-      - "Getting Help": GettingHelp.md
-  - "User Onboarding":
-      - "About the Facilities": UserOnboarding/facility.md
-      - "Applying for User Accounts": UserOnboarding/account.md
-  - "Quickstart Guides":
-      - "Overview": sshlogin/index.md
-      - "BNL": sshlogin/ssh2BNL.md
-      - "UChicago": sshlogin/UChicago.md
-      - "SLAC": sshlogin/ssh2SLAC.md
-  - "Machine Learning Containers":
-      - "Introduction": ML-Containers/info.md
-      - "Contents": ML-Containers/contents.md
-      - "Implementing": ML-Containers/implement.md
-  - "Containers for ATLAS Analysis Users":
-      - "OS Containers": ATLAS-Containers/OS-Containers.md
-      - "ATLAS Release Containers": ATLAS-Containers/Release-Containers.md
-  - "Data Store, Accessing and Sharing":
-      - "Data Storage at BNL": doma/storage/BNL/storage-at-bnl.md
-      - "Data Sharing": doma/DataSharing.md
-      - "Data Storage at UChicago": doma/storage/UChicago/uc_storage.md
-      - "Data Sharing at UChicago": doma/DataSharing-UChicago.md
-  - "Jupyter at Analysis Facilities":
-      - "Introduction": jupyter/JupyterAtTier3s.md
-      - "Jupyter at BNL": jupyter/BNLjupyter.md
-      - "Jupyter at UChicago with Coffea": jupyter/JupyterCoffeaCUChicago.md
-      - "JupyterLab at UChicago": jupyter/JupyterLabUChicago.md
-      - "Jupyter at SLAC": jupyter/SLACjupyter.md
-      - "Extend ATLAS JupyterLab at SLAC": jupyter/SLACJupyterExtraFuncs.md
-      - "How to get information about an xAOD in python": jupyter/examples/xAODcheck.md
-      - "Read xAODs using PyROOT": https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
-      - "Info about uproot and xAOD": jupyter/examples/convert_specific_variables.py.txt
-  - "Data Analysis Tutorial (2019-08)":
-      - "Introduction": Tutorial-2019Aug/README.md
-      - "Tutorial of Analysis Examples at BNL": Tutorial-2019Aug/BNL/README.md
-      - "Tutorial of Analysis Examples at SLAC": Tutorial-2019Aug/SLAC/README.md
-      - "Tutorial of Analysis Examples on the Grid": Tutorial-2019Aug/Grid/README.md
-  - "Singularity":
-      - "Using Singularity Containers": Containers/UsingSingularity/README.md
-  - "VSCode":
-      - "Detailed guide on using Visual Studio Code": VSCode/README.md
-  - "FAQs/Tips":
-      - "FAQs and some tips": faqs-tips/faq-tips.md
-      - "Glossary": faqs-tips/glossary.md
+  - Getting Started:
+      - Introduction: README.md
+      - Getting Help: GettingHelp.md
+  - User Onboarding:
+      - About the Facilities: UserOnboarding/facility.md
+      - Applying for User Accounts: UserOnboarding/account.md
+  - Quickstart Guides:
+      - Overview: sshlogin/index.md
+      - BNL: sshlogin/ssh2BNL.md
+      - UChicago: sshlogin/UChicago.md
+      - SLAC: sshlogin/ssh2SLAC.md
+  - Containers:
+      - Machine Learning Containers:
+          - Introduction: ML-Containers/info.md
+          - Contents: ML-Containers/contents.md
+          - Implementing: ML-Containers/implement.md
+      - Containers for ATLAS Analysis Users:
+          - OS Containers: ATLAS-Containers/OS-Containers.md
+          - ATLAS Release Containers: ATLAS-Containers/Release-Containers.md
+      - Singularity:
+          - Using Singularity Containers: Containers/UsingSingularity/README.md
+  - Data Access:
+      - Data Storage at BNL: doma/storage/BNL/storage-at-bnl.md
+      - Data Sharing: doma/DataSharing.md
+      - Data Storage at UChicago: doma/storage/UChicago/uc_storage.md
+      - Data Sharing at UChicago: doma/DataSharing-UChicago.md
+  - Jupyter:
+      - Introduction: jupyter/JupyterAtTier3s.md
+      - Jupyter at BNL: jupyter/BNLjupyter.md
+      - Jupyter at UChicago with Coffea: jupyter/JupyterCoffeaCUChicago.md
+      - JupyterLab at UChicago: jupyter/JupyterLabUChicago.md
+      - Jupyter at SLAC: jupyter/SLACjupyter.md
+      - Extend ATLAS JupyterLab at SLAC: jupyter/SLACJupyterExtraFuncs.md
+      - Examples:
+          - xAOD check: jupyter/examples/xAODcheck.md
+          - PyROOT: https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
+          - Uproot variables: jupyter/examples/convert_specific_variables.py.txt
+  - Tutorials:
+      - Introduction: Tutorial-2019Aug/README.md
+      - BNL Examples: Tutorial-2019Aug/BNL/README.md
+      - SLAC Examples: Tutorial-2019Aug/SLAC/README.md
+      - Grid Examples: Tutorial-2019Aug/Grid/README.md
+  - Tools & IDEs:
+      - VSCode: VSCode/README.md
+      - FAQs/Tips: faqs-tips/faq-tips.md
+      - Glossary: faqs-tips/glossary.md
+
+not_in_nav: |
+  /privacyDisclaimer.md
+  /ATLAS-Containers/index.md
+  /LLM/README.md
+  /LLM/RunYourOwnOllama.md
+  /LLM/SharedLLMservice.md
+  /ML-Containers/ML-Containers/README.md
+  /ML-Containers/ML-Containers/ml-images-ReadMe.md
+  /UserOnboarding/contact.md
+  /UserOnboarding/account/BNLFederatedID.md
+  /doma/Xcache/BNL/Using-Xcache-at-BNL.md
+  /testDir/BNL/README.md
 
 plugins:
   # Built-in
