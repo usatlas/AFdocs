@@ -10,13 +10,13 @@ copyright: "Copyright &copy; USATLAS 2025-present"
 docs_dir: tier3docs
 site_dir: site
 theme:
-  name: readthedocs
-  html_theme_options: "html_logo: images/lgbt_atlas.png"
+  name: material
+  logo: images/lgbt_atlas.png
+  favicon: images/lgbt_atlas.png
   font: false
   language: en
   icon:
-    repo: fontawesome/brands/gitlab
-    logo: material/file-document
+    repo: fontawesome/brands/github
     edit: material/pencil
   palette:
     - media: "(prefers-color-scheme: dark)"
@@ -39,10 +39,19 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
     - content.action.edit
     - content.code.copy
     - content.code.annotate
     - content.tooltips
+    - content.tabs.link
 
 nav:
   - "Getting Started":
@@ -51,11 +60,10 @@ nav:
   - "User Onboarding":
       - "About the Facilities": UserOnboarding/facility.md
       - "Applying for User Accounts": UserOnboarding/account.md
-  #- 'Editor':
-  #    - 'test-sheet': test-sheet.md
   - "Quickstart Guides":
+      - "Overview": sshlogin/index.md
       - "BNL": sshlogin/ssh2BNL.md
-      - "UChicago": sshlogin/README.md
+      - "UChicago": sshlogin/UChicago.md
       - "SLAC": sshlogin/ssh2SLAC.md
   - "Machine Learning Containers":
       - "Introduction": ML-Containers/info.md
@@ -66,9 +74,9 @@ nav:
       - "ATLAS Release Containers": ATLAS-Containers/Release-Containers.md
   - "Data Store, Accessing and Sharing":
       - "Data Storage at BNL": doma/storage/BNL/storage-at-bnl.md
-      - "Data Sharing": doma/DataSharing/README.md
+      - "Data Sharing": doma/DataSharing.md
       - "Data Storage at UChicago": doma/storage/UChicago/uc_storage.md
-      - "Data Sharing at UChicago": doma/DataSharing/uchicago/README.md
+      - "Data Sharing at UChicago": doma/DataSharing-UChicago.md
   - "Jupyter at Analysis Facilities":
       - "Introduction": jupyter/JupyterAtTier3s.md
       - "Jupyter at BNL": jupyter/BNLjupyter.md
@@ -94,9 +102,7 @@ nav:
 
 plugins:
   # Built-in
-  include-markdown: {}
-  search:
-    min_search_length: 2
+  search: {}
   macros: {}
   # Extra
   table-reader: {}
@@ -166,6 +172,10 @@ markdown_extensions:
         - links.txt
         - abbrs.txt
   - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
