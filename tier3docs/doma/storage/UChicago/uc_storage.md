@@ -1,16 +1,12 @@
 # Data Storage at UChicago
 
-  <!--<big>**Table of contents**</big>-->
+## Table of contents
 
-<font size="6">**Table of contents**</font> <br> -
-[Storage Limits](#storage-limits) <br> - [FileSystems](#filesystems) <br> -
-[LOCALGROUPDISK](#localgroupdisk)
-
-<!--+ [-](#-)-->
+- [Storage Limits](#storage-limits)
+- [FileSystems](#filesystems)
+- [LOCALGROUPDISK](#localgroupdisk)
 
 ## Storage Limits
-
-[]:#(table2 with filesystems differences)
 
 <table>
 <thead>
@@ -51,8 +47,7 @@
 ## Filesystems
 
 The UChicago analysis facility has three filesystems with a clearly defined
-role. Please be aware of each of these roles when running workloads. []:#(table
-with filesystems functions)
+role. Please be aware of each of these roles when running workloads.
 
 <table>
 <thead>

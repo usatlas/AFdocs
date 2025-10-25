@@ -6,15 +6,7 @@ account at each facility, but please contact your advisor if you are unsure of
 which site to use. This section will provide a brief description of the process
 of getting signed up to use the facilities.
 
-<!--
-# Table of Contents
-
-  - [Brookhaven National Lab](#BNL)
-  - [University of Chicago](#UChicago)
-  - [SLAC National Accelerator Laboratory](#SLAC)
--->
-
-## <span id="BNL"></span> Brookhaven National Lab
+## Brookhaven National Lab
 
 Brookhaven National Lab has two types of accounts. 1) lightweight Federated
 Identity account for accessing Jupyter instance at BNL SDCC and 2) full SDCC
@@ -44,29 +36,13 @@ go through the following steps:
 - Sign up for a New User Account
   - Complete directly on the BNL New User Account site above
 
-## <span id="UChicago"></span> University of Chicago
+## University of Chicago
 
 The UChicago AF user account sign-up information is here: 
 [UChicago AF Website](https://af.uchicago.edu/).
 
-## <span id="SLAC"></span> SLAC National Accelerator Laboratory
+## SLAC National Accelerator Laboratory
 
 Information about ATLAS at SLAC and their registration process can be found
 here:
 [SLAC ATLAS Support Center](https://atlas.slack.stanford.edu/atlas-support-center)
-
-<!--
-Similar to BNL, the process for signing up for access to SLAC AF is a two-step process:
-
-- User Registration
-    - Same as if you were to visit SLAC campus
-- Computer Account
-    - Fill out a Computer Account Request Form
-    - Send to Charles Young (SLAC's designated ATLAS host)
-- Request access to ATLAS resource at S3DF
-    - Once you have your SLAC Unix account ready, go to https://coact.slack.stanford.edu, login, click "repo" (top
-left) and click "Request Access to Facility" (yellow tab). Choose "ATLAS" facility
-    - You will get an e-mail when your access to ATLAS facility is approved. After that, go to the same place, then
-click "Request Repo Membership" (yellow tab). Choose "usatlas" as repo name, and "ATLAS" as facility name.
-    - Once your repo is approved (check your e-mail). Please login and check if your space /sdf/data/atlas/u/<username> is available. If not, [ask for help](../GettingHelp.md).
--->

@@ -15,10 +15,10 @@ system, and storage clusters
 
 There are two ways to login to S3DF.
 
-- <b>SSH login</b> (using SLAC Unix password)
+- **SSH login** (using SLAC Unix password)
   1. Login to the bastion host `ssh <username>@s3dflogin.slack.stanford.edu`
   2. Then login to the actual interactive pool node `ssh iana` to do your work.
-- <b>Login to S3DF web portal</b>
+- **Login to S3DF web portal**
   - Go to https://s3df.slack.stanford.edu/ondemand and login to via Jupyter or a
     terminal. You will land on a batch node.
 
@@ -61,7 +61,7 @@ refer to
 ### Submitting SLURM jobs
 
 All US ATLAS users can submit batch jobs using Slurm account
-<b>atlas:usatlas</b>, e.g. `srun -A atlas:usatlas hostname`. The partition to
+**atlas:usatlas**, e.g. `srun -A atlas:usatlas hostname`. The partition to
 use is `roma` (an HPC cluster with AMD EPYC 7702 CPUs) and `ampere` (a Nvidia
 A100 GPU cluster). The following is a typical script to be used with the
 `sbatch` command:
@@ -104,10 +104,6 @@ partitions (e.g. `#SBATCH --partition=roma,ampere`).
 A typical way to setup ATLAS environment upon login is to put the following in
 $HOME/.bashrc. This is the same at both AFS and SDF.
 
-<!--
-export ALRB_localConfigDir=/gpfs/slack/atlas/fs1/sw/localconfig
--->
-
 ```
 export RUCIO_ACCOUNT="change_me"
 export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
@@ -128,14 +124,6 @@ and a spinning disk backed CEPH s3 object storage. All the file system metadata 
 data migration
   <li> CVMFS is available on all interactive and batch nodes.
 </ol>
-
-<!--
-For ATLAS users, we currently provide GPFS filesystem for home (100GB) and data (2-10TB) in the AFS environment
-(under /gpfs/slack/atlas/fs1/{u,d} respectively).
-At SDF, ATLAS users will get a new home directory of 25GB. The GPFS file system is also available in SDF until
-the hardware retires (at that time, we will migrate users from GPFS to Lustre). AFS file system is not available
-in SDF.
--->
 
 ### Space available to the ATLAS users
 

@@ -9,9 +9,6 @@
 - [Kernels and extensions in the ATLAS Jupyter environment](#kernels-and-extensions-in-the-atlas-jupyter-environment)
 - [Extend ATLAS JupyterLab Functionalities](#extend-atlas-jupyterlab-functionalities)
 - [Getting help](#getting-help)
-<!--
-- [An alternative way to start a Jupyter environment at SLAC](#an-alternative-way-to-start-a-jupyter-environment-at-slac)
-  -->
 
 ## Login to JupyterLab at SLAC
 
@@ -36,11 +33,6 @@ menu bar. Then choose "Jupyter". You will need to make a few choices:
 5. Choose hours, # CPUs, memory, # GPUs and GPU type, then click "launch". Note
    that your Jupyter work runs as a SLURM job. So choose only what you need to
    ensure speedy launching of your job.
-
-<!--
-In addition to using this portal, it is also possible to directly run Jupyter
-on SLAC batch nodes (see [section below](#an-alternative-way-to-start-a-jupyter-environment-at-slac))
--->
 
 ## Run your own Jupyter environment
 
@@ -76,85 +68,11 @@ source ~/anaconda3/etc/profile.d/conda.sh
 conda activate
 ```
 
-<!--
-## An alternative way to start a Jupyter environment at SLAC
-
-The SLAC Jupyter portal uses the Open OnDemand technology. In rare cases, Open OnDemand may run into
-trouble. Fortunately the Slurm batch system at SLAC enables a user to SSH into a batch node if the user has a batch
-job running on that
-node. The feature makes it possible to for users to directly run Jupyter on batch nodes (bypassing Open OnDemand),
-by following instruction below:
-
-1\. Create a script to start your Jupyter environment. <p>
-The following script can be used to start a Jupyter instance using one of the ATLAS image in CVMFS. You can write a
-similar script to start your own Jupyter environment.
-```
-#!/bin/sh
-
-hostname -f
-
-op=exec
-cmd="jupyter lab"
-[ ! -z "$1" ] && cmd="$1"
-
-export T3repo=/cvmfs/atlas.sdcc.bnl.gov/jupyter/t3s
-#SINGULARITY_IMAGE_PATH=${T3repo}/slack/singularity/atlas-slack-w-slurm-cli-20200714.sif
-#SINGULARITY_IMAGE_PATH=${T3repo}/slack/singularity/jupyter-miniforge.20220315.sif
-SINGULARITY_IMAGE_PATH=${T3repo}/slack/singularity/jupyter-conda.20210403.sif
-export SINGULARITY_IMAGE_PATH
-singularity $op -B /cvmfs,/sdf,/gpfs,/scratch,/lscratch \
-                -B /etc/slurm,/opt/slurm,/var/spool/slurmd,/run/slurm/conf/slurm.conf \
-                -B /var/run/munge \
-                -B /bin/modulecmd \
-                -B ${T3repo}/slack/singularity/99-zatlas.sh:/.singularity.d/env/99-zatlas.sh \
-                --nv \
-            ${SINGULARITY_IMAGE_PATH} $cmd
-```
-Note that at the top of the script there is a `hostname -f` line. This is useful to tell which host (batch node)
-the script is actually running on.
-
-2\. Submit the script to Slurm
-```
-srun -J jupyter --nodes=1 <other_options> /bin/sh the_above_script
-```
-`other_options` can be
-```
---cpus-per-task=N (number of CPU cores)
---mem=XXXX (memory in MB)
---time=XXXX (wall time in minutes, default is 30 minutes)
---gres='gpu:a100:1' (request a A100 GPU, or 'gpu:1' for any kind of GPU)
---account='shared' (or use account 'usatlas')
-```
-A word about Slurm `account`: SLAC has a large pool of GPUs, including 80x A100 GPUs and a few hundreds older
-Nvidia GPU models. US ATLAS owns four A100 GPUs. 'usatlas' account will guaranty the usage, but you may be
-competing with other US ATLAS colleagues. Jobs using 'shared' account are subject to preemption but the risk of
-being preempted in a few hours is low (under the current usage pattern).
-
-3\. Write down a few info from the above `srun` command.<p>
-The command should first show the full hostname of the batch node it is running on (say
-`the_batch_node.slack.stanford.edu`). It should also print out messages asking you to point your browser to an URL like:
-```
-http://localhost:8888/?token=ec4d404fe69d2ff760d611c0509a9e8ac770c7f46ac32860
-```
-Note the port number above is `8888`. Sometimes it is not `8888`.
-
-4\. Setup a SSH tunnel between your desktop and the batch node to access Jupyter
-```
-ssh -L 8888:localhost:8888 -J <your_username>@sdf-login.slack.stanford.edu \
-                              <your_username>@the_batch_node.slack.stanford.edu
-```
-Again, note that the port number may not be `8888`.
-
-5\. Paste the above URL in your browser.
-
-You are all set.
--->
-
 ## Kernels and extensions in the ATLAS Jupyter environment
 
 The Jupyter environment provides several kernels and extensions. This includes:
 
-1. python2 with pyroot and uproot. By default, <b>AnalysisBase,21.2.111</b> is
+1. python2 with pyroot and uproot. By default, **AnalysisBase,21.2.111** is
    loaded before the pyroot2 kernel is launched. To overwrite this, create a
    file [$HOME/notebooks/.user_setups](SLACuser_setups.txt) in your home
    directory (even if your home directory is in AFS)

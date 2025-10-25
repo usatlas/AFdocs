@@ -2,9 +2,9 @@
 
 You can find [the main SDCC page](https://www.sdcc.bnl.gov)
 
-## <span id="Interactive_connection_to_BNL"></span> Interactive Connection to BNL
+## Interactive Connection to BNL
 
-### <span id="Connect_to_the_interactive_nodes"></span> ssh Connection to the interactive nodes
+### ssh Connection to the interactive nodes
 
 At BNL, you need login to `ssh.sdcc.bnl.gov` first, then login to interactive
 machines attsub01, ..., attsub08 with command **ssh** or **"rterm -i"** without
@@ -32,9 +32,9 @@ These nodes should be used for debugging and testing code. To run your complete
 analysis code you should take advantage of
 [the batch system](#Use_the_batch_system).
 
-### <span id="FileTransfer_with_BNL"></span> File transfer from/to BNL machines
+### File transfer from/to BNL machines
 
-### <span id="Connect_to_NX_servers_at_BNL"></span> Connection to NX servers at BNL
+### Connection to NX servers at BNL
 
 If you want to use a graphical environment, you can use
 [NoMachine](https://www.nomachine.com/getting-started-with-nomachine) client to
@@ -45,7 +45,7 @@ for details. Besides the connection through NoMachine client, you can also
 connect to the new NX servers on web browsers, using the URL:
 [https://nx.sdcc.bnl.gov](https://nx.sdcc.bnl.gov).
 
-### <span id="Connect_to_the_interactive_n_AN1"></span> Connect to the interactive nodes from NX
+### Connect to the interactive nodes from NX
 
 After you connect to the NX server, you can open a konsole terminal (depending
 on the Window Manager you have chosen). From NX servers, you can run **rterm**
@@ -99,7 +99,7 @@ executed command xterm.
 which will open a xterm terminal with the black background and green text color,
 with the font size of 10x20.
 
-### <span id="Setup_ATLAS_software_environment"></span> Setup ATLAS software environment
+### Setup ATLAS software environment
 
 Once you are on the interactive nodes, you can simply run:
 
@@ -129,9 +129,9 @@ CentOS7** could help set up such a container, you would get something like:
 
 Then it would behave like that you work on a CentOS7 machine.
 
-## <span id="Use_the_batch_system"></span> Use the batch system at BNL
+## Use the batch system at BNL
 
-### <span id="Condor_batch_system"></span> Condor batch system at BNL
+### Condor batch system at BNL
 
 RACF uses the Condor batch submission system. Detailed information about using
 this system (submitting jobs, killing jobs, etc.) is described here:
@@ -180,7 +180,7 @@ Or you could set up a rucio wrapper together with one release env, that is,
 which set up both the release env of AnalysisBase,21.2.129 and a rucio wrapper,
 which does not provide python API.
 
-#### <span id="Use_Condor_within_EventLoop"></span> Use Condor within <span class="twikiNewLink">[EventLoop](/twiki/bin/edit/AtlasComputing/EventLoop?topicparent=AtlasComputing.SPARatBNL;nowysiwyg=1 "this topic does not yet exist; you can create it.")</span>
+#### Use Condor within EventLoop
 
 If you are using EventLoop to submit your code to the Condor batch system you
 should replace your submission driver line with something like the following:
@@ -192,7 +192,7 @@ should replace your submission driver line with something like the following:
 You need replace the institute "&lt;institute&gt;" with your own institute (as
 assigned by ACF) here.
 
-#### <span id="Notice_on_using_bash_script_in_C"></span> Notice on using bash script in Condor
+#### Notice on using bash script in Condor
 
 Please be aware that aliases will not be expanded by default within script. To
 expand those aliases (such as **asetup**, **athena**), you need add the
@@ -200,7 +200,7 @@ following line to your script prior to running `setupATLAS`:
 
     shopt -s expand_aliases
 
-### <span id="HPC_cluster"></span> HPC cluster at BNL
+### HPC cluster at BNL
 
 - [Getting cluster allocation](https://www.sdcc.bnl.gov/information/services/obtaining-cluster-access) -
   how to apply for cluster allocation for your project

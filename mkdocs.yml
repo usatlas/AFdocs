@@ -62,52 +62,60 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - Getting Started:
+  - Home:
       - Introduction: README.md
-  - User Onboarding:
+      - Getting Help: GettingHelp.md
+      - FAQs and Tips: faqs-tips/faq-tips.md
+
+  - Access:
       - About the Facilities: UserOnboarding/facility.md
       - Applying for User Accounts: UserOnboarding/account.md
-  - Quickstart Guides:
-      - Overview: sshlogin/index.md
-      - BNL: sshlogin/ssh2BNL.md
-      - UChicago: sshlogin/UChicago.md
-      - SLAC: sshlogin/ssh2SLAC.md
-  - Containers:
-      - Machine Learning Containers:
-          - Introduction: ML-Containers/info.md
-          - Contents: ML-Containers/contents.md
-          - Implementing: ML-Containers/implement.md
-      - Containers for ATLAS Analysis Users:
-          - OS Containers: ATLAS-Containers/OS-Containers.md
-          - ATLAS Release Containers: ATLAS-Containers/Release-Containers.md
-      - Singularity:
-          - Using Singularity Containers: Containers/UsingSingularity/README.md
-  - Data Access:
+      - Quickstart Guides:
+          - Overview: sshlogin/index.md
+          - Access BNL: sshlogin/ssh2BNL.md
+          - Access UChicago: sshlogin/UChicago.md
+          - Access SLAC: sshlogin/ssh2SLAC.md
+
+  - Environments:
+      - Containers:
+          - Machine Learning Containers:
+              - Introduction: ML-Containers/info.md
+              - Contents: ML-Containers/contents.md
+              - Implementing: ML-Containers/implement.md
+          - ATLAS Analysis Containers:
+              - OS Containers: ATLAS-Containers/OS-Containers.md
+              - ATLAS Release Containers: ATLAS-Containers/Release-Containers.md
+          - Singularity:
+              - Introduction: Containers/UsingSingularity/introduction.md
+              - Installation: Containers/UsingSingularity/installation.md
+              - Usage: Containers/UsingSingularity/usage.md
+              - Container Images: Containers/UsingSingularity/images.md
+              - Grid Jobs: Containers/UsingSingularity/grid.md
+      - Jupyter:
+          - Overview: jupyter/JupyterAtTier3s.md
+          - Jupyter at BNL: jupyter/BNLjupyter.md
+          - Jupyter at UChicago (Coffea): jupyter/JupyterCoffeaCUChicago.md
+          - Jupyter at UChicago: jupyter/JupyterLabUChicago.md
+          - Jupyter at SLAC: jupyter/SLACjupyter.md
+          - Jupyter at SLAC (Extending): jupyter/SLACJupyterExtraFuncs.md
+          - Examples:
+              - xAOD check: jupyter/examples/xAODcheck.md
+              - Read xAOD with PyROOT: https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
+              - Uproot variable conversion: jupyter/examples/convert_specific_variables.py.txt
+      - Tools & IDEs:
+          - Using VSCode: VSCode/README.md
+
+  - Data:
       - Data Storage at BNL: doma/storage/BNL/storage-at-bnl.md
-      - Data Sharing: doma/DataSharing.md
       - Data Storage at UChicago: doma/storage/UChicago/uc_storage.md
+      - Data Sharing: doma/DataSharing.md
       - Data Sharing at UChicago: doma/DataSharing-UChicago.md
-  - Jupyter:
-      - Introduction: jupyter/JupyterAtTier3s.md
-      - Jupyter at BNL: jupyter/BNLjupyter.md
-      - Jupyter at UChicago with Coffea: jupyter/JupyterCoffeaCUChicago.md
-      - JupyterLab at UChicago: jupyter/JupyterLabUChicago.md
-      - Jupyter at SLAC: jupyter/SLACjupyter.md
-      - Extend ATLAS JupyterLab at SLAC: jupyter/SLACJupyterExtraFuncs.md
-      - Examples:
-          - xAOD check: jupyter/examples/xAODcheck.md
-          - PyROOT: https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
-          - Uproot variables: jupyter/examples/convert_specific_variables.py.txt
+
   - Tutorials:
-      - Introduction: Tutorial-2019Aug/README.md
+      - Overview: Tutorial-2019Aug/README.md
       - BNL Examples: Tutorial-2019Aug/BNL/README.md
       - SLAC Examples: Tutorial-2019Aug/SLAC/README.md
       - Grid Examples: Tutorial-2019Aug/Grid/README.md
-  - Tools & IDEs:
-      - VSCode: VSCode/README.md
-  - Help:
-      - Getting Help: GettingHelp.md
-      - FAQs/Tips: faqs-tips/faq-tips.md
 
 not_in_nav: |
   /ATLAS-Containers/index.md
