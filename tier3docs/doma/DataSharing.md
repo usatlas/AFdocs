@@ -252,7 +252,7 @@ lxplus% sshfs attsub02:/atlasgpfs01/usatlas/data/yesw2000 /tmp/yesw/data
 
 !!! note
 
-    This assumes that you have already set up the ssh configuration as shown in [the section of interactive connection to BNL](../sshlogin/ssh2BNL.md#Connect_to_the_interactive_nodes).
+    This assumes that you have already set up the ssh configuration as shown in [the section of interactive connection to BNL](../sshlogin/ssh2BNL.md#ssh-connection-to-the-interactive-nodes).
 
 To umount the mounted point, just run **fusermount -u /tmp/yesw/data**.
 

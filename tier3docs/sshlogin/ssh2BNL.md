@@ -9,7 +9,7 @@ You can find [the main SDCC page](https://www.sdcc.bnl.gov)
 At BNL, you need login to `ssh.sdcc.bnl.gov` first, then login to interactive
 machines attsub01, ..., attsub08 with command **ssh** or **"rterm -i"** without
 argument (please refer to
-[the following section for the rterm usage help](#Connect_to_the_interactive_n_AN1)
+[the following section for the rterm usage help](#connect-to-the-interactive-nodes-from-nx)
 ). You can add the following to file $HOME/.ssh/config on your laptop or local
 machine, so you can login attsub\* machines directly.
 
@@ -29,8 +29,7 @@ run the following to login any machine such as attsub01 directly,
 Please note that: the **gateway** was just changed to **ssh.sdcc.bnl.gov**.
 
 These nodes should be used for debugging and testing code. To run your complete
-analysis code you should take advantage of
-[the batch system](#Use_the_batch_system).
+analysis code you should take advantage of [the batch system](batch-BNL.md).
 
 ### File transfer from/to BNL machines
 
