@@ -51,8 +51,8 @@ April 2024.
 
 ## Submit SLURM batch job at SDF
 
-The [main page of SDF](https://sdf.slack.stanford.edu) provides
-[basic info about using SLURM batch system](https://sdf.slack.stanford.edu/public/doc/#/batch-compute?id=using-slurm).
+The [main page of SDF](https://sdf.slac.stanford.edu) provides
+[basic info about using SLURM batch system](https://sdf.slac.stanford.edu/public/doc/#/batch-compute?id=using-slurm).
 One of the lines in the example SLURM submission script,
 `#SBATCH --partition=shared` allows you to specify "shared" or "usatlas".
 
@@ -72,4 +72,4 @@ will need to use `#SBATCH --partition=shared` if you request a GPU.
 The following page has many useful info about using the AFS environment,
 esepecially with regard to using the LSF batch system.
 
-https://confluence.slack.stanford.edu/display/Atlas/SLAC+Analysis+Computing+Facility
+https://confluence.slac.stanford.edu/display/Atlas/SLAC+Analysis+Computing+Facility

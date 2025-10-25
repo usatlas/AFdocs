@@ -8,7 +8,7 @@
 | Data area      | 500GB per user under /atlasgpfs01/usatlas/data/$USERNAME                                                                                       |
 | dCache area    | 5TB per user under /pnfs/usatlas.bnl.gov/users/$USERNAME.                                                                                      |
 | BNLBox         | 50GB (with backup) space under [https://bnlbox.sdcc.bnl.gov](https://bnlbox.sdcc.bnl.gov/), accessiblle from both mobile devices and computers |
-| LOCALGROUPDISK | 50TB (default) on the grid at BNL. Please check [below](#LOCALGROUPDISK) for more details                                                      |
+| LOCALGROUPDISK | 50TB (default) on the grid at BNL. Please check [below](#localgroupdisk) for more details                                                      |
 
 **Note**:
 
@@ -81,7 +81,7 @@ In addition to Rucio (and DQ2Client), a convenient python script
 `/afs/usatlas/scripts/pnfs_ls.py` is provided to generate clist file (list of
 physicsl file path) for files in given datasets on BNL dCache, including
 datasets both on BNL rses (such as
-**[BNL-OSG2_LOCALGROUPDISK](#LOCALGROUPDISK)**) mentioned above) and under BNL
+**[BNL-OSG2_LOCALGROUPDISK](#localgroupdisk)**) mentioned above) and under BNL
 users dCache area.
 
 Please **click the following arrow** to see the full usage.

@@ -93,7 +93,7 @@ run the ML images at the command line.
 
     Steps for using ML containers using SLAC Jupyter interface:
 
-    1. Connect to SLAC's [S3DF Jupyter Portal](https://s3df.slack.stanford.edu/pun/sys/dashboard/batch_connect/sys/slack-ood-jupyter/session_contexts/new)
+    1. Connect to SLAC's [S3DF Jupyter Portal](https://s3df.slac.stanford.edu/pun/sys/dashboard/batch_connect/sys/slac-ood-jupyter/session_contexts/new)
     2. After you login, you'll come to the menu where you can define your jupyter server. The first dropdown is the **Jupyter Instance**. Choose the "Custom Singularity Container" option.
     3. Now the **Commands to initiate Jupyter** box will be editable. Replace the content of the box by the following:
 

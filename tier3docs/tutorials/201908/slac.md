@@ -20,7 +20,7 @@
 First you need ssh to one Atlas centos7 machine at SLAC:
 
 ```shell
-ssh -Y centos7.slack.stanford.edu
+ssh -Y centos7.slac.stanford.edu
 ```
 
 ---
@@ -31,7 +31,7 @@ You can pull the analysis package under the same github repo directory or copy
 from the directory at SLAC:
 
 ```
-/nfs/slack/g/atlas/u02/yesw/T3-Example-SLAC
+/nfs/slac/g/atlas/u02/yesw/T3-Example-SLAC
 |-- 00-Readme.txt
 |-- LSF-Job
 |   `-- test-LSF.sh
@@ -88,7 +88,7 @@ then run rucio to list files path.
 lsetup rucio
 voms-proxy-init -voms atlas
 rucio list-file-replicas --rse SLACXRD_LOCALGROUPDISK --protocols root $dset > dset-outside.txt
-sed 's#griddev03.slack.stanford.edu:2094#atlrdr1#' dset-outside.txt > dset-inside.txt
+sed 's#griddev03.slac.stanford.edu:2094#atlrdr1#' dset-outside.txt > dset-inside.txt
 ```
 
 Let us look into the generated file dset-inside.txt
@@ -223,7 +223,7 @@ plot.
 Xcache enables to access data remotely and also to cache them locally for faster
 access in future.
 
-The Xcache server at SLAC is **root://atlfax.slack.stanford.edu/**,
+The Xcache server at SLAC is **root://atlfax.slac.stanford.edu/**,
 
 We will try to cache the files located at BNL. Let us take the input file used
 in the BNL example. At BNL, the inputFile name is
@@ -243,7 +243,7 @@ For Xcache, we need add the Xcache server prefix with two slash characters, that
 is,
 
 ```
-inputFile=root://atlfax.slack.stanford.edu//root://dcgftp.usatlas.bnl.gov:1094/pnfs/usatlas.bnl.gov/LOCALGROUPDISK/rucio/data18_13TeV/da/ea/DAOD_EXOT12.14278917._000001.pool.root.1
+inputFile=root://atlfax.slac.stanford.edu//root://dcgftp.usatlas.bnl.gov:1094/pnfs/usatlas.bnl.gov/LOCALGROUPDISK/rucio/data18_13TeV/da/ea/DAOD_EXOT12.14278917._000001.pool.root.1
 cd Interactive-Job
 ../bin/Exam_JetsPlot $inputFile > myjob.log 2>&1
 ```
@@ -289,6 +289,6 @@ $ rucio list-content $dset
 Let us take the second one file.
 
 ```
-inputFile=root://atlfax.slack.stanford.edu//atlas/rucio/data18_13TeV:DAOD_EXOT12.14278917._000002.pool.root.1
+inputFile=root://atlfax.slac.stanford.edu//atlas/rucio/data18_13TeV:DAOD_EXOT12.14278917._000002.pool.root.1
 ../bin/Exam_JetsPlot $inputFile > myjob.log 2>&1
 ```

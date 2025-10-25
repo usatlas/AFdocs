@@ -72,7 +72,7 @@ verify that you can submit Slurm batch jobs at SLAC. You can use the following
 command to verify that:
 
 ```
-ssh -J s3dflogin.slack.stanford.edu iana srun -A atlas -p ampere hostname
+ssh -J s3dflogin.slac.stanford.edu iana srun -A atlas -p ampere hostname
 ```
 
 (**iana** is a cluster of interactive nodes, where Slurm jobs are submitted).

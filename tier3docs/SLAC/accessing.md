@@ -16,13 +16,13 @@ system, and storage clusters
 There are two ways to login to S3DF.
 
 - **SSH login** (using SLAC Unix password)
-  1. Login to the bastion host `ssh <username>@s3dflogin.slack.stanford.edu`
+  1. Login to the bastion host `ssh <username>@s3dflogin.slac.stanford.edu`
   2. Then login to the actual interactive pool node `ssh iana` to do your work.
 - **Login to S3DF web portal**
-  - Go to https://s3df.slack.stanford.edu/ondemand and login to via Jupyter or a
+  - Go to https://s3df.slac.stanford.edu/ondemand and login to via Jupyter or a
     terminal. You will land on a batch node.
 
-S3DF also have a few data transfer nodes (s3dfdtn.slack.stanford.edu) for
+S3DF also have a few data transfer nodes (s3dfdtn.slac.stanford.edu) for
 interactive data transfers. Note that all nodes in S3DF, except the bastion
 nodes and DTN nodes above, are in private network IP space. There are limited
 NAT capacity to reach to the outside from these interactive and batch nodes.
@@ -129,7 +129,7 @@ April 2024.
 
 ## SSH login to SDF
 
-`ssh <username>@sdf-login.slack.stanford.edu`
+`ssh <username>@sdf-login.slac.stanford.edu`
 
 SLAC has two different computer accounts, unix and Windows. Please use your
 Windows account password to login. You may ask: What if I only have a unix
@@ -139,24 +139,24 @@ SDF uses a new identity management system (aka _SLAC ID_ - it will be a computer
 account to login to everything at SLAC). If you already have a SLAC Windows
 account, you are all set (SLAC ID = SLAC Windows account) and go to the next
 step. If you don't have a SLAC Windows account, please go to
-[SLAC SDF page and click "Accounts Portal"](https://sdf.slack.stanford.edu/public/doc/#/accounts-and-access?id=access).
+[SLAC SDF page and click "Accounts Portal"](https://sdf.slac.stanford.edu/public/doc/#/accounts-and-access?id=access).
 After this, give it a hour for the changes to be propagated through SLAC
 computing.
 
 ## SSH login to the AFS environment
 
-`ssh <username>@centos7.slack.stanford.edu`
+`ssh <username>@centos7.slac.stanford.edu`
 
 You should use unix account password to login. Note that as SLAC retires the AFS
 environment in the next few years, this type of account (unix) may disappear.
 
 More info about using the AFS environment can be found at:
-https://confluence.slack.stanford.edu/display/Atlas/SLAC+Analysis+Computing+Facility
+https://confluence.slac.stanford.edu/display/Atlas/SLAC+Analysis+Computing+Facility
 
 ## Remote X-windows access
 
 SLAC currently provides
-[Fast-X](https://confluence.slack.stanford.edu/display/SCSPub/FastX) for
+[Fast-X](https://confluence.slac.stanford.edu/display/SCSPub/FastX) for
 accelerated X-window access. Fast-X maybe useful when you are far away from SLAC
 (geographically, or over a high latency network) and you want to diaply your
 ROOT 2-D or 3-D/scatter plot. You should use SLAC unix username and password to

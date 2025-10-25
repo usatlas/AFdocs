@@ -25,7 +25,7 @@ link for further details:
 
 SLAC also has a multi-factor authentication option. You will need to enroll in
 SLAC DUO. Instructions on setting up Two Step Authentication @ SLAC can be here:
-<https://www-internal.slack.stanford.edu/twostep/>
+<https://www-internal.slac.stanford.edu/twostep/>
 
 It will typically take one to two business days to get a light-weight BNL
 Federated ID account.

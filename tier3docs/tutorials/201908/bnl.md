@@ -301,14 +301,14 @@ Let us take the input file used in the SLAC example. At SLAC, the inputFile name
 for outside access (check the file _dset-outside.txt_ at SLAC) is
 
 ```
-inputFile=root://griddev03.slack.stanford.edu:2094//xrootd/atlas/atlaslocalgroupdisk/rucio/data16_13TeV/f9/bd/DAOD_SUSY15.11525262._000003.pool.root.1
+inputFile=root://griddev03.slac.stanford.edu:2094//xrootd/atlas/atlaslocalgroupdisk/rucio/data16_13TeV/f9/bd/DAOD_SUSY15.11525262._000003.pool.root.1
 ```
 
 For Xcache, we need add the Xcache server prefix with two slash characters, that
 is,
 
 ```
-inputFile=root://xrootd03.usatlas.bnl.gov:1094//root://griddev03.slack.stanford.edu:2094//xrootd/atlas/atlaslocalgroupdisk/rucio/data16_13TeV/f9/bd/DAOD_SUSY15.11525262._000003.pool.root.1
+inputFile=root://xrootd03.usatlas.bnl.gov:1094//root://griddev03.slac.stanford.edu:2094//xrootd/atlas/atlaslocalgroupdisk/rucio/data16_13TeV/f9/bd/DAOD_SUSY15.11525262._000003.pool.root.1
 cd T3-Example-BNL/Interactive-Job
 ../bin/Exam_JetsPlot $inputFile > myjob.log 2>&1
 ```

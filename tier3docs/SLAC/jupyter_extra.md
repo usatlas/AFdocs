@@ -48,7 +48,7 @@ there is a few things to prepare:
 3. Port forwarding
    - Open a terminal in Jupyter Lab and find out the host name (use command
      'hostname'). Let's say you are on host `rome0100`.
-   - From your desktop, `ssh -L 8787:rome0100:8787 sdf-login.slack.stanford.edu`
+   - From your desktop, `ssh -L 8787:rome0100:8787 sdf-login.slac.stanford.edu`
      .
    - In your web browser, open `http://localhost:8787/status` to access the DASK
      dashboard.

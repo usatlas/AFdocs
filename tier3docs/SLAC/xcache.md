@@ -3,7 +3,7 @@
 Xcache enables to access data remotely and also to cache them locally for faster
 access in future.
 
-The Xcache server at SLAC is `root://atlfax.slack.stanford.edu/`,
+The Xcache server at SLAC is `root://atlfax.slac.stanford.edu/`,
 
 We will try to cache the files located at BNL. Let us take the input file used
 in the BNL example. At BNL, the inputFile name is
@@ -23,7 +23,7 @@ For Xcache, we need add the Xcache server prefix with two slash characters, that
 is,
 
 ```bash
-inputFile=root://atlfax.slack.stanford.edu//root://dcgftp.usatlas.bnl.gov:1094/pnfs/usatlas.bnl.gov/LOCALGROUPDISK/rucio/data18_13TeV/da/ea/DAOD_EXOT12.14278917._000001.pool.root.1
+inputFile=root://atlfax.slac.stanford.edu//root://dcgftp.usatlas.bnl.gov:1094/pnfs/usatlas.bnl.gov/LOCALGROUPDISK/rucio/data18_13TeV/da/ea/DAOD_EXOT12.14278917._000001.pool.root.1
 cd Interactive-Job
 ../bin/Exam_JetsPlot $inputFile > myjob.log 2>&1
 ```
@@ -63,6 +63,6 @@ $ rucio list-content $dset
 Let us take the second one file.
 
 ```bash
-inputFile=root://atlfax.slack.stanford.edu//atlas/rucio/data18_13TeV:DAOD_EXOT12.14278917._000002.pool.root.1
+inputFile=root://atlfax.slac.stanford.edu//atlas/rucio/data18_13TeV:DAOD_EXOT12.14278917._000002.pool.root.1
 ../bin/Exam_JetsPlot $inputFile > myjob.log 2>&1
 ```

@@ -9,12 +9,12 @@ users to access various open source LLMs models. This service is based on
 The service provides an HTTP API interface, It supports accessing via the Ollama
 API, and is also
 [compatible the OpenAI API](https://ollama.com/blog/openai-compatibility). The
-service runs on host `sdfiana005.sdf.slack.stanford.edu` at port `11434`. If you
+service runs on host `sdfiana005.sdf.slac.stanford.edu` at port `11434`. If you
 are from outside of SLAC, you will need to use the following SSH port forwarding
 to access the service.
 
 ```
-ssh -L 11434:sdfiana005:11434 s3dflogin.slack.stanford.edu
+ssh -L 11434:sdfiana005:11434 s3dflogin.slac.stanford.edu
 ```
 
 1. The OpenAI API accessing URL is `http://localhost:11434/v1/` (set

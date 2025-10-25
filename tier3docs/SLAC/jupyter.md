@@ -1,4 +1,4 @@
-# [The SLAC JupyterLab](https://sdf.slack.stanford.edu/public/doc/#/interactive-compute?id=jupyter)
+# [The SLAC JupyterLab](https://sdf.slac.stanford.edu/public/doc/#/interactive-compute?id=jupyter)
 
 ## Table of contents
 
@@ -14,7 +14,7 @@
 
 Please refer to ["S3DF: a new ..."](accessing.md#accessing-to-s3df) for
 information about logging in to
-[SLAC Jupyter Web portal](https://s3df.slack.stanford.edu/ondemand), available
+[SLAC Jupyter Web portal](https://s3df.slac.stanford.edu/ondemand), available
 spaces and network constrains.
 
 ## How to launch JupyterLab at SLAC

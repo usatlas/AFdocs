@@ -80,8 +80,8 @@ This is an object store with the following features:
 
 The object store is available at the following URLs:
 
-- `https://sdf-dtn10.slack.stanford.edu:2094/share`
-- `root://sdf-dtn10.slack.stanford.edu:2094//share` (double slash after :2094)
+- `https://sdf-dtn10.slac.stanford.edu:2094/share`
+- `root://sdf-dtn10.slac.stanford.edu:2094//share` (double slash after :2094)
 
 ### Privacy
 
@@ -91,7 +91,7 @@ The object store is available at the following URLs:
 
 For example, if one copies a data file to:
 
-`https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat`
+`https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat`
 
 Others would not know the existence of `myfile.dat` unless they were told about
 the `random-string`. This is because `/share` is not searchable. As the owner,
@@ -133,19 +133,19 @@ curl is available everywhere. To use curl, follow these steps:
 2.  Upload:
 
     ```bash
-    mycurl -L -X PUT --upload-file /tmp/mydata.file https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat
+    mycurl -L -X PUT --upload-file /tmp/mydata.file https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat
     ```
 
 3.  Download:
 
     ```bash
-    mycurl -L -X GET https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat
+    mycurl -L -X GET https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat
     ```
 
 4.  Delete:
 
     ```bash
-    mycurl -L -X DELETE https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat
+    mycurl -L -X DELETE https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat
     ```
 
 #### Use gfal2 tools to upload/download/delete
@@ -156,25 +156,25 @@ have the gfal2 tools in your PATH.
 1. Upload:
 
    ```bash
-   gfal-copy -f /tmp/myfile.dat https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat
+   gfal-copy -f /tmp/myfile.dat https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat
    ```
 
 2. Download:
 
    ```bash
-   gfal-copy -f https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat /tmp/myfile.dat
+   gfal-copy -f https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat /tmp/myfile.dat
    ```
 
 3. Delete:
 
    ```bash
-   gfal-rm https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat
+   gfal-rm https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat
    ```
 
 4. You can even do:
 
    ```bash
-   gfal-copy -f https://cern.ch//SCRATCHDISK/myfile.dat https://sdf-dtn10.slack.stanford.edu:2094/share/random-string/myfile.dat
+   gfal-copy -f https://cern.ch//SCRATCHDISK/myfile.dat https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat
    ```
 
 !!! tip
@@ -191,25 +191,25 @@ port number.
 1. Upload:
 
    ```bash
-   xrdcp -f /tmp/myfile.dat root://sdf-dtn10.slack.stanford.edu:2094//share/random-string/myfile.dat
+   xrdcp -f /tmp/myfile.dat root://sdf-dtn10.slac.stanford.edu:2094//share/random-string/myfile.dat
    ```
 
 2. Download:
 
    ```bash
-   xrdcp -f root://sdf-dtn10.slack.stanford.edu:2094//share/random-string/myfile.dat /tmp/myfile.dat
+   xrdcp -f root://sdf-dtn10.slac.stanford.edu:2094//share/random-string/myfile.dat /tmp/myfile.dat
    ```
 
 3. Delete:
 
    ```bash
-   xrdfs root://sdf-dtn10.slack.stanford.edu:2094 rm /share/random-string/myfile.dat /tmp/myfile.dat
+   xrdfs root://sdf-dtn10.slac.stanford.edu:2094 rm /share/random-string/myfile.dat /tmp/myfile.dat
    ```
 
 4. You can also do:
 
    ```bash
-   xrdcp -f root://cern.ch//SCRATCHDISK/myfile.dat root://sdf-dtn10.slack.stanford.edu:2094//share/random-string/myfile.dat /tmp/myfile.dat
+   xrdcp -f root://cern.ch//SCRATCHDISK/myfile.dat root://sdf-dtn10.slac.stanford.edu:2094//share/random-string/myfile.dat /tmp/myfile.dat
    ```
 
 !!! note
