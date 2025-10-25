@@ -9,7 +9,7 @@ and printing progress for every 100 events.
 You can find the details at:
 
 - Running this example at **[BNL](bnl.md "Running at BNL")**
-- Running this example at **[SLAC](slack.md "Running at SLAC")**
+- Running this example at **[SLAC](slac.md "Running at SLAC")**
 
 If you do not care much about turnover speed, you can submit the jobs to the
 grid. You can find the [brief instruction](grid.md "Running at Grid").
