@@ -44,6 +44,7 @@ theme:
     - navigation.top
     - navigation.footer
     - navigation.indexes
+    - toc.follow
     - search.suggest
     - search.highlight
     - search.share
@@ -69,22 +70,26 @@ nav:
 
   - Computing:
       - computing/index.md
-      - About The Facilities: computing/facilities.md
-      - Signing Up:
-          - BNL: BNL/account.md
-          - UChicago: UChicago/account.md
-          - SLAC: SLAC/account.md
-      - Accessing:
-          - SSH Guide: computing/ssh_guide.md
-          - BNL: BNL/accessing.md
-          - UChicago: UChicago/accessing.md
-          - SLAC: SLAC/accessing.md
-          - Additional:
-              - BNL Federated ID Account: BNL/federated_id.md
-      - Using Batch:
+      - About the Facilities: computing/facilities.md
+
+      - Accounts & Access:
+          - Signing Up:
+              - BNL: BNL/account.md
+              - UChicago: UChicago/account.md
+              - SLAC: SLAC/account.md
+          - Accessing:
+              - SSH Guide: computing/ssh_guide.md
+              - BNL: BNL/accessing.md
+              - UChicago: UChicago/accessing.md
+              - SLAC: SLAC/accessing.md
+              - Additional:
+                  - BNL Federated ID Account: BNL/federated_id.md
+
+      - Running Jobs:
           - BNL: BNL/batch.md
           - UChicago: UChicago/batch.md
           - SLAC: SLAC/batch.md
+
   - Data:
       - Storage:
           - BNL: BNL/storage.md
@@ -94,7 +99,7 @@ nav:
           - BNL: BNL/data_sharing.md
           - UChicago: UChicago/data_sharing.md
           - SLAC: SLAC/data_sharing.md
-      - Xcache:
+      - XCache:
           - BNL: BNL/xcache.md
           - UChicago: UChicago/xcache.md
           - SLAC: SLAC/xcache.md
@@ -116,17 +121,17 @@ nav:
               - Grid Jobs: containers/singularity/grid.md
       - Jupyter:
           - Overview: jupyter/info.md
-          - BNL: BNL/jupyter.md
-          - UChicago: UChicago/jupyter.md
-          - SLAC: SLAC/jupyter.md
-          - Additional:
+          - Access per Site:
+              - BNL: BNL/jupyter.md
+              - UChicago: UChicago/jupyter.md
+              - SLAC: SLAC/jupyter.md
+          - Advanced:
               - Coffea on UChicago: UChicago/jupyter_coffea.md
               - Extending on SLAC: SLAC/jupyter_extra.md
-
           - Examples:
-              - xAOD check: jupyter/examples/xAODcheck.md
+              - xAOD Check: jupyter/examples/xAODcheck.md
               - Read xAOD with PyROOT: https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
-              - Uproot variable conversion: jupyter/examples/convert_specific_variables.py.txt
+              - Uproot Variable Conversion: jupyter/examples/convert_specific_variables.py.txt
       - Tools:
           - Using VSCode: tools/vscode.md
 
@@ -155,13 +160,13 @@ plugins:
   # Extra
   table-reader: {}
   glightbox: {}
-  minify:
-    minify_html: true
   git-revision-date-localized:
     type: date
     # Required for generated documentation from gen-files
     fallback_to_build_date: true
   section-index: {}
+  minify:
+    minify_html: true
 
 markdown_extensions:
   # Built-in
