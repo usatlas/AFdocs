@@ -64,66 +64,77 @@ extra_javascript:
 nav:
   - Home:
       - Introduction: README.md
-      - Getting Help: GettingHelp.md
-      - FAQs and Tips: faqs-tips/faq-tips.md
+      - Getting Help: getting_help.md
+      - FAQs and Tips: faqs_tips.md
 
   - Computing:
       - computing/index.md
-      - About The Facilities: UserOnboarding/facility.md
+      - About The Facilities: computing/facilities.md
       - Signing Up:
-          - BNL: computing/account-BNL.md
-          - UChicago: computing/account-UChicago.md
-          - SLAC: computing/account-SLAC.md
+          - BNL: BNL/account.md
+          - UChicago: UChicago/account.md
+          - SLAC: SLAC/account.md
       - Accessing:
-          - SSH Guide: computing/ssh-guide.md
-          - BNL: sshlogin/ssh2BNL.md
-          - UChicago: sshlogin/UChicago.md
-          - SLAC: sshlogin/ssh2SLAC.md
+          - SSH Guide: computing/ssh_guide.md
+          - BNL: BNL/accessing.md
+          - UChicago: UChicago/accessing.md
+          - SLAC: SLAC/accessing.md
+          - Additional:
+              - BNL Federated ID Account: BNL/federated_id.md
       - Using Batch:
-          - BNL: sshlogin/batch-BNL.md
-          - UChicago: sshlogin/batch-UChicago.md
-          - SLAC: sshlogin/batch-SLAC.md
+          - BNL: BNL/batch.md
+          - UChicago: UChicago/batch.md
+          - SLAC: SLAC/batch.md
+  - Data:
+      - Storage:
+          - BNL: BNL/storage.md
+          - UChicago: UChicago/storage.md
+          - SLAC: SLAC/storage.md
+      - Sharing:
+          - BNL: BNL/data_sharing.md
+          - UChicago: UChicago/data_sharing.md
+          - SLAC: SLAC/data_sharing.md
+      - Xcache:
+          - BNL: BNL/xcache.md
+          - UChicago: UChicago/xcache.md
+          - SLAC: SLAC/xcache.md
 
   - Environments:
       - Containers:
-          - Machine Learning Containers:
-              - Introduction: ML-Containers/info.md
-              - Contents: ML-Containers/contents.md
-              - Implementing: ML-Containers/implement.md
-          - ATLAS Analysis Containers:
-              - OS Containers: ATLAS-Containers/OS-Containers.md
-              - ATLAS Release Containers: ATLAS-Containers/Release-Containers.md
+          - Machine Learning:
+              - Info: containers/ml/info.md
+              - Contents: containers/ml/contents.md
+              - Implementing: containers/ml/implement.md
+          - ATLAS Analysis:
+              - OS Containers: containers/atlas/os.md
+              - Release Containers: containers/atlas/release.md
           - Singularity:
-              - Introduction: Containers/UsingSingularity/introduction.md
-              - Installation: Containers/UsingSingularity/installation.md
-              - Usage: Containers/UsingSingularity/usage.md
-              - Container Images: Containers/UsingSingularity/images.md
-              - Grid Jobs: Containers/UsingSingularity/grid.md
+              - Introduction: containers/singularity/introduction.md
+              - Installation: containers/singularity/installation.md
+              - Usage: containers/singularity/usage.md
+              - Images: containers/singularity/images.md
+              - Grid Jobs: containers/singularity/grid.md
       - Jupyter:
-          - Overview: jupyter/JupyterAtTier3s.md
-          - Jupyter at BNL: jupyter/BNLjupyter.md
-          - Jupyter at UChicago (Coffea): jupyter/JupyterCoffeaCUChicago.md
-          - Jupyter at UChicago: jupyter/JupyterLabUChicago.md
-          - Jupyter at SLAC: jupyter/SLACjupyter.md
-          - Jupyter at SLAC (Extending): jupyter/SLACJupyterExtraFuncs.md
+          - Overview: jupyter/info.md
+          - BNL: BNL/jupyter.md
+          - UChicago: UChicago/jupyter.md
+          - SLAC: SLAC/jupyter.md
+          - Additional:
+              - Coffea on UChicago: UChicago/jupyter_coffea.md
+              - Extending on SLAC: SLAC/jupyter_extra.md
+
           - Examples:
               - xAOD check: jupyter/examples/xAODcheck.md
               - Read xAOD with PyROOT: https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
               - Uproot variable conversion: jupyter/examples/convert_specific_variables.py.txt
-      - Tools & IDEs:
-          - Using VSCode: VSCode/README.md
-
-  - Data:
-      - Data Storage at BNL: doma/storage/BNL/storage-at-bnl.md
-      - Data Storage at UChicago: doma/storage/UChicago/uc_storage.md
-      - Data Sharing: doma/DataSharing.md
-      - Data Sharing at UChicago: doma/DataSharing-UChicago.md
+      - Tools:
+          - Using VSCode: tools/vscode.md
 
   - Tutorials:
-      - Overview: Tutorial-2019Aug/README.md
-      - BNL Examples: Tutorial-2019Aug/BNL/README.md
-      - SLAC Examples: Tutorial-2019Aug/SLAC/README.md
-      - Grid Examples: Tutorial-2019Aug/Grid/README.md
+      - Overview: tutorials/201908/info.md
+      - BNL Examples: tutorials/201908/bnl.md
+      - SLAC Examples: tutorials/201908/slac.md
+      - Grid Examples: tutorials/201908/grid.md
 
 not_in_nav: |
   /ATLAS-Containers/index.md

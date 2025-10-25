@@ -24,7 +24,7 @@ unix systems and storage.
 
 !!! question "Need Help?"
 
-    See our [Getting Help](GettingHelp.md) page for support options and how to reach the ATLAS AF team.
+    See our [Getting Help](getting_help.md) page for support options and how to reach the ATLAS AF team.
 
 ---
 
@@ -54,7 +54,7 @@ unix systems and storage.
 
   Information and use of ML containers
 
-  [:octicons-arrow-right-24: Learn More](ML-Containers/info.md)
+  [:octicons-arrow-right-24: Learn More](containers/ml/info.md)
 
 - :material-package-variant:{ .lg .middle } **ATLAS Containers**
 
@@ -62,7 +62,7 @@ unix systems and storage.
 
   Information and use of ATLAS containers
 
-  [:octicons-arrow-right-24: Explore](ATLAS-Containers/OS-Containers.md)
+  [:octicons-arrow-right-24: Explore](containers/atlas/os.md)
 
 - :material-database-sync:{ .lg .middle } **Data Storing, Accessing, and
   Sharing**
@@ -71,7 +71,7 @@ unix systems and storage.
 
   Explains the ways users can use their ATLAS data at AFs
 
-  [:octicons-arrow-right-24: View Guide](doma/DataSharing.md)
+  [:octicons-arrow-right-24: View Guide](BNL/data_sharing.md)
 
 - :material-notebook:{ .lg .middle } **Jupyter at Analysis Facilities**
 
@@ -79,7 +79,7 @@ unix systems and storage.
 
   Highlights the different aspects of Jupyter and how to use it at AFs
 
-  [:octicons-arrow-right-24: Get Started](jupyter/JupyterAtTier3s.md)
+  [:octicons-arrow-right-24: Get Started](jupyter/info.md)
 
 - :material-school:{ .lg .middle } **Data Analysis Tutorials**
 
@@ -87,7 +87,7 @@ unix systems and storage.
 
   Step-by-step tutorials on using AFs for analyses
 
-  [:octicons-arrow-right-24: Start Learning](Tutorial-2019Aug/README.md)
+  [:octicons-arrow-right-24: Start Learning](tutorials/201908/info.md)
 
 - :material-container:{ .lg .middle } **Containers**
 
@@ -96,7 +96,7 @@ unix systems and storage.
   Detailed information on container-based data processing and how to use them at
   AFs
 
-  [:octicons-arrow-right-24: View Docs](Containers/UsingSingularity/introduction.md)
+  [:octicons-arrow-right-24: View Docs](containers/singularity/introduction.md)
 
 - :material-microsoft-visual-studio-code:{ .lg .middle } **Using VSCode**
 
@@ -104,7 +104,7 @@ unix systems and storage.
 
   Detailed guide on using Visual Studio Code
 
-  [:octicons-arrow-right-24: Setup Guide](VSCode/README.md)
+  [:octicons-arrow-right-24: Setup Guide](tools/vscode.md)
 
 - :material-frequently-asked-questions:{ .lg .middle } **FAQ**
 
@@ -112,6 +112,6 @@ unix systems and storage.
 
   Answers to frequently asked questions
 
-  [:octicons-arrow-right-24: Find Answers](faqs-tips/faq-tips.md)
+  [:octicons-arrow-right-24: Find Answers](faqs_tips.md)
 
 </div>

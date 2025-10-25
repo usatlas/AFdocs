@@ -1,6 +1,19 @@
 site/
 *~
 tier3docs/BackupDir/
+*.py[co]
+__pycache__
+*.egg-info
+*.eggs
+*~
+*.bak
+.ipynb_checkpoints
+.DS_Store
+\#*#
+.#*
+*.swp
+*.map
+
 # pixi environments
 .pixi/*
 !.pixi/config.toml

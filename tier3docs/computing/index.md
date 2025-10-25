@@ -45,11 +45,11 @@ All three facilities provide:
 
 !!! tip "Need Help?"
 
-    See our [Getting Help](../GettingHelp.md) page for support options and how to reach the ATLAS AF team.
+    See our [Getting Help](../getting_help.md) page for support options and how to reach the ATLAS AF team.
 
 ---
 
 ## Learn More
 
 For detailed information about each facility's resources, capabilities, and
-infrastructure, see [About The Facilities](../UserOnboarding/facility.md).
+infrastructure, see [About The Facilities](facilities.md).

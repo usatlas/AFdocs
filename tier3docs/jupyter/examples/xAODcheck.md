@@ -117,7 +117,7 @@ container in which you are interested (e.g., `AntiKt4LCTopoJets`). **Note** xAOD
 APIs are higher-level APIs, and they hide some behind-the-scenes magic, which is
 actually saved in the Auxiliary store of the raw Root file. However, as of this
 writing, you can only access the xAOD APIs in either C++ (e.g.,
-[Exam_JetsPlot.cxx](../../Tutorial-2019Aug/BNL/src/Exam_JetsPlot.cxx)) or pyROOT
+[Exam_JetsPlot.cxx](../../tutorials/201908/bnl.md)) or pyROOT
 (e.g.,
 [pyROOT_example.ipynb](https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb),
 but not in [uproot](https://github.com/scikit-hep/uproot) yet. Until someone
