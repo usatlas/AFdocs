@@ -1,1 +1,0 @@
-/Users/kratsg/dotfiles/CLAUDE.md

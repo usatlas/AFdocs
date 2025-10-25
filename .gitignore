@@ -4,3 +4,6 @@ tier3docs/BackupDir/
 # pixi environments
 .pixi/*
 !.pixi/config.toml
+
+# AI Agents
+CLAUDE.md
