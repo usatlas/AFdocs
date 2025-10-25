@@ -1,6 +1,7 @@
 # Data Sharing at SLAC
 
-This guide covers data sharing methods available at SLAC, including Xcache servers and the Data Sharing Store.
+This guide covers data sharing methods available at SLAC, including Xcache
+servers and the Data Sharing Store.
 
 ---
 

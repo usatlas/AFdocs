@@ -19,7 +19,8 @@ like Gmail, Outlook, iCloud, etc. won't be accepted.
 ## SSH Key Setup
 
 Once your account is accepted, you will need to generate and upload an SSH key.
-See our [SSH Access Guide](../computing/ssh_guide.md) for detailed instructions on:
+See our [SSH Access Guide](../computing/ssh_guide.md) for detailed instructions
+on:
 
 - Choosing your username wisely
 - Generating SSH keys
@@ -32,9 +33,10 @@ See our [SSH Access Guide](../computing/ssh_guide.md) for detailed instructions 
 
 ### Upload Your Public Key
 
-After generating your SSH key pair (see the [SSH guide](../computing/ssh_guide.md)), upload
-the public key to your profile on the Analysis Facility portal by pasting its
-content into the "SSH public key" text box.
+After generating your SSH key pair (see the
+[SSH guide](../computing/ssh_guide.md)), upload the public key to your profile
+on the Analysis Facility portal by pasting its content into the "SSH public key"
+text box.
 
 You can view your public key with:
 
@@ -68,8 +70,8 @@ an issue, feel free to reach out to us for help either via
 
 ## Next Steps
 
-Once you can successfully login, see the
-[Accessing UChicago](accessing.md) guide for information on:
+Once you can successfully login, see the [Accessing UChicago](accessing.md)
+guide for information on:
 
 - SSH configuration options
 - ATLAS environment setup

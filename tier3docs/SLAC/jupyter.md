@@ -12,8 +12,8 @@
 
 ## Login to JupyterLab at SLAC
 
-Please refer to ["S3DF: a new ..."](accessing.md#accessing-to-s3df)
-for information about logging in to
+Please refer to ["S3DF: a new ..."](accessing.md#accessing-to-s3df) for
+information about logging in to
 [SLAC Jupyter Web portal](https://s3df.slack.stanford.edu/ondemand), available
 spaces and network constrains.
 

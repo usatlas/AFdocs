@@ -1,7 +1,8 @@
 # Data Sharing at UChicago: Work between UChicago and CERN
 
-This guide covers how to access CERN EOS from UChicago, [use the XCache server](./xcache.md),
-and manage authentication credentials for data access.
+This guide covers how to access CERN EOS from UChicago,
+[use the XCache server](./xcache.md), and manage authentication credentials for
+data access.
 
 ---
 

@@ -1,6 +1,7 @@
 # Data Sharing at BNL
 
-This guide covers data sharing methods available at BNL, including Xcache servers and accessing CERN EOS from BNL.
+This guide covers data sharing methods available at BNL, including Xcache
+servers and accessing CERN EOS from BNL.
 
 ---
 

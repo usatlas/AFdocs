@@ -55,7 +55,6 @@ However, for large file inputs on the grid, you are recommended to plan ahead
 and pre-stage them to BNL using
 [R2D2 request](https://rucio-ui.cern.ch/r2d2/manage_quota) or rucio command.
 
-
 ## Using Xcache at BNL
 
 Xcache enables to access data remotely and also to cache them locally for faster
