@@ -64,7 +64,6 @@ extra_javascript:
 nav:
   - Getting Started:
       - Introduction: README.md
-      - Getting Help: GettingHelp.md
   - User Onboarding:
       - About the Facilities: UserOnboarding/facility.md
       - Applying for User Accounts: UserOnboarding/account.md
@@ -106,11 +105,11 @@ nav:
       - Grid Examples: Tutorial-2019Aug/Grid/README.md
   - Tools & IDEs:
       - VSCode: VSCode/README.md
+  - Help:
+      - Getting Help: GettingHelp.md
       - FAQs/Tips: faqs-tips/faq-tips.md
-      - Glossary: faqs-tips/glossary.md
 
 not_in_nav: |
-  /privacyDisclaimer.md
   /ATLAS-Containers/index.md
   /LLM/README.md
   /LLM/RunYourOwnOllama.md

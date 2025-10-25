@@ -1,10 +1,3 @@
-<style>
-  #introMore {display: none;}
-  #acctsMore {display: none;}
-</style>
-
-<script type="text/javascript" src="/tier3docs/scripts/readMoreOrLess.js"></script>
-
 # S3DF: a new computing environment at SLAC
 
 For decades, SLAC runs a high throughput computing (HTC) environment, primarily

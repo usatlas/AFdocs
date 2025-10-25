@@ -61,3 +61,14 @@
   --md-accent-fg-color: #0b80c3;
   --md-accent-fg-color--transparent: #0b80c31a;
 }
+
+p.center {
+  text-align: center;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 4rem; /* Adjust as needed */
+  padding: 0.2rem;
+  background-color: rgba(255,255,255,0.75);
+}

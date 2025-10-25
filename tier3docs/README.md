@@ -1,13 +1,18 @@
 # Public Documentation for US ATLAS Analysis Facilities
 
+!!! warning "Privacy Disclaimer"
+
+    US ATLAS documents and code samples hosted at this GitHub organization are visible to the general public. Please do not put personal identifiable information, usernames and passwords and methods to access restricted US ATLAS and ATLAS (international) resources in this area.
+
 US ATLAS hosts three shared Tier 3 computing spaces at BNL, SLAC, and UChicago,
 also known as Analysis Facilities (AF). These three facilities are available to
 all US ATLAS physicists and computer scientists. They are organized and managed
 to support US ATLAS users' need for computing resources including login, run
 interactive and batch jobs, access ATLAS data, store private data, etc.
 
-[View the facility usage dashboard
-:material-chart-line:](https://atlas-kibana.mwt2.org:5601/s/analysis-facility/app/dashboards#/view/8bb58440-6145-11ed-afcf-d91dad577662?_g=(filters:!()){:target="_blank"}
+<p class="center" markdown>
+[:material-chart-line:{.lg} View the facility usage dashboard](https://atlas-kibana.mwt2.org:5601/s/analysis-facility/app/dashboards#/view/8bb58440-6145-11ed-afcf-d91dad577662?_g=%28filters%3A%21%28%29){ .md-button .center }
+</p>
 
 The AFs also support a wide variety of tools specific for analysis, including
 ATLAS/CERN software in CVMFS, Grid middleware, Rucio clients, Machine Learning
@@ -15,20 +20,11 @@ packages, MPI, Jupyter Lab with PyROOT, Xcache with auto data discovery, GPUs,
 etc. The three facilities are backed by staff to support software environments,
 unix systems and storage.
 
-<div style="float:right; margin-left:10px;">
-<a href="https://atlas-talk.sdcc.bnl.gov/">
-<img src="images/discourse.png" style="width:80px; height:80px" alt="Discourse Logo" />
-</a>
-<p>AF Discourse</p>
-</div>
+![Discourse Logo](images/discourse.png){ align=right width=110px }
 
 !!! question "Need Help?"
 
     Have questions or comments? Visit our [:fontawesome-solid-comments: ATLAS AF Discourse Forum](https://atlas-talk.sdcc.bnl.gov/) (do not confuse with Discord :fontawesome-brands-discord:) for user support, contact, friendly discussion, newsletter and more! We'd love to help you have a smooth experience while working at our analysis facilities!
-
-!!! info "Privacy Disclaimer"
-
-    Please read our [Privacy Disclaimer](privacyDisclaimer.md) for information about data handling and privacy policies.
 
 ---
 

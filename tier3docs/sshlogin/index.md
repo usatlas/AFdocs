@@ -21,7 +21,7 @@ facility below to get started.
 
   [:octicons-arrow-right-24: Get Started](ssh2BNL.md)
 
-- :material-university:{ .lg .middle } **UChicago Analysis Facility**
+- :material-school:{ .lg .middle } **UChicago Analysis Facility**
 
   ***
 
