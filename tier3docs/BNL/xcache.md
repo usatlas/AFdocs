@@ -85,11 +85,6 @@ need of knowing the exact path of a given filename.
 
 Let us take the same dataset used in the SLAC example.
 
-Please click the following command (where **dset** is defined previously) to see
-the output
-
-<details>
-
 ```bash
 $ rucio list-dataset-replicas data16_13TeV:data16_13TeV.00311481.physics_Main.merge.DAOD_SUSY15.f758_m1616_r8669_p3185_tid11525262_00
 +-------------------------------+---------+---------+

@@ -58,8 +58,6 @@ For more info on this topic, especially how to do this in batch jobs, please
 refer to
 [ATLAS Canada Twiki](https://twiki.atlas-canada.ca/bin/view/AtlasCanada/Containers)
 
-<<<<<<< HEAD
-
 ### Submitting SLURM jobs
 
 All US ATLAS users can submit batch jobs using Slurm account **atlas:usatlas**,

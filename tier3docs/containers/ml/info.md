@@ -6,7 +6,6 @@ and the option for users to request GPU resources. In a group effort between WBS
 necessary packages in order to do your work with minimal effort.
 
 This led to creating
-<a href="https://github.com/usatlas/ML-Containers/blob/main/ml-images-ReadMe.md">ML
-Containers</a> that house the basic python packages based on the
-<a href="https://github.com/usatlas-ml-training" target="_blank" rel="noopener noreferrer">
-US-ATLAS ML Tutorial 2019</a> materials.
+[ML Containers](https://github.com/usatlas/ML-Containers/blob/main/ml-images-ReadMe.md)
+that house the basic python packages based on the
+[US-ATLAS ML Tutorial 2019](https://github.com/usatlas-ml-training) materials.
