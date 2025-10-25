@@ -133,7 +133,7 @@ nav:
   - Tutorials:
       - Overview: tutorials/201908/info.md
       - BNL Examples: tutorials/201908/bnl.md
-      - SLAC Examples: tutorials/201908/slac.md
+      - SLAC Examples: tutorials/201908/slack.md
       - Grid Examples: tutorials/201908/grid.md
 
 not_in_nav: |
