@@ -137,8 +137,7 @@ SLAC has two different computer accounts, unix and Windows. Please use your
 Windows account password to login. You may ask: What if I only have a unix
 account, and do not have a SLAC Windows account? Continue reading.
 
-SDF uses a new identity management system (aka <span style="color:red">"SLAC
-ID"</span> - it will be a computer account to login to everything at SLAC). If
+SDF uses a new identity management system (aka _SLAC ID_ - it will be a computer account to login to everything at SLAC). If
 you already have a SLAC Windows account, you are all set (SLAC ID = SLAC Windows
 account) and go to the next step. If you don't have a SLAC Windows account,
 please go to
