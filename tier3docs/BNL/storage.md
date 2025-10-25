@@ -20,8 +20,8 @@
     <RT-RACF-StorageManagement@bnl.gov>.
 3.  Additional space on BNLBox is available upon email request to
     <RT-RACF-StorageManagement@bnl.gov>.
-4.  And there is also a 9TB **scratch disk** `/usatlas/scratch/` shared among all
-    users, where the files can be kept for **30 days**. Please make your own
+4.  And there is also a 9TB **scratch disk** `/usatlas/scratch/` shared among
+    all users, where the files can be kept for **30 days**. Please make your own
     subdir `/usatlas/scratch/$USER` there.
 
 ### Guidance on storage usage
@@ -29,8 +29,8 @@
 As a reminder, your home area ($HOME) is intended to store analysis code, and
 not data.
 
-Please use the other storage (`dCache`, `LOCALGROUPDISK`, and **Data area**)
-to store data.
+Please use the other storage (`dCache`, `LOCALGROUPDISK`, and **Data area**) to
+store data.
 
 As for dCache, the files could be listed with the command `ls` under /pnfs.
 However, they should be accessed via xrootd as explained
@@ -44,9 +44,9 @@ If you need to store data outside of the resources dedicated to the BNL Tier 3
 using the BNL Tier 3), consider using LOCALGROUPDISK, which is a resource that
 all US ATLAS collaborators have access to. You can check at
 [RSE account usage](https://rucio-ui.cern.ch/r2d2/manage_quota) with the RSE
-`BNL-OSG2_LOCALGROUPDISK` selected. Every user should have a **default quota
-of 50TB**, if you could not find your name there, please check if you have
-selected `/atlas/usatlas` in
+`BNL-OSG2_LOCALGROUPDISK` selected. Every user should have a **default quota of
+50TB**, if you could not find your name there, please check if you have selected
+`/atlas/usatlas` in
 [the VO groups/roles](https://lcg-voms2.cern.ch:8443/voms/atlas/user/home.action).
 For additional space if need beyond 50TB here is the
 [Request form](https://atlas-lgdm.cern.ch/LocalDisk_Usage/USER/RequestFormUsage/)
@@ -397,11 +397,11 @@ Aliases: rm=delete, mkdir=mkcol, mv=move, cp=copy, more=less, quit=exit=bye
 dav:/remote.php/dav/files/BNL-User-8efba3ed-bfc8-4324-9cef-e9f4878c3c8d/>
 ```
 
-You can use davix commands (`davix-ls`, `davix-put` and `davix-get`) as
-well to access to your BNLBox. These commands are available by default on
-lxplus. At BNL, you need run "setupATLAS -q; lsetup davix" to set up the env.
-Then specify the full webDAV to the davix commands plus an option `-k`
-(Disable SSL credential checks).
+You can use davix commands (`davix-ls`, `davix-put` and `davix-get`) as well to
+access to your BNLBox. These commands are available by default on lxplus. At
+BNL, you need run "setupATLAS -q; lsetup davix" to set up the env. Then specify
+the full webDAV to the davix commands plus an option `-k` (Disable SSL
+credential checks).
 
 >     attsub01% setupATLAS -q
 >     attsub01% lsetup davix
