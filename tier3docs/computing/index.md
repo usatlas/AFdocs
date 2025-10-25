@@ -1,6 +1,8 @@
 # Computing at US ATLAS Analysis Facilities
 
-Welcome to the US ATLAS Analysis Facilities! These computing resources provide interactive access, batch systems, data storage, and analysis tools for all US ATLAS physicists and computer scientists.
+Welcome to the US ATLAS Analysis Facilities! These computing resources provide
+interactive access, batch systems, data storage, and analysis tools for all US
+ATLAS physicists and computer scientists.
 
 ---
 
@@ -49,4 +51,5 @@ All three facilities provide:
 
 ## Learn More
 
-For detailed information about each facility's resources, capabilities, and infrastructure, see [About The Facilities](../UserOnboarding/facility.md).
+For detailed information about each facility's resources, capabilities, and
+infrastructure, see [About The Facilities](../UserOnboarding/facility.md).

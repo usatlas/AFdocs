@@ -113,16 +113,22 @@ problem.
 
 ### Linux Process Control
 
-Understanding how to control processes is crucial when working on remote systems. Two commonly confused keyboard shortcuts are:
+Understanding how to control processes is crucial when working on remote
+systems. Two commonly confused keyboard shortcuts are:
 
-- <kbd>Control</kbd>+<kbd>C</kbd>: **Terminates** the current process by sending the SIGINT signal
-- <kbd>Control</kbd>+<kbd>Z</kbd>: **Suspends** the current process by sending the SIGTSTP signal (does NOT terminate)
+- <kbd>Control</kbd>+<kbd>C</kbd>: **Terminates** the current process by sending
+  the SIGINT signal
+- <kbd>Control</kbd>+<kbd>Z</kbd>: **Suspends** the current process by sending
+  the SIGTSTP signal (does NOT terminate)
 
-The key difference is that <kbd>Control</kbd>+<kbd>Z</kbd> only **suspends** the process - it continues to exist and consume resources, just paused. <kbd>Control</kbd>+<kbd>C</kbd> actually **kills** the process.
+The key difference is that <kbd>Control</kbd>+<kbd>Z</kbd> only **suspends** the
+process - it continues to exist and consume resources, just paused.
+<kbd>Control</kbd>+<kbd>C</kbd> actually **kills** the process.
 
 #### Working with Suspended Processes
 
-When you suspend a process with <kbd>Control</kbd>+<kbd>Z</kbd>, you'll see output like:
+When you suspend a process with <kbd>Control</kbd>+<kbd>Z</kbd>, you'll see
+output like:
 
 ```
 [1]+  Stopped                 python my_script.py
@@ -163,7 +169,9 @@ $ kill %1
 
 ### Session Management with screen and tmux
 
-When working on remote systems, it's crucial to understand that **closing your SSH connection terminates all processes running in that session** unless you use a terminal multiplexer like `screen` or `tmux`.
+When working on remote systems, it's crucial to understand that **closing your
+SSH connection terminates all processes running in that session** unless you use
+a terminal multiplexer like `screen` or `tmux`.
 
 #### Why Use screen or tmux?
 
@@ -263,7 +271,8 @@ tmux kill-session -t my_analysis
 
 ### Environment Variables and Shell Configuration
 
-Environment variables control how your shell and programs behave. Understanding these is important for configuring your analysis environment.
+Environment variables control how your shell and programs behave. Understanding
+these is important for configuring your analysis environment.
 
 #### Common Environment Variables
 
@@ -296,7 +305,8 @@ export MY_VAR="value"
 
 #### Shell Configuration Files
 
-Your shell reads configuration files when starting. Understanding these helps you customize your environment:
+Your shell reads configuration files when starting. Understanding these helps
+you customize your environment:
 
 **For bash:**
 
@@ -310,7 +320,8 @@ Your shell reads configuration files when starting. Understanding these helps yo
 - `~/.zshrc`: Read when you start a new interactive shell
 - `~/.zsh_history`: Stores your command history
 
-**Best practice:** In your `~/.bash_profile` (or `~/.zprofile` for zsh), source your rc file:
+**Best practice:** In your `~/.bash_profile` (or `~/.zprofile` for zsh), source
+your rc file:
 
 ```sh
 # In ~/.bash_profile
@@ -362,7 +373,8 @@ top
 
 #### Using htop
 
-`htop` is a more user-friendly alternative to `top` with color and interactive features:
+`htop` is a more user-friendly alternative to `top` with color and interactive
+features:
 
 ```sh
 htop

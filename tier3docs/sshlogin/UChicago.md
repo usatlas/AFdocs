@@ -1,6 +1,7 @@
 # Accessing UChicago
 
-This guide covers accessing the UChicago Analysis Facility via SSH, including SSH configuration, filesystems, and setting up the ATLAS environment.
+This guide covers accessing the UChicago Analysis Facility via SSH, including
+SSH configuration, filesystems, and setting up the ATLAS environment.
 
 !!! info "Don't have an account yet?"
 
@@ -10,13 +11,15 @@ This guide covers accessing the UChicago Analysis Facility via SSH, including SS
 
 ## SSH Connection
 
-Once your account is approved and your SSH key is synchronized with the system (~15 minutes after upload), you can connect to the facility:
+Once your account is approved and your SSH key is synchronized with the system
+(~15 minutes after upload), you can connect to the facility:
 
 ```sh
 ssh login.af.uchicago.edu
 ```
 
-For detailed information on SSH key generation and setup, see our [SSH Access Guide](../computing/ssh-guide.md).
+For detailed information on SSH key generation and setup, see our
+[SSH Access Guide](../computing/ssh-guide.md).
 
 !!! tip "Need help connecting?"
 
@@ -26,11 +29,13 @@ For detailed information on SSH key generation and setup, see our [SSH Access Gu
 
 ## SSH Configuration (Optional)
 
-For detailed SSH configuration options including config files and SSH agent setup, see our [SSH Access Guide](../computing/ssh-guide.md).
+For detailed SSH configuration options including config files and SSH agent
+setup, see our [SSH Access Guide](../computing/ssh-guide.md).
 
 ### UChicago-Specific SSH Config Example
 
-You can create an SSH config file entry specifically for UChicago to simplify connections:
+You can create an SSH config file entry specifically for UChicago to simplify
+connections:
 
 ```sh
 Host uchicago
@@ -40,10 +45,12 @@ Host uchicago
   IdentityFile ~/.ssh/id_ed25519
 ```
 
-Replace `<your-username>` with your actual username. With this configuration, you can simply run:
+Replace `<your-username>` with your actual username. With this configuration,
+you can simply run:
 
 ```sh
 ssh uchicago
 ```
 
-For more information on SSH config files and adding keys to the SSH agent, see the [SSH Access Guide](../computing/ssh-guide.md#ssh-configuration-optional)
+For more information on SSH config files and adding keys to the SSH agent, see
+the [SSH Access Guide](../computing/ssh-guide.md#ssh-configuration-optional)

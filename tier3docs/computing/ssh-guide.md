@@ -1,6 +1,7 @@
 # SSH Access Guide
 
-This guide covers SSH key generation and setup for accessing US ATLAS Analysis Facilities.
+This guide covers SSH key generation and setup for accessing US ATLAS Analysis
+Facilities.
 
 ---
 
@@ -8,7 +9,8 @@ This guide covers SSH key generation and setup for accessing US ATLAS Analysis F
 
 Before you begin, ensure you have:
 
-- An approved user account at your chosen facility (see [Signing Up](../computing/index.md#before-you-begin))
+- An approved user account at your chosen facility (see
+  [Signing Up](../computing/index.md#before-you-begin))
 - A terminal/command-line interface on your local machine
 - Basic familiarity with command-line operations
 
@@ -24,7 +26,8 @@ Before you begin, ensure you have:
 
 ## Generating SSH Keys
 
-Once your account is approved, you will need to generate a cryptographic SSH key pair consisting of:
+Once your account is approved, you will need to generate a cryptographic SSH key
+pair consisting of:
 
 - **Public key**: Upload to your facility profile
 - **Private key**: Keep securely on your local machine
@@ -37,7 +40,8 @@ On Mac/Linux, create an SSH key pair using the following command:
 ssh-keygen -t ed25519
 ```
 
-We recommend modern elliptic curve key types, such as `ed25519` or `ecdsa`. These provide better security and performance than older key types.
+We recommend modern elliptic curve key types, such as `ed25519` or `ecdsa`.
+These provide better security and performance than older key types.
 
 !!! warning "Passphrase Recommended"
 
@@ -47,9 +51,11 @@ We recommend modern elliptic curve key types, such as `ed25519` or `ecdsa`. Thes
 
 ### Key File Locations
 
-The `ssh-keygen` command will generate two files in `~/.ssh` (unless you chose a different location):
+The `ssh-keygen` command will generate two files in `~/.ssh` (unless you chose a
+different location):
 
 If you used the `ed25519` key type with the default location:
+
 - **Private key**: `~/.ssh/id_ed25519`
 - **Public key**: `~/.ssh/id_ed25519.pub`
 
@@ -72,7 +78,8 @@ Copy the entire output (it should start with `ssh-ed25519`).
 Upload your public key to your facility's user portal:
 
 - **BNL**: Upload during account creation or via the SDCC portal
-- **UChicago**: Paste into the "SSH public key" text box on [af.uchicago.edu](https://af.uchicago.edu/)
+- **UChicago**: Paste into the "SSH public key" text box on
+  [af.uchicago.edu](https://af.uchicago.edu/)
 - **SLAC**: Follow facility-specific instructions
 
 !!! danger "Important: Protect Your Private Key!"
@@ -85,7 +92,8 @@ Upload your public key to your facility's user portal:
 
 ### Create SSH Config File
 
-You can create an SSH config file to simplify connections. First, open or create the `~/.ssh/config` file:
+You can create an SSH config file to simplify connections. First, open or create
+the `~/.ssh/config` file:
 
 ```sh
 touch ~/.ssh/config
@@ -139,7 +147,9 @@ ssh-add ~/.ssh/id_ed25519
 
 ## Testing Your Connection
 
-After uploading your public key, wait for the facility's synchronization period (typically 15 minutes for UChicago, varies by facility), then test your connection:
+After uploading your public key, wait for the facility's synchronization period
+(typically 15 minutes for UChicago, varies by facility), then test your
+connection:
 
 ```sh
 ssh <username>@<facility-hostname>
@@ -152,7 +162,8 @@ If it doesn't work:
 3. Wait the full synchronization period
 4. Check that you're using the correct hostname and username
 
-If problems persist, see our [Getting Help](../GettingHelp.md) page for support options.
+If problems persist, see our [Getting Help](../GettingHelp.md) page for support
+options.
 
 ---
 
@@ -174,7 +185,8 @@ Refer to your facility's specific access guide for details:
 
 ## Accessing CERN Resources
 
-If you need to access CERN resources like lxplus, GitLab, or SVN, you'll need special SSH configuration that uses Kerberos authentication.
+If you need to access CERN resources like lxplus, GitLab, or SVN, you'll need
+special SSH configuration that uses Kerberos authentication.
 
 ### SSH Configuration for CERN
 
@@ -233,13 +245,15 @@ Host lxtunnel lxtunnel.cern.ch
 
 ### Kerberos Authentication Setup
 
-CERN resources use Kerberos for authentication. After configuring SSH, obtain a Kerberos ticket:
+CERN resources use Kerberos for authentication. After configuring SSH, obtain a
+Kerberos ticket:
 
 ```sh
 kinit <CERN_USER>@CERN.CH
 ```
 
-You'll be prompted for your CERN password. After obtaining a ticket, you can SSH to CERN resources without additional password prompts:
+You'll be prompted for your CERN password. After obtaining a ticket, you can SSH
+to CERN resources without additional password prompts:
 
 ```sh
 ssh lxplus
@@ -265,4 +279,5 @@ kinit -R
     - Managing multiple Kerberos principals
     - Fixing common Kerberos issues
 
-For more detailed information about SSH at CERN, see the [CERN SSH FAQ](https://twiki.cern.ch/twiki/bin/view/LinuxSupport/SSHatCERNFAQ).
+For more detailed information about SSH at CERN, see the
+[CERN SSH FAQ](https://twiki.cern.ch/twiki/bin/view/LinuxSupport/SSHatCERNFAQ).

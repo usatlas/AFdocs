@@ -2,11 +2,10 @@
 
 ## Submitting SLURM jobs at S3DF
 
-All US ATLAS users can submit batch jobs using Slurm account
-**atlas:usatlas**, e.g. `srun -A atlas:usatlas hostname`. The partition to
-use is `roma` (an HPC cluster with AMD EPYC 7702 CPUs) and `ampere` (a Nvidia
-A100 GPU cluster). The following is a typical script to be used with the
-`sbatch` command:
+All US ATLAS users can submit batch jobs using Slurm account **atlas:usatlas**,
+e.g. `srun -A atlas:usatlas hostname`. The partition to use is `roma` (an HPC
+cluster with AMD EPYC 7702 CPUs) and `ampere` (a Nvidia A100 GPU cluster). The
+following is a typical script to be used with the `sbatch` command:
 
 ```
 #!/bin/bash

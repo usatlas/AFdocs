@@ -119,32 +119,47 @@ Upon opening a folder/file, you just click on the button of
 
 ## Remote SSH Extension
 
-The Visual Studio Code [Remote - SSH](https://code.visualstudio.com/docs/remote/ssh) extension lets you use any remote machine with an SSH server as your development environment. This is different from Remote Tunnels - it uses direct SSH connections to the remote host.
+The Visual Studio Code
+[Remote - SSH](https://code.visualstudio.com/docs/remote/ssh) extension lets you
+use any remote machine with an SSH server as your development environment. This
+is different from Remote Tunnels - it uses direct SSH connections to the remote
+host.
 
 The Remote - SSH extension:
 
 - Runs commands and extensions directly on the remote machine
-- Provides a local-quality development experience with full IntelliSense, debugging, and terminal access
-- Requires SSH access to be configured (see our [SSH Access Guide](../computing/ssh-guide.md))
+- Provides a local-quality development experience with full IntelliSense,
+  debugging, and terminal access
+- Requires SSH access to be configured (see our
+  [SSH Access Guide](../computing/ssh-guide.md))
 
 ### SSH Keys and Passphrases
 
-When using the Remote - SSH extension, SSH keys with passphrases can require additional configuration. VS Code may have difficulty prompting for passphrases during connection.
+When using the Remote - SSH extension, SSH keys with passphrases can require
+additional configuration. VS Code may have difficulty prompting for passphrases
+during connection.
 
 You have two options:
 
-1. **Use SSH Agent** (recommended): Configure your SSH agent to cache your passphrase. See the [SSH Access Guide](../computing/ssh-guide.md#ssh-agent-setup) for setup instructions.
+1. **Use SSH Agent** (recommended): Configure your SSH agent to cache your
+   passphrase. See the
+   [SSH Access Guide](../computing/ssh-guide.md#ssh-agent-setup) for setup
+   instructions.
 
-2. **Use keys without passphrases**: Generate a separate SSH key without a passphrase specifically for VS Code connections. Note that this is less secure.
+2. **Use keys without passphrases**: Generate a separate SSH key without a
+   passphrase specifically for VS Code connections. Note that this is less
+   secure.
 
-For more details, see the [VS Code SSH Git Authentication FAQ](https://code.visualstudio.com/docs/sourcecontrol/faq#_can-i-use-ssh-git-authentication-with-vs-code).
+For more details, see the
+[VS Code SSH Git Authentication FAQ](https://code.visualstudio.com/docs/sourcecontrol/faq#_can-i-use-ssh-git-authentication-with-vs-code).
 
 ### Disconnecting from a Remote Host
 
 To close the connection when you finish editing files on the remote host:
 
 - Choose **File > Close Remote Connection** to disconnect from the host
-- The default configuration does not include a keyboard shortcut for this command
+- The default configuration does not include a keyboard shortcut for this
+  command
 - You can also simply exit VS Code to close the remote connection
 
 ---
@@ -164,13 +179,21 @@ To close the connection when you finish editing files on the remote host:
 
 ### Common Misconceptions
 
-Many users mistakenly believe that closing VS Code or their SSH session will clean up running jobs. **This is not true.** The SSH session is just a connection to the server - closing it does not affect processes running on the server.
+Many users mistakenly believe that closing VS Code or their SSH session will
+clean up running jobs. **This is not true.** The SSH session is just a
+connection to the server - closing it does not affect processes running on the
+server.
 
 **Important keyboard shortcuts**:
 
-- <kbd>Control</kbd>+<kbd>C</kbd>: **Terminates** the current process (sends SIGINT)
-- <kbd>Control</kbd>+<kbd>Z</kbd>: **Suspends** the current process (sends SIGTSTP) - does NOT terminate it
+- <kbd>Control</kbd>+<kbd>C</kbd>: **Terminates** the current process (sends
+  SIGINT)
+- <kbd>Control</kbd>+<kbd>Z</kbd>: **Suspends** the current process (sends
+  SIGTSTP) - does NOT terminate it
 
-If you use <kbd>Control</kbd>+<kbd>Z</kbd>, the process is only suspended and will continue consuming resources. You must use `kill` or `pkill` to actually terminate suspended processes.
+If you use <kbd>Control</kbd>+<kbd>Z</kbd>, the process is only suspended and
+will continue consuming resources. You must use `kill` or `pkill` to actually
+terminate suspended processes.
 
-For more information on process control and session management, see the [FAQs and Tips](../faqs-tips/faq-tips.md) page.
+For more information on process control and session management, see the
+[FAQs and Tips](../faqs-tips/faq-tips.md) page.
