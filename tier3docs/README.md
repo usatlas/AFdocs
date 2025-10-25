@@ -38,7 +38,7 @@ unix systems and storage.
 
   Details the process of applying for user accounts at BNL, SLAC, and UChicago
 
-  [:octicons-arrow-right-24: Get Started](UserOnboarding/account.md)
+  [:octicons-arrow-right-24: Get Started](computing/index.md)
 
 - :material-rocket-launch:{ .lg .middle } **Quickstart Guides**
 
@@ -46,7 +46,7 @@ unix systems and storage.
 
   Walkthroughs for accessing the Analysis Facilities
 
-  [:octicons-arrow-right-24: Choose Your Facility](sshlogin/index.md)
+  [:octicons-arrow-right-24: Choose Your Facility](computing/index.md)
 
 - :material-robot:{ .lg .middle } **Machine Learning Containers**
 
