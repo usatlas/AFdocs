@@ -71,7 +71,7 @@ All three facilities provide:
 
 !!! tip "Need Help?"
 
-    Visit our [:fontawesome-solid-comments: ATLAS AF Discourse Forum](https://atlas-talk.sdcc.bnl.gov/) for user support, contact, friendly discussion, newsletter and more!
+    See our [Getting Help](../GettingHelp.md) page for support options and how to reach the ATLAS AF team.
 
 ---
 

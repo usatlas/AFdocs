@@ -106,3 +106,325 @@ find the details [here](https://help.duo.com/s/article/3159?language=en_US).
 
 So you can simply enable the screen lock on your phone to resolve the above
 problem.
+
+---
+
+## Linux Basics
+
+### Linux Process Control
+
+Understanding how to control processes is crucial when working on remote systems. Two commonly confused keyboard shortcuts are:
+
+- <kbd>Control</kbd>+<kbd>C</kbd>: **Terminates** the current process by sending the SIGINT signal
+- <kbd>Control</kbd>+<kbd>Z</kbd>: **Suspends** the current process by sending the SIGTSTP signal (does NOT terminate)
+
+The key difference is that <kbd>Control</kbd>+<kbd>Z</kbd> only **suspends** the process - it continues to exist and consume resources, just paused. <kbd>Control</kbd>+<kbd>C</kbd> actually **kills** the process.
+
+#### Working with Suspended Processes
+
+When you suspend a process with <kbd>Control</kbd>+<kbd>Z</kbd>, you'll see output like:
+
+```
+[1]+  Stopped                 python my_script.py
+```
+
+You can then manage suspended processes with these commands:
+
+- `jobs`: List all suspended and background jobs
+- `fg`: Bring the most recent suspended job to the foreground
+- `fg %1`: Bring job number 1 to the foreground
+- `bg`: Allow the most recent suspended job to run in the background
+- `bg %1`: Allow job number 1 to run in the background
+- `kill %1`: Terminate job number 1
+
+#### Example Workflow
+
+```sh
+$ python my_script.py
+# Press Control+Z to suspend
+[1]+  Stopped                 python my_script.py
+
+$ jobs
+[1]+  Stopped                 python my_script.py
+
+$ bg %1
+[1]+ python my_script.py &
+
+$ jobs
+[1]+  Running                 python my_script.py &
+
+$ kill %1
+[1]+  Terminated              python my_script.py
+```
+
+!!! warning "Suspended Processes Still Consume Resources"
+
+    Suspended processes remain in memory and can hold locks on files or resources. Always properly terminate processes you no longer need using `kill` or <kbd>Control</kbd>+<kbd>C</kbd>.
+
+### Session Management with screen and tmux
+
+When working on remote systems, it's crucial to understand that **closing your SSH connection terminates all processes running in that session** unless you use a terminal multiplexer like `screen` or `tmux`.
+
+#### Why Use screen or tmux?
+
+- Keep long-running processes alive after disconnecting
+- Resume your work from a different location
+- Protect against accidental disconnections
+- Run multiple terminal sessions in one SSH connection
+
+#### Using screen
+
+**Start a new screen session:**
+
+```sh
+screen
+```
+
+**Start a named screen session:**
+
+```sh
+screen -S my_analysis
+```
+
+**Detach from a screen session:**
+
+- Press <kbd>Control</kbd>+<kbd>A</kbd>, then <kbd>D</kbd>
+
+**List all screen sessions:**
+
+```sh
+screen -ls
+```
+
+**Reattach to a screen session:**
+
+```sh
+screen -r
+# Or for a specific session:
+screen -r my_analysis
+```
+
+**Kill a screen session:**
+
+```sh
+# From inside the session:
+exit
+# Or from outside:
+screen -X -S my_analysis quit
+```
+
+#### Using tmux
+
+**Start a new tmux session:**
+
+```sh
+tmux
+```
+
+**Start a named tmux session:**
+
+```sh
+tmux new -s my_analysis
+```
+
+**Detach from a tmux session:**
+
+- Press <kbd>Control</kbd>+<kbd>B</kbd>, then <kbd>D</kbd>
+
+**List all tmux sessions:**
+
+```sh
+tmux ls
+```
+
+**Reattach to a tmux session:**
+
+```sh
+tmux attach
+# Or for a specific session:
+tmux attach -t my_analysis
+```
+
+**Kill a tmux session:**
+
+```sh
+tmux kill-session -t my_analysis
+```
+
+!!! danger "Don't Just Close Your SSH Connection"
+
+    **Never** simply close your SSH connection or terminal window if you have important processes running. Always either:
+
+    1. Use screen/tmux and properly detach
+    2. Terminate your processes first with <kbd>Control</kbd>+<kbd>C</kbd> or `kill`
+    3. Ensure processes are designed to run as background daemons
+
+    Closing your connection without detaching from screen/tmux can cause session corruption or loss of work.
+
+### Environment Variables and Shell Configuration
+
+Environment variables control how your shell and programs behave. Understanding these is important for configuring your analysis environment.
+
+#### Common Environment Variables
+
+- `$PATH`: List of directories where the shell looks for executable commands
+- `$HOME`: Your home directory path
+- `$USER`: Your username
+- `$SHELL`: Your current shell (e.g., `/bin/bash` or `/bin/zsh`)
+- `$PWD`: Present working directory
+- `$OLDPWD`: Previous working directory
+
+**View an environment variable:**
+
+```sh
+echo $PATH
+```
+
+**View all environment variables:**
+
+```sh
+env
+# or
+printenv
+```
+
+**Set an environment variable (current session only):**
+
+```sh
+export MY_VAR="value"
+```
+
+#### Shell Configuration Files
+
+Your shell reads configuration files when starting. Understanding these helps you customize your environment:
+
+**For bash:**
+
+- `~/.bash_profile`: Read when you login (e.g., SSH connection)
+- `~/.bashrc`: Read when you start a new interactive shell
+- `~/.bash_history`: Stores your command history
+
+**For zsh:**
+
+- `~/.zprofile`: Read when you login
+- `~/.zshrc`: Read when you start a new interactive shell
+- `~/.zsh_history`: Stores your command history
+
+**Best practice:** In your `~/.bash_profile` (or `~/.zprofile` for zsh), source your rc file:
+
+```sh
+# In ~/.bash_profile
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
+```
+
+This ensures your interactive shell settings are loaded for login shells too.
+
+!!! tip "Testing Configuration Changes"
+
+    After editing configuration files, either:
+
+    - Start a new shell: `bash` or `zsh`
+    - Source the file: `source ~/.bashrc` or `. ~/.bashrc`
+    - Logout and login again
+
+#### Modifying Your PATH
+
+To add a directory to your PATH (e.g., for custom scripts):
+
+```sh
+# Add to ~/.bashrc or ~/.zshrc
+export PATH="$HOME/bin:$PATH"
+```
+
+This prepends `~/bin` to your PATH, so executables there are found first.
+
+### Process Monitoring
+
+Monitoring your processes helps you track resource usage and identify problems.
+
+#### Using top
+
+The `top` command shows real-time process information:
+
+```sh
+top
+```
+
+**Useful top commands** (while running):
+
+- <kbd>q</kbd>: Quit
+- <kbd>k</kbd>: Kill a process (prompts for PID)
+- <kbd>u</kbd>: Filter by username (useful to see only your processes)
+- <kbd>M</kbd>: Sort by memory usage
+- <kbd>P</kbd>: Sort by CPU usage
+
+#### Using htop
+
+`htop` is a more user-friendly alternative to `top` with color and interactive features:
+
+```sh
+htop
+```
+
+Features:
+
+- Color-coded output
+- Mouse support (click to select processes)
+- Tree view of process relationships
+- Easy process killing with <kbd>F9</kbd>
+
+#### Using btop
+
+`btop` is a modern resource monitor with beautiful visualizations:
+
+```sh
+btop
+```
+
+Features:
+
+- Modern, colorful interface
+- Shows CPU, memory, disk, and network usage
+- Process management
+- Customizable themes
+
+#### Finding Your Processes
+
+**List all your processes:**
+
+```sh
+ps -u $USER
+```
+
+**Find processes by name:**
+
+```sh
+ps aux | grep python
+```
+
+**Kill processes by name:**
+
+```sh
+pkill python
+# Or more specific:
+pkill -f my_script.py
+```
+
+**Kill all your processes matching a pattern:**
+
+```sh
+pkill -u $USER -f "jupyter"
+```
+
+!!! warning "Be Careful with pkill"
+
+    `pkill` can terminate multiple processes at once. Always double-check what you're killing:
+
+    ```sh
+    # First check what would be killed:
+    pgrep -u $USER -f "pattern"
+    # Then kill:
+    pkill -u $USER -f "pattern"
+    ```

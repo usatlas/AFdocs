@@ -67,14 +67,22 @@ nav:
       - Getting Help: GettingHelp.md
       - FAQs and Tips: faqs-tips/faq-tips.md
 
-  - Access:
-      - About the Facilities: UserOnboarding/facility.md
-      - Applying for User Accounts: UserOnboarding/account.md
-      - Quickstart Guides:
-          - Overview: sshlogin/index.md
-          - Access BNL: sshlogin/ssh2BNL.md
-          - Access UChicago: sshlogin/UChicago.md
-          - Access SLAC: sshlogin/ssh2SLAC.md
+  - Computing:
+      - computing/index.md
+      - About The Facilities: UserOnboarding/facility.md
+      - Signing Up:
+          - BNL: computing/account-BNL.md
+          - UChicago: computing/account-UChicago.md
+          - SLAC: computing/account-SLAC.md
+      - Accessing:
+          - SSH Guide: computing/ssh-guide.md
+          - BNL: sshlogin/ssh2BNL.md
+          - UChicago: sshlogin/UChicago.md
+          - SLAC: sshlogin/ssh2SLAC.md
+      - Using Batch:
+          - BNL: sshlogin/batch-BNL.md
+          - UChicago: sshlogin/batch-UChicago.md
+          - SLAC: sshlogin/batch-SLAC.md
 
   - Environments:
       - Containers:

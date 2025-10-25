@@ -54,11 +54,6 @@ code
 
 ## Getting help
 
-Please use the following e-mail addresses to get help. The division below is not
-strict. Questions will be routed to appropriate staff members.
+!!! info "Need help?"
 
-1. Use atlas-us-UChicago-acf@cern.ch for ATLAS specific questions and
-   requestions, including ATLAS software related issues.
-2. Use unix-admin@UChicago.stanford.edu for all other questions.
-
-For software additions and upgrades please contact ivukotic@uchicago.edu.
+    See our [Getting Help](../GettingHelp.md) page for support options and how to reach the ATLAS AF team.

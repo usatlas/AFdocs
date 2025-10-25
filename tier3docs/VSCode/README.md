@@ -1,6 +1,6 @@
 # Using VSCode
 
-# Introduction
+## Introduction
 
 [Visual Studio Code](https://code.visualstudio.com/) is a lightweight but
 powerful source code editor which runs on your desktop. It provides a rich code
@@ -16,7 +16,7 @@ editing experience with features like
 You can enhance its functionality by installing extensions from
 [the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/VSCode).
 
-# Remote-Tunnels
+## Remote-Tunnels
 
 The Visual Studio Code
 [Remote - Tunnels](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server)
@@ -114,3 +114,63 @@ following screenshot:
 
 Upon opening a folder/file, you just click on the button of
 `Yes, I trusted the authors`.
+
+---
+
+## Remote SSH Extension
+
+The Visual Studio Code [Remote - SSH](https://code.visualstudio.com/docs/remote/ssh) extension lets you use any remote machine with an SSH server as your development environment. This is different from Remote Tunnels - it uses direct SSH connections to the remote host.
+
+The Remote - SSH extension:
+
+- Runs commands and extensions directly on the remote machine
+- Provides a local-quality development experience with full IntelliSense, debugging, and terminal access
+- Requires SSH access to be configured (see our [SSH Access Guide](../computing/ssh-guide.md))
+
+### SSH Keys and Passphrases
+
+When using the Remote - SSH extension, SSH keys with passphrases can require additional configuration. VS Code may have difficulty prompting for passphrases during connection.
+
+You have two options:
+
+1. **Use SSH Agent** (recommended): Configure your SSH agent to cache your passphrase. See the [SSH Access Guide](../computing/ssh-guide.md#ssh-agent-setup) for setup instructions.
+
+2. **Use keys without passphrases**: Generate a separate SSH key without a passphrase specifically for VS Code connections. Note that this is less secure.
+
+For more details, see the [VS Code SSH Git Authentication FAQ](https://code.visualstudio.com/docs/sourcecontrol/faq#_can-i-use-ssh-git-authentication-with-vs-code).
+
+### Disconnecting from a Remote Host
+
+To close the connection when you finish editing files on the remote host:
+
+- Choose **File > Close Remote Connection** to disconnect from the host
+- The default configuration does not include a keyboard shortcut for this command
+- You can also simply exit VS Code to close the remote connection
+
+---
+
+## Important: Background Jobs Continue Running
+
+!!! danger "Closing VS Code Does NOT Terminate Jobs"
+
+    **Critical**: Closing VS Code or disconnecting from an SSH session does NOT terminate jobs running on the remote machine. This includes:
+
+    - Jupyter notebook kernels
+    - Running scripts or processes
+    - Background jobs
+    - Interactive programs
+
+    **You must explicitly terminate processes** using commands like `kill`, `pkill`, or by using proper termination methods within your programs.
+
+### Common Misconceptions
+
+Many users mistakenly believe that closing VS Code or their SSH session will clean up running jobs. **This is not true.** The SSH session is just a connection to the server - closing it does not affect processes running on the server.
+
+**Important keyboard shortcuts**:
+
+- <kbd>Control</kbd>+<kbd>C</kbd>: **Terminates** the current process (sends SIGINT)
+- <kbd>Control</kbd>+<kbd>Z</kbd>: **Suspends** the current process (sends SIGTSTP) - does NOT terminate it
+
+If you use <kbd>Control</kbd>+<kbd>Z</kbd>, the process is only suspended and will continue consuming resources. You must use `kill` or `pkill` to actually terminate suspended processes.
+
+For more information on process control and session management, see the [FAQs and Tips](../faqs-tips/faq-tips.md) page.

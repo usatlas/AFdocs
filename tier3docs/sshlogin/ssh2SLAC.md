@@ -58,6 +58,7 @@ For more info on this topic, especially how to do this in batch jobs, please
 refer to
 [ATLAS Canada Twiki](https://twiki.atlas-canada.ca/bin/view/AtlasCanada/Containers)
 
+<<<<<<< HEAD
 ### Submitting SLURM jobs
 
 All US ATLAS users can submit batch jobs using Slurm account **atlas:usatlas**,
@@ -153,13 +154,15 @@ unix `cp -r -p` command. `rsync` is also a good and easy to use tool. Copying
 data may take days. So you may want to run your `cp` or `rsync` inside a
 `screen` session.
 
-### Migration from older faculity to S3DF
+## Migration from older faculity to S3DF
 
 Please refer to the following slides for plan and resentation about the
 migration.
 
 1. [User data migration plan](https://docs.google.com/document/d/1-4YHRG2AswbJiBRP5EkWK86VPXW_x2HfWFrpTyTy5VA/edit?usp=sharing)
 2. [Presentation at the SLAC ATLAS Group Meeting 2024-02-16](https://docs.google.com/presentation/d/1Hl1gDhSL8K0YFNVLHLm95a6Uo3p8SoCjdhhNQpg1gwY/edit?usp=sharing)
+
+---
 
 # Old obsolete systems
 
@@ -168,7 +171,7 @@ facilities. Please migrate to S3DF ASAP as SLAC has set a deadline to
 decommission most of the services in these two older facilities around
 April 2024.
 
-## <a name="sdf"></a>SSH login to SDF
+## SSH login to SDF
 
 `ssh <username>@sdf-login.slack.stanford.edu`
 
@@ -185,36 +188,14 @@ please go to
 After this, give it a hour for the changes to be propagated through SLAC
 computing.
 
-## Submit SLURM batch job at SDF
-
-The above URL is actually [the main page of SDF](https://sdf.slack.stanford.edu)
-(login info at the upper half of the page, and user document at the lower half
-of the page). At there you can also find
-[the basic info about using SLURM batch system](https://sdf.slack.stanford.edu/public/doc/#/batch-compute?id=using-slurm).
-One of the lines in the example SLURM submission script,
-`#SBATCH --partition=shared` allows you to specify "shared" or "usatlas".
-
-ATLAS owns a small fraction of CPU resource in SDF. "usatlas" will give you
-guaranteed access to ATLAS owned CPUs but you may have to wait if other ATLAS
-users are using them. "shared" allows you to access a large pool of CPUs (own by
-others) so the waiting time will likely be shorter. But there is small risk that
-your job will be pre-emptied. The rule of thumb is to run short jobs in
-"shared", and run long jobs (12h+) in "usatlas".
-
-To request a GPU, add "#SBATCH --gpus=1" to the submission script. All installed
-GPUs are Nvidia CUDA GPUs. Since ATLAS currently does not own a GPU at SDF, you
-will need to use `#SBATCH --partition=shared` if you request a GPU.
-
-## SSH login to the AFS environment and submit LSF batch jobs
+## SSH login to the AFS environment
 
 `ssh <username>@centos7.slack.stanford.edu`
 
 You should use unix account password to login. Note that as SLAC retires the AFS
 environment in the next few years, this type of account (unix) may disappear.
 
-The following page has many useful info about using the AFS environment,
-esepecially with regard to using the LSF batch system.
-
+More info about using the AFS environment can be found at:
 https://confluence.slack.stanford.edu/display/Atlas/SLAC+Analysis+Computing+Facility
 
 ## Remote X-windows access

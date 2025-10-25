@@ -98,9 +98,6 @@ with SLURM. Check out [this doc](SLACJupyterExtraFuncs.md) on how to do that.
 
 ## Getting help
 
-Please use the following e-mail addresses to get help. The division below is not
-strict. Questions will be routed to appropriate staff members.
+!!! info "Need help?"
 
-1. Use atlas-us-slac-acf@cern.ch for ATLAS specific questions and requestions,
-   including ATLAS software related issues.
-2. Use unix-admin@slack.stanford.edu for all other questions
+    See our [Getting Help](../GettingHelp.md) page for support options and how to reach the ATLAS AF team.
