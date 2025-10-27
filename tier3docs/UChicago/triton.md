@@ -53,8 +53,8 @@ Include in your request:
 
 #### 2. Create Your Model Directory
 
-Once approved, you'll receive S3 credentials. Create a subdirectory in the
-model repository using your AF username:
+Once approved, you'll receive S3 credentials. Create a subdirectory in the model
+repository using your AF username:
 
 ```bash
 s3://triton-models/<your-username>/
@@ -87,8 +87,8 @@ Upload your models to your directory using any S3-compatible client:
 #### 4. Request Model Activation
 
 After uploading your models,
-[contact the AF administrators](../getting_help.md#facility-specific-support)
-to have your models added to the Triton server configuration.
+[contact the AF administrators](../getting_help.md#facility-specific-support) to
+have your models added to the Triton server configuration.
 
 Include:
 
