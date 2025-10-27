@@ -35,9 +35,8 @@ To upload and deploy your machine learning models on Triton, follow these steps:
 
 #### 1. Request Access and Credentials
 
-Contact the UChicago AF administrators to request access to the S3 model repository:
-
-**Email:** [atlas-us-chicago-tier3-admins@lists.uchicago.edu](mailto:atlas-us-chicago-tier3-admins@lists.uchicago.edu)
+[Contact the UChicago AF administrators](../getting_help.md#facility-specific-support)
+to request access to the S3 model repository.
 
 Include in your request:
 - Your UChicago AF username
@@ -75,9 +74,8 @@ mc cp --recursive /path/to/your/model s3/triton-models/<your-username>/model-nam
 
 #### 4. Request Model Activation
 
-After uploading your models, contact the AF administrators again to have your models added to the Triton server configuration:
-
-**Email:** [atlas-us-chicago-tier3-admins@lists.uchicago.edu](mailto:atlas-us-chicago-tier3-admins@lists.uchicago.edu)
+After uploading your models, [contact the AF administrators](../getting_help.md#facility-specific-support)
+to have your models added to the Triton server configuration.
 
 Include:
 - Your username
@@ -115,9 +113,8 @@ The AF team can configure GPU affinity for your inference service to ensure opti
 
 ## Support and Contact
 
-For any questions, access requests, model configuration issues, or troubleshooting assistance:
-
-**Contact:** [atlas-us-chicago-tier3-admins@lists.uchicago.edu](mailto:atlas-us-chicago-tier3-admins@lists.uchicago.edu)
+For any questions, access requests, model configuration issues, or troubleshooting assistance,
+please see the [Getting Help](../getting_help.md) page for UChicago facility contact information.
 
 ---
 

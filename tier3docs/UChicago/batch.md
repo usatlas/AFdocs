@@ -31,9 +31,9 @@ for small files such as job logs, submit files, code and so on.
 Data files, on the other hand, should be placed in the `$DATA` filesystem
 (`/data/<username>`) which is more suitable for large files but is **not**
 backed up. By default, you will be given a 5TB quota on this filesystem. If you
-are working on an analysis that requires more local storage, please reach out to
-us at **atlas-us-chicago-tier3-admins@cern.ch** and we'll do our best to
-accommodate your request.
+are working on an analysis that requires more local storage, please
+[contact the UChicago facility team](../getting_help.md#facility-specific-support)
+and we'll do our best to accommodate your request.
 
 Finally, jobs submitted to HTCondor will be assigned to a server with one or
 more dedicated high-speed "scratch" disks to use as working space when

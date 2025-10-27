@@ -12,7 +12,7 @@ like Gmail, Outlook, iCloud, etc. won't be accepted.
 
 !!! info "Not an ATLAS member yet?"
 
-    If you are not yet an ATLAS member, but are working with someone in ATLAS, please email **atlas-us-chicago-tier3-admins@cern.ch** explaining who you are working with and why you need an account.
+    If you are not yet an ATLAS member, but are working with someone in ATLAS, please [contact the UChicago facility team](../getting_help.md#facility-specific-support) explaining who you are working with and why you need an account.
 
 ---
 
@@ -62,9 +62,7 @@ ssh login.af.uchicago.edu
 
 If it does not work, please double check that you have been approved, have
 uploaded your public key and have waited at least 15 minutes. If you still have
-an issue, feel free to reach out to us for help either via
-[Discourse](https://atlas-talk.sdcc.bnl.gov/) or email
-**atlas-us-chicago-tier3-admins@cern.ch**.
+an issue, feel free to [reach out for help](../getting_help.md).
 
 ---
 

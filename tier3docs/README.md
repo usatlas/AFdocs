@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Public Documentation for US ATLAS Analysis Facilities
 
 !!! warning "Privacy Disclaimer"

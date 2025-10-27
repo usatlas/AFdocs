@@ -16,10 +16,9 @@
     command `/usr/lpp/mmfs/bin/mmlsquota atlasgpfs01` but note that _the actual
     quota and usage is half the values displayed._
 2.  In case the subdir `/pnfs/usatlas.bnl.gov/users/$USERNAME` does not exist,
-    you can request its creation via email to
-    <RT-RACF-StorageManagement@bnl.gov>.
-3.  Additional space on BNLBox is available upon email request to
-    <RT-RACF-StorageManagement@bnl.gov>.
+    you can [request its creation from the BNL facility team](../getting_help.md#facility-specific-support).
+3.  Additional space on BNLBox is available upon
+    [request to the BNL facility team](../getting_help.md#facility-specific-support).
 4.  And there is also a 9TB **scratch disk** `/usatlas/scratch/` shared among
     all users, where the files can be kept for **30 days**. Please make your own
     subdir `/usatlas/scratch/$USER` there.
@@ -130,9 +129,8 @@ Options:
 
 This section describes how to download datasets from the grid to your pNFS area
 (/pnfs/usatlas.bnl.gov/users/$USER/). If for some reason you do not have a pNFS
-area you can fill out a ticket to this email group:
-<RT-RACF-StorageManagement@bnl.gov>. If you have an pNFS area your name should
-appear on this website:
+area you can [request one from the BNL facility team](../getting_help.md#facility-specific-support).
+If you have an pNFS area your name should appear on this website:
 [https://www.sdcc.bnl.gov/experiments/usatlas/list-users-institutes]
 (https://www.sdcc.bnl.gov/experiments/usatlas/list-users-institutes).
 
@@ -296,8 +294,8 @@ data12_8TeV:data12_8TeV.00200863.physics_Egamma.merge.NTUP_PHOTON.r4065_p1278_p1
 Total Local Usage: 923 (GB) with 829 files
 ```
 
-If you have any questions, just open a new ticket at BNL RT
-(<RT-RACF-USAtlasSharedT3@bnl.gov>).
+If you have any questions, please
+[contact the BNL facility team](../getting_help.md#facility-specific-support).
 
 ### Access your data in your pNFS space
 

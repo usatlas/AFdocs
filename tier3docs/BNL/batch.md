@@ -14,8 +14,8 @@ consult this list of users:
 You can also find your group information using the interactive command:
 `whatgroup`.
 
-If your name does not appear here, send an email to:
-<RT-RACF-BatchSystems@bnl.gov>
+If your name does not appear here,
+[contact the BNL facility team](../getting_help.md#facility-specific-support).
 
 After the batch system migration into the shared pool at BNL in March 2019, it
 need not specify the group in the condor job description.
