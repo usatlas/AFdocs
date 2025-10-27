@@ -235,7 +235,6 @@ markdown_extensions:
       custom_checkbox: true
       clickable_checkbox: true
   - pymdownx.tilde:
-  - mdx_truly_sane_lists: # for 2-space indented lists, https://github.com/mkdocs/mkdocs/issues/545
   - attr_list:
   - md_in_html:
   - pymdownx.blocks.caption:

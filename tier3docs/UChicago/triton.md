@@ -6,14 +6,12 @@ The Triton Inference Server is deployed as a Kubernetes cluster service within
 the UChicago Analysis Facility. This service provides high-performance AI model
 inference with automatic scaling capabilities.
 
-**Key Information:**
+!!! info "Key Information"
 
-- **Access:** Internal to UChicago AF Kubernetes cluster only (not externally
-  exposed)
-- **Endpoint:** `triton-traefik.triton.svc.cluster.local:8000`
-- **Version:** v2.61.0
-- **Autoscaling:** Managed by Horizontal Pod Autoscaler (HPA) based on average
-  queue time metrics
+    - **Access:** Internal to UChicago AF Kubernetes cluster only (not externally exposed)
+    - **Endpoint:** `triton-traefik.triton.svc.cluster.local:8000`
+    - **Version:** v2.61.0
+    - **Autoscaling:** Managed by Horizontal Pod Autoscaler (HPA) based on average queue time metrics
 
 The Triton service automatically scales the number of server instances based on
 workload demand, ensuring efficient resource utilization.
@@ -42,65 +40,68 @@ system managed by the UChicago Analysis Facility.
 
 To upload and deploy your machine learning models on Triton, follow these steps:
 
-#### 1. Request Access and Credentials
+1.  **Request Access and Credentials**
 
-[Contact the UChicago AF administrators](../getting_help.md#facility-specific-support)
-to request access to the S3 model repository.
+    [Contact the UChicago AF administrators](../getting_help.md#facility-specific-support)
+    to request access to the S3 model repository.
 
-Include in your request:
+    Include in your request:
 
-- Your UChicago AF username
-- Brief description of your models and use case
-- Expected storage requirements
+    <!-- prettier-ignore (https://github.com/prettier/prettier/issues/18005) -->
+    - Your UChicago AF username
+    - Brief description of your models and use case
+    - Expected storage requirements
 
-#### 2. Create Your Model Directory
+2.  **Create Your Model Directory**
 
-Once approved, you'll receive S3 credentials. Create a subdirectory in the model
-repository using your AF username:
+    Once approved, you'll receive S3 credentials. Create a subdirectory in the
+    model repository using your AF username:
 
-```bash
-s3://triton-models/<your-username>/
-```
+    ```bash
+    s3://triton-models/<your-username>/
+    ```
 
-This keeps your models organized and separates them from other users' models.
+    This keeps your models organized and separates them from other users'
+    models.
 
-#### 3. Upload Models
+3.  **Upload Models**
 
-Upload your models to your directory using any S3-compatible client:
+    Upload your models to your directory using any S3-compatible client:
 
-**Option 1: AWS CLI**
+    === "AWS CLI"
 
-```bash
-aws s3 cp /path/to/your/model s3://triton-models/<your-username>/model-name/ --recursive
-```
+        ```bash
+        aws s3 cp /path/to/your/model s3://triton-models/<your-username>/model-name/ --recursive
+        ```
 
-**Option 2: s3cmd**
+    === "s3cmd"
 
-```bash
-s3cmd put /path/to/your/model s3://triton-models/<your-username>/model-name/ --recursive
-```
+        ```bash
+        s3cmd put /path/to/your/model s3://triton-models/<your-username>/model-name/ --recursive
+        ```
 
-**Option 3: MinIO Client**
+    === "MinIO Client"
 
-```bash
-mc cp --recursive /path/to/your/model s3/triton-models/<your-username>/model-name/
-```
+        ```bash
+        mc cp --recursive /path/to/your/model s3/triton-models/<your-username>/model-name/
+        ```
 
-#### 4. Request Model Activation
+4.  **Request Model Activation**
 
-After uploading your models,
-[contact the AF administrators](../getting_help.md#facility-specific-support) to
-have your models added to the Triton server configuration.
+    After uploading your models,
+    [contact the AF administrators](../getting_help.md#facility-specific-support)
+    to have your models added to the Triton server configuration.
 
-Include:
+    Include:
 
-- Your username
-- Model directory path
-- Model name and type
-- Any specific backend requirements (see below)
+    <!-- prettier-ignore (https://github.com/prettier/prettier/issues/18005) -->
+    - Your username
+    - Model directory path
+    - Model name and type
+    - Any specific backend requirements (see below)
 
-The Triton server polls the model repository every 60 seconds, so once
-configured, your models should become available automatically.
+    The Triton server polls the model repository every 60 seconds, so once
+    configured, your models should become available automatically.
 
 ## Requesting Additional Features
 
