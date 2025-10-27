@@ -16,7 +16,8 @@
     command `/usr/lpp/mmfs/bin/mmlsquota atlasgpfs01` but note that _the actual
     quota and usage is half the values displayed._
 2.  In case the subdir `/pnfs/usatlas.bnl.gov/users/$USERNAME` does not exist,
-    you can [request its creation from the BNL facility team](../getting_help.md#facility-specific-support).
+    you can
+    [request its creation from the BNL facility team](../getting_help.md#facility-specific-support).
 3.  Additional space on BNLBox is available upon
     [request to the BNL facility team](../getting_help.md#facility-specific-support).
 4.  And there is also a 9TB **scratch disk** `/usatlas/scratch/` shared among
@@ -129,7 +130,8 @@ Options:
 
 This section describes how to download datasets from the grid to your pNFS area
 (/pnfs/usatlas.bnl.gov/users/$USER/). If for some reason you do not have a pNFS
-area you can [request one from the BNL facility team](../getting_help.md#facility-specific-support).
+area you can
+[request one from the BNL facility team](../getting_help.md#facility-specific-support).
 If you have an pNFS area your name should appear on this website:
 [https://www.sdcc.bnl.gov/experiments/usatlas/list-users-institutes]
 (https://www.sdcc.bnl.gov/experiments/usatlas/list-users-institutes).
