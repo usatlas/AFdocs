@@ -40,68 +40,65 @@ system managed by the UChicago Analysis Facility.
 
 To upload and deploy your machine learning models on Triton, follow these steps:
 
-1.  **Request Access and Credentials**
+#### 1. Request Access and Credentials
 
-    [Contact the UChicago AF administrators](../getting_help.md#facility-specific-support)
-    to request access to the S3 model repository.
+[Contact the UChicago AF administrators](../getting_help.md#facility-specific-support)
+to request access to the S3 model repository.
 
-    Include in your request:
+Include in your request:
 
-    <!-- prettier-ignore (https://github.com/prettier/prettier/issues/18005) -->
-    - Your UChicago AF username
-    - Brief description of your models and use case
-    - Expected storage requirements
+- Your UChicago AF username
+- Brief description of your models and use case
+- Expected storage requirements
 
-2.  **Create Your Model Directory**
+#### 2. Create Your Model Directory
 
-    Once approved, you'll receive S3 credentials. Create a subdirectory in the
-    model repository using your AF username:
+Once approved, you'll receive S3 credentials. Create a subdirectory in the
+model repository using your AF username:
+
+```bash
+s3://triton-models/<your-username>/
+```
+
+This keeps your models organized and separates them from other users' models.
+
+#### 3. Upload Models
+
+Upload your models to your directory using any S3-compatible client:
+
+=== "AWS CLI"
 
     ```bash
-    s3://triton-models/<your-username>/
+    aws s3 cp /path/to/your/model s3://triton-models/<your-username>/model-name/ --recursive
     ```
 
-    This keeps your models organized and separates them from other users'
-    models.
+=== "s3cmd"
 
-3.  **Upload Models**
+    ```bash
+    s3cmd put /path/to/your/model s3://triton-models/<your-username>/model-name/ --recursive
+    ```
 
-    Upload your models to your directory using any S3-compatible client:
+=== "MinIO Client"
 
-    === "AWS CLI"
+    ```bash
+    mc cp --recursive /path/to/your/model s3/triton-models/<your-username>/model-name/
+    ```
 
-        ```bash
-        aws s3 cp /path/to/your/model s3://triton-models/<your-username>/model-name/ --recursive
-        ```
+#### 4. Request Model Activation
 
-    === "s3cmd"
+After uploading your models,
+[contact the AF administrators](../getting_help.md#facility-specific-support)
+to have your models added to the Triton server configuration.
 
-        ```bash
-        s3cmd put /path/to/your/model s3://triton-models/<your-username>/model-name/ --recursive
-        ```
+Include:
 
-    === "MinIO Client"
+- Your username
+- Model directory path
+- Model name and type
+- Any specific backend requirements (see below)
 
-        ```bash
-        mc cp --recursive /path/to/your/model s3/triton-models/<your-username>/model-name/
-        ```
-
-4.  **Request Model Activation**
-
-    After uploading your models,
-    [contact the AF administrators](../getting_help.md#facility-specific-support)
-    to have your models added to the Triton server configuration.
-
-    Include:
-
-    <!-- prettier-ignore (https://github.com/prettier/prettier/issues/18005) -->
-    - Your username
-    - Model directory path
-    - Model name and type
-    - Any specific backend requirements (see below)
-
-    The Triton server polls the model repository every 60 seconds, so once
-    configured, your models should become available automatically.
+The Triton server polls the model repository every 60 seconds, so once
+configured, your models should become available automatically.
 
 ## Requesting Additional Features
 
