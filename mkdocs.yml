@@ -104,7 +104,7 @@ nav:
           - UChicago: UChicago/xcache.md
           - SLAC: SLAC/xcache.md
 
-  - Environments:
+  - Software & Tools:
       - Containers:
           - Machine Learning:
               - Info: containers/ml/info.md
@@ -132,7 +132,11 @@ nav:
               - xAOD Check: jupyter/examples/xAODcheck.md
               - Read xAOD with PyROOT: https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
               - Uproot Variable Conversion: jupyter/examples/convert_specific_variables.py.txt
-      - Tools:
+      - AI Inference:
+          - Triton (UChicago):
+              - User Guide: UChicago/triton.md
+              - Deployment Notes: UChicago/triton_deployment.md
+      - Development Tools:
           - Using VSCode: tools/vscode.md
 
   - Tutorials:
