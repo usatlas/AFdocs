@@ -142,16 +142,11 @@ nav:
       - Grid Examples: tutorials/201908/grid.md
 
 not_in_nav: |
-  /ATLAS-Containers/index.md
   /LLM/README.md
   /LLM/RunYourOwnOllama.md
   /LLM/SharedLLMservice.md
   /ML-Containers/ML-Containers/README.md
   /ML-Containers/ML-Containers/ml-images-ReadMe.md
-  /UserOnboarding/contact.md
-  /UserOnboarding/account/BNLFederatedID.md
-  /doma/Xcache/BNL/Using-Xcache-at-BNL.md
-  /testDir/BNL/README.md
 
 plugins:
   # Built-in
