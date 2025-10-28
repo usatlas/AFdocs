@@ -3,7 +3,7 @@
 This guide covers how to [use the XCache server](./xcache.md) and manage
 authentication credentials for data access.
 
-For accessing CERN EOS storage, see [CERN EOS Access](../computing/cern_eos.md).
+For accessing CERN EOS storage, see [CERN EOS Access](eos.md).
 
 ---
 

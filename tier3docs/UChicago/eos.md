@@ -66,8 +66,6 @@ cp /eos/user/d/dschrute/file.txt  $HOME/codingx/ # eg: /home/dschrute/codingx/
 # use `cp -r` if you need to copy a directory
 ```
 
-For accessing CERN EOS storage, see [CERN EOS Access](../computing/cern_eos.md).
-
 ---
 
 # CERN Kerberos ticket

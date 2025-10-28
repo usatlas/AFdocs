@@ -9,7 +9,7 @@ For XCache server usage and examples, see [XCache at BNL](xcache.md).
 
 ---
 
-For accessing CERN EOS storage, see [CERN EOS Access](../computing/cern_eos.md).
+For accessing CERN EOS storage, see [CERN EOS Access](eos.md).
 
 ## Access to BNL files from CERN and outside BNL
 
