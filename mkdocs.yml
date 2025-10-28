@@ -171,7 +171,8 @@ plugins:
 markdown_extensions:
   # Built-in
   - markdown.extensions.abbr:
-  - markdown.extensions.admonition:
+  # disable in favor of pymdownx.blocks.admonition
+  #- markdown.extensions.admonition:
   - markdown.extensions.attr_list:
   - markdown.extensions.def_list:
   - markdown.extensions.footnotes:
@@ -234,6 +235,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
+  - pymdownx.blocks.admonition:
   - pymdownx.tilde:
   - attr_list:
   - md_in_html:

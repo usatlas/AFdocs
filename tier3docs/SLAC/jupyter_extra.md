@@ -1,13 +1,5 @@
 # Extend functionalities
 
-## Table of contents
-
-- [Use DASK with SLURM](#use-dask-with-slurm)
-    - [Access DASK Dashboard](#access-dask-dashboard)
-- [Use your own Conda environment](#use-your-own-conda-environment)
-- [Using built-in Conda environments](#using-built-in-conda-environments)
-- [Install PYCUDA](#install-pycuda)
-
 Though pip, you can add more packages to your python/Jupyter. The following are
 examples that apply to python3
 

@@ -1,20 +1,5 @@
 # Running the tutorial example at BNL Tier3
 
-## Table of Contents
-
-- [Login to BNL machines](#login-to-bnl-machines)
-- [Location of this analysis example package at BNL](#location-of-this-analysis-example-package-at-bnl)
-- [Env Setup and Package Building](#env-setup-and-package-building)
-    - [Setup of the Release Env](#setup-of-the-release-env)
-    - [Package Building](#package-building)
-- [Dataset Preparation](#dataset-preparation)
-- [Interactive Job Running at BNL](#interactive-job-running-at-bnl)
-- [Condor Batch Job Running at BNL](#condor-batch-job-running-at-bnl)
-- [Using Xcache at BNL](#using-xcache-at-bnl)
-    - [Using Xcache (gLFN) at BNL](#using-xcache-glfn-at-bnl)
-
----
-
 ## Login to BNL machines
 
 First you need ssh to spar machines at BNL:

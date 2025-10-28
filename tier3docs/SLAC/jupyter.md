@@ -1,15 +1,5 @@
 # [The SLAC JupyterLab](https://sdf.slac.stanford.edu/public/doc/#/interactive-compute?id=jupyter)
 
-## Table of contents
-
-- [Login to JupyterLab at SLAC](#login-to-jupyterlab-at-slac)
-- [How to launch JupyterLab at SLAC](#how-to-launch-jupyterlab-at-slac)
-- [How to launch JupyterLab at SLAC](#how-to-launch-jupyterlab-at-slac)
-- [Run your own Jupyter environment](#run-your-own-jupyter-environment)
-- [Kernels and extensions in the ATLAS Jupyter environment](#kernels-and-extensions-in-the-atlas-jupyter-environment)
-- [Extend ATLAS JupyterLab Functionalities](#extend-atlas-jupyterlab-functionalities)
-- [Getting help](#getting-help)
-
 ## Login to JupyterLab at SLAC
 
 Please refer to ["S3DF: a new ..."](accessing.md#accessing-to-s3df) for

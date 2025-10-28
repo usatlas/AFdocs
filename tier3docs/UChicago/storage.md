@@ -1,11 +1,5 @@
 # Data Storage at UChicago
 
-## Table of contents
-
-- [Storage Limits](#storage-limits)
-- [FileSystems](#filesystems)
-- [LOCALGROUPDISK](#localgroupdisk)
-
 ## Storage Limits
 
 <table>

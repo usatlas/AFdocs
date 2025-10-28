@@ -2,14 +2,6 @@
 
 ![underconstruction](../images/underconstruction.jpg)
 
-## Table of contents
-
-- [Go to JupyterLab at UChicago](#login-to-jupyterlab-at-uchicago)
-- [How to launch a JupyterLab at UChicago](#how-to-launch-jupyterlab-at-uchicago)
-- [Using ATLAS environment at JupyterLab UChicago](#using-atlas-environment-at-jupyterlab-uchicago)
-- [Images](#images)
-- [Getting help](#getting-help)
-
 ## Login to JupyterLab at UChicago
 
 ## How to launch JupyterLab at UChicago

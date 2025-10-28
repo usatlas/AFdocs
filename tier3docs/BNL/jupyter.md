@@ -1,11 +1,5 @@
 # [The BNL JupyterLab](https://atlas-jupyter.sdcc.bnl.gov)
 
-## Table of Contents
-
-- [The JupyterHub resources on HTC cluster and HPC clusters](#the-jupyterhub-resources-on-htc-cluster-and-hpc-clusters)
-- [Kernels and extensions in the ATLAS Jupyter environment](#kernels-and-extensions-in-the-atlas-jupyter-environment)
-- [Getting help](#getting-help)
-
 Before accessing the BNL JupyterHub - <https://atlas-jupyter.sdcc.bnl.gov/>,
 please apply for a BNL computing account.
 [Link to the instructions.](federated_id.md). BNL's Scientific Data Computing
