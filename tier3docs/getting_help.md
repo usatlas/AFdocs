@@ -10,7 +10,8 @@ hide:
 
 ![Discourse Logo](images/discourse.png){ align=left width=110px }
 
-/// admonition | Need Help? type: question
+/// admonition | Need Help?<!-- prettier-ignore -->
+    type: question
 
 For help with ATLAS software, using the facilities, or are generally stuck,
 visit our
