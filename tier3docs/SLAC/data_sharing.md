@@ -5,60 +5,11 @@ servers and the Data Sharing Store.
 
 ---
 
-## Using the Xcache servers
+For XCache server usage and examples, see [XCache at SLAC](xcache.md).
 
-Both BNL and SLAC have set up **Xcache servers** to help cache locally the files
-on the grid or **CERN EOS**. Currently there are 60TB on the BNL Xcache server,
-and 20TB on the SLAC Xcache server.
+## CERN EOS Access
 
-The Xcache servers:
-
-- Provide **rucioN2N feature**, enabling users to access any files on the grid
-  without knowing its exact site location and the file path.
-- Help **cache locally** the content of remote files actually read in the first
-  access, thus improves the read performance for sequential access. If only
-  partial content of a file is read, then only that part would be cached.
-
-You can run the predefined command **Xcache_ls.py** to generate a clist file
-(containing a list of physical file paths) for given datasets, then use the
-clist in your jobs.
-
-### Using Xcache_ls.py
-
-Run **Xcache_ls.py -h** to get the full usage:
-
-```
-% Xcache_ls.py -h
-Usage:
-     Xcache_ls.py [options] dsetNamePattern[,dsetNamePattern2[,more patterns]]
-  or
-     Xcache_ls.py [options] --eos eosPath/
-  or
-     Xcache_ls.py [options] --eos eosPath/filenamePattern
-  or
-     Xcache_ls.py [options] dsetListFile
-
-  This script generates a list (clist) of
-  Xcache gLFN (global logical filename) access path
-  for given datasets on Atlas grid sites.
-  Wildcard is supported in the dataset name pattern.
-
-Options:
-  -h, --help            show this help message and exit
-  -v                    Verbose
-  -V, --version         print my version
-  -X XCACHESITE, --XcacheSite=XCACHESITE
-                        Specify a Xcache server site of BNL or SLAC
-                        (default=BNL)
-  -o OUTCLISTFILE, --outClistFile=OUTCLISTFILE
-                        write the list into a file instead of the screen
-  --eos=EOS_PATH, --cerneos=EOS_PATH
-                        List files (*.root and *.root.[0-9] on default) on
-                        CERN EOS
-  -d OUTCLISTDIR, --dirForClist=OUTCLISTDIR
-                        write the list into a directory with a file per
-                        dataset
-```
+To be documented.
 
 ---
 

@@ -80,6 +80,9 @@ nav:
               - SLAC: SLAC/account.md
           - Accessing:
               - SSH Guide: computing/ssh_guide.md
+              - EOS:
+                  - BNL: BNL/eos.md
+                  - UChicago: UChicago/eos.md
               - BNL: BNL/accessing.md
               - UChicago: UChicago/accessing.md
               - SLAC: SLAC/accessing.md

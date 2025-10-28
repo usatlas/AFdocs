@@ -33,7 +33,11 @@ analysis code you should take advantage of [the batch system](batch.md).
 
 ### File transfer from/to BNL machines
 
+<!-- TODO: Consider adding file transfer content or removing this section if covered elsewhere -->
+
 ### Connection to NX servers at BNL
+
+<!-- TODO: Consider extracting NX/NoMachine content to separate remote_desktop.md -->
 
 If you want to use a graphical environment, you can use
 [NoMachine](https://www.nomachine.com/getting-started-with-nomachine) client to
@@ -45,6 +49,8 @@ connect to the new NX servers on web browsers, using the URL:
 [https://nx.sdcc.bnl.gov](https://nx.sdcc.bnl.gov).
 
 ### Connect to the interactive nodes from NX
+
+<!-- TODO: Consider extracting detailed rterm documentation to separate rterm.md or tools.md -->
 
 After you connect to the NX server, you can open a konsole terminal (depending
 on the Window Manager you have chosen). From NX servers, you can run **rterm**

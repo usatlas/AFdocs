@@ -24,13 +24,9 @@ explaining who you are working with and why you need an account.
 ## SSH Key Setup
 
 Once your account is accepted, you will need to generate and upload an SSH key.
-See our [SSH Access Guide](../computing/ssh_guide.md) for detailed instructions
-on:
 
-- Choosing your username wisely
-- Generating SSH keys
-- Setting up passphrases
-- Configuring SSH
+See our [SSH Access Guide](../computing/ssh_guide.md) for instructions on
+generating SSH keys.
 
 /// warning | UChicago Key Requirements
 

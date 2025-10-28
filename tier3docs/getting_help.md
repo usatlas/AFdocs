@@ -10,9 +10,14 @@ hide:
 
 ![Discourse Logo](images/discourse.png){ align=left width=110px }
 
-!!! question "Need Help?"
+/// admonition | Need Help? type: question
 
-    For help with ATLAS software, using the facilities, or are generally stuck, visit our [:fontawesome-solid-comments: **ATLAS AF Discourse**](https://atlas-talk.sdcc.bnl.gov/) forum. We have members from the physics support team ready to assist you!
+For help with ATLAS software, using the facilities, or are generally stuck,
+visit our
+[:fontawesome-solid-comments: **ATLAS AF Discourse**](https://atlas-talk.sdcc.bnl.gov/)
+forum. We have members from the physics support team ready to assist you!
+
+///
 
 ---
 

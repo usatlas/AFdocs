@@ -20,51 +20,8 @@ Facility:
 - [ ] Check all my jobs requirements
 - [ ] Always check my jobs status
 
-### Which filesystem to use
-
-Your account on the UChicago Analysis Facility will be allocated space on the
-`$HOME` and `$DATA` filesystems when your account is approved. By default, we
-give each user 100GB of storage on the `$HOME` filesystem (i.e.,
-`/home/<username>`). This filesystem is backed up weekly and is more optimized
-for small files such as job logs, submit files, code and so on.
-
-Data files, on the other hand, should be placed in the `$DATA` filesystem
-(`/data/<username>`) which is more suitable for large files but is **not**
-backed up. By default, you will be given a 5TB quota on this filesystem. If you
-are working on an analysis that requires more local storage, please
-[contact the UChicago facility team](../getting_help.md#facility-specific-support)
-and we'll do our best to accommodate your request.
-
-Finally, jobs submitted to HTCondor will be assigned to a server with one or
-more dedicated high-speed "scratch" disks to use as working space when
-processing your jobs, each with a few TB of available space. This is important
-for two reasons:
-
-- The scratch disk is _local_. We strongly recommend that you copy your input
-  data from `$DATA` to `$SCRATCH` when running a job because this will generally
-  deliver the best performance.
-- The scratch disk is _ephemeral_. HTCondor will automatically clean up the
-  scratch disk for the next workload when your job has finished using it.
-
-/// warning | Don't lose your data!
-
-With this in mind, you will need to make sure that you copy your output data
-away from the `$SCRATCH` filesystem and into the `$DATA` filesystem at the end
-of your job. Any data left in `$SCRATCH` will be lost at the end of your job!
-When submitting jobs, you should try to use the scratch disk whenever possible.
-This will help you be a "good neighbor" to other users on the system, and reduce
-overall stress on the shared filesystems, which can lead to slowness, downtimes,
-etc.
-
-///
-
-To summarize, please review the following table:
-
-| Filesystem | Best for ...                  | Backup | Access from ...    | Default Quota |
-| ---------- | ----------------------------- | ------ | ------------------ | ------------- |
-| $HOME      | Code, Logs, Submit files      | Weekly | SSH, Jupyter, Jobs | 100GB         |
-| $DATA      | ROOT files, other large files | None   | SSH, Jupyter, Jobs | 5TB           |
-| $SCRATCH   | Transient job files           | None   | Jobs only          | No quota      |
+For information about storage quotas and filesystem usage, see
+[Data Storage](storage.md).
 
 Consider the following example: Data is read from Rucio, we pretend to process
 it, and then push a small output back to the `$DATA` filesystem. It assumes your
