@@ -9,8 +9,10 @@ inference with automatic scaling capabilities.
 !!! info "Key Information"
 
     - **Access:** Internal to UChicago AF Kubernetes cluster only (not externally exposed)
-    - **Endpoint:** `triton-traefik.triton.svc.cluster.local:8000`
-    - **Version:** v2.61.0
+    - **Endpoint:** `triton-traefik.triton.svc.cluster.local:8001` (gRPC)
+    - **Version:** [Release 2.61.0](https://github.com/triton-inference-server/server/releases/tag/v2.61.0) (NGC container 25.09)
+    - **GPU Resources:** 1-3 pods, each pod allocated 1 GPU ([see hardware specs](https://af.uchicago.edu/hardware))
+    - **CPU/Memory:** Burstable (no minimum request, scales as needed)
     - **Autoscaling:** Managed by Horizontal Pod Autoscaler (HPA) based on average queue time metrics
 
 The Triton service automatically scales the number of server instances based on
@@ -21,22 +23,33 @@ workload demand, ensuring efficient resource utilization.
 Access to the Triton Inference Server is currently restricted to services and
 workloads running inside the UChicago AF Kubernetes cluster. If you need to
 access Triton from your analysis workflows, you can connect to the load balancer
-endpoint within the cluster environment.
+endpoint within the cluster environment using gRPC.
 
-**Load Balancer Endpoint:**
+**Load Balancer Endpoint (gRPC):**
 
 ```
-triton-traefik.triton.svc.cluster.local:8000
+triton-traefik.triton.svc.cluster.local:8001
 ```
 
 ## Model Repository Access
 
-All model repositories for Triton are hosted in an S3-compatible object storage
-system managed by the UChicago Analysis Facility.
+Triton can access models from two storage options at the UChicago Analysis Facility:
 
-**S3 Storage URL:** `https://s3.af.uchicago.edu`
+1. **CVMFS** - For existing production ML models already stored in CVMFS (via Kubernetes hostPath mount)
+2. **S3 Storage** - For uploading new models to `https://s3.af.uchicago.edu`
 
-### Uploading Your Models
+### Using Models from CVMFS
+
+If your production ML models are already stored in CVMFS, Triton can access them directly through a Kubernetes hostPath mount. This enables you to deploy existing models without needing to copy them to S3.
+
+To use CVMFS models, [contact the AF administrators](../getting_help.md#facility-specific-support) with:
+
+- Path to your model(s) in CVMFS
+- Model name and type
+- Backend requirements (TensorFlow, PyTorch, ONNX, etc.)
+- Expected duration/timeframe for model usage
+
+### Uploading Your Models to S3
 
 To upload and deploy your machine learning models on Triton, follow these steps:
 
@@ -96,6 +109,7 @@ Include:
 - Model directory path
 - Model name and type
 - Any specific backend requirements (see below)
+- Expected duration/timeframe for model usage
 
 The Triton server polls the model repository every 60 seconds, so once
 configured, your models should become available automatically.
