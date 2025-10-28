@@ -88,6 +88,8 @@ with SLURM. Check out [this doc](jupyter_extra.md) on how to do that.
 
 ## Getting help
 
-!!! info "Need help?"
+/// info | Need help?
 
-    See our [Getting Help](../getting_help.md) page for support options and how to reach the ATLAS AF team.
+See our [Getting Help](../getting_help.md) page for support options and how to reach the ATLAS AF team.
+
+///

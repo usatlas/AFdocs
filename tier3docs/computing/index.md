@@ -8,9 +8,11 @@ ATLAS physicists and computer scientists.
 
 ## Before You Begin
 
-!!! warning "Account Required"
+/// warning | Account Required
 
-    You need an approved account to access any of the Analysis Facilities. See the "Getting Access" section for details on applying for user accounts at BNL, SLAC, and UChicago.
+You need an approved account to access any of the Analysis Facilities. See the "Getting Access" section for details on applying for user accounts at BNL, SLAC, and UChicago.
+
+///
 
 ### Prerequisites
 
@@ -43,9 +45,11 @@ All three facilities provide:
 - :material-language-python: Machine Learning packages
 - :material-laptop: JupyterLab environments
 
-!!! tip "Need Help?"
+/// tip | Need Help?
 
-    See our [Getting Help](../getting_help.md) page for support options and how to reach the ATLAS AF team.
+See our [Getting Help](../getting_help.md) page for support options and how to reach the ATLAS AF team.
+
+///
 
 ---
 

@@ -60,9 +60,11 @@ Options:
                         dataset
 ```
 
-!!! tip "Pre-staging large files"
+/// tip | Pre-staging large files
 
-    For large file inputs on the grid, you are recommended to plan ahead and pre-stage them to BNL using [R2D2 request](https://rucio-ui.cern.ch/r2d2/manage_quota) or rucio command.
+For large file inputs on the grid, you are recommended to plan ahead and pre-stage them to BNL using [R2D2 request](https://rucio-ui.cern.ch/r2d2/manage_quota) or rucio command.
+
+///
 
 ---
 
@@ -82,9 +84,11 @@ way of using ssh-tunnel below) by:
 kinit YourNameAtCERN@CERN.CH
 ```
 
-!!! warning "CERN.CH must be uppercase"
+/// warning | CERN.CH must be uppercase
 
-    Please be aware that in the above command the realm **CERN.CH** must be in **UPPERCASE**.
+Please be aware that in the above command the realm **CERN.CH** must be in **UPPERCASE**.
+
+///
 
 As convenience for the US ATLAS users, we have installed the eos-client and
 eos-fusex packages on the interactive nodes.
@@ -99,9 +103,11 @@ ls /eos/atlas/...
 ls /eos/user/y/yesw/...
 ```
 
-!!! note
+/// note
 
-    Please replace _"y/yesw"_ with your own username at CERN.
+Please replace _"y/yesw"_ with your own username at CERN.
+
+///
 
 To copy files from EOS:
 
@@ -250,9 +256,11 @@ lxplus% mkdir /tmp/yesw/data
 lxplus% sshfs attsub02:/atlasgpfs01/usatlas/data/yesw2000 /tmp/yesw/data
 ```
 
-!!! note
+/// note
 
-    This assumes that you have already set up the ssh configuration as shown in [the section of interactive connection to BNL](accessing.md#ssh-connection-to-the-interactive-nodes).
+This assumes that you have already set up the ssh configuration as shown in [the section of interactive connection to BNL](accessing.md#ssh-connection-to-the-interactive-nodes).
+
+///
 
 To umount the mounted point, just run **fusermount -u /tmp/yesw/data**.
 

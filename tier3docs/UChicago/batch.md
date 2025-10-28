@@ -46,9 +46,11 @@ for two reasons:
 - The scratch disk is _ephemeral_. HTCondor will automatically clean up the
   scratch disk for the next workload when your job has finished using it.
 
-!!! warning "Don't lose your data!"
+/// warning | Don't lose your data!
 
-    With this in mind, you will need to make sure that you copy your output data away from the `$SCRATCH` filesystem and into the `$DATA` filesystem at the end of your job. Any data left in `$SCRATCH` will be lost at the end of your job! When submitting jobs, you should try to use the scratch disk whenever possible. This will help you be a "good neighbor" to other users on the system, and reduce overall stress on the shared filesystems, which can lead to slowness, downtimes, etc.
+With this in mind, you will need to make sure that you copy your output data away from the `$SCRATCH` filesystem and into the `$DATA` filesystem at the end of your job. Any data left in `$SCRATCH` will be lost at the end of your job! When submitting jobs, you should try to use the scratch disk whenever possible. This will help you be a "good neighbor" to other users on the system, and reduce overall stress on the shared filesystems, which can lead to slowness, downtimes, etc.
+
+///
 
 To summarize, please review the following table:
 
@@ -129,9 +131,11 @@ from your submit file and your jobs will be sent to the `long-queue`
 automatically, otherwise your job will be placed on hold until you remove it or
 release it (check HTCondor commands).
 
-!!! important "Use the short queue for short jobs"
+/// important | Use the short queue for short jobs
 
-    Using the short queue for short jobs when possible is essential for the use of the available resources, specially to let the long queue available for long jobs.
+Using the short queue for short jobs when possible is essential for the use of the available resources, specially to let the long queue available for long jobs.
+
+///
 
 ### Job memory request
 
@@ -244,14 +248,16 @@ Queue 1
 
 ## Check these points before using the Analysis Facility System
 
-!!! warning "$HOME quota"
+/// warning | $HOME quota
 
-    Your quota at $HOME is 100GB. Be careful not to exceed this quota because some issues may arise, for example not being able to login next time.
+Your quota at $HOME is 100GB. Be careful not to exceed this quota because some issues may arise, for example not being able to login next time.
 
-    **Tips:**
+**Tips:**
 
-    - Use the command `du -sh` to know the actual size of your current directory
-    - Check the table displayed at the start of your session, which indicates the usage of your /home and /data directories
+- Use the command `du -sh` to know the actual size of your current directory
+- Check the table displayed at the start of your session, which indicates the usage of your /home and /data directories
+
+///
 
 ---
 

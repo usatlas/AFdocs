@@ -47,7 +47,11 @@ contact the appropriate team below:
     [atlas-us-slac-acf@cern.ch](mailto:atlas-us-slac-acf@cern.ch)
 
     /// note | This is a CERN e-group
-    Please [join the e-group](https://e-groups.cern.ch/e-groups/Egroup.do?egroupName=atlas-us-slac-acf) first.
+
+    Please
+    [join the e-group](https://e-groups.cern.ch/e-groups/Egroup.do?egroupName=atlas-us-slac-acf)
+    first.
+
     ///
 
     :material-chat: **Chat:**

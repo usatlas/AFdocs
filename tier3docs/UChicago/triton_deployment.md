@@ -8,9 +8,11 @@ based on the ManiacLab Helm chart with several custom configurations to improve
 performance, fault tolerance, and integration with existing monitoring and
 scaling systems.
 
-!!! info "Audience" This documentation is intended for system administrators and
-infrastructure engineers. Users looking for information on how to use Triton
-should refer to the [Triton User Guide](triton.md).
+/// info | Audience
+
+This documentation is intended for system administrators and infrastructure engineers. Users looking for information on how to use Triton should refer to the [Triton User Guide](triton.md).
+
+///
 
 ## Deployment Method
 

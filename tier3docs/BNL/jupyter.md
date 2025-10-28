@@ -39,6 +39,8 @@ The Jupyter environment provides several kernels and extensions. This includes:
 
 ## Getting help
 
-!!! info "Need help?"
+/// info | Need help?
 
-    See our [Getting Help](../getting_help.md) page for support options and how to reach the ATLAS AF team.
+See our [Getting Help](../getting_help.md) page for support options and how to reach the ATLAS AF team.
+
+///
