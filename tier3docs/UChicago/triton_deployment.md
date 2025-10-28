@@ -10,7 +10,9 @@ scaling systems.
 
 /// info | Audience
 
-This documentation is intended for system administrators and infrastructure engineers. Users looking for information on how to use Triton should refer to the [Triton User Guide](triton.md).
+This documentation is intended for system administrators and infrastructure
+engineers. Users looking for information on how to use Triton should refer to
+the [Triton User Guide](triton.md).
 
 ///
 

@@ -10,7 +10,9 @@ ATLAS physicists and computer scientists.
 
 /// warning | Account Required
 
-You need an approved account to access any of the Analysis Facilities. See the "Getting Access" section for details on applying for user accounts at BNL, SLAC, and UChicago.
+You need an approved account to access any of the Analysis Facilities. See the
+"Getting Access" section for details on applying for user accounts at BNL, SLAC,
+and UChicago.
 
 ///
 
@@ -47,7 +49,8 @@ All three facilities provide:
 
 /// tip | Need Help?
 
-See our [Getting Help](../getting_help.md) page for support options and how to reach the ATLAS AF team.
+See our [Getting Help](../getting_help.md) page for support options and how to
+reach the ATLAS AF team.
 
 ///
 

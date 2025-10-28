@@ -20,7 +20,12 @@ Before you begin, ensure you have:
 
 /// tip | Username Best Practices
 
-When choosing a UNIX username during signup, you should consider using the same username that you have at CERN. This will make certain tools (e.g. Rucio, EOS) simpler to set up. Otherwise, we recommend that you pick a username that is reflective of your full name, and that you should prefer brevity (e.g. John Smith -> `jsmith`). **We will not be able to easily change your username for you if you decide that you want something different later.**
+When choosing a UNIX username during signup, you should consider using the same
+username that you have at CERN. This will make certain tools (e.g. Rucio, EOS)
+simpler to set up. Otherwise, we recommend that you pick a username that is
+reflective of your full name, and that you should prefer brevity (e.g. John
+Smith -> `jsmith`). **We will not be able to easily change your username for you
+if you decide that you want something different later.**
 
 ///
 
@@ -47,9 +52,12 @@ These provide better security and performance than older key types.
 
 /// warning | Passphrase Recommended
 
-We strongly recommend setting a passphrase on your private key. This way, if your private key is ever lost or compromised, an attacker would still need your passphrase in order to impersonate you.
+We strongly recommend setting a passphrase on your private key. This way, if
+your private key is ever lost or compromised, an attacker would still need your
+passphrase in order to impersonate you.
 
-**Note**: If you use VS Code Remote SSH, be aware that passphrases can cause connection issues. See the [VS Code guide](../tools/vscode.md) for workarounds.
+**Note**: If you use VS Code Remote SSH, be aware that passphrases can cause
+connection issues. See the [VS Code guide](../tools/vscode.md) for workarounds.
 
 ///
 
@@ -88,7 +96,8 @@ Upload your public key to your facility's user portal:
 
 /// danger | Important: Protect Your Private Key!
 
-You must **only** upload the public key (.pub file)! Treat the private key as if it were your password. Never share it or upload it anywhere.
+You must **only** upload the public key (.pub file)! Treat the private key as if
+it were your password. Never share it or upload it anywhere.
 
 ///
 
@@ -283,7 +292,8 @@ kinit -R
 
 /// info | Kerberos Troubleshooting
 
-For advanced Kerberos configuration, token sharing across machines, and troubleshooting, see the [FAQs and Tips](../faqs_tips.md) page, which covers:
+For advanced Kerberos configuration, token sharing across machines, and
+troubleshooting, see the [FAQs and Tips](../faqs_tips.md) page, which covers:
 
 - Sharing Kerberos tokens across multiple machines
 - Managing multiple Kerberos principals

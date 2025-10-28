@@ -10,7 +10,8 @@ data access.
 
 /// warning | EOS access from worker nodes
 
-`/eos` is only mounted on the interactive (`login`) nodes. To access from worker nodes (e.g. condor jobs), we recommend the use of `xrootd` such as:
+`/eos` is only mounted on the interactive (`login`) nodes. To access from worker
+nodes (e.g. condor jobs), we recommend the use of `xrootd` such as:
 
 ```bash
 root://eosuser.cern.ch//eos/user/d/dschrute/file.txt
@@ -23,7 +24,8 @@ xrdcp root://eosuser.cern.ch//eos/user/d/dschrute/file.txt .
 xrdcp -r root://eosuser.cern.ch//eos/user/d/dschrute/many_files/ .
 ```
 
-as long as you [export your CERN Kerberos ticket](#cern-kerberos-ticket) to your HTCondor jobs.
+as long as you [export your CERN Kerberos ticket](#cern-kerberos-ticket) to your
+HTCondor jobs.
 
 ///
 
@@ -123,7 +125,10 @@ grid certificate.
 
 /// warning | Proxy certificate expiration
 
-Your x509proxy certificate has an expiry date. Once it expires you have to create an ATLAS VOMS proxy again in the usual way. You create (or copy it to) the shared $HOME filesystem so that the HTCondor scheduler can find and read the proxy.
+Your x509proxy certificate has an expiry date. Once it expires you have to
+create an ATLAS VOMS proxy again in the usual way. You create (or copy it to)
+the shared $HOME filesystem so that the HTCondor scheduler can find and read the
+proxy.
 
 ///
 
@@ -135,7 +140,8 @@ voms-proxy-init -voms atlas -out $HOME/x509proxy
 
 /// important
 
-Without the term `-out $HOME/x509proxy` you create a new proxy but the one that maybe is already in your $HOME directory is still expired.
+Without the term `-out $HOME/x509proxy` you create a new proxy but the one that
+maybe is already in your $HOME directory is still expired.
 
 ///
 

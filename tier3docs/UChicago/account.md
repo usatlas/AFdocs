@@ -12,7 +12,10 @@ like Gmail, Outlook, iCloud, etc. won't be accepted.
 
 /// info | Not an ATLAS member yet?
 
-If you are not yet an ATLAS member, but are working with someone in ATLAS, please [contact the UChicago facility team](../getting_help.md#facility-specific-support) explaining who you are working with and why you need an account.
+If you are not yet an ATLAS member, but are working with someone in ATLAS,
+please
+[contact the UChicago facility team](../getting_help.md#facility-specific-support)
+explaining who you are working with and why you need an account.
 
 ///
 
@@ -31,7 +34,10 @@ on:
 
 /// warning | UChicago Key Requirements
 
-The UChicago Analysis Facility will **not** accept deprecated key types such as DSA or RSA with a SHA-1 signature, as these are generally considered insecure. Please use modern elliptic curve keys (`ed25519` or `ecdsa`) as recommended in the SSH guide.
+The UChicago Analysis Facility will **not** accept deprecated key types such as
+DSA or RSA with a SHA-1 signature, as these are generally considered insecure.
+Please use modern elliptic curve keys (`ed25519` or `ecdsa`) as recommended in
+the SSH guide.
 
 ///
 
@@ -50,7 +56,8 @@ cat ~/.ssh/id_ed25519.pub
 
 /// danger | Important: Protect Your Private Key!
 
-You must only upload the public key (.pub)! Treat the private key as if it were your password.
+You must only upload the public key (.pub)! Treat the private key as if it were
+your password.
 
 ///
 

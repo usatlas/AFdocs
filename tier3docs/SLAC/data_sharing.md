@@ -87,7 +87,8 @@ The object store is available at the following URLs:
 
 /// warning | Low sensitivity data only
 
-Browsing/Listing of `/share` is disabled in order to provide a level of privacy that is suitable for sharing **low sensitivity data**.
+Browsing/Listing of `/share` is disabled in order to provide a level of privacy
+that is suitable for sharing **low sensitivity data**.
 
 ///
 
@@ -102,7 +103,9 @@ random string can search for the content under it.
 
 /// danger | Important: Keep your random string secure
 
-If you lose the random string, you lose access to your data. Administrators won't be able to help you since there is no records of ownership in the object store. The data will eventually be purged after expiration.
+If you lose the random string, you lose access to your data. Administrators
+won't be able to help you since there is no records of ownership in the object
+store. The data will eventually be purged after expiration.
 
 ///
 
@@ -132,7 +135,8 @@ curl is available everywhere. To use curl, follow these steps:
 
     /// note
 
-    You may need to adjust the proxy location and CA directory location (/etc/grid-security/certificates) in your environment.
+    You may need to adjust the proxy location and CA directory location
+    (/etc/grid-security/certificates) in your environment.
 
     ///
 
@@ -185,7 +189,8 @@ have the gfal2 tools in your PATH.
 
 /// tip
 
-Gfal2 tools work with both https and root protocols. In the last example, the source and destination can use different protocols.
+Gfal2 tools work with both https and root protocols. In the last example, the
+source and destination can use different protocols.
 
 ///
 

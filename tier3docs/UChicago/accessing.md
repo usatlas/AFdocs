@@ -5,7 +5,8 @@ SSH configuration, filesystems, and setting up the ATLAS environment.
 
 /// info | Don't have an account yet?
 
-If you haven't signed up for a UChicago Analysis Facility account yet, please see [Signing Up for UChicago](account.md) first.
+If you haven't signed up for a UChicago Analysis Facility account yet, please
+see [Signing Up for UChicago](account.md) first.
 
 ///
 
@@ -25,7 +26,8 @@ For detailed information on SSH key generation and setup, see our
 
 /// tip | Need help connecting?
 
-See our [Getting Help](../getting_help.md) page for support options and how to reach the ATLAS AF team.
+See our [Getting Help](../getting_help.md) page for support options and how to
+reach the ATLAS AF team.
 
 ///
 

@@ -62,7 +62,9 @@ Options:
 
 /// tip | Pre-staging large files
 
-For large file inputs on the grid, you are recommended to plan ahead and pre-stage them to BNL using [R2D2 request](https://rucio-ui.cern.ch/r2d2/manage_quota) or rucio command.
+For large file inputs on the grid, you are recommended to plan ahead and
+pre-stage them to BNL using
+[R2D2 request](https://rucio-ui.cern.ch/r2d2/manage_quota) or rucio command.
 
 ///
 
@@ -86,7 +88,8 @@ kinit YourNameAtCERN@CERN.CH
 
 /// warning | CERN.CH must be uppercase
 
-Please be aware that in the above command the realm **CERN.CH** must be in **UPPERCASE**.
+Please be aware that in the above command the realm **CERN.CH** must be in
+**UPPERCASE**.
 
 ///
 
@@ -258,7 +261,8 @@ lxplus% sshfs attsub02:/atlasgpfs01/usatlas/data/yesw2000 /tmp/yesw/data
 
 /// note
 
-This assumes that you have already set up the ssh configuration as shown in [the section of interactive connection to BNL](accessing.md#ssh-connection-to-the-interactive-nodes).
+This assumes that you have already set up the ssh configuration as shown in
+[the section of interactive connection to BNL](accessing.md#ssh-connection-to-the-interactive-nodes).
 
 ///
 
