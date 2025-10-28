@@ -17,16 +17,16 @@ site specific documents on Jupyter.
   [documents](../BNL/jupyter.md).
 - [SLAC JupyterLab](https://sdf.slac.stanford.edu/public/doc/#/interactive-compute?id=jupyter)
   and [documents](../SLAC/jupyter.md).
-  - SLAC is migrating to a new computing facility SDF. As a result, we recently
-    made some change to the SLAC JupyterLab portal. If you haven't read and
-    prepare yourself for "SLAC ID", please refer to
-    ["SSH login to SDF"](../SLAC/accessing.md#ssh-login-to-sdf) to estiblish
-    your "SLAC ID", then `ssh sdf-login.slac.stanford.edu` for the first time.
-  - The SLAC JupyterLab link above will change in the near future as the
-    migration continue. When that happens, we will update the above link.
-  - When asked to choose an identity provider, please choose "SLAC National
-    Accelerator Laboratory" and then use your
-    ["SLAC ID"](../SLAC/accessing.md#ssh-login-to-sdf) to login.
+    - SLAC is migrating to a new computing facility SDF. As a result, we
+      recently made some change to the SLAC JupyterLab portal. If you haven't
+      read and prepare yourself for "SLAC ID", please refer to
+      ["SSH login to SDF"](../SLAC/accessing.md#ssh-login-to-sdf) to estiblish
+      your "SLAC ID", then `ssh sdf-login.slac.stanford.edu` for the first time.
+    - The SLAC JupyterLab link above will change in the near future as the
+      migration continue. When that happens, we will update the above link.
+    - When asked to choose an identity provider, please choose "SLAC National
+      Accelerator Laboratory" and then use your
+      ["SLAC ID"](../SLAC/accessing.md#ssh-login-to-sdf) to login.
 
 # Examples of using Jupyter to analyze xAODs
 

@@ -180,9 +180,9 @@ need pass your CERN Kerberos ticket to the batch machines in the following way:
 1. First define one envvar **KRB5CCNAME** prior to running
    `kinit YourNameAtCERN@CERN.CH`:
 
-   ```bash
-   export KRB5CCNAME=$HOME/krb5cc_`id -u`
-   ```
+    ```bash
+    export KRB5CCNAME=$HOME/krb5cc_`id -u`
+    ```
 
 2. Then add the envvar **KRB5CCNAME** to your condor batch jobs.
 

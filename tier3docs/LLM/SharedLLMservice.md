@@ -48,9 +48,9 @@ designed to:
   service. There will be a **gap** between the time the job is submitted and the
   time the job actually starts running. Use the following command to check the
   status of the Slurm job:
-  ```
-  curl -s http://localhost:11434/backend/state
-  ```
+    ```
+    curl -s http://localhost:11434/backend/state
+    ```
 - Allow multiple users to share the same LLM service. The service allows a
   limited concurrency usage. Currently the service uses a single Slurm job with
   one Nvidia A100-SXM4-40GB GPU. This limits how many different LLM models can

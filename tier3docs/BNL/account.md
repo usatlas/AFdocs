@@ -21,9 +21,9 @@ go through the following steps:
 
 - Register for a Guest Number (if you don't already have a valid Life or Guest
   Number)
-  - Same for as if you were going to visit BNL campus
-  - Most likely will need to upload photos of identification
-  - Non-citizens will need to upload your CV
+    - Same for as if you were going to visit BNL campus
+    - Most likely will need to upload photos of identification
+    - Non-citizens will need to upload your CV
 - Complete CyberSecurity training and Computer Use agreement
 - Sign up for a New User Account
-  - Complete directly on the BNL New User Account site above
+    - Complete directly on the BNL New User Account site above

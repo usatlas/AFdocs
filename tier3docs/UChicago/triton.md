@@ -33,16 +33,22 @@ triton-traefik.triton.svc.cluster.local:8001
 
 ## Model Repository Access
 
-Triton can access models from two storage options at the UChicago Analysis Facility:
+Triton can access models from two storage options at the UChicago Analysis
+Facility:
 
-1. **CVMFS** - For existing production ML models already stored in CVMFS (via Kubernetes hostPath mount)
+1. **CVMFS** - For existing production ML models already stored in CVMFS (via
+   Kubernetes hostPath mount)
 2. **S3 Storage** - For uploading new models to `https://s3.af.uchicago.edu`
 
 ### Using Models from CVMFS
 
-If your production ML models are already stored in CVMFS, Triton can access them directly through a Kubernetes hostPath mount. This enables you to deploy existing models without needing to copy them to S3.
+If your production ML models are already stored in CVMFS, Triton can access them
+directly through a Kubernetes hostPath mount. This enables you to deploy
+existing models without needing to copy them to S3.
 
-To use CVMFS models, [contact the AF administrators](../getting_help.md#facility-specific-support) with:
+To use CVMFS models,
+[contact the AF administrators](../getting_help.md#facility-specific-support)
+with:
 
 - Path to your model(s) in CVMFS
 - Model name and type

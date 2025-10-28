@@ -44,9 +44,9 @@ The best tools to copy your data from AFS/GPFS to S3DF spaces are:
 
 - the Unix command:
 
-  ```bash
-  cp -r -p source destination
-  ```
+    ```bash
+    cp -r -p source destination
+    ```
 
 - or `rsync`, which is also easy to use.
 

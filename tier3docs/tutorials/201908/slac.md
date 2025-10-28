@@ -5,13 +5,13 @@
 - [Login to SLAC machines](#login-to-slac-machines)
 - [Location of the analysis example package at SLAC](#location-of-the-analysis-example-package-at-slac)
 - [Env Setup and Package Building](#env-setup-and-package-building)
-  - [Setup of the Release Env](#setup-of-the-release-env)
-  - [Package Building](#package-building)
+    - [Setup of the Release Env](#setup-of-the-release-env)
+    - [Package Building](#package-building)
 - [Dataset Preparation](#dataset-preparation)
 - [Interactive Job Running at SLAC](#interactive-job-running-at-slac)
 - [Job Running on LSF at SLAC](#job-running-on-lsf-at-slac)
 - [Using Xcache at SLAC](#using-xcache-at-slac)
-  - [Using Xcache (gLFN) at SLAC](#using-xcache-glfn-at-slac)
+    - [Using Xcache (gLFN) at SLAC](#using-xcache-glfn-at-slac)
 
 ---
 

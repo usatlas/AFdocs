@@ -3,7 +3,7 @@
 ## Table of contents
 
 - [Use DASK with SLURM](#use-dask-with-slurm)
-  - [Access DASK Dashboard](#access-dask-dashboard)
+    - [Access DASK Dashboard](#access-dask-dashboard)
 - [Use your own Conda environment](#use-your-own-conda-environment)
 - [Using built-in Conda environments](#using-built-in-conda-environments)
 - [Install PYCUDA](#install-pycuda)
@@ -42,16 +42,16 @@ there is a few things to prepare:
    listens to port 8787. You may need to change this port number if it is used
    by other users or by your other DASK programs. In the above example, line
    `scheduler_options={'dashboard_address': ':8787'}` specify the port number.
-   - You don't have to do this: if you remove this `scheduler_options= ...`
-     line, DASK will select an available port for you. In that case, you can
-     print the `client` object in find out the host:port.
+    - You don't have to do this: if you remove this `scheduler_options= ...`
+      line, DASK will select an available port for you. In that case, you can
+      print the `client` object in find out the host:port.
 3. Port forwarding
-   - Open a terminal in Jupyter Lab and find out the host name (use command
-     'hostname'). Let's say you are on host `rome0100`.
-   - From your desktop, `ssh -L 8787:rome0100:8787 sdf-login.slac.stanford.edu`
-     .
-   - In your web browser, open `http://localhost:8787/status` to access the DASK
-     dashboard.
+    - Open a terminal in Jupyter Lab and find out the host name (use command
+      'hostname'). Let's say you are on host `rome0100`.
+    - From your desktop, `ssh -L 8787:rome0100:8787 sdf-login.slac.stanford.edu`
+      .
+    - In your web browser, open `http://localhost:8787/status` to access the
+      DASK dashboard.
 
 ## Use your own Conda environment
 

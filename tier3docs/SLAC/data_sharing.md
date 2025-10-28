@@ -155,27 +155,27 @@ have the gfal2 tools in your PATH.
 
 1. Upload:
 
-   ```bash
-   gfal-copy -f /tmp/myfile.dat https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat
-   ```
+    ```bash
+    gfal-copy -f /tmp/myfile.dat https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat
+    ```
 
 2. Download:
 
-   ```bash
-   gfal-copy -f https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat /tmp/myfile.dat
-   ```
+    ```bash
+    gfal-copy -f https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat /tmp/myfile.dat
+    ```
 
 3. Delete:
 
-   ```bash
-   gfal-rm https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat
-   ```
+    ```bash
+    gfal-rm https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat
+    ```
 
 4. You can even do:
 
-   ```bash
-   gfal-copy -f https://cern.ch//SCRATCHDISK/myfile.dat https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat
-   ```
+    ```bash
+    gfal-copy -f https://cern.ch//SCRATCHDISK/myfile.dat https://sdf-dtn10.slac.stanford.edu:2094/share/random-string/myfile.dat
+    ```
 
 !!! tip
 
@@ -190,27 +190,27 @@ port number.
 
 1. Upload:
 
-   ```bash
-   xrdcp -f /tmp/myfile.dat root://sdf-dtn10.slac.stanford.edu:2094//share/random-string/myfile.dat
-   ```
+    ```bash
+    xrdcp -f /tmp/myfile.dat root://sdf-dtn10.slac.stanford.edu:2094//share/random-string/myfile.dat
+    ```
 
 2. Download:
 
-   ```bash
-   xrdcp -f root://sdf-dtn10.slac.stanford.edu:2094//share/random-string/myfile.dat /tmp/myfile.dat
-   ```
+    ```bash
+    xrdcp -f root://sdf-dtn10.slac.stanford.edu:2094//share/random-string/myfile.dat /tmp/myfile.dat
+    ```
 
 3. Delete:
 
-   ```bash
-   xrdfs root://sdf-dtn10.slac.stanford.edu:2094 rm /share/random-string/myfile.dat /tmp/myfile.dat
-   ```
+    ```bash
+    xrdfs root://sdf-dtn10.slac.stanford.edu:2094 rm /share/random-string/myfile.dat /tmp/myfile.dat
+    ```
 
 4. You can also do:
 
-   ```bash
-   xrdcp -f root://cern.ch//SCRATCHDISK/myfile.dat root://sdf-dtn10.slac.stanford.edu:2094//share/random-string/myfile.dat /tmp/myfile.dat
-   ```
+    ```bash
+    xrdcp -f root://cern.ch//SCRATCHDISK/myfile.dat root://sdf-dtn10.slac.stanford.edu:2094//share/random-string/myfile.dat /tmp/myfile.dat
+    ```
 
 !!! note
 

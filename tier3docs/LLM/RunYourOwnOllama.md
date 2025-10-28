@@ -10,17 +10,17 @@ be run at the SLAC AF.
 ## Getting Start with Ollama on a Mac Desktop
 
 1. Use `brew` to install Ollama.
-   - If installed via the Ollama.app from Ollama web site, you may want disable
-     the `Ollama Application` from **Open at Login** in **System Setting ->
-     General -> Login Items and Extensions**.
+    - If installed via the Ollama.app from Ollama web site, you may want disable
+      the `Ollama Application` from **Open at Login** in **System Setting ->
+      General -> Login Items and Extensions**.
 2. Start the Ollama server:
-   - If you want to run LLM models via Ollama on your desktop, type
-     `ollama serve`.
-   - If your plan is to run the LLM models at SLAC AF, see instruction below.
+    - If you want to run LLM models via Ollama on your desktop, type
+      `ollama serve`.
+    - If your plan is to run the LLM models at SLAC AF, see instruction below.
 3. Start the Ollama client and run a model: (assume the server is running), type
    `ollama run llama3.2`. Now you can start typing your questions.
-   - This command actually tell the server to pull a model named "llama3.2" from
-     Ollama model library, and run it at the server side.
+    - This command actually tell the server to pull a model named "llama3.2"
+      from Ollama model library, and run it at the server side.
 
 ## Interact with Ollama
 

@@ -1,7 +1,7 @@
 ---
 hide:
-  - toc
-  - navigation
+    - toc
+    - navigation
 ---
 
 # Getting Help
@@ -48,7 +48,7 @@ contact the appropriate team below:
 
     !!! note "This is a CERN e-group"
 
-        Please [join the e-group](https://e-groups.cern.ch/e-groups/Egroup.do?egroupName=atlas-us-slac-acf) first.
+              Please [join the e-group](https://e-groups.cern.ch/e-groups/Egroup.do?egroupName=atlas-us-slac-acf) first.
 
     :material-chat: **Chat:**
     [CERN Mattermost](https://mattermost.web.cern.ch/slac-testing/channels/town-square)
