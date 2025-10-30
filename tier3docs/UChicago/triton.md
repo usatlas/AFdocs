@@ -163,7 +163,11 @@ optimal performance.
 
 ### Additional Model Repositories
 
-We can set up additional [model repositories](https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/user_guide/model_repository.html) to mount into the Triton pods as part of the [:octicons-lock-24: HelmChart configuration](https://github.com/maniaclab/flux_apps/blob/main/af/triton/helmRelease-patch.yaml) that UChicago uses.
+We can set up additional
+[model repositories](https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/user_guide/model_repository.html)
+to mount into the Triton pods as part of the
+[:octicons-lock-24: HelmChart configuration](https://github.com/maniaclab/flux_apps/blob/main/af/triton/helmRelease-patch.yaml)
+that UChicago uses.
 
 The following directories are currently configured:
 
