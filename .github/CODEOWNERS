@@ -1,0 +1,5 @@
+*              @usatlas/admin
+/docs/         @usatlas/analysis-facilities
+/docs/BNL      @usatlas/bnl
+/docs/UChicago @usatlas/uchicago
+/docs/SLAC     @usatlas/slac
