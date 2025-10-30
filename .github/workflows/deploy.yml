@@ -1,0 +1,25 @@
+name: Trigger AI Factory GitOps (Docs)
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  trigger-gitops:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Repository Dispatch to maniaclab/ai_factory
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.MANIACLAB_AI_FACTORY_DEPLOY_TOKEN }}
+          repository: maniaclab/ai_factory
+          event-type: gitops-docs-trigger
+          client-payload: |
+            {
+              "ref": "${{ github.ref }}",
+              "sha": "${{ github.sha }}",
+              "repository": "${{ github.repository }}",
+              "workflow": "${{ github.workflow }}"
+            }
