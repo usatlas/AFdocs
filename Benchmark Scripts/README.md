@@ -13,11 +13,11 @@ following way:
 - Suppose the crontab is set to run a batch job, then it will read
   /home/selbor/benchmarks/TRUTH3/script_TRUTH.sh
 
-  ```bash
-  #!/bin/bash
+    ```bash
+    #!/bin/bash
 
-  condor_submit /home/selbor/benchmarks/TRUTH3/benchmark_TRUTH.sub
-  ```
+    condor_submit /home/selbor/benchmarks/TRUTH3/benchmark_TRUTH.sub
+    ```
 
 2. The contents of /home/selbor/benchmarks/TRUTH3/script_TRUTH.sh file will
    submit the submission file;
@@ -41,14 +41,14 @@ Each of the jobs listed below have their respective directories with everything
 needed to run them, either interactively or in the batch:
 
 - EVNT:
-  - Batch
+    - Batch
 - TRUTH3:
-  - Batch
+    - Batch
 - Rucio:
-  - Interactive
+    - Interactive
 - TRUTH3_centos7:
-  - Batch
-  - Interactive
+    - Batch
+    - Interactive
 
 ## Interactive Jobs
 

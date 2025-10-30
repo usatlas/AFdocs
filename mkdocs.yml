@@ -4,32 +4,32 @@ site_author: USATLAS
 site_url: https://usatlas.readthedocs.io/projects/af-docs/
 repo_name: usatlas/AFdocs
 repo_url: https://github.com/usatlas/AFdocs
-edit_uri: edit/main/tier3docs
+edit_uri: edit/main/docs
 copyright: "Copyright &copy; USATLAS 2025-present"
 
-docs_dir: tier3docs
+docs_dir: docs
 site_dir: site
 theme:
-  name: readthedocs
-  html_theme_options: "html_logo: images/lgbt_atlas.png"
+  name: material
+  logo: images/lgbt_atlas.png
+  favicon: images/lgbt_atlas.png
   font: false
   language: en
   icon:
-    repo: fontawesome/brands/gitlab
-    logo: material/file-document
+    repo: fontawesome/brands/github
     edit: material/pencil
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
-      accent: light-blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue
-      accent: light-blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
@@ -39,80 +39,143 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
     - content.action.edit
     - content.code.copy
     - content.code.annotate
     - content.tooltips
+    - content.tabs.link
+
+extra_css:
+  - css/atlas-theme.css
+
+extra_javascript:
+  - javascript/config.js
+  - https://polyfill-fastly.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - "Getting Started":
-      - "Introduction": README.md
-      - "Getting Help": GettingHelp.md
-  - "User Onboarding":
-      - "About the Facilities": UserOnboarding/facility.md
-      - "Applying for User Accounts": UserOnboarding/account.md
-  #- 'Editor':
-  #    - 'test-sheet': test-sheet.md
-  - "Quickstart Guides":
-      - "BNL": sshlogin/ssh2BNL.md
-      - "UChicago": sshlogin/README.md
-      - "SLAC": sshlogin/ssh2SLAC.md
-  - "Machine Learning Containers":
-      - "Introduction": ML-Containers/info.md
-      - "Contents": ML-Containers/contents.md
-      - "Implementing": ML-Containers/implement.md
-  - "Containers for ATLAS Analysis Users":
-      - "OS Containers": ATLAS-Containers/OS-Containers.md
-      - "ATLAS Release Containers": ATLAS-Containers/Release-Containers.md
-  - "Data Store, Accessing and Sharing":
-      - "Data Storage at BNL": doma/storage/BNL/storage-at-bnl.md
-      - "Data Sharing": doma/DataSharing/README.md
-      - "Data Storage at UChicago": doma/storage/UChicago/uc_storage.md
-      - "Data Sharing at UChicago": doma/DataSharing/uchicago/README.md
-  - "Jupyter at Analysis Facilities":
-      - "Introduction": jupyter/JupyterAtTier3s.md
-      - "Jupyter at BNL": jupyter/BNLjupyter.md
-      - "Jupyter at UChicago with Coffea": jupyter/JupyterCoffeaCUChicago.md
-      - "JupyterLab at UChicago": jupyter/JupyterLabUChicago.md
-      - "Jupyter at SLAC": jupyter/SLACjupyter.md
-      - "Extend ATLAS JupyterLab at SLAC": jupyter/SLACJupyterExtraFuncs.md
-      - "How to get information about an xAOD in python": jupyter/examples/xAODcheck.md
-      - "Read xAODs using PyROOT": https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
-      - "Info about uproot and xAOD": jupyter/examples/convert_specific_variables.py.txt
-  - "Data Analysis Tutorial (2019-08)":
-      - "Introduction": Tutorial-2019Aug/README.md
-      - "Tutorial of Analysis Examples at BNL": Tutorial-2019Aug/BNL/README.md
-      - "Tutorial of Analysis Examples at SLAC": Tutorial-2019Aug/SLAC/README.md
-      - "Tutorial of Analysis Examples on the Grid": Tutorial-2019Aug/Grid/README.md
-  - "Singularity":
-      - "Using Singularity Containers": Containers/UsingSingularity/README.md
-  - "VSCode":
-      - "Detailed guide on using Visual Studio Code": VSCode/README.md
-  - "FAQs/Tips":
-      - "FAQs and some tips": faqs-tips/faq-tips.md
-      - "Glossary": faqs-tips/glossary.md
+  - Home:
+      - Introduction: README.md
+      - FAQs and Tips: faqs_tips.md
+
+  - Need Help?: getting_help.md
+
+  - Computing:
+      - computing/index.md
+      - About the Facilities: computing/facilities.md
+
+      - Accounts & Access:
+          - Signing Up:
+              - BNL: bnl/account.md
+              - UChicago: uchicago/account.md
+              - SLAC: slac/account.md
+          - Accessing:
+              - SSH Guide: computing/ssh_guide.md
+              - EOS:
+                  - BNL: bnl/eos.md
+                  - UChicago: uchicago/eos.md
+              - BNL: bnl/accessing.md
+              - UChicago: uchicago/accessing.md
+              - SLAC: slac/accessing.md
+              - Additional:
+                  - BNL Federated ID Account: bnl/federated_id.md
+
+      - Running Jobs:
+          - BNL: bnl/batch.md
+          - UChicago: uchicago/batch.md
+          - SLAC: slac/batch.md
+
+  - Data:
+      - Storage:
+          - BNL: bnl/storage.md
+          - UChicago: uchicago/storage.md
+          - SLAC: slac/storage.md
+      - Sharing:
+          - BNL: bnl/data_sharing.md
+          - UChicago: uchicago/data_sharing.md
+          - SLAC: slac/data_sharing.md
+      - XCache:
+          - BNL: bnl/xcache.md
+          - UChicago: uchicago/xcache.md
+          - SLAC: slac/xcache.md
+
+  - Software & Tools:
+      - Containers:
+          - Machine Learning:
+              - Info: containers/ml/info.md
+              - Contents: containers/ml/contents.md
+              - Implementing: containers/ml/implement.md
+          - ATLAS Analysis:
+              - OS Containers: containers/atlas/os.md
+              - Release Containers: containers/atlas/release.md
+          - Singularity:
+              - Introduction: containers/singularity/introduction.md
+              - Installation: containers/singularity/installation.md
+              - Usage: containers/singularity/usage.md
+              - Images: containers/singularity/images.md
+              - Grid Jobs: containers/singularity/grid.md
+      - Jupyter:
+          - Overview: jupyter/info.md
+          - Access per Site:
+              - BNL: bnl/jupyter.md
+              - UChicago: uchicago/jupyter.md
+              - SLAC: slac/jupyter.md
+          - Advanced:
+              - Coffea on UChicago: uchicago/jupyter_coffea.md
+              - Extending on SLAC: slac/jupyter_extra.md
+          - Examples:
+              - xAOD Check: jupyter/examples/xAODcheck.md
+              - Read xAOD with PyROOT: https://github.com/usatlas/docs/blob/master/jupyter/examples/pyROOT_example.ipynb
+              - Uproot Variable Conversion: jupyter/examples/convert_specific_variables.py.txt
+      - AI Inference:
+          - Triton (UChicago):
+              - User Guide: uchicago/triton.md
+              - Deployment Notes: uchicago/triton_deployment.md
+      - Development Tools:
+          - Using VSCode: tools/vscode.md
+
+  - Tutorials:
+      - Overview: tutorials/201908/info.md
+      - BNL Examples: tutorials/201908/bnl.md
+      - SLAC Examples: tutorials/201908/slac.md
+      - Grid Examples: tutorials/201908/grid.md
+
+not_in_nav: |
+  /LLM/README.md
+  /LLM/RunYourOwnOllama.md
+  /LLM/SharedLLMservice.md
+  /ML-Containers/ML-Containers/README.md
+  /ML-Containers/ML-Containers/ml-images-ReadMe.md
 
 plugins:
   # Built-in
-  include-markdown: {}
-  search:
-    min_search_length: 2
+  search: {}
   macros: {}
   # Extra
   table-reader: {}
   glightbox: {}
-  minify:
-    minify_html: true
   git-revision-date-localized:
     type: date
     # Required for generated documentation from gen-files
     fallback_to_build_date: true
   section-index: {}
+  minify:
+    minify_html: true
 
 markdown_extensions:
   # Built-in
   - markdown.extensions.abbr:
-  - markdown.extensions.admonition:
+  # disable in favor of pymdownx.blocks.admonition
+  #- markdown.extensions.admonition:
   - markdown.extensions.attr_list:
   - markdown.extensions.def_list:
   - markdown.extensions.footnotes:
@@ -160,19 +223,23 @@ markdown_extensions:
   - pymdownx.snippets:
       check_paths: true
       base_path:
-        - tier3docs/.snippets
-        - tier3docs/README.md
+        - docs/.snippets
+        - docs/README.md
       auto_append:
         - links.txt
         - abbrs.txt
   - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
+  - pymdownx.blocks.admonition:
   - pymdownx.tilde:
-  - mdx_truly_sane_lists: # for 2-space indented lists, https://github.com/mkdocs/mkdocs/issues/545
   - attr_list:
   - md_in_html:
   - pymdownx.blocks.caption:
