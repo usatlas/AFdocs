@@ -4,10 +4,10 @@ site_author: USATLAS
 site_url: https://usatlas.readthedocs.io/projects/af-docs/
 repo_name: usatlas/AFdocs
 repo_url: https://github.com/usatlas/AFdocs
-edit_uri: edit/main/tier3docs
+edit_uri: edit/main/docs
 copyright: "Copyright &copy; USATLAS 2025-present"
 
-docs_dir: tier3docs
+docs_dir: docs
 site_dir: site
 theme:
   name: material
@@ -75,38 +75,38 @@ nav:
 
       - Accounts & Access:
           - Signing Up:
-              - BNL: BNL/account.md
-              - UChicago: UChicago/account.md
-              - SLAC: SLAC/account.md
+              - BNL: bnl/account.md
+              - UChicago: uchicago/account.md
+              - SLAC: slac/account.md
           - Accessing:
               - SSH Guide: computing/ssh_guide.md
               - EOS:
-                  - BNL: BNL/eos.md
-                  - UChicago: UChicago/eos.md
-              - BNL: BNL/accessing.md
-              - UChicago: UChicago/accessing.md
-              - SLAC: SLAC/accessing.md
+                  - BNL: bnl/eos.md
+                  - UChicago: uchicago/eos.md
+              - BNL: bnl/accessing.md
+              - UChicago: uchicago/accessing.md
+              - SLAC: slac/accessing.md
               - Additional:
-                  - BNL Federated ID Account: BNL/federated_id.md
+                  - BNL Federated ID Account: bnl/federated_id.md
 
       - Running Jobs:
-          - BNL: BNL/batch.md
-          - UChicago: UChicago/batch.md
-          - SLAC: SLAC/batch.md
+          - BNL: bnl/batch.md
+          - UChicago: uchicago/batch.md
+          - SLAC: slac/batch.md
 
   - Data:
       - Storage:
-          - BNL: BNL/storage.md
-          - UChicago: UChicago/storage.md
-          - SLAC: SLAC/storage.md
+          - BNL: bnl/storage.md
+          - UChicago: uchicago/storage.md
+          - SLAC: slac/storage.md
       - Sharing:
-          - BNL: BNL/data_sharing.md
-          - UChicago: UChicago/data_sharing.md
-          - SLAC: SLAC/data_sharing.md
+          - BNL: bnl/data_sharing.md
+          - UChicago: uchicago/data_sharing.md
+          - SLAC: slac/data_sharing.md
       - XCache:
-          - BNL: BNL/xcache.md
-          - UChicago: UChicago/xcache.md
-          - SLAC: SLAC/xcache.md
+          - BNL: bnl/xcache.md
+          - UChicago: uchicago/xcache.md
+          - SLAC: slac/xcache.md
 
   - Software & Tools:
       - Containers:
@@ -126,20 +126,20 @@ nav:
       - Jupyter:
           - Overview: jupyter/info.md
           - Access per Site:
-              - BNL: BNL/jupyter.md
-              - UChicago: UChicago/jupyter.md
-              - SLAC: SLAC/jupyter.md
+              - BNL: bnl/jupyter.md
+              - UChicago: uchicago/jupyter.md
+              - SLAC: slac/jupyter.md
           - Advanced:
-              - Coffea on UChicago: UChicago/jupyter_coffea.md
-              - Extending on SLAC: SLAC/jupyter_extra.md
+              - Coffea on UChicago: uchicago/jupyter_coffea.md
+              - Extending on SLAC: slac/jupyter_extra.md
           - Examples:
               - xAOD Check: jupyter/examples/xAODcheck.md
-              - Read xAOD with PyROOT: https://github.com/usatlas/tier3docs/blob/master/jupyter/examples/pyROOT_example.ipynb
+              - Read xAOD with PyROOT: https://github.com/usatlas/docs/blob/master/jupyter/examples/pyROOT_example.ipynb
               - Uproot Variable Conversion: jupyter/examples/convert_specific_variables.py.txt
       - AI Inference:
           - Triton (UChicago):
-              - User Guide: UChicago/triton.md
-              - Deployment Notes: UChicago/triton_deployment.md
+              - User Guide: uchicago/triton.md
+              - Deployment Notes: uchicago/triton_deployment.md
       - Development Tools:
           - Using VSCode: tools/vscode.md
 
@@ -223,8 +223,8 @@ markdown_extensions:
   - pymdownx.snippets:
       check_paths: true
       base_path:
-        - tier3docs/.snippets
-        - tier3docs/README.md
+        - docs/.snippets
+        - docs/README.md
       auto_append:
         - links.txt
         - abbrs.txt

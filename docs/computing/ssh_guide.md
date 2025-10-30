@@ -194,9 +194,9 @@ Each facility may have specific SSH requirements or configurations:
 
 Refer to your facility's specific access guide for details:
 
-- [Accessing BNL](../BNL/accessing.md)
-- [Accessing UChicago](../UChicago/accessing.md)
-- [Accessing SLAC](../SLAC/accessing.md)
+- [Accessing BNL](../bnl/accessing.md)
+- [Accessing UChicago](../uchicago/accessing.md)
+- [Accessing SLAC](../slac/accessing.md)
 
 ---
 

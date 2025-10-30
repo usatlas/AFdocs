@@ -67,7 +67,7 @@ for chunk in stream:
 ## Running LLM Models via Ollama at SLAC AF
 
 First, complete the ssh key login setup so that you can use
-[ssh in between SLAC nodes](../SLAC/accessing.md) without using a password. Then
+[ssh in between SLAC nodes](../slac/accessing.md) without using a password. Then
 verify that you can submit Slurm batch jobs at SLAC. You can use the following
 command to verify that:
 

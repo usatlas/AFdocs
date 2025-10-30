@@ -86,7 +86,7 @@ reach the ATLAS AF team.
 
     Explains the ways users can use their ATLAS data at AFs
 
-    [:octicons-arrow-right-24: View Guide](BNL/data_sharing.md)
+    [:octicons-arrow-right-24: View Guide](bnl/data_sharing.md)
 
 - :material-notebook:{ .lg .middle } **Jupyter at Analysis Facilities**
 

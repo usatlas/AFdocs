@@ -1,6 +1,5 @@
 site/
 *~
-tier3docs/BackupDir/
 *.py[co]
 __pycache__
 *.egg-info
