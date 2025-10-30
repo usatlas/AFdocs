@@ -167,6 +167,7 @@ We can set up additional [model repositories](https://docs.nvidia.com/deeplearni
 
 The following directories are currently configured:
 
+- `s3://https://s3.af.uchicago.edu:443/triton-d4363a43-23b5-4a13-836b-c98175f4ac41/models`
 - `/cvmfs/atlas.cern.ch/repo/sw/database/GroupData/BTagging/20250213/`
 
 Please get in touch if you want additional paths included.
