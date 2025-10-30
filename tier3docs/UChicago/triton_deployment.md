@@ -20,6 +20,9 @@ the [Triton User Guide](triton.md).
 
 Triton is deployed via Helm using the ManiacLab on-premises Helm chart:
 
+**FluxCD Configuration:**
+[https://github.com/maniaclab/flux_apps/tree/main/af/triton](https://github.com/maniaclab/flux_apps/tree/main/af/triton)
+
 **Chart Repository:**
 [https://github.com/maniaclab/triton-inference-server/tree/main/deploy/k8s-onprem](https://github.com/maniaclab/triton-inference-server/tree/main/deploy/k8s-onprem)
 
