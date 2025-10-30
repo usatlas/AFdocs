@@ -10,7 +10,7 @@ make the approval process smoother. Please enter your full name, your home
 institution's name, and your institutional email; account requests from services
 like Gmail, Outlook, iCloud, etc. won't be accepted.
 
-/// info | Not an ATLAS member yet?
+/// note | Not an ATLAS member yet?
 
 If you are not yet an ATLAS member, but are working with someone in ATLAS,
 please

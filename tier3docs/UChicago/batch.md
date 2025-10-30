@@ -94,7 +94,7 @@ from your submit file and your jobs will be sent to the `long-queue`
 automatically, otherwise your job will be placed on hold until you remove it or
 release it (check HTCondor commands).
 
-/// important | Use the short queue for short jobs
+/// tip | Use the short queue for short jobs
 
 Using the short queue for short jobs when possible is essential for the use of
 the available resources, specially to let the long queue available for long

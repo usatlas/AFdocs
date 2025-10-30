@@ -3,7 +3,7 @@
 This guide covers accessing the UChicago Analysis Facility via SSH, including
 SSH configuration, filesystems, and setting up the ATLAS environment.
 
-/// info | Don't have an account yet?
+/// note | Don't have an account yet?
 
 If you haven't signed up for a UChicago Analysis Facility account yet, please
 see [Signing Up for UChicago](account.md) first.

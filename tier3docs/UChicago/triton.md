@@ -6,7 +6,7 @@ The Triton Inference Server is deployed as a Kubernetes cluster service within
 the UChicago Analysis Facility. This service provides high-performance AI model
 inference with automatic scaling capabilities.
 
-/// info | Key Information
+/// note | Key Information
 
 - **Access:** Internal to UChicago AF Kubernetes cluster only (not externally
   exposed)

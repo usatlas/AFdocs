@@ -290,7 +290,7 @@ To renew your ticket (typically valid for 24 hours):
 kinit -R
 ```
 
-/// info | Kerberos Troubleshooting
+/// note | Kerberos Troubleshooting
 
 For advanced Kerberos configuration, token sharing across machines, and
 troubleshooting, see the [FAQs and Tips](../faqs_tips.md) page, which covers:

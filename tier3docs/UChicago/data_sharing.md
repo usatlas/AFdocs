@@ -35,7 +35,7 @@ This is how you copy it to $HOME:
 voms-proxy-init -voms atlas -out $HOME/x509proxy
 ```
 
-/// important
+/// tip
 
 Without the term `-out $HOME/x509proxy` you create a new proxy but the one that
 maybe is already in your $HOME directory is still expired.
