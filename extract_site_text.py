@@ -62,7 +62,9 @@ def main() -> None:
     output_dir = Path("site_text")
 
     if not site_dir.exists():
-        print(f"Error: {site_dir} directory does not exist. Run 'pixi run build' first.")
+        print(
+            f"Error: {site_dir} directory does not exist. Run 'pixi run build' first."
+        )
         return
 
     # Find all HTML files
@@ -90,7 +92,9 @@ def main() -> None:
 
         print(f"✓ {rel_path} -> {txt_path.relative_to(output_dir)}")
 
-    print(f"\n✅ Successfully extracted text from {len(html_files)} HTML files to {output_dir}/")
+    print(
+        f"\n✅ Successfully extracted text from {len(html_files)} HTML files to {output_dir}/"
+    )
 
 
 if __name__ == "__main__":
