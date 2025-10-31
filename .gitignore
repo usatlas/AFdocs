@@ -1,4 +1,5 @@
 site/
+site_text/
 *~
 *.py[co]
 __pycache__
