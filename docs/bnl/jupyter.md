@@ -2,10 +2,10 @@
 
 Before accessing the BNL JupyterHub - <https://atlas-jupyter.sdcc.bnl.gov/>,
 please apply for a BNL computing account.
-[Link to the instructions.](federated_id.md). BNL's Scientific Data Computing
-Center (SDCC) provides JupyterHub environment on their HTC (high throughput
-computing) cluster and HPC (high performance computing) clusters. Choose one of
-them to login.
+[Link to the instructions.](account.md). BNL's Scientific Data Computing Center
+(SDCC) provides JupyterHub environment on their HTC (high throughput computing)
+cluster and HPC (high performance computing) clusters. Choose one of them to
+login.
 
 ## The JupyterHub resources on HTC cluster and HPC clusters
 

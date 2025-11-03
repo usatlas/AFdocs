@@ -34,8 +34,6 @@ theme:
         icon: material/weather-sunny
         name: Switch to dark mode
   features:
-    - navigation.sections
-    - navigation.expand
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.instant
@@ -69,44 +67,38 @@ nav:
 
   - Need Help?: getting_help.md
 
-  - Computing:
+  - Computing and Access:
       - computing/index.md
       - About the Facilities: computing/facilities.md
-
-      - Accounts & Access:
-          - Signing Up:
-              - BNL: bnl/account.md
-              - UChicago: uchicago/account.md
-              - SLAC: slac/account.md
-          - Accessing:
-              - SSH Guide: computing/ssh_guide.md
-              - EOS:
-                  - BNL: bnl/eos.md
-                  - UChicago: uchicago/eos.md
-              - BNL: bnl/accessing.md
-              - UChicago: uchicago/accessing.md
-              - SLAC: slac/accessing.md
-              - Additional:
-                  - BNL Federated ID Account: bnl/federated_id.md
-
+      - Signing Up:
+          - BNL: bnl/account.md
+          - UChicago: uchicago/account.md
+          - SLAC: slac/account.md
+      - Accessing:
+          - SSH Guide: computing/ssh_guide.md
+          - BNL: bnl/accessing.md
+          - UChicago: uchicago/accessing.md
+          - SLAC: slac/accessing.md
       - Running Jobs:
           - BNL: bnl/batch.md
           - UChicago: uchicago/batch.md
           - SLAC: slac/batch.md
-
-  - Data:
-      - Storage:
-          - BNL: bnl/storage.md
-          - UChicago: uchicago/storage.md
-          - SLAC: slac/storage.md
-      - Sharing:
-          - BNL: bnl/data_sharing.md
-          - UChicago: uchicago/data_sharing.md
-          - SLAC: slac/data_sharing.md
-      - XCache:
-          - BNL: bnl/xcache.md
-          - UChicago: uchicago/xcache.md
-          - SLAC: slac/xcache.md
+      - Data:
+          - Storage:
+              - BNL: bnl/storage.md
+              - UChicago: uchicago/storage.md
+              - SLAC: slac/storage.md
+          - Sharing:
+              - BNL: bnl/data_sharing.md
+              - UChicago: uchicago/data_sharing.md
+              - SLAC: slac/data_sharing.md
+          - XCache:
+              - BNL: bnl/xcache.md
+              - UChicago: uchicago/xcache.md
+              - SLAC: slac/xcache.md
+          - EOS:
+              - BNL: bnl/eos.md
+              - UChicago: uchicago/eos.md
 
   - Software & Tools:
       - Containers:
