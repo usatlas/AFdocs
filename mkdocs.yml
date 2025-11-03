@@ -83,22 +83,22 @@ nav:
           - BNL: bnl/batch.md
           - UChicago: uchicago/batch.md
           - SLAC: slac/batch.md
-    - Data:
-        - Storage:
-            - BNL: bnl/storage.md
-            - UChicago: uchicago/storage.md
-            - SLAC: slac/storage.md
-        - Sharing:
-            - BNL: bnl/data_sharing.md
-            - UChicago: uchicago/data_sharing.md
-            - SLAC: slac/data_sharing.md
-        - XCache:
-            - BNL: bnl/xcache.md
-            - UChicago: uchicago/xcache.md
-            - SLAC: slac/xcache.md
-        - EOS:
-            - BNL: bnl/eos.md
-            - UChicago: uchicago/eos.md
+      - Data:
+          - Storage:
+              - BNL: bnl/storage.md
+              - UChicago: uchicago/storage.md
+              - SLAC: slac/storage.md
+          - Sharing:
+              - BNL: bnl/data_sharing.md
+              - UChicago: uchicago/data_sharing.md
+              - SLAC: slac/data_sharing.md
+          - XCache:
+              - BNL: bnl/xcache.md
+              - UChicago: uchicago/xcache.md
+              - SLAC: slac/xcache.md
+          - EOS:
+              - BNL: bnl/eos.md
+              - UChicago: uchicago/eos.md
 
   - Software & Tools:
       - Containers:
