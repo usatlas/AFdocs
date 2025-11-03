@@ -2,8 +2,10 @@
 
 Brookhaven National Lab has two types of accounts.
 
-1. lightweight Federated Identity account for accessing Jupyter instance at BNL SDCC and
-2. full SDCC account which includes access to Jupyter as well as ssh access to analysis facility.
+1. lightweight Federated Identity account for accessing Jupyter instance at BNL
+   SDCC and
+2. full SDCC account which includes access to Jupyter as well as ssh access to
+   analysis facility.
 
 ## Full SDCC Account
 
@@ -25,9 +27,9 @@ go through the following steps:
 ## Lightweight Federated Identity Account
 
 The Federated Identity account is quicker to get and users connect BNL AF
-resources only through the Jupyter Hub instance.
-BNL now has a Jupyter instance that allows ATLAS members to sign in with their
-CERN or SLAC computer credentials.
+resources only through the Jupyter Hub instance. BNL now has a Jupyter instance
+that allows ATLAS members to sign in with their CERN or SLAC computer
+credentials.
 
 ### Prerequisites
 
