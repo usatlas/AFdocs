@@ -37,6 +37,7 @@ jobs:
           path: site/
 
   deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'usatlas/AFdocs'
     # Add a dependency to the build job
     needs: build
 
