@@ -25,11 +25,11 @@ should be much faster and more reliable.
 ## High performance caching
 
 ServiceX and large scale dask jobs require more performance and storage space
-than a single xcache server can provide. For this reason at UChicago Analysis
+than a single XCache server can provide. For this reason at UChicago Analysis
 Facility we have five dedicated nodes with 100Gbps NICs and NVMe only storage.
 
 The optimal way to use them is to let Rucio decide which file should be accessed
-through which xcache node in this way:
+through which XCache node in this way:
 
 ```bash
 ~> export SITE_NAME=AF_200
@@ -39,9 +39,9 @@ through which xcache node in this way:
 | data18_13TeV | DAOD_PHYSLITE.34858087._000001.pool.root.1 | 264.466 MB | 41f423f0  | MWT2_UC_LOCALGROUPDISK: root://192.170.240.191:1094//root://fax.mwt2.org:1094//pnfs/uchicago.edu/atlaslocalgroupdisk/rucio/data18_13TeV/df/a4/DAOD_PHYSLITE.34858087._000001.pool.root.1 |
 ```
 
-The way this works is that xcaches every 10 seconds send heartbeats and space
-available to Rucio. Rucio then in real time calculates which xcache is optimal
+The way this works is that XCaches every 10 seconds send heartbeats and space
+available to Rucio. Rucio then in real time calculates which XCache is optimal
 for each file. While Rucio list-file-replicas call might be expensive, it
 guaranties returned paths will work. If you still decide to cache list of the
-paths, please keep in mind that available xcaches might change and you will have
+paths, please keep in mind that available XCaches might change and you will have
 to refresh it.
