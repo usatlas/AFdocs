@@ -16,6 +16,15 @@ editing experience with features like
 You can enhance its functionality by installing extensions from
 [the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/VSCode).
 
+## Facility-Specific Guides
+
+For detailed setup instructions specific to each facility:
+
+- [Using VSCode at BNL](../bnl/vscode.md)
+- [Using VSCode at UChicago](../uchicago/vscode.md)
+
+---
+
 ## Remote-Tunnels
 
 The Visual Studio Code
@@ -52,12 +61,16 @@ machine, you still need:
 
 ## Setup Guide
 
-### Step-1: Create a Secure Tunnel on the Remote Machine
+### Create a Secure Tunnel on the Remote Machine
 
 You can grab the CLI through a
-[standalone install](https://code.visualstudio.com/#alt-downloads). However, the
-executable `code` has already been installed as
-_/cvmfs/atlas.sdcc.bnl.gov/users/yesw/t3s/bin/code_.
+[standalone install](https://code.visualstudio.com/#alt-downloads).
+
+/// note
+
+Some facilities may have the VSCode CLI pre-installed. Check your facility-specific guide for details.
+
+///
 
 Create a secure tunnel with the tunnel command:
 
@@ -88,29 +101,22 @@ Afterward, the remote machine screen would prompt:
 What would you like to call this machine?
 ```
 
-Provide a name to the remote machine, for example, _BNL-ATTSUB_.
+Provide a descriptive name to the remote machine.
 
-Then it would yield something like:
+Then it would yield a link to access your tunnel:
 
 ```
-[2023-09-25 22:22:51] info Creating tunnel with the name: bnl-attsub
+[2023-09-25 22:22:51] info Creating tunnel with the name: my-machine
 
 Open this link in your browser
-https://vscode.dev/tunnel/bnl-attsub/home/tmp/yesw
+https://vscode.dev/tunnel/my-machine/home/username
 ```
 
-Now you can explore the files on the remote machine, and use VSCode to edit
-file:
+Now you can explore the files on the remote machine, and use VSCode to edit files:
 
-- Either on a browser, open the above link:
-  https://vscode.dev/tunnel/bnl-attsub/home/tmp/yesw
+- Either on a browser, open the tunnel link
 - Or in VSCode client, open **Remote Explorer**, click on **Remotes**, then
-  **Tunnels**, choose the name **BNL-ATTSUB**.
-
-In the VSCode client, you can see the name **BNL-ATTSUB** as shown in the
-following screenshot:
-
-![screenshot of BNL Jupyter Launcher](Screenshot-Remote-Tunnels.png)
+  **Tunnels**, and choose your machine name
 
 Upon opening a folder/file, you just click on the button of
 `Yes, I trusted the authors`.
@@ -163,52 +169,6 @@ To close the connection when you finish editing files on the remote host:
 - You can also simply exit VS Code to close the remote connection
 
 ---
-
-## Connecting VSCode to JupyterLab Kernel
-
-You can follow these steps to connect your Visual Studio Code to a JupyterLab
-kernel that is running on the University of Chicago Analysis Facility (UC AF).
-This allows you to work on your Jupyter notebooks using VS Code while utilizing
-the computational resources of UC AF.
-
-/// note
-
-Make sure your JupyterLab instance is running and remains active while you are
-using VS Code to connect.
-
-///
-
-### Steps
-
-1. **Access Your JupyterLab**:
-    - Visit [UC AF JupyterLab](https://af.uchicago.edu/jupyterlab) to access
-      your JupyterLab environment.
-    - You'll need to log in with your credentials and create your Jupyter
-      server.
-
-2. **Get the JupyterLab URL**:
-    - Right click on the link to your JupyterLab instance, then copy it. This
-      link typically looks like
-      `https://ivukotic-notebook-1.notebook.af.uchicago.edu/?token=...`.
-
-3. **Configure VS Code**:
-    - Open Visual Studio Code.
-    - Install the **Python** and **Jupyter** extensions if you haven't already.
-
-4. **Select Your Server and Kernel**:
-    - Open the notebook file you wish to work on in VS Code.
-    - Click on the kernel picker in the top right corner of the notebook editor
-    - Click the kernel dropdown → click "Select Another Kernel..." → then
-      "Existing Jupyter Server...".
-    - Paste your server URI there.
-    - Select the kernel you want to use from your JupyterLab.
-
-5. **Using the Remote Kernel**:
-    - Once the correct Kernel is selected, you can execute your notebook code
-      within VS Code, utilizing the UC AF's computational resources.
-    - If you encounter issues, ensure that VS Code is allowed through your
-      firewall if applicable, and your network allows communicating with the UC
-      AF nodes.
 
 ## Important: Background Jobs Continue Running
 
