@@ -173,7 +173,8 @@ the computational resources of UC AF.
 
 /// note
 
-Make sure your JupyterLab instance is running and remains active while you are using VS Code to connect.
+Make sure your JupyterLab instance is running and remains active while you are
+using VS Code to connect.
 
 ///
 
@@ -208,7 +209,6 @@ Make sure your JupyterLab instance is running and remains active while you are u
     - If you encounter issues, ensure that VS Code is allowed through your
       firewall if applicable, and your network allows communicating with the UC
       AF nodes.
-
 
 ## Important: Background Jobs Continue Running
 
