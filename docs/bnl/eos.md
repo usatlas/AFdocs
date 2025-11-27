@@ -122,11 +122,11 @@ need pass your CERN Kerberos ticket to the batch machines in the following way:
 
 2. Then add the envvar **KRB5CCNAME** to your condor batch jobs.
 
-## Access to CERN EOS through BNL XCache server
+## Access to CERN EOS through BNL Xcache server
 
-If you need repeat access the same EOS files, you can make use of the BNL XCache
+If you need repeat access the same EOS files, you can make use of the BNL Xcache
 server to speed up the reading speed for the sequential access.
 
-Just use the option **--eos=EOS_PATH** in the script **XCache_ls.py** to
-generate the clist files for your EOS files at CERN. Please run **XCache_ls.py
+Just use the option **--eos=EOS_PATH** in the script **Xcache_ls.py** to
+generate the clist files for your EOS files at CERN. Please run **Xcache_ls.py
 -h** for more details.
