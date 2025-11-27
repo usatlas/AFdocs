@@ -275,12 +275,12 @@ the plot.
 
 ---
 
-## Using XCache at BNL
+## Using Xcache at BNL
 
-XCache enables to access data remotely and also to cache them locally for faster
+Xcache enables to access data remotely and also to cache them locally for faster
 access in future.
 
-The XCache server at BNL is **root://xrootd03.usatlas.bnl.gov:1094/**.
+The Xcache server at BNL is **root://xrootd03.usatlas.bnl.gov:1094/**.
 
 Let us take the input file used in the SLAC example. At SLAC, the inputFile name
 for outside access (check the file _dset-outside.txt_ at SLAC) is
@@ -289,7 +289,7 @@ for outside access (check the file _dset-outside.txt_ at SLAC) is
 inputFile=root://griddev03.slac.stanford.edu:2094//xrootd/atlas/atlaslocalgroupdisk/rucio/data16_13TeV/f9/bd/DAOD_SUSY15.11525262._000003.pool.root.1
 ```
 
-For XCache, we need add the XCache server prefix with two slash characters, that
+For Xcache, we need add the Xcache server prefix with two slash characters, that
 is,
 
 ```
@@ -298,9 +298,9 @@ cd T3-Example-BNL/Interactive-Job
 ../bin/Exam_JetsPlot $inputFile > myjob.log 2>&1
 ```
 
-### Using XCache (gLFN) at BNL
+### Using Xcache (gLFN) at BNL
 
-XCache at BNL also supports gLFN (global Logical File Name) access, without the
+Xcache at BNL also supports gLFN (global Logical File Name) access, without the
 need of knowing the exact path of a given filename.
 
 Let us take the same dataset used in the SLAC example.
