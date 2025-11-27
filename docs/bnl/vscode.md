@@ -1,8 +1,10 @@
 # Using VSCode at BNL
 
-For general information about VSCode and its features, see the [VSCode Overview](../tools/vscode.md).
+For general information about VSCode and its features, see the
+[VSCode Overview](../tools/vscode.md).
 
-This page covers BNL-specific setup instructions for using VSCode with the BNL Analysis Facility.
+This page covers BNL-specific setup instructions for using VSCode with the BNL
+Analysis Facility.
 
 ## Remote-Tunnels Setup at BNL
 
@@ -71,7 +73,9 @@ Upon opening a folder/file, you just click on the button of
 
 ## SSH Access
 
-For SSH-based connections to BNL, see the [SSH Access Guide](../computing/ssh_guide.md) for information on connecting through the BNL gateway.
+For SSH-based connections to BNL, see the
+[SSH Access Guide](../computing/ssh_guide.md) for information on connecting
+through the BNL gateway.
 
 ## Getting help
 

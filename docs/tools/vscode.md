@@ -68,7 +68,8 @@ You can grab the CLI through a
 
 /// note
 
-Some facilities may have the VSCode CLI pre-installed. Check your facility-specific guide for details.
+Some facilities may have the VSCode CLI pre-installed. Check your
+facility-specific guide for details.
 
 ///
 
@@ -112,7 +113,8 @@ Open this link in your browser
 https://vscode.dev/tunnel/my-machine/home/username
 ```
 
-Now you can explore the files on the remote machine, and use VSCode to edit files:
+Now you can explore the files on the remote machine, and use VSCode to edit
+files:
 
 - Either on a browser, open the tunnel link
 - Or in VSCode client, open **Remote Explorer**, click on **Remotes**, then
