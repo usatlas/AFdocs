@@ -171,6 +171,12 @@ kernel that is running on the University of Chicago Analysis Facility (UC AF).
 This allows you to work on your Jupyter notebooks using VS Code while utilizing
 the computational resources of UC AF.
 
+/// note
+
+Make sure your JupyterLab instance is running and remains active while you are using VS Code to connect.
+
+///
+
 ### Steps
 
 1. **Access Your JupyterLab**:
@@ -203,12 +209,6 @@ the computational resources of UC AF.
       firewall if applicable, and your network allows communicating with the UC
       AF nodes.
 
-### Notes
-
-- Make sure your JupyterLab instance is running and remains active while you are
-  using VS Code to connect.
-
----
 
 ## Important: Background Jobs Continue Running
 
