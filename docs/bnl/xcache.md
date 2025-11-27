@@ -1,10 +1,10 @@
-## Use the Xcache servers
+## Use the XCache servers
 
-Both BNL and SLAC have set up the **Xcache servers**, to help cache locally the
-file on the grid or **CERN EOS**. Currently there are 60TB on the BNL Xcache
-server, and 20TB on the SLAC Xcache server.
+Both BNL and SLAC have set up the **XCache servers**, to help cache locally the
+file on the grid or **CERN EOS**. Currently there are 60TB on the BNL XCache
+server, and 20TB on the SLAC XCache server.
 
-The Xcache servers
+The XCache servers
 
 - provide **rucioN2N feature**, enabling users to access any files on the grid
   without knowing its exact site location and the file path.
@@ -12,25 +12,25 @@ The Xcache servers
   first access, thus improves the read performance for sequential access. If
   only partial content of a file is read, then only that part would cached.
 
-You can run the predefined command **Xcache_ls.py** to generate a clist file
+You can run the predefined command **XCache_ls.py** to generate a clist file
 (containing a list of physicsl file paths) for given datasets, then use the
 clist in your jobs.
 
-Run `Xcache_ls.py -h` to get the full usage
+Run `XCache_ls.py -h` to get the full usage
 
 ```bash
-% Xcache_ls.py -h
+% XCache_ls.py -h
 Usage:
-     Xcache_ls.py [options] dsetNamePattern[,dsetNamePattern2[,more patterns]]
+     XCache_ls.py [options] dsetNamePattern[,dsetNamePattern2[,more patterns]]
   or
-     Xcache_ls.py [options] --eos eosPath/
+     XCache_ls.py [options] --eos eosPath/
   or
-     Xcache_ls.py [options] --eos eosPath/filenamePattern
+     XCache_ls.py [options] --eos eosPath/filenamePattern
   or
-     Xcache_ls.py [options] dsetListFile
+     XCache_ls.py [options] dsetListFile
 
   This script generates a list (clist) of
-  Xcache gLFN (global logical filename) access path
+  XCache gLFN (global logical filename) access path
   for given datasets on Atlas grid sites.
   Wildcard is supported in the dataset name pattern.
 
@@ -38,8 +38,8 @@ Options:
   -h, --help            show this help message and exit
   -v                    Verbose
   -V, --version         print my version
-  -X XCACHESITE, --XcacheSite=XCACHESITE
-                        Specify a Xcache server site of BNL or SLAC
+  -X XCACHESITE, --XCacheSite=XCACHESITE
+                        Specify a XCache server site of BNL or SLAC
                         (default=BNL)
   -o OUTCLISTFILE, --outClistFile=OUTCLISTFILE
                         write the list into a file instead of the screen
@@ -55,12 +55,12 @@ However, for large file inputs on the grid, you are recommended to plan ahead
 and pre-stage them to BNL using
 [R2D2 request](https://rucio-ui.cern.ch/r2d2/manage_quota) or rucio command.
 
-## Using Xcache at BNL
+## Using XCache at BNL
 
-Xcache enables to access data remotely and also to cache them locally for faster
+XCache enables to access data remotely and also to cache them locally for faster
 access in future.
 
-The Xcache server at BNL is **root://xrootd03.usatlas.bnl.gov:1094/**.
+The XCache server at BNL is **root://xrootd03.usatlas.bnl.gov:1094/**.
 
 Let us take the input file used in the SLAC example. At SLAC, the inputFile name
 for outside access (check the file _dset-outside.txt_ at SLAC) is
@@ -69,7 +69,7 @@ for outside access (check the file _dset-outside.txt_ at SLAC) is
 inputFile=root://griddev03.slac.stanford.edu:2094//xrootd/atlas/atlaslocalgroupdisk/rucio/data16_13TeV/f9/bd/DAOD_SUSY15.11525262._000003.pool.root.1
 ```
 
-For Xcache, we need add the Xcache server prefix with two slash characters, that
+For XCache, we need add the XCache server prefix with two slash characters, that
 is,
 
 ```
@@ -78,9 +78,9 @@ cd T3-Example-BNL/Interactive-Job
 ../bin/Exam_JetsPlot $inputFile > myjob.log 2>&1
 ```
 
-### Using Xcache (gLFN) at BNL
+### Using XCache (gLFN) at BNL
 
-Xcache at BNL also supports gLFN (global Logical File Name) access, without the
+XCache at BNL also supports gLFN (global Logical File Name) access, without the
 need of knowing the exact path of a given filename.
 
 Let us take the same dataset used in the SLAC example.
